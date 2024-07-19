@@ -1,0 +1,39 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tituloPrincipal
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.divTemas
+{
+    width: 100vw;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.contenedorPrincipal
+{
+    width: 100vw;
+    height: 100vh;
+    background-color:burlywood,
+}
+
+.tituloSecundario
+{
+    color:steelblue;
+    border: 1px solid brown;
+}
+
+.tema0_divprincipal
+{
+    text-align: center;
+}

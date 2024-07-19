@@ -1,0 +1,21 @@
+Buenas! estuve pensando en cuales son los conceptos 
+que se deben manejar en JS para que sea un aprendizaje
+mas cómodo tanto para Node como para React, 
+sigo manteniendo la opinion de la 
+
+gestio de datos, 
+tanto para arreglos con funciones como 
+
+.filter 
+.map 
+.reduce, 
+
+tambien la manipulacion de objetos, 
+
+destructing, 
+spread operator 
+y 
+rest operator, 
+
+y tambien me parece importante que sea vea programacion asincrona ya sea 
+con Promise o async/await y callbacks

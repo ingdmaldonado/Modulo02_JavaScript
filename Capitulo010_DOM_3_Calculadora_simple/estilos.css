@@ -1,0 +1,38 @@
+
+/* con esto le digo a todos
+los elementos que tengan
+margen 0, padding */
+
+* /* selector para todos los atributos */
+{
+    margin: 0; /* sacamos margenes por defecto */
+    padding: 0; /* le sacamos el padding por defecto */   
+}
+
+body
+{
+    background-color: black;/* Color del body todo negro */
+}
+
+/*  a todos los elementos que están 
+dentro del div */
+.divPrincipal > *
+{
+    margin-left: 30px; /* margen izq. de 30 px*/
+    padding: 5px 5px; /* un padding de 5px arriba y abajo y izq y der */
+    display: block; /* se muestren en bloque */
+    margin-bottom:15px; /* separados hacia abajo por 15 px*/
+}
+
+/* al div principal 
+le damos */
+.divPrincipal
+{
+    width: 400px; /* ancho */
+    height: 400px; /* alto */
+    background-color: coral; /*color de fondo */
+    color: white; /* color de la letra */
+    display: block; /* se muestren en bloque */
+    margin-left:auto; /* margen derecho */
+    margin-right:auto; /* margen izquierdo */
+}

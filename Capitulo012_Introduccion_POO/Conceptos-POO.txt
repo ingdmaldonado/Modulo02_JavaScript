@@ -1,0 +1,64 @@
+Clases y Objetos:
+
+
+
+
+Sobrecarga de métodos.
+Métodos y propiedades dinámicas.
+Abstracción:
+
+
+
+
+
+Prototipos y herencia prototípica.
+
+
+-------------------------------------------------------------
+LOS TEMAS QUE SI VAMOS A VER 
+--------------------------------------------------------------
+
+	Declaración de clases. (listo)
+	Creación de objetos.(listo)
+	Métodos y propiedades de objetos.
+
+	Definición de métodos estáticos en clases.
+	Uso de métodos estáticos para operaciones comunes.
+	Getters y Setters:
+
+
+	Encapsulamiento:
+
+	Uso de métodos y propiedades privadas.
+	Métodos y propiedades públicas.
+
+	Polimorfismo:
+
+--------------------------------------------------------------
+SOLAMENTE VAMOS A COMENTAR ESTOS TEMAS
+--------------------------------------------------------------
+
+	Herencia:
+
+	Extender clases utilizando la palabra clave extends.
+	Métodos super() en clases hijas.
+	Herencia prototípica.
+
+	Ventajas y desventajas de cada enfoque.
+	Uso adecuado de la composición y la herencia en el diseño de clases.
+	Instanciación y destrucción de Objetos:
+
+	Constructores y Prototipos:
+
+	Composición vs. Herencia:
+
+	A Este tema javascript no lo tiene incorporado de forma nativa
+	pero se pueden simular.
+		Definición de interfaces
+		Métodos y propiedades abstractas.
+
+
+	Ciclo de vida de un objeto.
+	Métodos new, delete, Object.create(), Object.assign().
+	
+

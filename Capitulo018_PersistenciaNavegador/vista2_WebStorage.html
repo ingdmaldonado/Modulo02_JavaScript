@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStorage</title>
+</head>
+<body>
+    <h1>Web Storage - Local Storage vs Session Storage</h1>
+
+    <hr>
+    <label for="idSelectorDestino">Seleccione el Destino del los datos</label>
+    <br>
+    <select id="idSelectorDestino">
+        <option value="EnLocalStorage">Local Storage</option>
+        <option value="EnSessionStorage">Session Storage</option>
+    </select>
+    <hr>
+    <label for="idTxtNombreClave">Ingrese el Nombre de la Clave</label>
+    <br>
+    <input type="text" id="idTxtNombreClave" value="" placeholder="Ingrese el nombre de la Clave">
+    <br>
+    <label for="idTxtValor">Ingrese el Valor</label>
+    <br>
+    <input type="text" id="idTxtValor" value="" placeholder="Ingrese el Valor">
+    <br>
+    <br>
+    <input type="button" value="Persistir" id="idPersistir">
+    <input type="button" value="Ver Claves Almacenadas" id="idVerDatosGuardados">
+    <hr>
+    <br>
+    <label for="idTxtNombreClaveEliminar">Ingrese nombre clave para eliminar</label>
+    <br>
+    <input type="text" id="idTxtNombreClaveEliminar" placeholder="Ingrese el nombre de la Clave a Eliminar">
+    <br>
+    <br>
+    <input type="button" id="idBtnEliminar" value="Eliminar Clave">
+    <input type="button" id="idBtnEliminarTodas" value="Eliminar Todas Clave">
+    
+    <script src="vista2_WebStorage.js"></script>
+</body>
+</html>

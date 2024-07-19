@@ -1,0 +1,101 @@
+<div>
+    <h2>INTRODUCCIÓN AL PROTOCOLO HTTP / HTTPs</h2>
+
+    <pre>
+
+        1.	Inicio de la Solicitud: El ciclo de vida comienza cuando el usuario ingresa una URL en su navegador o hace clic en un enlace.
+
+        2.	Resolución DNS: El navegador traduce el nombre de dominio en la URL a una dirección IP utilizando el Sistema de Nombres de Dominio (DNS).
+
+        3.	Establecimiento de la Conexión: Se establece una conexión TCP (o TLS si se utiliza HTTPS) entre el cliente (navegador) y el servidor.
+
+        4.	Envío de la Solicitud: El navegador envía una solicitud HTTP al servidor web. Esta solicitud incluye la URL, los encabezados y, en algunos casos, datos adicionales como parámetros de consulta o contenido del formulario.
+
+        5.	Procesamiento de la Solicitud en el Servidor: El servidor web recibe la solicitud 
+        y la procesa. Esto implica la identificación del recurso solicitado, la ejecución de 
+        scripts si es necesario (por ejemplo, PHP, Python, etc.), y la recuperación de datos 
+        de la base de datos si es aplicable.
+
+        6.	Generación de la Respuesta: El servidor web genera una respuesta HTTP que incluye
+        el código de estado (por ejemplo, 200 OK, 404 Not Found), los encabezados de respuesta y,
+        opcionalmente, el contenido del recurso solicitado.
+
+        7.	Envío de la Respuesta: El servidor envía la respuesta al navegador a través de la conexión TCP/TLS establecida.
+
+        8.	Renderizado en el Navegador: El navegador recibe la respuesta y comienza a renderizar el contenido.
+        Esto implica interpretar y renderizar el HTML, aplicar estilos CSS, ejecutar scripts JavaScript, 
+        y cargar recursos externos como imágenes, archivos CSS y JavaScript adicionales.
+        
+        9.	Interacción del Usuario: Una vez que la página se ha renderizado completamente en el navegador, 
+        el usuario puede interactuar con ella haciendo clic en enlaces, enviando formularios, 
+        desplazándose por la página, etc.
+
+    </pre>
+
+    <h3>VIDEO EXPLICATIVO DEL FUNCIONAMIENTO DEL PROTOCOLO HTTP y HTTPs</h3>
+
+    <div class="tema0_divprincipal">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nymxjNQ_qW0?si=xSqSZTKgDgtPtomQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+  
+
+    <h3>EL RENDERIZADO POR EL NAVEGADOR</h3>
+    <pre>
+        
+        El proceso de renderizado de una página web en un navegador involucra varias etapas, desde la solicitud 
+        inicial de la página hasta la visualización completa en la pantalla del usuario. 
+        Aquí hay un resumen de las etapas principales:
+
+        Solicitud HTTP: Cuando un usuario ingresa la URL de una página web en su navegador y presiona Enter,
+        se envía una solicitud HTTP al servidor que aloja el sitio web.
+        
+        Recibo de recursos: El servidor procesa la solicitud y envía de vuelta al navegador los archivos 
+        necesarios para mostrar la página web solicitada. Estos archivos pueden incluir 
+        HTML, CSS, JavaScript, imágenes y otros recursos.
+        
+        Procesamiento HTML: El navegador comienza a procesar el HTML recibido. Esto implica analizar la 
+        estructura del documento HTML para construir el DOM (Modelo de Objetos del Documento).
+        
+        Construcción del DOM: El DOM representa la estructura de la página web en forma de un árbol de nodos,
+        donde cada nodo representa un elemento HTML (como etiquetas <div>, <p>, <img>, etc.) y sus atributos.
+        
+        Recuperación de recursos adicionales: A medida que se procesa el HTML, el navegador puede encontrar 
+        referencias a otros recursos, como archivos CSS, scripts de JavaScript o imágenes externas. 
+        Si es necesario, el navegador enviará solicitudes adicionales al servidor para recuperar estos recursos.
+        
+        Procesamiento CSS: Una vez que se ha construido el DOM, el navegador procesa el CSS asociado 
+        con la página. Esto implica aplicar estilos a los elementos HTML según las reglas definidas 
+        en las hojas de estilo CSS.
+        
+        Construcción del CSSOM: Al igual que el DOM para HTML, el CSSOM (Modelo de Objetos de Estilo en Cascada)
+        representa la estructura de estilos definidos en las hojas de estilo CSS.
+        
+        Renderizado de la página: Con el DOM y el CSSOM construidos, el navegador combina la información de ambos
+        para generar el "Render Tree" (Árbol de Renderizado). Este árbol contiene todos los elementos 
+        que se deben renderizar en la página, así como la información de estilo asociada.
+        
+        Layout (Diseño) y Pintura: El navegador calcula la posición y el tamaño de cada elemento en el 
+        Render Tree y realiza el diseño de la página (layout). Luego, se pinta cada elemento en la pantalla
+        del usuario según su posición y estilo.
+        
+        Interactividad y ejecución de JavaScript: Una vez que la página se ha renderizado, el navegador 
+        puede ejecutar scripts de JavaScript asociados con la página. Estos scripts pueden agregar interactividad
+        a la página, modificar el contenido dinámicamente o realizar otras acciones basadas en eventos 
+        del usuario o del sistema.
+        
+        Eventos y escucha de acciones del usuario: El navegador está continuamente escuchando eventos del usuario,
+        como clics de mouse, pulsaciones de teclas o interacciones táctiles, y responde a estos eventos según sea 
+        necesario, como navegando a otras páginas, mostrando o ocultando contenido, o realizando acciones específicas.
+        
+        Este proceso de renderizado puede parecer bastante lineal en la descripción, pero en realidad, el navegador 
+        puede realizar muchas de estas etapas de manera simultánea y en paralelo para optimizar el rendimiento 
+        y la velocidad de carga de la página web.
+    </pre>
+ 
+    <h3>ESQUEMA DE UNA APLICACIÓN WEB</h3>
+    <div class="tema0_divprincipal">
+        <img src="imagen02_arquitecturaweb.jpg" alt="">
+    </div>
+
+</div>

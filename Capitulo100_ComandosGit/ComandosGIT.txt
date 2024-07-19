@@ -1,0 +1,11 @@
+# Obtener los cambios más recientes del repositorio remoto
+git fetch origin
+
+# Restablecer la rama local para que coincida con la versión remota
+git reset --hard origin/main
+
+# Eliminar archivos no rastreados (incluyendo nuevos archivos)
+git clean -fd
+
+# Verificar el estado del repositorio
+git status
