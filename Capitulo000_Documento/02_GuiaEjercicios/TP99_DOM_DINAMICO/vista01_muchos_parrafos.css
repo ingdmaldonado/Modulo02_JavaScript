@@ -1,0 +1,45 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: orange;    
+    color: black;
+}
+
+h1
+{
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor
+{
+    color: white;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+.contenedor > p
+{
+    padding: 5px;
+}
+
+.boton
+{
+    padding: 10px;
+}
+
+textarea
+{
+    
+    padding: 10px;
+    width: 80vw;
+}
+
