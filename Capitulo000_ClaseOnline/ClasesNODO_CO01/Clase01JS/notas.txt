@@ -1,0 +1,15 @@
+
+
+    vamos a realizar un programa que me permita
+    introducir un valor de compra de un producto 
+    o de varios productos y que en función
+    de ese valor calcule el 25% de descento.
+
+    totalCompra => 10.000,00
+
+
+    descuento = 2500 pesos.
+
+    totalAPagar = 10.000,00 - 2.500,00 = 7.500,00
+
+    

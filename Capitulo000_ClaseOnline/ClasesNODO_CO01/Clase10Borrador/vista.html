@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESUPUESTO</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>SISTEMA DE PRESUPUESTOS DE CONCESIONARIA XX</h1>
+    </div>
+    <div class="contenedor">
+        <h2>SELECCIONE EL VEHICULO</h2>
+        <select id="idSelectorVehiculo">
+            <option value="1">VEHICULO 1 - 25.000.000,00</option>
+            <option value="2">VEHICULO 2 - 30.000.000,00</option>
+            <option value="3">VEHICULO 3 - 35.000.000,00</option>
+        </select>
+    </div>
+    <div class="contenedor">
+        <h2>INDIQUE EL DINERO A ENTREGAR</h2>
+        <p>Concesionaria XX financia únicamente hasta el 50% del vaor del vehiculo</p>
+        <label for="idDineroEntregado">Dinero a Entregar</label>
+        <input type="number" placeholder="Ingrese aqui el Dinero a Entregar" id="idDineroEntregado">
+    </div>
+
+    <div class="contenedor">
+        <input type="button" value="Calcular Cotizacion" id="idBtnCotizar">
+    </div>
+
+
+    <script src="controlador.js"></script>
+</body>
+</html>
