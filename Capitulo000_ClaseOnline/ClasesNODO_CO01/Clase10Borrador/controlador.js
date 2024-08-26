@@ -32,10 +32,41 @@ const fnDevolverValorAuto = (tipoAuto)=>
         }
 
         return valorAuto;
-
     }
 
+const fnCalcularFinanciacion = (diferenciaAFinanciar,planFinanciacion) =>
+{
+    let calculoDiferenciaConInteres = 0;
+    let calculoCuota = 0;
+    let mensajeCuota = "";
+    if(planFinanciacion === 1) /* 10% de incremento en 24 cuotas */
+    {
+        calculoDiferenciaConInteres = diferenciaAFinanciar + (diferenciaAFinanciar * 10)/100;
+        calculoCuota = calculoDiferenciaConInteres/24;
+        mensajeCuota = `Financiaremos la diferencia en 24 cuotas de ${calculoCuota.toLocaleString("ES-es")}`;
+    }
+    if(planFinanciacion === 2)
+    {
+        calculoDiferenciaConInteres = diferenciaAFinanciar + (diferenciaAFinanciar * 20)/100;
+        calculoCuota = calculoDiferenciaConInteres/48;
+        mensajeCuota = `Financiaremos la diferencia en 48 cuotas de ${calculoCuota.toLocaleString("ES-es")}`;
+    }
+    if(planFinanciacion === 3)
+        {
+            calculoDiferenciaConInteres = diferenciaAFinanciar + (diferenciaAFinanciar * 50)/100;
+            calculoCuota = calculoDiferenciaConInteres/60;
+            mensajeCuota = `Financiaremos la diferencia en 60 cuotas de ${calculoCuota.toLocaleString("ES-es")}`;
+        }
+
+    return mensajeCuota;
+
+}
+
 window.addEventListener("load",()=>{
+
+    
+    console.log("application is running");
+
 
     const idSelectorVehiculo = document.querySelector("#idSelectorVehiculo");
     const idDineroEntregado = document.querySelector("#idDineroEntregado");
@@ -61,22 +92,30 @@ window.addEventListener("load",()=>{
     idDivPlanFinanciacion.style.display = 'none';
 
 
+    /* Declaramos Variables Globales a todos los Eventos */
+
+    let vehiculoElegido = 0;
+    let valorVehiculoElegido = 0;
+    let dineroAEntregar = 0;
+    let calculoDel50PorCientoValorVehiculo = 0;
+    let diferenciaAFinanciar = 0;
+    let planFinanciacion = 0;
 
     idBtnCotizar.addEventListener("click",()=>
         {
           
-            let vehiculoElegido = Number(idSelectorVehiculo.value);
+            vehiculoElegido = Number(idSelectorVehiculo.value);
             console.log(vehiculoElegido);
 
-            let valorVehiculoElegido = fnDevolverValorAuto(vehiculoElegido);
+            valorVehiculoElegido = fnDevolverValorAuto(vehiculoElegido);
             console.log(valorVehiculoElegido);
 
-            let dineroAEntregar = Number(idDineroEntregado.value);
+            dineroAEntregar = Number(idDineroEntregado.value);
             console.log(dineroAEntregar);
 
-            let calculoDel50PorCientoValorVehiculo = valorVehiculoElegido * 50/100;
+            calculoDel50PorCientoValorVehiculo = valorVehiculoElegido * 50/100;
 
-            let diferenciaAFinanciar = 0;
+            diferenciaAFinanciar = 0;
             
             if(dineroAEntregar <= 0)
             {
@@ -108,13 +147,15 @@ window.addEventListener("load",()=>{
 
         idSelectorPlanFinanciacion.addEventListener("change",()=>
             {
-                console.log("estan cambiando el selector de planes de financiacion");
-                idResultadoFinanciacion.textContent = `El Total Financiado es de 18.500.000`;
+                planFinanciacion = Number(idSelectorPlanFinanciacion.value);
+
+                let mensajeFinanciacion = fnCalcularFinanciacion(diferenciaAFinanciar,planFinanciacion);
+
+                console.log(mensajeFinanciacion);
+
+                console.log(`Plan ${planFinanciacion} ${mensajeFinanciacion}`);
+                idResultadoFinanciacion.textContent = `Plan ${planFinanciacion} ${mensajeFinanciacion}`;
             })
-    
-
-    console.log("application is running");
-
 
 
 })
