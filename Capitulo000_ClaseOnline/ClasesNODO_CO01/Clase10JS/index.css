@@ -113,3 +113,18 @@ label {
 input[type="checkbox"] {
     margin-right: 10px;
 }
+
+#idDatosPersonales {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
+    background-color: #fff; /* Color de fondo blanco */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de profundidad */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    width: 80%; /* Ancho del contenedor como porcentaje del ancho de la pantalla */
+    max-width: 600px; /* Ancho máximo para evitar que el contenedor sea demasiado grande */
+}

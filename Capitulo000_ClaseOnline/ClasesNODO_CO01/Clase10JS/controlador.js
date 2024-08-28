@@ -25,6 +25,7 @@ Si el cliente decide recibir mayor información por parte de nuestros vendedores
 
 */
 
+   
 
     /* Aqui construimos una función del tipo arrow
     function. que recibe como parametro el auto seleccionado
@@ -58,10 +59,18 @@ Si el cliente decide recibir mayor información por parte de nuestros vendedores
             return valorDelAuto;
         }
 
+    /* hacemos una función que retorne el minimo exigible 
+    que era el 50% del valor del auto */
+
     const fnMinimoExigible = (valorDelAuto,porcentajeGerente)=>
         {
             return (valorDelAuto * porcentajeGerente)/100;
         }
+
+
+    /* esta función lo que hace es calcular la financiación
+    que en definitiva depende del plan que uno elija y 
+    de la diferencia a financiar */
 
     const fnDevolverCuotaFinanciacion = (diferencia,plan)=>{
 
@@ -85,8 +94,39 @@ Si el cliente decide recibir mayor información por parte de nuestros vendedores
 
         return mensajeFinanciacion;
 
-
     }
+
+    /* esto es una función, en forma de arrow function que
+    recibe como parametro un texto y se fija si el dato
+    ingresado tiene una longitud mayor ó igual a 5 caracteres.
+
+    en caso afirmativo retornara true
+    en caso negativo retornara falso
+    */
+
+    const fnEsUnDatoValido = (texto)=>
+        {
+
+            /*
+            console.log("esto ocurre dentro de la funcion ",texto);
+
+            console.log("esto ocurre dentro de la funcion ",texto.length);*/
+            
+
+            if(texto.length >=5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+/* Esto sería el programa principal. donde comienza la pagina
+es decir, cuando la pagina se termino de renderizar */
 
 window.addEventListener("load",()=>{
 
@@ -99,9 +139,15 @@ window.addEventListener("load",()=>{
     const idDineroAEntregar = document.querySelector("#idDineroAEntregar");
     const idSelectorDePlanFinanciacion = document.querySelector("#idSelectorDePlanFinanciacion");
     const idBtnAceptar = document.querySelector("#idBtnAceptar");
+
     const idApellido = document.querySelector("#idApellido");
+    const idNombre = document.querySelector("#idNombre");
+    const idTelefono = document.querySelector("#idTelefono");
+    const idCorreo = document.querySelector("#idCorreo");
+
     const idDatosPersonales = document.querySelector("#idDatosPersonales");
     const idAceptaLlamada = document.querySelector("#idAceptaLlamada");
+    const idBtnCancelar = document.querySelector("#idBtnCancelar");
 
     /* Aqui voy mostrando esas constantes para
     verificar que estoy capturando bien 
@@ -113,6 +159,12 @@ window.addEventListener("load",()=>{
     console.log(idSelectorDePlanFinanciacion);
     console.log(idDatosPersonales);
 
+    console.log(idApellido);
+    console.log(idNombre);
+    console.log(idTelefono);
+    console.log(idCorreo);
+    console.log(idBtnCancelar);
+
     idDatosPersonales.style.display = 'none';
 
     /* Estado de la aplicación */
@@ -123,7 +175,11 @@ window.addEventListener("load",()=>{
     let diferenciaAFinanciar = 0;
     let planFinanciacion = 0;
     let mensajeFinanciacion = "";
+
     let apellidoIngresado = "";
+    let nombreIngresado = "";
+    let telefonoIngresado = "";
+    let emailIngresado = "";
 
 
     idBtnCalcular.addEventListener("click",()=>{
@@ -190,20 +246,85 @@ window.addEventListener("load",()=>{
 
     })
 
+
+    /* Este es el boton aceptar del POPUP que me permite
+    almacenar los datos del cliente para posteriormente
+    llamarlo por telefono */
+
     idBtnAceptar.addEventListener("click",()=>{
 
         apellidoIngresado = idApellido.value;
+        nombreIngresado = idNombre.value;
+        emailIngresado = idCorreo.value;
+        telefonoIngresado = idTelefono.value;
 
-        alert(`Sr. ${apellidoIngresado} nos comunicaremos con ud. a la brevedad`);
+        console.log(apellidoIngresado);
+        console.log(nombreIngresado);
+        console.log(telefonoIngresado);
+        console.log(emailIngresado);
+    
 
+        console.log(fnEsUnDatoValido(apellidoIngresado));
+        console.log(fnEsUnDatoValido(nombreIngresado));
+        console.log(fnEsUnDatoValido(telefonoIngresado));
+        console.log(fnEsUnDatoValido(emailIngresado));
+
+        if(!fnEsUnDatoValido(apellidoIngresado))
+        {
+            // por aqui no se esta validando bien el apellido //
+            alert("Señor por favor ingrese su apellido");
+        }
+        else
+        {  // por aqui el apellido esta bien //
+            if(!fnEsUnDatoValido(nombreIngresado))
+            {
+                alert("Señor por favor ingrese su nombre de forma correcta");
+            }
+            else
+            {
+                if(!fnEsUnDatoValido(telefonoIngresado))
+                {
+                    alert("Señor ingrese correctamente el telefono");
+                }
+                else
+                {
+                    if(!fnEsUnDatoValido(emailIngresado))
+                    {
+                        alert("Señor ingrese correctamente el email");
+                    }
+                    else
+                    {
+                        alert(`Sr. ${apellidoIngresado} nos comunicaremos con ud. a la brevedad`);
+                    }
+
+                }
+            }
+        }
+      
     })
+
+    /* este evento se dispara cuando cambian el checkbox */
 
      idAceptaLlamada.addEventListener("change",()=>
         {
             console.log("aqui deberia mostrar el div");
 
-            idDatosPersonales.style.display = 'block';
+            if(idAceptaLlamada.checked)
+            {
+                idDatosPersonales.style.display = 'block';
+            }
+            else
+            {
+                idDatosPersonales.style.display = 'none';
+            }
         })
 
+    idBtnCancelar.addEventListener("click",()=>
+        {
+
+            idDatosPersonales.style.display = 'none';
+            idAceptaLlamada.checked = false;
+
+        })
 
 })
