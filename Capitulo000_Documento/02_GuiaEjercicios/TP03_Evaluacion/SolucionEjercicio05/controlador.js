@@ -1,117 +1,103 @@
 
 
-const fnCalcularViaje = (destinoSeleccionado,cantidadDePasajeros,idQuiereServicioPremium)=>
+const fnValidarNombreMes = (nombreMes)=>
     {
-        let costoViaje = 0
-
-
-        switch(destinoSeleccionado)
+        switch(nombreMes)
         {
-            case 1:
+            case 'ENERO':
                 {
-                    costoViaje = 2000 * cantidadDePasajeros;
+                    return true;
                     break;
                 }
-
-            case 2:
+            case 'FEBRERO':
+            {
+                return true;
+                break;
+            }
+            case 'MARZO':
                 {
-                    costoViaje = 2200 * cantidadDePasajeros;
+                    return true;
                     break;
                 }
-
-            case 3:
+            case 'ABRIL':
                 {
-                    costoViaje = 1200 * cantidadDePasajeros;
+                    return true;
                     break;
                 }
-
+            case 'MAYO':
+                {
+                    return true;
+                    break;
+                }
+            case 'JUNIO':
+                {
+                    return true;
+                    break;
+                }
+            case 'JULIO':
+                {
+                    return true;
+                    break;
+                }
+            case 'AGOSTO':
+                {
+                    return true;
+                    break;
+                }
+            case 'SEPTIEMBRE':
+                {
+                    return true;
+                    break;
+                }
+            case 'OCTUBRE':
+                {
+                    return true;
+                    break;
+                }
+            case 'NOVIEMBRE':
+                {
+                    return true;
+                    break;
+                }
+            case 'DICIEMBRE':
+                {
+                    return true;
+                    break;
+                }
             default:
                 {
-                    costoViaje = 0;
+                    return false;
                     break;
                 }
-
         }
-
-        if(idQuiereServicioPremium)
-        {
-            costoViaje = costoViaje * 1.25;
-        }
-
-        return costoViaje;
-
 
     }
 
+window.addEventListener("load",()=>
+    {
 
+        const idNombreMesIngresado = document.querySelector("#idNombreMesIngresado");
+        const btnValidarMes = document.querySelector("#btnValidarMes");
+        const idResultado = document.querySelector("#idResultado");
 
-window.addEventListener("load",()=>{
+        let nombreIngresado = "";
 
-    console.log("funcionando");
-
-    /* (1ro) - Capturamos los objetos/elementos HTML que deseo controlar */
-
-    const idSelectorDestino = document.querySelector("#idSelectorDestino");
-    const idCantidadDePasajeros = document.querySelector("#idCantidadDePasajeros");
-    const idQuiereServicioPremium = document.querySelector("#idQuiereServicioPremium");
-    const idBtnCalcularViaje = document.querySelector("#idBtnCalcularViaje");
-    const idTextoCostoTotal = document.querySelector("#idTextoCostoTotal");
-    const idComunicarmeConRepresentante = document.querySelector("#idComunicarmeConRepresentante");
-    const idDatosPersonales = document.querySelector("#idDatosPersonales");
-
-
-    idDatosPersonales.style.display ='none';
-
-    /* (2do) - Muestro los objetos/elementos HTML por consola */
-    console.log(idSelectorDestino);
-    console.log(idCantidadDePasajeros);
-    console.log(idQuiereServicioPremium);
-    console.log(idBtnCalcularViaje);
-    console.log(idTextoCostoTotal);
-    console.log(idComunicarmeConRepresentante);
-    console.log(idDatosPersonales);
-
-    /* (3ro) - Creo variables donde almacenaré los datos ingresados ó el estado
-    de la aplicación */
-
-    let destinoSeleccionado = 0;
-    let cantidadDePasajeros = 0;
-    let aceptaServicioPremium = 0;
-    
-
-
-    idBtnCalcularViaje.addEventListener("click",()=>{
-
-            destinoSeleccionado = Number(idSelectorDestino.value);
-            cantidadDePasajeros = Number(idCantidadDePasajeros.value);
-            aceptaServicioPremium = idQuiereServicioPremium.checked;
-
-            if((cantidadDePasajeros >= 1) && (cantidadDePasajeros <= 4))
+        btnValidarMes.addEventListener("click",()=>
             {
 
-                let costoTotal = fnCalcularViaje(destinoSeleccionado,cantidadDePasajeros,aceptaServicioPremium);
+                nombreIngresado = idNombreMesIngresado.value;
 
-                idTextoCostoTotal.textContent = `El Costo Total del Viaje es U$$ - ${costoTotal.toLocaleString("ES-es")}`;
+                console.log(fnValidarNombreMes(nombreIngresado.toUpperCase()));
 
-                console.log(costoTotal);
-            }
-            else
-            {
-                alert("la cantidad permitidad de pasajeros por paquete es hasta 4 pasajeros");
-            }
+                if(fnValidarNombreMes(nombreIngresado.toUpperCase()))
+                {
+                    idResultado.textContent = `El dato ingresado ${nombreIngresado} corresponde a un nombre de mes válido`;
+                }
+                else
+                {
+                    idResultado.textContent = `El dato ingresado ${nombreIngresado} NO corresponde a un nombre de mes válido`;
+                }
+
+            })
 
     })
-
-    idComunicarmeConRepresentante.addEventListener("change",()=>
-        {
-            if(idComunicarmeConRepresentante.checked)
-            {
-                idDatosPersonales.style.display ='block';
-            }
-            else
-            {
-                idDatosPersonales.style.display ='none';
-            }
-        })
-
-})

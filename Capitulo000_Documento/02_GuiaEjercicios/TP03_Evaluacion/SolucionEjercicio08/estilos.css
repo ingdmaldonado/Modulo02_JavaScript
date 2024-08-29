@@ -1,0 +1,44 @@
+/* Configuración general del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ocupa el 100% del alto de la ventana */
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacio distribuido entre los elementos */
+    align-items: center;
+    overflow: hidden; /* Evita que haya scroll */
+}
+
+/* Estilo para todos los divs */
+div {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px; /* Reducido el padding para ahorrar espacio */
+    margin: 5px 0; /* Reducido el margen entre los elementos */
+    width: 80%; /* Ajusta el ancho de los divs */
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Estilo para la sección #idDatosPersonales (modal oculto) */
+#idDatosPersonales {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Otros estilos adicionales si se necesitan */
+

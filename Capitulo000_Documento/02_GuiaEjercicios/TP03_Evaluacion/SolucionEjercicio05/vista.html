@@ -3,48 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>AGENCIA DE VIAJES XXYY</title>
+    <title>Ejercicio Nro. 05</title>
 </head>
 <body>
-    <h1>SIMULADOR DE VIAJES DE LA EMPRESA XXYY</h1>
-    <div>
-        <h3>Seleccione su Destino</h3>
-        <select id="idSelectorDestino">
-            <option value="1">ESPAÑA - U$$ 2.000,00 POR PERSONA</option>
-            <option value="2">PORTUGAL - U$$ 2.200,00 POR PERSONA</option>
-            <option value="3">BRASIL - U$$ 1.200,00 POR PERSONA</option>
-        </select>
-    </div>
-    <div>
-        <h3>Cantidad de Pasajeros</h3>
-        <label for="idCantidadDePasajeros">Ingrese Cantidad de pasjaros</label>
-        <input type="number" placeholder="Ingrese aqui la cantidad de pasajeros" id="idCantidadDePasajeros" min="1" max="4">
-    </div>
-    <div>
-        <h3>Indique Tipo de Servicio</h3>
-        <label for="idQuiereServicioPremium">Quiero el Servicio Premium. 25% mas por pasajero</label>
-        <input type="checkbox" id="idQuiereServicioPremium">
-    </div>
-    <div>
-        <input type="button" id="idBtnCalcularViaje" value="Calcular Viaje">
-    </div>
-    <div>
-        <h2 id="idTextoCostoTotal">Costo Total del Viaje</h2>
-    </div>
-    <div>
-        <label for="idComunicarmeConRepresentante">Deseo Comunicarme con un representante</label>
-        <input type="checkbox" id="idComunicarmeConRepresentante">
-    </div>
-    <div id="idDatosPersonales">
-        <h3>Ingrese sus datos y un representante se comunicará a la brevedad</h3>
-        <label>Ingrese su Nombre</label>
-        <input type="text" placeholder="Ingrese aqui su nombre" id="idNombre">
-        <label>Ingrese su Telefono</label>
-        <input type="text" placeholder="Ingrese aqui su telefono" id="idTelefono">
-        <input type="button" value="Aceptar" id="idBtnAceptar">
-        <input type="button" value="Cancelar" id="idBtnCancelar">
-    </div> 
+    <h1>Ejercicio Nro. 05 - Aplicación para validar nombre del Mes</h1>
+    <label for="idNombreMesIngresado">Ingrese el Mes aquí</label>
+    <input type="text" placeholder="ingrese aquí el nombre del mes" id="idNombreMesIngresado">
+    <input type="button" value="Validar si es Mes Correcto" id="btnValidarMes">
+    <br>
+    <h2 id="idResultado"></h2>
     <script src="controlador.js"></script>
 </body>
 </html>
