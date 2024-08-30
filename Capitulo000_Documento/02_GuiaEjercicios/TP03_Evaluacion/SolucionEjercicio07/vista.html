@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ejercicio Nro. 07</title>
+</head>
+<body>
+    <h1>Ejercicio Nro. 07 - Simulador de Plazos Fijos</h1>
+    <div>
+        <h3>CAPITAL A INVERTIR</h3>
+        <label for="idCapitalAInvertir">Ingrese Capital a Invertir</label>
+        <br>
+        <input type="number" placeholder="Ingrese Capital" id="idCapitalAInvertir">
+        <br>
+    </div>
+    <div>
+        <h4>TASA PREFERENCIAL</h4>
+        <label>Para Clientes del Banco (0.7%) más sobre rentabilidad</label>
+        <input type="checkbox" id="idEsClienteDelBanco">
+        <br>
+        <label>Plazo Fijo autorenovable cada 3 meses (0.9%) más sobre rentabilidad</label>
+        <input type="checkbox" id="idEsAutorenovable">
+    </div>
+    <div>
+        <br>
+        <input type="button" value="Calcular Rentabilidad" id="idBtnCalcularRentabilidad">
+        <br>
+    </div>
+    <div>
+        <h3>Rentabilidad Calculada</h3>
+        <h5 id="idCapitalInvertido">Capital Invertido</h5>
+        <h5 id="idRentabilidadSalida">Rentabilidad</h5>
+        <h5 id="idRentabilidadAdicionalPorClienteDelBanco">Adicional por Cliente del Banco</h5>
+        <h5 id="idRentabilidadAdicionalPorPlazoFijoAutorenovable">Adicional por Plazo Fijo autorenovable</h5>
+        <h5 id="idRentabilidadTotal">Rentabilidad TOTAL</h5>
+    </div>
+    <script src="controlador.js"></script>
+</body>
+</html>

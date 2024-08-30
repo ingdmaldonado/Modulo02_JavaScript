@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
     <title>Ejercicio Nro. 06</title>
 </head>
 <body>
-    <h1>Aplicación de Facturación - Argentina</h1>
     <div>
+        <h1>Ejercicio. Nro. 06 - Aplicación de Facturación - Argentina</h1>
         <label for="idImporteBaseFactura">Ingrese Importe Base</label>
         <br>
         <input type="number" placeholder="Ingrese el Neto a Facturar" id="idImporteBaseFactura">
         <br>  
     </div>
     <div>
+        <br>
         <label for="idSelectorTipoArticulo">Seleccione Tipo de Articulo</label>
         <br>
         <select id="idSelectorTipoArticulo">
@@ -25,11 +27,14 @@
         </select>
     </div>
     <div>
+        <br>
         <input type="button" id="idBtnCalcular" value="Calcular Totales">
+        <br>
     </div>
     <div>
-        <h3 id="idImporteBase">Importe Base</h3>
-        <h3 id="idImporteIVA">Importe IVA</h3>
+        <br>
+        <h3 id="idImporteBase">Importe Base</h3>        
+        <h3 id="idImporteIVA">Importe IVA</h3>        
         <h3 id="idImporteFinal">Importe Final</h3>
     </div>
     <script src="controlador.js"></script>
