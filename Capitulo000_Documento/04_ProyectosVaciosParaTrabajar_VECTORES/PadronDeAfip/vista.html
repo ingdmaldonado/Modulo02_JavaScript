@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Padron PAIS de AFIP</title>
+</head>
+<body>
+    <h1>Trabajando Con Contribuyentes - PAIS</h1>
+
+    <div>
+        <h3>Mostrar todas las Empresas</h3>
+        <input type="button" value="Mostrar Todas las Empresas" id="idBtnMostrarTodas">
+    </div>
+    <br>
+    <div>
+        <h3>Busqueda por Nombre</h3>
+        <label>Ingrese el Nombre de la Empresa</label>
+        <input type="text" id="idTextoABuscar" placeholder="Ingrese el Nombre de la Empresa a Buscar">
+        <input type="button" value="Buscar por Nombre" id="idBtnBuscarPorNombre">
+    </div>
+    <br>
+    <div>
+        <h3>Busqueda por CUIT</h3>
+        <label>Ingrese el CUIT</label>
+        <input type="text" id="idCuitABuscar" placeholder="Ingrese CUIT">
+        <input type="button" value="Buscar por Cuit"  id="idBtnBuscarPorCuit">
+        <br>
+        <br>
+        <h4 id="idResultadoPorCuit"></h4>
+    </div>
+    <br>
+    <div>
+        <h3>Filtrar por Condición ante el IMPUESTO A LAS GANANCIAS</h3>
+        <br>
+        <select id="idSelectorImpGanancias">
+            <option value="NI">NI - NO INFORMA</option>
+            <option value="AC">AC - ACTIVO</option>
+            <option value="EX">EX - EXENTO</option>
+            <option value="NC">NC - NO CATEGORIZADO</option>
+        </select>
+        <br>
+        <br>
+        <input type="button" value="Filtrar Empresas por Impuesto a las Ganancias" id="idBtnFiltrarPorGanancias">
+    </div>
+  
+    <script src="vista.js" type="module"></script>
+</body>
+</html>
