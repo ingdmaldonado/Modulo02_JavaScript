@@ -1,0 +1,26 @@
+
+Pasos para habilitar la ejecución de scripts en PowerShell:
+Abre PowerShell como administrador:
+
+Haz clic derecho en el ícono de PowerShell y selecciona "Ejecutar como administrador".
+Verifica la política actual:
+
+Ejecuta el siguiente comando para ver la política de ejecución actual:
+bash
+Copiar código
+Get-ExecutionPolicy
+Cambiar la política de ejecución:
+
+Para permitir la ejecución de scripts, puedes cambiar la política a RemoteSigned, lo que permitirá la ejecución de scripts locales sin firmar y scripts remotos solo si están firmados.
+bash
+Copiar código
+Set-ExecutionPolicy RemoteSigned
+Confirma el cambio:
+
+PowerShell te pedirá confirmación, escribe Y y presiona Enter.
+Verifica la instalación de nodemon nuevamente:
+
+Después de cambiar la política, intenta ejecutar el comando para verificar la instalación de nodemon:
+bash
+Copiar código
+nodemon -v

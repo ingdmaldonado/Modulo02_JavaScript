@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRACION DE CLIENTES</title>
+</head>
+<body>
+    <h1>BIENVENIDOS A LA ADMINISTRACIÓN DE CLIENTES</h1>
+    <div>
+        <h2>Recuperar todos los clientes</h2>
+        <input type="button" value="Recuperar todos los Clientes" id="btnClienteGet">
+    </div>
+
+    <div>
+        <h2>Recuperando Clientes por (ID)</h2>
+        <label for="txtClienteId">Ingrese (ID)</label>
+        <input type="text" placeholder="Ingrese el ID del Cliente" id="txtClienteId">
+        <input type="button" value="Recuperar cliente por (ID)" id="btnBuscarClientePorId">
+    </div>
+
+    <div>
+        <h2>Recuperando Clientes por (CUIT)</h2>
+        <label for="txtClienteCuit">Ingrese (CUIT)</label>
+        <input type="text" placeholder="Ingrese el ID del Cliente" id="txtClienteCuit">
+        <input type="button" value="Recuperar cliente por (CUIT)" id="btnBuscarClientePorCuit">
+    </div>
+
+    <div>
+        <h2>Agregando Cliente Nuevo</h2>
+        <label for="idClienteCuit">Ingrese CUIT</label>
+        <br>
+        <input type="text" placeholder="aqui ingrese su CUIT" id="idClienteCuit">
+        <label for="idClienteNombre"></label>
+        <br>
+        <label for="idClienteNombre">Ingrese su NOMBRE</label>
+        <br>
+        <input type="text" placeholder="aqui ingrese su NOMBRE" id="idClienteNombre">
+        <br>
+        <label for="idClienteDomicilio">Ingrese su Domicilio</label>
+        <br>
+        <input type="text" placeholder="Ingrese su  DOMICILIO " id="idClienteDomicilio">
+        <br>
+        <label>Indique la localidad</label>
+        <br>
+        <select id="idLocalidadId">
+            <option value = 1>PIRQUITAS</option>
+            <option value = 2>TERCENA</option>
+            <option value = 3>CARRERA</option>
+            <option value = 4>PIEDRA BLANCA</option>
+            <option value= 5>SAN ANTONIO</option>
+        </select>
+        <br>
+        <br>
+        <input type="button" value="Agregar Cliente" id="btnAgregarCliente">
+
+
+
+    </div>
+
+
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>
