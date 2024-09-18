@@ -1,0 +1,17 @@
+
+- Modulos
+- JSON
+- Destructuring
+- Spread Operator
+- Spread Operator para pasar como parametro en funciones
+- Vectores
+	* Filter
+	* Map
+	* reduce
+
+- Try/catch
+
+- Asincronismo
+
+	Async/Await
+
