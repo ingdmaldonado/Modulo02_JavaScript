@@ -1,0 +1,9 @@
+
+
+    window.addEventListener("loac",()=>
+        {
+
+        
+
+
+        })

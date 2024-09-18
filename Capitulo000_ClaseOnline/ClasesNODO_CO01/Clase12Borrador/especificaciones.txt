@@ -1,0 +1,36 @@
+
+1ro) Debería tener una función, que dada una frase
+un texto, evalúe si la persona tiene intenciones
+de comprar un auto y como definición simple vamos
+a intepretar de la siguiente forma.
+
+    QUIERO
+    COMPRAR 
+    AUTO 
+
+2do) esa función podríamos crearla primero como
+una función independiente y luego que sea un método
+miembro de una clase
+
+3ro) La clase debería tener un vínculo al documento
+por lo tanto el documento debería ser un atributo de
+la clase y debería pasarse como parametro en el 
+constructor de la clase
+
+// 1. Convertir un objeto JavaScript a una cadena JSON
+const objeto = {
+    nombre: "Juan",
+    edad: 30,
+    ocupacion: "Desarrollador"
+};
+
+const jsonString = JSON.stringify(objeto);
+console.log("JSON.stringify:", jsonString);
+// Resultado: {"nombre":"Juan","edad":30,"ocupacion":"Desarrollador"}
+
+// 2. Convertir la cadena JSON de vuelta a un objeto JavaScript
+const objetoConvertido = JSON.parse(jsonString);
+console.log("JSON.parse:", objetoConvertido);
+// Resultado: {nombre: "Juan", edad: 30, ocupacion: "Desarrollador"}
+
+
