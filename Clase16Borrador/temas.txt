@@ -1,0 +1,28 @@
+
+0) Generación de COMPONENTES
+
+1) Mostrar el Archivo de AFIP
+
+1) Pedirle al CHAT que haga algo con el VECTOR
+de PADRON ELECTORAL ó PADRON DE AFIP
+
+1) Módulos
+
+2) Try Catch
+
+3) Destructuring
+
+4) Asincronismo
+
+5) Rest y Spread Operator
+
+6)  MidelWares
+
+7) JSON => JAVASCRIP OBJET NOTATION
+
+    http://json2table.com/
+
+    https://jsonformatter.curiousconcept.com/
+
+10) ESTADO DE LA APLICACIÓN
+

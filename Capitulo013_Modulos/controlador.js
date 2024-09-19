@@ -169,5 +169,4 @@ window.onload = function()
     has cubierto y estás listo para profundizar más, podrías considerar 
     explorar alguno de estos temas adicionales.
 
-
 */
