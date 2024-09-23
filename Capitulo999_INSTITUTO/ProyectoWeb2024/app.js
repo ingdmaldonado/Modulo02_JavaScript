@@ -509,8 +509,12 @@
                         /* obtenemos de los parametros el clienteid que viene desde los parametros*/
                         const clienteid = req.params.clienteid;
 
+                        console.log("este es el clienteid a actualizar ",clienteid)
+
                         /* los datos a modificar deben venir en el body */
                         const {clientecuit,clientenombre,clientedomicilio,localidadid} = req.body; 
+
+                        console.log(clientecuit,clientenombre,clientedomicilio,localidadid);
     
                         /* armamos la sentencia sql parametrizada y no nos olvidamos de poner la palabra returning * que significa
                         que devolverá los datos agregados tal como quedaron posteriormente a la inserción */

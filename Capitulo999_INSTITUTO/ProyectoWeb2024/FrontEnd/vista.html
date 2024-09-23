@@ -4,18 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMINISTRACION DE CLIENTES</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>BIENVENIDOS A LA ADMINISTRACIÓN DE CLIENTES</h1>
     <div>
         <h2>Recuperar todos los clientes</h2>
         <input type="button" value="Recuperar todos los Clientes" id="btnClienteGet">
+
+        <table>
+            <thead>
+                <th>
+                    ID
+                </th>
+                <th>
+                    CUIT
+                </th>
+                <th>
+                    NOMBRE
+                </th>
+                <th>
+                    DOMICILIO
+                </th>
+                <th>
+                    DEPARTAMENTO
+                </th>
+                <th>
+                    LOCALIDAD
+                </th>
+                <th>
+                    SELECCIONAR
+                </th>
+            </thead>
+            <tbody id="idCuerpoDeTabla">
+                <tr>
+                    <td>10</td>
+                    <td>23240106639</td>
+                    <td>MALDONADO DANIEL</td>
+                    <td>BARRIO PARQUE LA GRUTA ESTE</td>
+                    <td>LAS PIRQUITAS</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
     <div>
         <h2>Recuperando Clientes por (ID)</h2>
         <label for="txtClienteId">Ingrese (ID)</label>
-        <input type="text" placeholder="Ingrese el ID del Cliente" id="txtClienteId">
+        <input type="number" placeholder="Ingrese el ID del Cliente" id="txtClienteId">
         <input type="button" value="Recuperar cliente por (ID)" id="btnBuscarClientePorId">
     </div>
 
@@ -27,7 +64,9 @@
     </div>
 
     <div>
-        <h2>Agregando Cliente Nuevo</h2>
+        <h2>Agregar / Modificar Cliente</h2>
+        
+        <label id="idClienteId">ClienteID = </label>
         <label for="idClienteCuit">Ingrese CUIT</label>
         <br>
         <input type="text" placeholder="aqui ingrese su CUIT" id="idClienteCuit">
@@ -52,7 +91,10 @@
         </select>
         <br>
         <br>
+
         <input type="button" value="Agregar Cliente" id="btnAgregarCliente">
+        <input type="button" value="Nuevo Cliente" id="btnNuevoCliente">
+        <input type="button" value="Guardar Cambios" id="idBtnGuardarCambios">
 
 
 

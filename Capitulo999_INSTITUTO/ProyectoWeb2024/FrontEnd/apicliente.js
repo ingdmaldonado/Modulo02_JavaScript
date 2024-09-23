@@ -74,14 +74,40 @@ const endPointgetClientePorCuit = 'http://localhost:3000/cliente/porcuit/';
             body: (cliente) //
         });
 
+            // Convertimos la respuesta a JSON
+            const datosEnFormatoJSON = await respuestaEndPoint.json();
+
+            // Si todo salió bien, retornamos el objeto de respuesta
+            return datosEnFormatoJSON;
+
+        } catch (error) {
+            console.log(error);
+            return { result_estado: 'error', result_message: error.message };
+    }
+    }
+
+
+     // Función para modificar un cliente
+
+     export async function putCliente(cliente){
+        try {
+            const respuestaEndPoint = await fetch(endPoint+cliente.clienteid, {
+            method: 'PUT', // Especificamos el método POST
+            headers: {
+                'Content-Type': 'application/json' // Indicamos que los datos enviados son JSON
+            },
+            body: (cliente) //
+        });
+
         // Convertimos la respuesta a JSON
         const datosEnFormatoJSON = await respuestaEndPoint.json();
 
         // Si todo salió bien, retornamos el objeto de respuesta
         return datosEnFormatoJSON;
 
-    } catch (error) {
-        console.log(error);
-        return { result_estado: 'error', result_message: error.message };
+        } catch (error) {
+            console.log(error);
+            return { result_estado: 'error', result_message: error.message };
+        }
     }
-}
+

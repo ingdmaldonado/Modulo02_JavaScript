@@ -132,6 +132,7 @@ window.addEventListener("load",()=>
             ]
         };
         
+        
 
         const diplomaturaString = JSON.stringify(diplomatura);
 
@@ -140,6 +141,14 @@ window.addEventListener("load",()=>
             console.log(typeof diplomatura);
             console.log(typeof diplomaturaString);
 
+
+        /*
+        
+        https://jsonplaceholder.org/posts
+
+        https://www.freetogame.com/api/games
+
+        */
 
 
     })

@@ -24,5 +24,22 @@ de PADRON ELECTORAL ó PADRON DE AFIP
 
     https://jsonformatter.curiousconcept.com/
 
+
+8) PostMAN
+
 10) ESTADO DE LA APLICACIÓN
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+
+2) ASINCRONISMO
+
+    FUNCIONES CALLBACK
+    
+    PROMESAS = PROMIS
+
+    ASYNC & AWAIT
 

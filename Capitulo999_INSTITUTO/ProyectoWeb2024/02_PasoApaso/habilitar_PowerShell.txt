@@ -1,7 +1,7 @@
 
 Pasos para habilitar la ejecución de scripts en PowerShell:
 Abre PowerShell como administrador:
-
+ 
 Haz clic derecho en el ícono de PowerShell y selecciona "Ejecutar como administrador".
 Verifica la política actual:
 
