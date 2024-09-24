@@ -1,5 +1,5 @@
 
-//import vectorContribuyentes from "./Datos/VectorContribuyentes_10000";
+//import vectorContribuyentes from "./Datos/VectorContribuyentes_10000.js";
 //import vectorContribuyentes from "./Datos/VectorContribuyentes_25000.js";
 import vectorContribuyentes from "./Datos/VectorContribuyentes_50000.js";
 //import vectorContribuyentes from ".Datos//VectorContribuyentes_100000.js";

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSQUEDA DE CLIENTES</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>BUSQUEDA Y ADMINISTRACIÓN DE CONTRIBUYENTES</h1>
+    </div>
+    <div class="contenedor">
+        <h2>BUSQUEDA POR CONTRIBUYENTE</h2>
+        <input type="text" placeholder="Ingrese Cuit a buscar" id="idCuitIngresado">
+        <input type="button" value="Buscar por Cuit" id="idBtnBuscarPorCuit">
+    </div>
+    <div class="contenedor">
+        <h2>BUSQUEDA POR NOMBRE</h2>
+        <label for="idNombreIngresado"></label>
+        <input type="text" placeholder="Ingrese Nombre" id="idNombreIngresado">
+        <input type="button" value="Buscar por Nombre" id="idBtnBuscarPorNombre">
+    </div>
+    <div class="contenedor">
+        <table border="2px">
+            <thead>
+                <th>
+                    CUIT
+                </th>
+                <th>
+                    DENOMINACION
+                </th>
+            </thead>
+            <tbody id="idCuerpoTabla">
+                <tr>
+                    <td>
+                        23240106639
+                    </td>
+                    <td>
+                        MALDONADO DANIEL
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
