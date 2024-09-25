@@ -1,7 +1,5 @@
 
 
-
-
 window.onload = function()
 {
     console.log("aplicación andando");
