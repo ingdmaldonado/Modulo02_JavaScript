@@ -8,7 +8,7 @@ body {
 
 .contenedor {
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 80%; /* Aumentamos el ancho máximo */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -96,6 +96,8 @@ tbody tr:nth-child(even) {
     margin-top: 20px;
 }
 
+/* Resaltar filas de la tabla al pasar el mouse */
 table tbody tr:hover {
-    background-color: #e0f7fa;
+    background-color: #b2ebf2; /* Color más visible al pasar el ratón */
+    cursor: pointer;
 }
