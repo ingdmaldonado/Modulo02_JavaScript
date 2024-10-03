@@ -3,6 +3,8 @@ import {obtenerPokemones} from "./apiPokemon.js";
 import {obtenerUniversidades} from "./apiUniversidades.js";
 import {obtenerImagenAstronomia} from "./apiNasa.js";
 import {obtenerImagenAleatoria,obtenerRazasDePerros} from "./apiDogs.js";
+import {obtenerPronosticoTiempo} from "./apiTiempo.js";
+import {obtenerPaisesYCapitales} from "./apiCapitalesDelMundo.js";
 
 
 window.addEventListener("load",()=>
@@ -13,6 +15,8 @@ window.addEventListener("load",()=>
         const idBtnNasa = document.querySelector("#idBtnNasa");
         const idBtnImagenPerritos = document.querySelector("#idBtnImagenPerritos");
         const idBtnRazas = document.querySelector("#idBtnRazas");
+        const idBtnCotizacionDolar = document.querySelector("#idBtnCotizacionDolar");
+        const idBtnCapitalesDelMundo = document.querySelector("#idBtnCapitalesDelMundo");
 
         idBtnRecuperarPokemones.addEventListener("click",async ()=>
             {
@@ -57,6 +61,22 @@ window.addEventListener("load",()=>
             console.log(resultado.message.collie);
 
         })
+
+        idBtnCotizacionDolar.addEventListener("click",async ()=>
+            {
+                let resultado = await obtenerPronosticoTiempo();
+
+                console.log(resultado);
+
+            })
+
+        idBtnCapitalesDelMundo.addEventListener("click",async ()=>
+            {
+                let resultado = await obtenerPaisesYCapitales();
+
+                console.log(resultado);
+
+            })
 
         console.log("andando");
 
