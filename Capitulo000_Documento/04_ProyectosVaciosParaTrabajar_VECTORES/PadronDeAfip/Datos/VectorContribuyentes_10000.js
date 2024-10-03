@@ -7,9 +7,9 @@ const vectorContribuyentes = [];
 /************************ CUERPO DONDE CREAMOS LOS OBJETOS Y LOS AGREGAMOS AL VECTOR  ************************************/
 /*************************************************************************************************************************/
 
-let Objeto2 = {PadronAFIPId:'2', PadronAFIPCUIT:'20000035891',PadronAFIPDenominacion:'MULLER CARLOS JORGE           ',PadronAFIPImpGanancias:'AC',PadronAFIPImpIVA:'NI',PadronAFIPMonotributo:'NI',PadronAFIPIntegranteSoc:'N',PadronAFIPEmpleador:'N',PadronAFIPActividadMonotributo:'AC'};
+let Objeto2 = {PadronAFIPId:'2', PadronAFIPCUIT:'20000035891',PadronAFIPDenominacion:'MULLER CARLOS JORGE           ',PadronAFIPImpGanancias:'AC',PadronAFIPImpIVA:'NI',PadronAFIPMonotributo:'NI',PadronAFIPIntegranteSoc:'S',PadronAFIPEmpleador:'N',PadronAFIPActividadMonotributo:'AC'};
 vectorContribuyentes.push(Objeto2)
-let Objeto3 = {PadronAFIPId:'3', PadronAFIPCUIT:'20000179672',PadronAFIPDenominacion:'CANTARELLA ADELINA            ',PadronAFIPImpGanancias:'AC',PadronAFIPImpIVA:'NI',PadronAFIPMonotributo:'NI',PadronAFIPIntegranteSoc:'N',PadronAFIPEmpleador:'N',PadronAFIPActividadMonotributo:'AC'};
+let Objeto3 = {PadronAFIPId:'3', PadronAFIPCUIT:'20000179672',PadronAFIPDenominacion:'CANTARELLA ADELINA            ',PadronAFIPImpGanancias:'AC',PadronAFIPImpIVA:'NI',PadronAFIPMonotributo:'NI',PadronAFIPIntegranteSoc:'S',PadronAFIPEmpleador:'N',PadronAFIPActividadMonotributo:'AC'};
 vectorContribuyentes.push(Objeto3)
 let Objeto4 = {PadronAFIPId:'4', PadronAFIPCUIT:'20000278417',PadronAFIPDenominacion:'SUCESION DE GEROSA RICARDO ANG',PadronAFIPImpGanancias:'AC',PadronAFIPImpIVA:'AC',PadronAFIPMonotributo:'NI',PadronAFIPIntegranteSoc:'N',PadronAFIPEmpleador:'N',PadronAFIPActividadMonotributo:'AC'};
 vectorContribuyentes.push(Objeto4)

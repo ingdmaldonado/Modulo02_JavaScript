@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor1 {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.contenedor1 h1 {
+    color: darkslategray;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contenedor2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 25%;
+}
+
+.box {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    overflow: hidden;
+    color: white;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
+}
+
+.box h3 {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0;
+    z-index: 1;
+    color: darkslategray;
+}
+
+
+/* Hover Effects */
+.box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* TOTAL */
+.total-general {
+    padding: 20px;          /* Padding inside the div */
+    margin: 20px auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;     /* Center the div horizontally and add margin */
+}
+
+/* Style for <h2> within .total-general */
+.total-general h2 {
+    font-size: 24px;        /* Font size for the heading */
+    color: #333;            /* Dark gray color for the text */
+    margin-bottom: 10px;    /* Space below the heading */
+}
+
+/* Style for <p> within .total-general */
+.total-general p {
+    font-size: 18px;        /* Font size for the paragraph */
+    color: #555;            /* Medium gray color for the text */
+}
+/* TOTAL */

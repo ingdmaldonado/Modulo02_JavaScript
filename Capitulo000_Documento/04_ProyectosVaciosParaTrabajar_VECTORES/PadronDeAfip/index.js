@@ -5,6 +5,84 @@
 import vectorContribuyentes from "./Datos/VectorContribuyentes_10000.js";
 
 
+/*---------------------------------------------------*/
+/* (11) Me Cargo tres Vectores de Filtros            */
+/*---------------------------------------------------*/
+
+    const FiltrosImpGanancias = [
+        {
+            codigo:'',
+            descripcion:'SIN FILTRO'
+        },
+        {
+            codigo:'NI',
+            descripcion:'NO INFORMA'
+        },
+        {
+            codigo:'AC',
+            descripcion:'ACTIVO'
+        },
+        {
+            codigo:'EX',
+            descripcion:'EXENTO'
+        }
+    ]
+
+    const FiltrosIntegranteSociedades = 
+        [
+            {
+                codigo:'',
+                descripcion:'SIN FILTRO'
+            },
+            {
+                codigo:'N',
+                descripcion:'NO INTEGRA SOCIEDADES'
+            },
+            {
+                codigo:'S',
+                descripcion:'SI INTEGRA SOCIEDADES'
+            }
+        ]
+
+    const FiltrosEmpleador = 
+    [
+        {
+            codigo:'',
+            descripcion:'SIN FILTRO'
+        },
+        {
+            codigo:'N',
+            descripcion:'NO ES EMPLEADOR'
+        },
+        {
+            codigo:'S',
+            descripcion:'SI ES EMPLEADOR'
+        }
+    ]
+
+
+    const fnCompletarSelector = (idSelector,vectorDeOpciones)=>
+        {
+
+            //console.log(vectorDeOpciones);
+
+            vectorDeOpciones.forEach(({codigo,descripcion}) => {
+
+                let opcionDinamica = document.createElement("option");
+
+                opcionDinamica.value = codigo;
+                opcionDinamica.textContent = descripcion;
+
+                console.log(codigo);
+                console.log(descripcion);
+
+                idSelector.appendChild(opcionDinamica);
+
+            })
+
+        }
+
+
 /*-----------------------------------------------------------------------*/
 /* (4to) Voy a crear un objeto literal que contenga el estado
 de la aplicación y para acceder a los atributos crearemos metodos
@@ -19,6 +97,9 @@ const estadoAplicacion =
         nombreIngresado:"",
         habilitarBusquedaProgresiva:false,
         filasVisiblesDeTabla:[],
+        filtrosImpGanancias:"",
+        filtrosIntegranteSociedades:"",
+        filtrosEmpleador:"",
 
         // este método permite recibir un valor nuevo y asignarlo al atributo CuitIngresado //
         setCuitIngresado(newValue)
@@ -42,7 +123,23 @@ const estadoAplicacion =
         setfilasVisiblesDeTabla(newValue)
         {
             this.filasVisiblesDeTabla = newValue;
+        },
+
+        setfiltrosImpGanancias(newValue)
+        {
+            this.filtrosImpGanancias = newValue;
+        },
+
+        setfiltrosIntegranteSociedades(newValue)
+        {
+            this.filtrosIntegranteSociedades = newValue;
+        },
+
+        setfiltrosEmpleador(newValue)
+        {
+            this.filtrosEmpleador = newValue;
         }
+        
     }
 
 
@@ -111,8 +208,6 @@ const estadoAplicacion =
             return filasDeTabla;
         }
 
-
-
     //(7.4) Realizamos una función que toma las filas de la tabla y las dibuja en el cuerpo de la tabla 
     const fnAgregarFilasATabla = (pFilas,pCuerpoDeTabla) =>
         {
@@ -140,6 +235,31 @@ const estadoAplicacion =
     }
 
 
+    // (12) Filtrar por Filtros Varios //
+    const fnFiltrarPorFiltrosVarios = (valorFiltro1, valorFiltro2, valorFiltro3) => 
+        {
+    
+            let vectorFiltrado = vectorContribuyentes.filter(element => 
+                {
+
+                    // Verificación para Impuesto a las Ganancias
+                    const cumpleFiltroGanancias = valorFiltro1 === "" || element.PadronAFIPImpGanancias === valorFiltro1;
+
+                    // Verificación para Integrante de Sociedades
+                    const cumpleFiltroSociedades = valorFiltro2 === "" || element.PadronAFIPIntegranteSoc === valorFiltro2;
+
+                    // Verificación para Empleador
+                    const cumpleFiltroEmpleador = valorFiltro3 === "" || element.PadronAFIPEmpleador === valorFiltro3;
+
+                    // Retornamos true solo si cumple todos los filtros que no están vacíos
+                    return cumpleFiltroGanancias && cumpleFiltroSociedades && cumpleFiltroEmpleador;
+                });
+
+        return vectorFiltrado;
+    }
+
+
+
 /*-------------------------------------------------------*/
 /* (2do:) Manejo del Evento load, principal de la página */
 /*--------------------------------------------------------*/
@@ -164,6 +284,17 @@ window.addEventListener("load",()=>
         // BLOQUE 03 - LISTADO DE CLIENTES
             const idBtnVerClientesSeleccionados = document.querySelector("#idBtnVerClientesSeleccionados");
             const idCuerpoTabla = document.querySelector("#idCuerpoTabla");
+
+        // BLOQUE 04 - FILTROS VARIOS 
+            const idSelectorImpuestoGanancias = document.querySelector("#idSelectorImpuestoGanancias");
+            const idSelectorIntegranteSociedades = document.querySelector("#idSelectorIntegranteSociedades");
+            const idSelectorEsEmpleador = document.querySelector("#idSelectorEsEmpleador");
+            const idBtnFiltrar = document.querySelector("#idBtnFiltrar");
+
+            fnCompletarSelector(idSelectorImpuestoGanancias,FiltrosImpGanancias);
+            fnCompletarSelector(idSelectorIntegranteSociedades,FiltrosIntegranteSociedades);
+            fnCompletarSelector(idSelectorEsEmpleador,FiltrosEmpleador);
+
 
         // visualizamos por consola los elementos/objetos //
         console.log(idCuitIngresado);
@@ -309,4 +440,65 @@ window.addEventListener("load",()=>
                         });
                 })
 
+
+        /*-------------------------------------------------------------------*/
+        /* (11mo) Filtrar Clientes - Bloque 04                               */
+        /*-------------------------------------------------------------------*/
+
+        idSelectorImpuestoGanancias.addEventListener("change",()=>
+            {
+                estadoAplicacion.setfiltrosImpGanancias(idSelectorImpuestoGanancias.value);
+
+                console.log(estadoAplicacion);
+
+            })
+
+        
+        idSelectorIntegranteSociedades.addEventListener("change",()=>{
+
+            estadoAplicacion.setfiltrosIntegranteSociedades(idSelectorIntegranteSociedades.value);
+
+            console.log(estadoAplicacion);
+
+        })
+
+        idSelectorEsEmpleador.addEventListener("change",()=>
+            {
+
+                estadoAplicacion.setfiltrosEmpleador(idSelectorEsEmpleador.value);
+
+                console.log(estadoAplicacion);
+
+            })
+
+        idBtnFiltrar.addEventListener("click",()=>
+            {
+  
+
+                //(7.1) Realizamos una función que busque y filtre en el vector los contribuyentes por estos tres atributos
+                const vectorFiltrado = fnFiltrarPorFiltrosVarios(estadoAplicacion.filtrosImpGanancias,estadoAplicacion.filtrosIntegranteSociedades,estadoAplicacion.filtrosEmpleador);
+
+                //(7.2) Realizamos una función que recibe como parametro un vector filtrado y genera las filas de la tabla 
+                const filasDeTabla = fnGenerarFilasDeTabla(vectorFiltrado);         
+                       
+                //(7.3) Guardo esas filas seleccionadas en el estado de la aplicación 
+                estadoAplicacion.setfilasVisiblesDeTabla(filasDeTabla);
+
+                //(7.4) Realizamos una función que toma las filas de la tabla y las dibuja en el cuerpo de la tabla 
+                fnAgregarFilasATabla(filasDeTabla,idCuerpoTabla);                  
+
+                /*
+                
+                   PadronAFIPId,
+                    PadronAFIPCUIT,
+                    PadronAFIPDenominacion,
+                    PadronAFIPImpGanancias,
+                    PadronAFIPImpIVA,
+                    PadronAFIPMonotributo,
+                    PadronAFIPIntegranteSoc,
+                    PadronAFIPEmpleador,
+                    PadronAFIPActividadMonotributo
+
+                */
+            })
     })
