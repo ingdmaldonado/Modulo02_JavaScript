@@ -1,0 +1,64 @@
+Realice una aplicación Web que permita registrar los alumnos 
+que se inscribirán en el año 2025 en el instituto superior general
+san martín. para eso sabemos que las carreras el instituto son
+las siguientes:
+
+Profesorado en Educación Tecnológica
+Profesorado en TIC (Tecnologías de la Información y la Comunicación)
+Técnico Superior en Desarrollo de Software
+Técnico Superior en Recursos Humanos
+Técnico Superior en Comercio Internacional
+Técnico Superior en Marketing
+Técnico Superior en Diseño y Construcción
+
+El sitio debe permitir 
+
+1) Ingresar el Apellido y Nombre del Interesado
+
+2) Dni del interesado
+
+3) Carrera Elegida (debe ser un selector dinámico)
+
+4) Ingrese Teléfono
+
+5) Defina el horario en el que desea ser llamado por Secretaria. (debe ser un selector dinámico).
+
+	Mañana de 9:00 a 13:00
+	Siesta de 15:00 a 17:00
+	Tarde/Noche: de 19: a 21:00
+
+
+/************************************************************************************************/
+
+const carrerasInstitutoSanMartin = [
+    {
+        carreraId: 1,
+        nombre: "Profesorado en Educación Tecnológica"
+    },
+    {
+        carreraId: 2,
+        nombre: "Profesorado en TIC (Tecnologías de la Información y la Comunicación)"
+    },
+    {
+        carreraId: 3,
+        nombre: "Técnico Superior en Desarrollo de Software"
+    },
+    {
+        carreraId: 4,
+        nombre: "Técnico Superior en Recursos Humanos"
+    },
+    {
+        carreraId: 5,
+        nombre: "Técnico Superior en Comercio Internacional"
+    },
+    {
+        carreraId: 6,
+        nombre: "Técnico Superior en Marketing"
+    },
+    {
+        carreraId: 7,
+        nombre: "Técnico Superior en Diseño y Construcción"
+    }
+];
+
+
