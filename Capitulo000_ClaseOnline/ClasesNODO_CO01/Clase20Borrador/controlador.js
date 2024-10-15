@@ -4,7 +4,7 @@ import {obtenerUniversidades} from "./apiUniversidades.js";
 import {obtenerImagenAstronomia} from "./apiNasa.js";
 import {obtenerImagenAleatoria,obtenerRazasDePerros} from "./apiDogs.js";
 import {obtenerPronosticoTiempo} from "./apiTiempo.js";
-import {obtenerPaisesYCapitales} from "./apiCapitalesDelMundo.js";
+import {obtenerPaisesYCapitales} from "./apiCapitalesMundo.js";
 
 
 window.addEventListener("load",()=>
@@ -15,7 +15,7 @@ window.addEventListener("load",()=>
         const idBtnNasa = document.querySelector("#idBtnNasa");
         const idBtnImagenPerritos = document.querySelector("#idBtnImagenPerritos");
         const idBtnRazas = document.querySelector("#idBtnRazas");
-        const idBtnCotizacionDolar = document.querySelector("#idBtnCotizacionDolar");
+        const idBtnPronostico = document.querySelector("#idBtnPronostico");
         const idBtnCapitalesDelMundo = document.querySelector("#idBtnCapitalesDelMundo");
 
         idBtnRecuperarPokemones.addEventListener("click",async ()=>
@@ -23,9 +23,15 @@ window.addEventListener("load",()=>
 
                 let resultado = await obtenerPokemones();
 
-                console.log(resultado);
+                if (resultado !== null)
+                {
+                    console.log(resultado);
 
-                console.log(resultado.results);
+                    console.log(resultado.results);
+
+                }
+
+              
                 
             })
 
@@ -62,7 +68,7 @@ window.addEventListener("load",()=>
 
         })
 
-        idBtnCotizacionDolar.addEventListener("click",async ()=>
+        idBtnPronostico.addEventListener("click",async ()=>
             {
                 let resultado = await obtenerPronosticoTiempo();
 

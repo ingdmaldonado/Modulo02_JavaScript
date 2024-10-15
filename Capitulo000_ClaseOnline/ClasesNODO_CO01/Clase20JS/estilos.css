@@ -1,0 +1,52 @@
+/* estilos.css */
+
+/* Estilo general para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los contenedores */
+.contenedor {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4a90e2; /* Enmarcado */
+    text-align: center;
+}
+
+/* Estilo para los botones */
+input[type="button"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para los botones */
+input[type="button"]:hover {
+    background-color: #357ABD;
+}
+
+/* Estilo para las imágenes si las agregas */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Resaltar el contenedor cuando se pasa el ratón */
+.contenedor:hover {
+    background-color: #e0f7fa;
+    border-color: #357ABD;
+}

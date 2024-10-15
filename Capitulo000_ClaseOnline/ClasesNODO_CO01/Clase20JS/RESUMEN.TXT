@@ -1,0 +1,82 @@
+
+1. Introducción a JavaScript
+    Qué es JavaScript: Definición, historia y evolución del lenguaje.
+
+    Primeros pasos:
+    Cómo incluir JavaScript en un HTML (<script> interno y externo).
+    Consola del navegador (uso básico de console.log para depuración).
+
+2. Tipos de Datos y Variables
+    Tipos de datos primitivos:
+
+    string, number, boolean, null, undefined, symbol (ES6).
+    Declaración de variables:
+    Uso de var, let, y const (diferencias y mejores prácticas).
+
+    Number()
+
+3. Operadores y Expresiones
+    Operadores aritméticos (+, -, *, /, %).
+    Operadores de asignación (=, +=, -=, etc.).
+    Operadores de comparación (==, ===, !=, !==, <, >, etc.).
+    Operadores lógicos (&&, ||, !).
+
+
+    Operador ternario (condicional condición ? valor1 : valor2).
+
+
+4. Estructuras de Control
+
+    Condicionales:
+    if, else if, else, anidación de condicionales.
+    Uso de switch para múltiples casos.
+
+    Bucles:
+        for, while, do...while.
+        Iteración con for...of y for...in (ES6).
+
+    
+    contadores
+    acumuladores
+    calculos de porcentaje
+
+    LOGICA DE PROGRAMACIÓN
+
+
+5. Funciones
+    Declaración y expresión de funciones:
+
+    const func1 = 
+
+    Funciones normales y funciones anónimas.
+        Uso de funciones flecha (=>) introducidas en ES6.
+        Parámetros y valores de retorno:
+        Parámetros predeterminados.
+    Funciones con retorno de valores (return).
+
+6. Arrays (Vectores)
+    Creación de arrays.
+    Métodos comunes de arrays:
+        .push(), .pop(), .shift(), .unshift(), .length, .slice(), .splice(), .indexOf(), .includes(), .join(), .concat().
+
+    Recorrer arrays con forEach, map, filter, reduce.
+        Spread operator para concatenar o clonar arrays.
+
+DOM
+
+DOM DINAMICO =>
+
+CLASES Y OBJETOS
+
+OBJETOS LITERALES
+
+EVENTOS
+
+LO SINCRONICO Y ASINCRONICO
+
+MODULOS => 
+
+TRY/CATCH
+
+rest operator y spread operator
+

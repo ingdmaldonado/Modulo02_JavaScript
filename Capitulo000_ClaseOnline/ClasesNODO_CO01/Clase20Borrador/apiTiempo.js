@@ -9,8 +9,6 @@ export async function obtenerPronosticoTiempo() {
         const response = await fetch(url);
         const data = await response.json();
 
-
-
         // Aquí puedes manipular los resultados, por ejemplo, mostrando los pronósticos
         data.forEach(pronostico => {
             console.log(`Ciudad: ${pronostico.name}`);

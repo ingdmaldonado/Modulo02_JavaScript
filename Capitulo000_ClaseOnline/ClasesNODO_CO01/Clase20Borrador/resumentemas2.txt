@@ -1,0 +1,117 @@
+
+Resumen de JavaScript - Curso Completo
+
+1. Introducción a JavaScript
+    Qué es JavaScript: Definición, historia y evolución del lenguaje.
+
+    Primeros pasos:
+    Cómo incluir JavaScript en un HTML (<script> interno y externo).
+    Consola del navegador (uso básico de console.log para depuración).
+
+2. Tipos de Datos y Variables
+    Tipos de datos primitivos:
+
+    string, number, boolean, null, undefined, symbol (ES6).
+    Declaración de variables:
+    Uso de var, let, y const (diferencias y mejores prácticas).
+
+    Conversiones de tipo:
+    parseInt(), parseFloat(), coerción de tipos automáticos.
+
+3. Operadores y Expresiones
+    Operadores aritméticos (+, -, *, /, %).
+    Operadores de asignación (=, +=, -=, etc.).
+    Operadores de comparación (==, ===, !=, !==, <, >, etc.).
+    Operadores lógicos (&&, ||, !).
+    Operador ternario (condicional condición ? valor1 : valor2).
+
+4. Estructuras de Control
+    Condicionales:
+    if, else if, else, anidación de condicionales.
+    Uso de switch para múltiples casos.
+
+    Bucles:
+        for, while, do...while.
+        Iteración con for...of y for...in (ES6).
+
+5. Funciones
+    Declaración y expresión de funciones:
+
+    Funciones normales y funciones anónimas.
+        Uso de funciones flecha (=>) introducidas en ES6.
+        Parámetros y valores de retorno:
+        Parámetros predeterminados.
+    Funciones con retorno de valores (return).
+
+6. Arrays (Vectores)
+    Creación de arrays.
+    Métodos comunes de arrays:
+        .push(), .pop(), .shift(), .unshift(), .length, .slice(), .splice(), .indexOf(), .includes(), .join(), .concat().
+
+    Recorrer arrays con forEach, map, filter, reduce.
+        Spread operator para concatenar o clonar arrays.
+
+    7. Objetos Literales
+        Creación de objetos: Definir propiedades y métodos.
+        Acceso y modificación de propiedades (objeto.propiedad o objeto['propiedad']).
+        Destructuring de objetos (ES6).
+        Clonación de objetos con el spread operator (ES6).
+
+    8. Programación Orientada a Objetos (POO)
+        Clases y objetos:
+            Creación de clases con class (ES6).
+            Uso de constructor y this.
+            Métodos dentro de las clases.
+            Herencia: Uso de extends para heredar de una clase base.
+            Encapsulamiento y métodos estáticos (static).
+
+    9. Manipulación del DOM (Document Object Model)
+        Selección de elementos del DOM:
+            getElementById(), getElementsByClassName(), querySelector(), querySelectorAll().
+        Manipulación del contenido:
+        innerText, innerHTML, textContent.
+
+        Modificación de atributos:
+            setAttribute(), getAttribute(), classList.add(), classList.remove().
+
+        Creación y eliminación de nodos:
+            createElement(), appendChild(), removeChild().
+
+        10. Eventos en JavaScript
+            Introducción a los eventos: click, submit, keydown, keyup, etc.
+            Manejo de eventos:
+            addEventListener().
+
+
+        11. Promesas y Operaciones Asíncronas
+            Uso de Promesas:
+        
+        Definición de promesas con new Promise().
+        Métodos then(), catch(), y finally().
+
+        Async/Await:
+        Uso de async y await para un código más legible.
+        Manejo de errores:
+        try, catch.
+
+        12. Fetch API y Consumo de APIs
+        
+        Introducción al uso de APIs.
+        Uso de Fetch API para hacer peticiones a servidores.
+        Manejo de respuestas en JSON.
+        Ejemplos con APIs públicas (sin API key).
+        Uso de async y await para peticiones asíncronas.
+
+        13. Módulos de JavaScript (ES6)
+        Importación y exportación de módulos:
+        export y import de variables, funciones y clases.
+
+        Modularización del código:
+        Separación del código en archivos más pequeños y reutilizables.
+
+        14. Manejo de Errores
+        Uso de try...catch:
+        Captura de excepciones y manejo de errores.
+
+
+
