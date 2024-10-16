@@ -1,0 +1,23 @@
+1) Presentación
+2) Creamos el primer proyecto
+3) Creamos documento HTML
+4) Incorporamos código JavaScript
+5) Lenguaje de programación débilmente tipado
+6) primeras instrucciones
+7) llaves representan bloque de código
+
+
+	alert();
+	promt();
+	console.log();
+	confirm();
+
+7) Declaración de variables.
+
+	forma de declaración de variables 
+		=> camelCase
+		=> upperCase
+
+	
+	
+
