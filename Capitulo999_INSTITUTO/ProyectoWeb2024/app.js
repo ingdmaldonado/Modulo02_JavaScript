@@ -1,7 +1,6 @@
 
     console.log("Esto será la aplicación web");
 
-
     /* importo la clase express */
         const ClaseExpress = require('express');
 
