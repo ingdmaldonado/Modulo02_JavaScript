@@ -1,4 +1,37 @@
 
+/*
+
+Ejercicio propuesto Nro. 13:
+	Realizar una función que pueda calcular y determinar la dosis de insulina recomendada para un paciente diabético. Basada en tres datos importantes para el cálculo.
+1)	Nivel de glucosa en sangre
+2)	Peso Corporal (en kilogramos)
+3)	Tipo de diabetes
+a.	Tipo 1
+b.	Tipo 2
+Para Tipo 1: El cálculo es el 50% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre, este último termino solamente si la glucosa es mayor a 180.
+Para Tipo 2: El cálculo es el 20% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre, este último termino solamente si la glucosa es mayor a  180.
+La función debe retornar la dosis de insulina recomendada y recibir como parámetros de entrada (argumentos) nivel de glucosa, peso corporal y tipo de diabetes.
+Nota: expresar las funciones de forma tradicional y como arrow functions
+Ejercicio propuesto Nro. 14:
+	Realizar una función que pueda obtener y calcular el IMC – índice de masa corporal sabiendo que la fórmula es la siguiente IMC = peso (kg) / altura (metros) al cuadrado
+ 
+
+Clasificación del IMC
+La Organización Mundial de la Salud (OMS) clasifica el IMC en las siguientes categorías:
+
+Bajo peso: IMC menor de 18.5
+Peso normal: IMC entre 18.5 y 24.9
+Sobrepeso: IMC entre 25 y 29.9
+Obesidad grado I: IMC entre 30 y 34.9
+Obesidad grado II: IMC entre 35 y 39.9
+Obesidad grado III (Obesidad mórbida): IMC de 40 o más
+	La función debe recibir como parámetros la altura (en metros) y el peso (en kilogramos) y calcular el IMC, devolverlo y además mostrar los carteles de (bajo peso, peso normal, sobre peso, etc) según el cálculo.
+Nota: expresar las funciones de forma tradicional y como arrow function.
+
+
+*/
+
+
 /* Función que se encargará de calcular la dosis de Insulina
 para un paciente diabético. recibe como parametro tres valores
 que son, el nivel de glucosa en sangre, el peso corporal y el tipo
