@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Calculadora de Consumo Calorico Diario</h1>
+    <br>
+    <hr>
+    <div class="contenedor1">
+        <h4 for="idEdad">Ingresar su Edad</h4>
+        <input type="number" placeholder="Ingrese su Edad" id="idEdad">
+    </div>
+    <br>    
+    <hr>
+    <div class="contenedor2">
+        <h4>(02) Indique su sexo</h4>
+        <label>Varon</label>
+        <input type="radio" value="Varon" id="idVaron" name="sexo">
+        <label>Mujer</label>
+        <input type="radio" value="Mujer" id="idMujer" name="sexo">
+    </div>
+    <br>
+    <hr>
+    <div class="contenedor3">
+        <h4>(03) Indique su actividad física</h4>
+        <select id="idSelectorActividad">
+            <option value="1">Sedentario</option>
+            <option value="2">Moderadamente Activo</option>
+            <option value="3">Activo</option>
+            <option value="4">Muy Activo</option>
+        </select>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h4>(04) Indique sus hábitos vinculados a la comida</h4>
+        <br>
+        <br>
+        <label for="idConsumeVegetales">Consume regularmente Vegetales</label>
+        <input type="checkbox" id="idConsumeVegetales">
+        <br>
+        <br>
+        <label for="idConsumeCarbohidratos">Consume regularmente Carbohidratos</label>        
+        <input type="checkbox" id="idConsumeCarbohidratos">
+        <br>
+        <br>
+        <label for="idConsumeProteinas">Consume regularmente Proteinas</label>
+        <input type="checkbox" id="idConsumeProteinas">
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h4>(05) Calcular Calorias</h4>
+        <input type="button" value="Calcular Calorias Diarias" id="idBtnCalcular">
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h1 id="idResultado">Calorias Diarias</h1>
+    </div>
+    <script src="controlador.js"></script>
+</body>
+</html>
