@@ -1,0 +1,12 @@
+
+body
+{
+    background-color: skyblue;
+}
+
+label,input,h3
+{
+    display: block;
+    margin: 5px;
+    width: 80%;
+}

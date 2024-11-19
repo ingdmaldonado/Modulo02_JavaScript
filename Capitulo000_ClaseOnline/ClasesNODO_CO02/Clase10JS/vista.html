@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIVEL DE INSULINA</title>
+</head>
+<body>
+    <h1>NIVEL DE INSULINA EN SANGRE</h1>
+    <div>
+        <label>Indique su tipo de Diabetes</label>
+        <br>
+        <select id="idSelTipoDeDiabetes">
+            <option value="1">TIPO DE DIABETES 1</option>
+            <option value="2">TIPO DE DIABETES 2</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="idPesoCorporal">Ingrese su peso Corporal en KG</label>
+        <br>
+        <input type="number" placeholder="Ingrese su peso corporal en KG." id="idPesoCorporal">
+    </div>
+    <br>
+    <div>
+        <label for="idNivelDeGlucosa">Indique su nivel de Glucosa</label>
+        <br>
+        <input type="number" placeholder="Ingrese su nivel de Glucosa" id="idNivelDeGlucosa">
+    </div>
+    <div>
+        <input type="button" value="Calcular Nivel de INSULINA" id="idBtnCalcular">
+        <h4 id="idResultado">Resultado:</h4>
+    </div>
+    
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <div>
+        <h1>addEventListener</h1>
+        <input type="button" value="Soy el Boton1" id="idBtn1">
+        <input type="button" value="Soy el Boton2" id="idBtn2">
+    </div>
+    <div>
+        <label for="idPaisDeOrigen">Seleccione el PAIS</label>
+        <select id="idPaisDeOrigen">
+            <option value="0"></option>
+            <option value="1">ARGENTINA</option>
+            <option value="2">BOLIVIA</option>
+            <option value="3">ITALIA</option>
+            <option value="4">BRASIL</option>
+            <option value="5">PARAGUAY</option>
+        </select>
+        <input type="button" value="Saber que PAIS esta elegido" id="idBtnPaisElegido">
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div>
+        <input type="number" placeholder="Ingrese el Valor del Producto" id="idPrecioProducto">
+        <br>
+        <label>Paga el Seguro Extendido ?. 5%</label>
+        <input type="checkbox" id="idPagaSeguro">
+        <br>
+        <label>Paga el Envio - 2.000,00</label>
+        <input type="checkbox" id="idPagaEnvio">
+        <br>
+        <input type="button" value="Calcular" id="idBtnCalcular">
+        <br>
+        <h4 id="idCostototal">Costo Total</h4>
+    </div>
+    
+    <script src="vista02.js"></script>
+</body>
+</html>

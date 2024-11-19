@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSULINA RECOMENDADA</title>
+</head>
+<body>
+    <h1>NIVEL DE INSULINA REDOMENDADA</h1>
+
+    <div>
+        <label for="idSelTipoDiabetes">SELECCIONE TIPO DE DIABETES DIAGNOSTICADA</label>
+        <br>
+        <select id="idSelTipoDiabetes">
+            <option value="1">DIABETES TIPO 1</option>
+            <option value="2">DIABETES TIPO 2</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="idNivelDeGlucosa">INDIQUE EL NIVEL DE GLUCOSA EN SANGRE</label>
+        <br>
+        <input type="number" id="idNivelDeGlucosa">
+    </div>
+    <br>
+    <div>
+        <label for="idPesoCorporal">INDIQUE PESO CORPORAL</label>
+        <br>
+        <input type="number" id="idPesoCorporal">
+    </div>
+    <div>
+        <input type="button" value="Calcular Nivel Insulina" id="idBtnCalcular">
+    </div>
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>
