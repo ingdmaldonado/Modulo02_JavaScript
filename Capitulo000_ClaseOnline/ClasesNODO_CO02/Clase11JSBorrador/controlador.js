@@ -1,108 +1,6 @@
 
-
-/* esta función recibe como parametro una edad y 
-determina si está dentro de un rango válido */
-
-const fnValidarEdad = (edad)=>
-    {
-        let edadValida = false;
-
-       // edad > 0 && edad < 100 ? edadValida=true:edadValida=false;
-
-        return (edad > 0 && edad < 100 ? true:false);
-
-      //  return edadValida;
-
-    }
-
-
-/* esta función recibe como parametro la edad, una variable booleana
-que determina si es varon ó mujer y en función de ello devuelve las
-calorías base */
-
-const fnCaloriasBase = (edad,varon,mujer)=>
-{
-    let caloriasBase = 0;
-    
-    if(varon)
-    {
-        caloriasBase = 10 * edad;
-    }
-    if(mujer)
-    {
-        caloriasBase = 8 * edad;
-    }
-
-    return (caloriasBase);
-
-}
-
-/* esta función recibe como parametros las calorias base y luego
-el tipo de actividad, en función del tipo de actividad determina
-las calorías adicionales que el cuerpo necesita.*/
-
-
-const fnCaloriasPorActividadFisica = (caloriasBase,tipoDeActividad)=>
-    {
-        let caloriasPorActividadFisica = 0;
-
-        switch (tipoDeActividad) 
-        {
-            case 1:
-                {
-                    caloriasPorActividadFisica = 0;
-                    break;
-
-                }
-            case 2:
-                {
-                    caloriasPorActividadFisica = caloriasBase * 10/100;
-                    break;
-
-                }
-            case 3:
-                {
-                    caloriasPorActividadFisica = caloriasBase * 20/100;
-                    break;                    
-                }
-            case 4:
-                {
-                    caloriasPorActividadFisica = caloriasBase * 30/100;
-                    break;               
-                }
-            default:
-                {   
-                    caloriasPorActividadFisica = 0;
-                }
-        }
-
-        return (caloriasPorActividadFisica);
-
-    }
-
-
-/* esta función calcularía las calorias adicionales, dependiendo
-si es necesario acumular esas calorias */
-
-const fnCaloriasAdicionales = (sumaCaloriasAdicionales)=>
-    {
-        if(sumaCaloriasAdicionales)
-        {
-            return 50;
-        }
-        return 0;
-    }
-
-/* esta función calcularía las calorías TOTALES que una
-persona necesita, en función de la edad,sexo, actividad física y 
-alimentación adicional 
-*/
-
-const fnCaloriasTotales = ()=>
-    {
-        
-    }
-
+import {fnValidarEdad} from "./validaciones.js";
+import {fnCaloriasBase,fnCaloriasPorActividadFisica,fnCaloriasAdicionales} from "./modelo.js";
 
 
 window.addEventListener("load",()=>
@@ -160,6 +58,23 @@ window.addEventListener("load",()=>
             if(fnValidarEdad(edad))
             {
                 console.log("por aqui la edad es valida");
+
+                let caloriasBase = 0;
+                caloriasBase = fnCaloriasBase(edad,varon,mujer);
+
+                let caloriasPorActividadFisica = fnCaloriasPorActividadFisica(caloriasBase,actividadFisica);
+
+                let caloriasAdicionalesConsumoVegetariano = fnCaloriasAdicionales(consumeVegetales);
+                let caloriasAdicionalesConsumeCarbohidratos = fnCaloriasAdicionales(consumeCarbohidratos);
+                let caloriasAdicionalesConsumeProteinas = fnCaloriasAdicionales(consumeProteinas);
+
+                console.log(caloriasBase);
+                console.log(caloriasPorActividadFisica);
+
+                console.log(caloriasAdicionalesConsumoVegetariano);
+                console.log(caloriasAdicionalesConsumeCarbohidratos);
+                console.log(caloriasAdicionalesConsumeProteinas);
+
 
 
 

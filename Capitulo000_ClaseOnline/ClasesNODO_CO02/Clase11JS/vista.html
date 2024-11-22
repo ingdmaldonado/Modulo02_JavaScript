@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Calorias</title>
+</head>
+<body>
+    <h1>Calculadora de Calorias</h1>
+    <div>
+        <h3>Calculo Base</h3>
+        <label for="idEdad">Ingrese la Edad</label>
+        <br>
+        <input type="number" id="idEdad" placeholder="Ingrese su edad">
+        <br>
+        <label>Mujer</label>
+        <input type="radio" id="idMujer" name="sexo">
+        
+        <label>Varon</label>
+        <input type="radio" id="idVaron" name="sexo">
+    </div>
+
+    <div>
+        <h3>Indique el Tipo de Actividad Fisica</h3>
+        <select id="idActividadFisica">
+            <option value="1">SEDENTARIO</option>
+            <option value="2">MODERADAMENTE ACTIVO</option>
+            <option value="3">ACTIVO</option>
+            <option value="4">MUY ACTIVO</option>
+        </select>
+    </div>
+
+
+    <div>
+        <h3>Indique sus consumos alimenticios normales</h3>
+        <label for="idVegetales">Consume Vegetales ? </label>
+        <input type="checkbox" id="idVegetales">
+        <br>
+        <label for="idCarbohidratos">Consume Carbohidratos ?</label>
+        <input type="checkbox" id="idCarbohidratos">
+        <br>
+        <label for="idProteinas">Consume Proteinas ?</label>
+        <input type="checkbox" id="idProteinas">
+    </div>
+
+    
+    <div>
+        <h3>Resultados Parciales</h3>
+        <input type="button" value="Calcular" id="idBtnCalcular">
+        <h4 id="idResultado">Calorias Base</h4>
+    </div>
+    
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>
