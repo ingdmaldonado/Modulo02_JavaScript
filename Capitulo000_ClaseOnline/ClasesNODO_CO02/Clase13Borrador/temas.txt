@@ -1,0 +1,67 @@
+
+
+1) ARRAYs
+
+    LOS QUE VIMOS:
+        - 
+    
+        - forEach
+        - filter
+        - map
+        - reduce
+
+
+4) PANTALLAS MODALES => 
+
+1) POO => ejemplo (listoooooooooooooooooooo !!!.)
+    
+    clase => nueva estructura de datos
+
+            objetos, atributos, constructor, metodos get y set
+
+            metodos de una clase
+                (publicos, estaticos, privados)
+
+            abstracción
+
+            encapsulación
+
+            roles de un programador: constructor o consumidor de clases
+
+
+2) OBJETOS LITERALES (listo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+
+
+3) ARRAYs de OBJETOS LITERALES (listooooooooooooo !!!)
+
+4) DESTRUCTURING (listo !!!!!!!!!!!!!)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+5) ESTADO DE LA APLICACIÓN
+
+6) MODULOS - BIBLIOTECAS
+
+7) MANIPULACIÓN DINÁMICA DEL DOM
+
+8) FUNCIONES COMO ENTIDADES DE PRIMERA clase
+
+9) ASINCRONISMO
+
+10) APIs + FETCH + JSON + TRY/CATCH
+
+11) PERSISTENCIA EN EL NAVEGADOR
+    * localStorage
+    * sessionStorage
+    * cookies
+    * indexDB
+
+    
+
+
+
+
+
