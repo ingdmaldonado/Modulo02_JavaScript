@@ -59,9 +59,9 @@ window.addEventListener("load",()=>
             estudiantes: [
                 {
                     id: 1,
-                    nombre: "Ana Rodríguez",
+                    nombre: "Ana Espeche",
                     edad: 25,
-                    correo: "ana.rodriguez@example.com",
+                    correo: "ana.espeche@example.com",
                     modulosCursados: [
                         {
                             moduloId: 1,
