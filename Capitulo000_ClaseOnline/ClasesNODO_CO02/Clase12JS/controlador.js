@@ -11,7 +11,7 @@
 
 */
 
-
+const vectorDeNotas = [10,11,14,17,15,19,18,14,22,80];
 
 window.addEventListener("load",()=>
     {
@@ -25,6 +25,7 @@ window.addEventListener("load",()=>
         const idBtn05_QuitarDeADentro = document.querySelector("#idBtn05_QuitarDeADentro");
         const idBtn06_Particularidades = document.querySelector("#idBtn06_Particularidades");
         const idBtn07_RecorridoFOR = document.querySelector("#idBtn07_RecorridoFOR");
+        const idBtn08_ForEach = document.querySelector("#idBtn08_ForEach");
 
         console.log(idBtn01_Mostrar);
 
@@ -182,7 +183,7 @@ window.addEventListener("load",()=>
     idBtn07_RecorridoFOR.addEventListener("click",()=>
         {
 
-            const vectorDeNotas = [10,11,14,17,15,19,18,14,22,80];
+            
 
             console.log(vectorDeNotas);
 
@@ -203,6 +204,16 @@ window.addEventListener("load",()=>
                 })
 
             
+
+        })
+
+    idBtn08_ForEach.addEventListener("click",()=>
+        {
+
+            vectorDeNotas.forEach((element,indice)=>
+                {
+                    console.log(element,indice);
+                })
 
         })
 

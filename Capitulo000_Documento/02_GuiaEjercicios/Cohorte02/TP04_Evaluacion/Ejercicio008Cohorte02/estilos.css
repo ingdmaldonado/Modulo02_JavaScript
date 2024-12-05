@@ -1,0 +1,10 @@
+
+/* Estilo del canvas para el gráfico */
+#graficoCircular1 {
+    width: 100%;
+    max-width: 600px; /* Máximo ancho del gráfico */
+    height: 300px;    /* Altura fija del gráfico */
+    margin: 0 auto;   /* Centrar el canvas horizontalmente */
+    display: block;   /* Asegurar que se comporte como un bloque */
+  }
+  

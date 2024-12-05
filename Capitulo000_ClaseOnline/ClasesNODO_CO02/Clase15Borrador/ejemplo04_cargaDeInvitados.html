@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVITADOS PARA UNA FIESTA</title>
+    <link rel="stylesheet" href="ejemplo04_cargaDeInvitados.css">
+</head>
+<body>
+    <div>
+        <h1>LISTA DE INVITADOS PARA EL ASADO DEL NODO</h1>
+    </div>
+    <div>
+        <h3>COMPLETAR DATOS</h3>
+        <label for="idApellidoyNombre">Cargue Apellido y Nombre</label>
+        <br>
+        <input type="text" placeholder="cargue aquí apellido y nombre" id="idApellidoyNombre">
+        <br>
+        <label for="idTelefono">Cargue su Telefono</label>
+        <br>
+        <input type="text" placeholder="cargue telefono" id="idTelefono">
+        <br>
+        <input type="button" value="Aceptar" id="idBtnAceptar">
+    </div>
+    <div>
+        <h3>LISTADO DE INVITADOS</h3>
+        <table>
+            <thead>
+                <th>
+                    APELLIDO Y NOMBRE
+                </th>
+                <th>
+                    TELEFONO
+                </th>
+                <th>
+                    CONFIRMADO
+                </th>
+            </thead>
+            <tbody id="idCuerpoDeLaTabla">
+                <tr>
+                    <td>
+                        MALDONADO DANIEL
+                    </td>
+                    <td>
+                        3834-123456
+                    </td>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="button" id="idBtnEliminarLosNoConfirmados" value="Eliminar los No Confirmados">
+    </div>
+    <script src="ejemplo04_cargaDeInvitados.js"></script>
+</body>
+</html>
