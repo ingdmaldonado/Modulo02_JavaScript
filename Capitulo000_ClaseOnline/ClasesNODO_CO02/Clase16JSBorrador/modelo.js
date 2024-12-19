@@ -1,8 +1,8 @@
 
 export const vehiculos = [
     {
-        vehiculoId: 0,
-        vehiculoNombre: "Seleccione Vehiculo",
+        vehiculoId:"",
+        vehiculoNombre: "",
         vehiculoPrecio: 0,
         vehiculoEntregaMinima:0,
         vehiculoImagenes: [        

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas Padron Electoral</title>
+    <link rel="stylesheet" href="consultapadron.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado y formulario -->
+        <div class="form-container">
+            <h2>Consultar por DNI</h2>
+            <div class="form">
+                <label for="idDniBusqueda">Ingrese DNI</label>
+                <input type="number" placeholder="Ingrese DNI" id="idDniBusqueda">
+                <input type="button" value="Buscar" id="idBtnBuscarPorDni">
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Consultar por Apellido y nombre</h2>
+            <div class="form">
+                <label>Ingrese Apellido y Nombre</label>
+                <input type="text" placeholder="Ingrese Apellido y Nombre" id="idApellidoYNombre">
+                <input type="button" value="Buscar" id="idBtnBuscarPorApellidoYNombre">
+            </div>
+        </div>
+
+        <!-- Tabla de resultados -->
+        <div class="table-container">
+            <h2>Resultados de la búsqueda</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>DNI</th>
+                        <th>APELLIDOS</th>
+                        <th>SELECCIONAR</th>
+                        <th>VER</th>
+                    </tr>
+                </thead>
+                <tbody id="idCuerpoDeTabla">
+                    <tr>
+                        <td>1</td>
+                        <td>24010663</td>
+                        <td>MESSI LIONEL ANDRES</td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="button" value="Ver Datos"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Fondo semi-transparente para el popup -->
+        <div id="popupOverlay"></div>
+
+        <div class="form-container" id="idPopup">
+            <h2>Datos Escuela</h2>
+            <label id="idNOMBRECIRCUITO">NOMBRECIRCUITO</label>
+            <br>
+            <label id="idNOMBREMUNICIPIO">NOMBREMUNICIPIO</label>
+            <br>
+            <label id="idMESA">MESA</label>
+            <br>
+            <label id="idORDEN">ORDEN</label>
+            <br>
+            <label id="idESCUELA">ESCUELA</label>
+            <br>
+            <label id="idDIRECCIONESCUELA"></label>
+        </div>
+
+    </div>
+  
+    <script src="consultapadron.js" type="module"></script>
+</body>
+</html>

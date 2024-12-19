@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Nro. 16</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>TU CONCESIONARIA ONLINE - CarOne.com</h1>
+
+    <div>
+        <h3>Seleccione Vehiculo de su Gusto</h3>
+        <select id="idSelectorDinamico">
+        </select>
+    </div>
+
+   
+
+    <div>
+        <h3>Imagenes Disponibles</h3>
+        <div id="idImagenes">
+            <img src="">
+            <img>
+            <img>
+
+        </div>
+    </div>    
+
+    <div>
+        <label for="idEstoyInteresado">Estoy interesado</label>
+        <input type="checkbox" id="idEstoyInteresado">
+    </div>
+
+    <!-- Fondo semi-transparente -->
+    <div id="popupBackground">
+
+    </div>
+
+    <!-- Popup para registro -->
+    <div id="idRegistracion">
+        <input type="text" placeholder="Déjanos tu teléfono" id="idTelefono">
+        <input type="text" placeholder="Correo electrónico" id="idEmail">        
+        <input type="button" value="Registrarme" id="idBtnRegistrarme">
+        <input type="button" value="Cerrar" id="idBtnCerrar">
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <input type="button" value="Visualizar Clientes Registrados" id="idBtnVerRegistrados">
+    <input type="button" value="Limpiar Cookies" id="idBtnBlanquearCookies">
+
+    <div>
+        <table>
+            <thead>
+                <th>telefono</th>
+                <th>email</th>
+            </thead>
+            <tbody id="idCuerpoDeTabla">
+                <tr>
+                    <td>3834 402862</td>
+                    <td>ingdmaldonado@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

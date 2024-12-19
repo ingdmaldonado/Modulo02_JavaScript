@@ -11,6 +11,7 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 40px;
 }
 
 /* Contenedor principal */
@@ -82,20 +83,31 @@ select {
     z-index: 1000;
 }
 
-/* Botón dentro del popup */
-#idRegistracion input[type="button"] {
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+/* Botones generales */
+input[type="button"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Azul coherente con el diseño general */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
-#idRegistracion input[type="button"]:hover {
-    background-color: #0056b3;
+input[type="button"]:hover {
+    background-color: #0056b3; /* Azul más oscuro para hover */
+}
+
+/* Botón "Limpiar Cookies" */
+#idBtnBlanquearCookies {
+    background-color: #007bff; /* Igual que el resto de los botones */
+}
+
+#idBtnBlanquearCookies:hover {
+    background-color: #0056b3; /* Igual que el hover de los otros botones */
 }
 
 /* Estilo de los campos del formulario */
@@ -107,4 +119,44 @@ select {
     border-radius: 5px;
     outline: none;
     font-size: 14px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
