@@ -1,9 +1,14 @@
 
 import {obtenerPokemones} from "./apiPokemon.js";
+
 import {obtenerUniversidades} from "./apiUniversidades.js";
+
 import {obtenerImagenAstronomia} from "./apiNasa.js";
+
 import {obtenerImagenAleatoria,obtenerRazasDePerros} from "./apiDogs.js";
+
 import {obtenerPronosticoTiempo} from "./apiTiempo.js";
+
 import {obtenerPaisesYCapitales} from "./apiCapitalesMundo.js";
 
 
