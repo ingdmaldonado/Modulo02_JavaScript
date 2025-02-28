@@ -1,0 +1,44 @@
+Realizar una interfaz con HTML5 y código JavaScript
+que permita registrar y almacenar productos de 
+un supermercado. los datos de los produto son
+
+- codigo de barras (longitud mayor a 5)
+- descripción del producto
+- precio
+- tipo de producto (este dato lo debe elegir
+de un selector, que se debe cargar desde un vector
+donde se almacenarán todos los tipos disponibles)
+
+BEBIDAS GASEOSAS
+BEBIDAS LIGHT
+FIAMBRES
+QUESOS
+ALIMENTOS PERECEDEROS
+CARNES
+VERDURAS
+
+1) Crear la interfaz HTML
+2) Crear el Controlador
+3) Cargar el selector con elementos dinámicos a partir de un
+vector que tendrá los tipos de productos a cargar
+4) Vector que contiene los tipos de productos disponibles
+
+	const tiposDeProductos = [
+    		{ codigo: 1, nombre: "BEBIDAS GASEOSAS" },
+    		{ codigo: 2, nombre: "BEBIDAS LIGHT" },
+    		{ codigo: 3, nombre: "FIAMBRES" },
+    		{ codigo: 4, nombre: "QUESOS" },
+    		{ codigo: 5, nombre: "ALIMENTOS PERECEDEROS" },
+    		{ codigo: 6, nombre: "CARNES" },
+    		{ codigo: 7, nombre: "VERDURAS" }
+	];
+5) Realizar la carga de los productos con los datos ingresados
+6) Validar que ingrese un código de barras válido, 
+es decir longitud mayor a 10.
+7) Validar que ingrese una descripción válida. Que no esté
+vacía.
+8) A medida que se vayan cargando los productos debe ir
+mostrandolos en una tabla HTML de forma dinámica.
+
+
+

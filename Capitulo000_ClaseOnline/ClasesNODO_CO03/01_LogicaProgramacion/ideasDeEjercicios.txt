@@ -1,0 +1,223 @@
+
+
+
+Realizar una función que reciba como parámetro 
+una cadena de texto y a partir de ella devuelva la cantidad de vocales que tiene la misma.
+
+
+Realizar una función que reciba como parámetro una cadena de texto y a partir de ella devuelva la cantidad de letras “a” que tiene. Luego (INVOCAR Ó LLAMAR) esa función desde el programa PRINCIPAL.
+
+
+
+•	Enunciado: Una agencia de viajes quiere crear un planificador que permita a los usuarios seleccionar su destino, ingresar la cantidad de personas que viajan, y calcular el costo total del viaje. Además, el usuario podrá seleccionar entre diferentes planes de viaje que incluyen distintos servicios.
+•	Requisitos:
+1.	El usuario selecciona un destino de viaje. Los precios expuestos corresponden a un servicio estándar, en caso de habilitar la casilla de verificación donde solicita un servicio “premium” el costo por persona, se incrementa en un 25%.
+	ESPAÑA – U$$ 2.000,00 DOLARES POR PERSONA
+	PORTUGAL - U$$ 2.000,00 DOLARES POR PERSONA 
+	BRASIL – U$$ 1.200,00 DOLARES POR PERSONA
+2.	Ingresar la cantidad de personas. (mínimo 1, máximo 4 personas).
+3.	Calcular y mostrar el costo total del viaje. En caso que la casilla de verificación de servicio “Premium” este activa deberá mostrar el costo total.
+4.	Permitir al usuario guardar el plan de viaje y sus datos para que la agencia se contacte con él. Pedir nombre y teléfono nada más. (validar que haya ingresado los datos antes de aceptar).
+
+
+----------------------------------------------------------------------------
+
+Una prestigiosa concesionaria de autos lanza una promoción muy importante buscando como objetivo promover la venta de vehículos cero kilómetros que tiene en Stock.
+	para ello contrata un programador Web Full Stack con la intención que mediante una aplicación web permita a los interesados simular la operatoria de compra y de esta manera no saturar sus oficinas con personas interesadas en la "operatoria".
+
+	El dueño de la concesionaria plantea el siguiente esquema: El usuario podrá elegir tres modelos de vehículo que tenemos disponibles.
+
+	Vehiculo1 => con un precio de venta de 25.000.000
+	Vehiculo2 => con un precio de venta de 29.000.000
+	Vehiculo3 => con un precio de venta de 35.000.000
+
+	El Gerente nos da las siguientes indicaciones
+
+1)	deberá elegir el vehículo en el cual está interesado
+2)	podrá ingresar el importe a entregar de contado, que siempre, deberá ser mayor al 50% del valor del vehículo elegido y lógicamente menor al valor total del vehículo.
+3ro) entendemos que el resto (diferencia será financiada bajo la siguiente modalidad).
+
+	Podrá elegir entre los siguientes esquemas de financiación
+
+a)	el total a financiar con un 10% en 24 cuotas
+b)	el total a financiar con un 20% en 48 cuotas
+c)	el total a financiar con un 50% en 60 cuotas.
+
+Si el cliente decide recibir mayor información por parte de nuestros vendedores, que tenga un lugar donde pueda colocar sus datos personales, (apellido, nombre), teléfonos, correo electrónico y nos comunicaremos, es decir un representante estaría en condiciones de comunicarse con, siempre y cuando active la casilla de “aprobación de comunicarnos vía privada”.
+
+Consideraciones:
+-	debe crear la interfaz HTML (vista)
+-	debe asignar CSS a gusto 
+-	debe crear y vincular a la vista su controlador.
+-	debe crear una función en forma de arrow function que reciba como parámetro un texto que en este caso sería el mes ingresado (en formato texto)  la función debe evaluar si el texto ingresado coincide con alguno de los doce meses del año, y en caso afirmativo retornar true ó false.
+-	al presionar el botón “Validar ” deberá capturar el valor ingresado y pasarlo como parámetro a la función que está invocando, esa función le retornará true o false y en función de esto deberá decir si el mes es correcto o no.
+
+-------------------------------------------------------------------------------
+
+Realizar una aplicación que permita calcular a partir de un importe base el impuesto IVA correspondiente según las siguientes especificaciones. A partir del importe base y del tipo de artículo a facturar será su impuesto correspondiente según el siguiente esquema.
+Tipo 1: 21%: Es el alícuota general aplicable a la mayoría de los bienes y servicios.
+Tipo 2: 27%: Se aplica a ciertos servicios públicos como energía eléctrica y gas natural
+Tipo 3: 10.5%: Se aplica a bienes y servicios específicos
+	incluyendo:
+		Venta de ciertos alimentos básicos (frutas, verduras, carnes, etc.).
+		Prestación de servicios médicos y paramédicos.
+		Obras de construcción de viviendas sociales.
+		Venta de ciertos medicamentos.
+		Productos tecnológicos.
+Tipo 4: 5%: Aplica a ciertos productos agrícolas y ganaderos, como frutas, 
+	hortalizas y carnes en algunos casos específicos.
+Tipo 5: 0% Exentos
+Consideraciones:
+-	debe crear la interfaz HTML (vista)
+-	debe asignar CSS a gusto 
+-	debe crear y vincular a la vista su controlador.
+-	debe crear una función en forma de arrow function que reciba como parámetro el importe base y el tipo de articulo a facturar y devuelva el importe IVA de la misma
+-	debe mostrar al presionar el botón “calcular” los tres importes.
+o	Importe base ingresado
+o	Importe IVA calculado
+o	Importe total = base ingresado + IVA
+
+
+-----------------------------------------------------------------------------------
+
+Ejercicio Nro. 03:
+	
+Una Importante empresa de captura, potabilización y distribución de agua corriente requiere contratar un programador que automatice el funcionamiento de una bomba de agua que alimente una cisterna. Para ello se plantea el siguiente escenario donde la empresa nos comenta.
+Disponemos de una reserva de agua de 50 mil metros cúbicos a nivel superficial y contamos con una reserva en elevación de agua de 50 mil metros cúbicos, a partir de ahora la llamaremos Tanque Inferior y Tanque Superior, ambos de la misma capacidad. La idea es que el programador mediante sensores que la empresa posee y ya se encuentran colocados e instalados, pueda activar o apagar la bomba dependiendo de los estados que nos indican los sensores colocados en ambas reservas de agua.
+	Los sensores de cada tanque pueden detectar únicamente tres estados que pasamos a describir.
+1-	Completo
+2-	Al 50%
+3-	Vacío
+
+	El Ingeniero Hidráulico de la Empresa nos dice que a partir de la señal obtenida de ambos sensores el Sistema debería encender la bomba, apagar la bomba y para ello hay que analizar los casos que se pueden detectar en ambos tanques.
+	Por ejemplo:
+-	Si el tanque inferior no tiene agua se debe “apagar la bomba”
+-	Si el tanque superior está completo se debe “apagar la bomba”
+-	Si el tanque inferior tiene algo de agua, ya sea (al 50% ó esté completo) y al tanque superior le falte agua (vació ó al 50%) la bomba se debe activar.
+El programa de JavaScript debe solicitar que se ingrese los tres posibles estados de cada tanque, solamente tres estados, puede hacer que esos estados estén en formato numérico o con un formato string. Luego con condicionales dependiendo de la combinación de estados deberá mostrar un mensaje por consola diciendo “Apagar Bomba”, “Encender Bomba”.
+
+---------------------------------------------------------------------------------------
+
+La Empresa “Piscinas Libres de Mantenimiento S.A.” se dedica a la comercialización de un producto “Revolucionario” para el hogar. Está fabricando un dispositivo denominado “dosificador automático para tu piscina” que se podrá instalar en cualquier piscina de hogar. Este dispositivo mediante sensores determinará los productos y la dosis justa de los productos a colocar en la pileta, haciendo que únicamente el propietario de la piscina deba “recargar” los productos en los compartimentos logrando la máxima eficiencia, ahorro y trabajo.
+	El dispositivo cuenta con cinco recipientes, donde se debe reponer
+1-	Cloro líquido
+2-	Líquido para disminuir PH -
+3-	Líquido para aumentar PH +
+4-	Líquido para Algas
+5-	Líquido decantador
+El dueño de la firma nos informa, lógicamente que la cantidad de producto a colocar dependerá de la cantidad de agua total que tiene la piscina, ese es un dato que variará en cada piscina y que el usuario que compre nuestro producto deberá ingresar.
+El programa debe solicitar ingresar la cantidad de litros de Agua, siendo la cantidad mínima 22.000 mil litros de agua y como máximo 250.000 mil litros de agua.
+	Los sensores de la piscina pueden devolver únicamente tres estados que Ud. Deberá considerar como variables string para que el programa sea más legible. Es decir, debería ingresar los posibles estados de los sensores y debe calcular la dosificación de cada producto en función de la siguiente tabla.
+
+Nota1: solamente se dosifica cuando alguno de los sensores está en estado faltante  
+Nota2: cuando PH- ó PH+ deban ser repuestos (es decir, estén en estado faltante cualquiera de ellos, ó uno ó el otro ó ambos) no será necesario colocar ni alguicida ni decantador. 
+
+----------------------------------------------------------------------------------------
+
+Escriba un programa que pida el número de mes (del 1 al 12) 
+y el año e imprima el número de días que tiene el mes.
+
+-----------------------------------------------------------------------------------------
+
+Dados 3 valores enteros X, Y, Z. 
+Elaborar un algoritmo para determinar si esos 
+valores son los lados de un triángulo. X, Y, Z,
+son los lados de un triángulo si cumplen 
+con las siguientes condiciones:       
+X>0, Y>0, Z>0, X+Y>Z, X+Z>Y, Y+Z>X 
+Además, clasificar el triángulo por sus lados: 
+Equilátero, Escaleno e Isóscele
+
+------------------------------------------------------------------------------------------
+
+Ejercicio Nro. 05:
+El dueño de una concesionaria desea lanzar una promoción de venta de sus vehículos 0 km. que tiene en STOCK. Para ello nos cuenta que tiene tres vehículos disponibles para la venta
+y el precio de los mismos es el siguiente:
+	1) Amarok V6 (Oferta: 65.000.000)
+	2) TAOS 53.000.000
+	3) Polo Nuevo 47.000.000
+
+El Gerente nos indica se debería realizar una aplicación debe permitir a los interesados (clientes)
+	1ro) Selecciona el Vehículo de interés
+	2do) Que el cliente pueda ingresar el dinero disponible para la compra del vehículo, sabiendo que el dinero a entregar debe ser mayor al 30% del valor del vehículo y menor al importe total del mismo.
+	3ro) El Sistema debe calcular la financiación del dinero restante a pagar, sabiendo que la diferencia a pagar sería equivalente al valor total del vehículo elegido menos el dinero a entregar; esa diferencia será financiada de la siguiente forma:
+	
+		12 cuotas - 9.9 % ANUAL
+		24 cuotas - 22 % ANUAL
+		36 cuotas - 33 % ANUAL
+
+Consideraciones: para realizar el ejercicio debe utilizar solamente código JavaScript, sin interacción con el DOM y cargar los datos de entrada por medio de prompt.
+
+------------------------------------------------------------------------------------------
+
+Ejercicio Nro. 06:
+Una Frigorífico posee una cinta transportadora y clasificadora de huevos para consumo humano. La cinta no tan solo los transporta sino también los clasifica según su peso. es decir, al final de la cinta existe una balanza electrónica de alta precisión que evalúa su peso y los clasifica.
+a) XL, súper grandes: peso ≥ 73 gramos.
+b) L, grandes: peso ≥ 63 gramos y < 73 gramos.
+c) M, medianos: peso ≥ 53 gramos y < 63 gramos.
+Nota: considere como descartados aquellos que no estén dentro del rango de valores aceptables.
+Determinar lo siguiente:
+1) Cantidad total de Huevos (Todas las categorías)
+2) Cantidad total de Huevos XL
+3) Cantidad total de Huevos L
+4) Cantidad total de Huevos M
+5) Cantidad total de Huevos descartados
+6) Determinar el % de Huevos XL sobre el Total
+7) Determinar el % de Huevos L sobre el Total
+8) Determinar el % de Huevos M sobre el Total
+Consideraciones: para realizar el ejercicio debe utilizar solamente código JavaScript, sin interacción con el DOM y cargar los datos de entrada por medio de prompt.
+
+--------------------------------------------------------------------------------------------
+
+Realizar una aplicación web que permita calcular y determinar la dosis de insulina recomendada para un paciente diabético; Basada en tres datos importantes para el cálculo.
+1) Nivel de glucosa en sangre
+2) Peso Corporal (en kilogramos)
+3) Tipo de diabetes
+a. Tipo 1
+b. Tipo 2
+Para Tipo 1: El cálculo es el 50% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
+este último término solamente si la glucosa es mayor a 180.
+Para Tipo 2: El cálculo es el 20% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
+este último término solamente si la glucosa es mayor a 180.
+La función debe retornar la dosis de insulina recomendada y recibir como parámetros de entrada (argumentos) nivel de glucosa, peso corporal y tipo de diabetes.
+
+Salidas de la aplicación: la aplicación debe indicar la insulina recomendada para el paciente.
+
+----------------------------------------------------------------------------------------
+
+Ejercicio Nro. 07:
+Desarrollar una aplicación web que permita calcular el consumo calórico diario recomendado para una persona según su información personal, nivel de actividad física y hábitos alimenticios. El cálculo debe realizarse de acuerdo con las siguientes especificaciones:
+Datos necesarios:
+Información personal:
+. Peso corporal (en kilogramos). – controlar que sea mayor a 30 y menor a 450. Se puede implementar
+Con un <input> en el HTML.
+. Altura (en centímetros). – controlar que sea mayor a 80 cm y menor a 250 cm. Se puede implementar con un <input> en HTML.
+. Edad (en años). – controlar que sea mayor o igual a 10 y menor o igual a 100. Se puede implementar con un <input> en HTML.
+. Sexo (seleccionar entre masculino o femenino). Se puede implementar con un <input> del tipo radio button.
+Nivel de actividad física: El usuario debe seleccionar uno de los siguientes niveles: (Se debe implementar con un <select>)
+Sedentario.
+Moderadamente activo.
+Activo.
+Muy activo.
+Hábitos alimenticios: El usuario puede seleccionar uno o más de los siguientes hábitos. (Se debe implementar con un <input> del tipo checkbox.
+Dieta vegetariana.
+Alto consumo de carbohidratos.
+Consumo regular de proteínas.
+
+Fórmula base para el gasto energético basal (BMR):
+Nota: realizar una función en forma de arrow function que resuelva este cálculo y que reciba como parámetro los datos que necesita la función para realizar el cálculo.
+HOMBRES:
+BMR=(10×peso)+(6.25×altura)−(5×edad)+5
+MUJERES:
+BMR=(10×peso)+(6.25×altura)−(5×edad)−161
+Ajuste por actividad física:
+El valor del BMR debe multiplicarse por el factor correspondiente al nivel de actividad física seleccionado:
+Nota: realizar una función en forma de arrow function que resuelva este cálculo y que reciba como parámetro los datos que necesita la función para realizar el cálculo.
+• Sedentario: BMR×1.2
+• Moderadamente activo: BMR×1.55
+• Activo: BMR×1.725
+• Muy activo: BMR×1.9
+Ajuste por hábitos alimenticios:
+Por cada hábito alimenticio seleccionado, se deben agregar 50 calorías al valor ajustado. Recordar que puede optar, elegir más de un hábito alimenticio.
+Salidas de la aplicación: la aplicación debe indicar el consumo calórico diario recomendado
+

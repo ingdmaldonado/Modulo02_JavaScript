@@ -1,0 +1,46 @@
+Realizar una aplicación web con HTML5, CSS y JavaScript
+que permita a un administrador gestionar 
+las reservaciones de un salón de eventos.
+
+Los tipos de eventos disponibles y sus costos 
+están definidos previamente
+
+Requisitos del sistema:
+
+La interfaz debe permitir al administrador:
+
+Seleccionar un cliente de un selector dinámico.
+Elegir el tipo de evento de un selector dinámico.
+Indicar la fecha del evento mediante un campo de selección de fecha.
+Ingresar el número de asistentes mediante un campo de entrada.
+
+Todos los datos de la reservación deben almacenarse 
+en un arreglo, 
+y las reservaciones deben visualizarse en 
+tiempo real en una tabla dinámica que incluya:
+
+Cliente
+Tipo de evento
+Fecha
+Número de asistentes
+Costo total (calculado automáticamente según el costo del evento y el número de asistentes).
+Datos Adicionales:
+
+const clientes = [
+    { id: 1, nombre: "Juan Pérez", telefono: "1234567890" },
+    { id: 2, nombre: "Ana López", telefono: "2345678901" },
+    { id: 3, nombre: "Carlos Gómez", telefono: "3456789012" },
+    { id: 4, nombre: "María Sánchez", telefono: "4567890123" },
+    { id: 5, nombre: "Luis Fernández", telefono: "5678901234" }
+];
+
+const eventos = [
+    { id: 1, nombre: "Cumpleaños", costoPorPersona: 500 },
+    { id: 2, nombre: "Boda", costoPorPersona: 1500 },
+    { id: 3, nombre: "Conferencia", costoPorPersona: 800 },
+    { id: 4, nombre: "Fiesta de Graduación", costoPorPersona: 1000 },
+    { id: 5, nombre: "Baby Shower", costoPorPersona: 700 }
+];
+
+
+

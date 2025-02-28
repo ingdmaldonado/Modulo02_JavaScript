@@ -1,0 +1,105 @@
+Realizar una aplicación Web con HTML5,
+CSS y JavaScript que permita a un preventista
+levantar pedidos de los productos que comercializa.
+
+El preventista levanta pedidos de productos lácteos
+por mayor a únicamente cinco clientes y el catálogo
+de productos que venden son los siguientes.
+
+	Realice una interfaz que permita al usuario
+1) Seleccionar el cliente de un Selector dinámico
+2) Seleccionar el producto de un Selector dinámico
+3) indicar la cantidad de productos que requiere
+el cliente (desde un input).
+
+Registrar todos esos datos en un vector y a medida
+que se vayan cargando. visualizarlos en una tabla
+dinámica.
+
+Datos Adicionales:
+
+const personas = [
+    {
+        id: 1,
+        cuit: "20123456780",
+        razonSocial: "Distribuidora El Granero S.A."
+    },
+    {
+        id: 2,
+        cuit: "20345678901",
+        razonSocial: "Frutos del Campo SRL"
+    },
+    {
+        id: 3,
+        cuit: "20340987654",
+        razonSocial: "Panificados La Espiga"
+    },
+    {
+        id: 4,
+        cuit: "27321098765",
+        razonSocial: "Carnes del Sur S.A."
+    },
+    {
+        id: 5,
+        cuit: "30212345679",
+        razonSocial: "Aceites Gourmet del Valle"
+    }
+];
+
+
+const productosLacteos = [
+    {
+        id: 1,
+        nombre: "Leche Entera 1L",
+        precio: 150.00
+    },
+    {
+        id: 2,
+        nombre: "Yogur Descremado 500g",
+        precio: 200.00
+    },
+    {
+        id: 3,
+        nombre: "Queso Crema 300g",
+        precio: 250.00
+    },
+    {
+        id: 4,
+        nombre: "Manteca 200g",
+        precio: 180.00
+    },
+    {
+        id: 5,
+        nombre: "Queso Rallado 100g",
+        precio: 120.00
+    },
+    {
+        id: 6,
+        nombre: "Leche Deslactosada 1L",
+        precio: 160.00
+    },
+    {
+        id: 7,
+        nombre: "Yogur Griego 500g",
+        precio: 220.00
+    },
+    {
+        id: 8,
+        nombre: "Crema de Leche 330g",
+        precio: 190.00
+    },
+    {
+        id: 9,
+        nombre: "Queso Mozzarella 500g",
+        precio: 300.00
+    },
+    {
+        id: 10,
+        nombre: "Queso Ricotta 500g",
+        precio: 275.00
+    }
+];
+
+
+
+

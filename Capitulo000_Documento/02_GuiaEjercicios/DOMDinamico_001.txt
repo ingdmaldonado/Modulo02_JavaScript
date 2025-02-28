@@ -1,0 +1,23 @@
+Realizar una aplicación web, que
+permita registrar personas interesadas
+por adquirir un vehículo de la marca
+chevrolet. para ello deberá realizar
+una interfaz que permita ingresar
+-telefono del interesado
+-email del interesado
+-seleccionar el vehiculo el cual desea
+adquirir (debe elegirlo de un selector
+dinámico). que estará cargado desde
+un vector. el vector debería tener objetos
+literales donde se guarde 
+{
+	modelo:1,
+	nombre:"chevrolet corsa 1.6 LTX MOD 2023",
+	precio:12000000
+}
+
+- también debe guardar el valor a entregar por
+parte del interesado y debe calcular la diferencia
+
+- registrar todos los interesados, guardando 
+toda la información necesaria para el 
