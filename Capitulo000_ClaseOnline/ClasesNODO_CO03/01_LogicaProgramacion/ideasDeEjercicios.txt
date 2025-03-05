@@ -150,41 +150,6 @@ Consideraciones: para realizar el ejercicio debe utilizar solamente código Java
 
 ------------------------------------------------------------------------------------------
 
-Ejercicio Nro. 06:
-Una Frigorífico posee una cinta transportadora y clasificadora de huevos para consumo humano. La cinta no tan solo los transporta sino también los clasifica según su peso. es decir, al final de la cinta existe una balanza electrónica de alta precisión que evalúa su peso y los clasifica.
-a) XL, súper grandes: peso ≥ 73 gramos.
-b) L, grandes: peso ≥ 63 gramos y < 73 gramos.
-c) M, medianos: peso ≥ 53 gramos y < 63 gramos.
-Nota: considere como descartados aquellos que no estén dentro del rango de valores aceptables.
-Determinar lo siguiente:
-1) Cantidad total de Huevos (Todas las categorías)
-2) Cantidad total de Huevos XL
-3) Cantidad total de Huevos L
-4) Cantidad total de Huevos M
-5) Cantidad total de Huevos descartados
-6) Determinar el % de Huevos XL sobre el Total
-7) Determinar el % de Huevos L sobre el Total
-8) Determinar el % de Huevos M sobre el Total
-Consideraciones: para realizar el ejercicio debe utilizar solamente código JavaScript, sin interacción con el DOM y cargar los datos de entrada por medio de prompt.
-
---------------------------------------------------------------------------------------------
-
-Realizar una aplicación web que permita calcular y determinar la dosis de insulina recomendada para un paciente diabético; Basada en tres datos importantes para el cálculo.
-1) Nivel de glucosa en sangre
-2) Peso Corporal (en kilogramos)
-3) Tipo de diabetes
-a. Tipo 1
-b. Tipo 2
-Para Tipo 1: El cálculo es el 50% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
-este último término solamente si la glucosa es mayor a 180.
-Para Tipo 2: El cálculo es el 20% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
-este último término solamente si la glucosa es mayor a 180.
-La función debe retornar la dosis de insulina recomendada y recibir como parámetros de entrada (argumentos) nivel de glucosa, peso corporal y tipo de diabetes.
-
-Salidas de la aplicación: la aplicación debe indicar la insulina recomendada para el paciente.
-
-----------------------------------------------------------------------------------------
-
 Ejercicio Nro. 07:
 Desarrollar una aplicación web que permita calcular el consumo calórico diario recomendado para una persona según su información personal, nivel de actividad física y hábitos alimenticios. El cálculo debe realizarse de acuerdo con las siguientes especificaciones:
 Datos necesarios:
@@ -220,4 +185,6 @@ Nota: realizar una función en forma de arrow function que resuelva este cálcul
 Ajuste por hábitos alimenticios:
 Por cada hábito alimenticio seleccionado, se deben agregar 50 calorías al valor ajustado. Recordar que puede optar, elegir más de un hábito alimenticio.
 Salidas de la aplicación: la aplicación debe indicar el consumo calórico diario recomendado
+
+--------------------------------------------------------------------------------
 
