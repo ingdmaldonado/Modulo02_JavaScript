@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enlaces e Imágenes en HTML</title>
+  <link rel="stylesheet" href="cap003_enlaceseimagenes.css">
+</head>
+<body>
+  <header>
+    <h1>Ejemplos de Enlaces e Imágenes en HTML</h1>
+    <p>Este documento presenta una variedad de ejemplos prácticos para usar correctamente enlaces e imágenes en HTML.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Enlaces Básicos</h2>
+      <p>Enlace a una página externa:</p>
+      <p><a href="https://www.wikipedia.org" target="_blank">Ir a Wikipedia</a></p>
+
+      <p>Enlace a una página interna:</p>
+      <p><a href="pagina-ejemplo.html">Ir a otra página del sitio</a></p>
+
+      <p>Enlace con título (tooltip):</p>
+      <p><a href="https://www.mozilla.org" title="Sitio web de Mozilla">Mozilla</a></p>
+    </section>
+
+    <section>
+      <h2>Enlaces con Atributos Especiales</h2>
+      <p>Enlace que se abre en una nueva pestaña:</p>
+      <p><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google en nueva pestaña</a></p>
+
+      <p>Enlace que apunta a un ancla interna:</p>
+      <p><a href="#imagenes">Ir a la sección de imágenes</a></p>
+
+      <p>Enlace con descarga (archivo):</p>
+      <p><a href="documentos/manual.pdf" download>Descargar Manual PDF</a></p>
+    </section>
+
+    <section id="imagenes">
+      <h2>Imágenes Básicas</h2>
+      <p>Imagen con texto alternativo:</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/220px-Wikipedia-logo.png" alt="Logo de Wikipedia">
+
+      <p>Imagen con atributos de tamaño:</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mozilla_Firefox_3.5_logo_256.png/200px-Mozilla_Firefox_3.5_logo_256.png" alt="Logo de Firefox" width="200" height="150">
+
+      <p>Imagen como enlace:</p>
+      <a href="https://unsplash.com" target="_blank">
+        <img src="https://images.unsplash.com/photo-1602526216316-f8d8db82f4a3?auto=format&fit=crop&w=300&q=80" alt="Foto de Unsplash libre de derechos">
+      </a>
+    </section>
+
+    <section>
+      <h2>Buenas Prácticas</h2>
+      <ul>
+        <li>Usar <code>alt</code> en todas las imágenes por accesibilidad.</li>
+        <li>Usar <code>target="_blank"</code> con <code>rel="noopener noreferrer"</code> para seguridad.</li>
+        <li>Evitar enlaces vacíos (sin <code>href</code>).</li>
+        <li>Optimizar el tamaño de las imágenes para carga rápida.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Curso de HTML5. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

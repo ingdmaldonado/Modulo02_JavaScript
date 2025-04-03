@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 2rem;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #004b8d;
+  }
+  
+  ul {
+    margin-bottom: 2rem;
+  }
+  
+  .nivel {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-left: 5px solid #004b8d;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
