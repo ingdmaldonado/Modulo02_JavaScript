@@ -1,0 +1,1024 @@
+
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+
+
+/*********************************************************/
+/* PARTICULARIDAD DE LAS ARROW FUNCTION                  */
+/*********************************************************/
+
+/* una arrow function que calcula el cuadrado */
+
+const fnCalcularCuadrado = (numero)=>
+    {
+        return numero * numero;
+    }
+
+/* si se recibe un solo parametro de entrada
+se puede prescindir de los () que engloban
+el parametro
+*/
+
+const fnCalcularCuadrado2 = numero =>
+{
+    return numero * numero;
+}
+
+/* se pueden obviar los () que engloban el parametro, siempre y cuando sea uno solo
+y también se pueden obviar las {} siempre y cuando haya una sola instrucción en el 
+return */
+
+const fnCalcularCuadrado3 = numero => numero * numero;
+
+/*******************************************/
+/* FUNCIONES CALLBACK                      *
+/*******************************************/
+
+/* la definición de la función llamadora ó 
+función de orden superior.
+cuando es una función, que recibe como parametro
+otra función y la invoca a dentro de su propio cuerpo
+*/
+    const fnLLamadora = (fn,valor)=>
+        {
+            let resultado = fn(valor);
+            console.log(resultado);
+        }
+
+
+window.addEventListener("load",()=>{
+
+    console.log("esto esta funcionando");
+
+    console.log(fnCalcularCuadrado(2));
+
+    console.log(fnCalcularCuadrado2(2));
+
+    console.log(fnCalcularCuadrado3(2));
+
+
+    /* función llamadora o de orden superior */
+
+    fnLLamadora(fnCalcularCuadrado,2);
+    fnLLamadora(fnCalcularCuadrado2,4);
+    fnLLamadora(numero =>{return numero * numero * numero},5);
+
+    /* función callback */
+
+    /* VECTORES */
+
+    let a = "DANIEL";
+    let b = 200;
+
+    const c = "JUAN ROMAN RIQUELME SE TIENE  QUE IR DE BOCA";
+
+
+    const Vector = [200,45,"esta ES UNA CLASE DE VECTORES",a,b,"SE VIENE LA PRIMAVERA","EL CUMPLEAÑOS DEL NODO EL 21"];
+
+    console.log(Vector);
+
+    /* CARACTERISTICAS DE LOS VECTORES 
+    
+        Es una estructura lineal elástica
+    */
+
+    console.log(Vector[2]);
+
+    let elemento0 = Vector[0];
+    let elemento1 = Vector[1];
+
+    console.log(elemento0);
+    console.log(elemento1);
+
+    console.log(Vector.length);
+
+    /* Vamos a realizar un proceso que recorra ó itere las posiciones del vector */
+
+    console.log("a continuación vamos a mostrar los elementos del vector");
+
+    for(let indice = 0; indice < Vector.length;indice = indice + 1)
+    {
+        console.log(Vector[indice]);
+    }
+
+    /* OBJETOS LITERALES */
+
+
+    /* atributos y valores */
+
+    let persona1 = {dni:454545,apellido:"MESSI",nombres:"LIONEL ANDRES"};
+
+    let persona2 = {dni:46465577,apellido:"ROMERO",nombres:"CUTI"};
+
+    console.log(persona1);
+    console.log(persona2);
+
+    const VectorDePersonas = [persona1,persona2,{dni:89292828,apellido:"DE PAUL",nombres:"RODRIGO"}];
+
+    console.log(VectorDePersonas);
+
+    /*
+    
+        - particularidades de las arrow function
+        - funcion de orden superior que llama a otras y esas otras se llaman
+            funciones callback.
+                - pueden estar definidas y declaradas antes
+                - se pueden definir dentro de la invocación de la función superior
+
+        - objetos literales
+
+        - vector de objetos literales
+        
+
+    */
+
+})
+
+
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+
+
+
+window.addEventListener("load",()=>
+    {
+
+        const VectorDeNumero = [2,5,7,-1,30,45,22,33,77,-15];
+
+        console.log(VectorDeNumero);
+
+        /* push() => agrega al final de vector */
+
+            VectorDeNumero.push(35);
+
+            console.log(VectorDeNumero);
+
+        /* pop() => eliminar el último elemento del vector */
+
+            let eliminado1 = VectorDeNumero.pop();
+            let eliminado2 = VectorDeNumero.pop();
+
+            console.log(eliminado1);
+            console.log(eliminado2);
+
+            console.log(VectorDeNumero);
+
+        /* shift() => elimina el primer del vector */
+
+            let eliminado3 = VectorDeNumero.shift();
+
+            console.log(eliminado3);
+
+            console.log(VectorDeNumero);
+
+        /* unshift() => agregar un elemento al vector desde el principio */
+    
+            VectorDeNumero.unshift(-77);
+
+            console.log(VectorDeNumero);
+
+        /* PARTICULARIDAD DE LOS VECTORES */
+
+            let valor1 = 20;
+
+            let valor2 = 30;
+
+            let valor3 = 45;
+
+            valor1 = valor2;
+
+            console.log(valor1);
+            console.log(valor2);
+            console.log(valor3);
+
+            /* con esto lo unico que estoy haciendo
+            es creando otra referencia al mismo vector */
+            const VectorDeNumeros2 = VectorDeNumero;
+
+
+        
+
+            /* spread operator */
+            const VectorDeNumeros3 = [...VectorDeNumero];
+
+            VectorDeNumeros2.push(25);
+            VectorDeNumeros2.push(-105);
+
+            VectorDeNumeros3.push(12);
+            VectorDeNumeros3.push(21);
+
+            console.log(VectorDeNumero);
+            console.log(VectorDeNumeros2);
+            console.log(VectorDeNumeros3);
+
+            /*  
+                SPREAD OPERATOR 
+            */
+
+            const VectorOriginal1 = [7,14,11];
+
+            const VectorOriginal2 = [21,7,2020];
+
+            const VectorSuma = [...VectorOriginal1,...VectorOriginal2];
+
+            VectorSuma.push(14);
+            VectorSuma.push(-44);
+            
+            console.log(VectorOriginal1);
+            console.log(VectorOriginal2);
+
+            console.log(VectorSuma);
+
+
+        /* splice. Desde la posicion, sacar tantos elementos 
+            NO MODIFICA EL VECTOR ORIGINAL, es decir extrae unicamente
+        */
+
+            const SubVector = VectorSuma.splice(3,5);
+
+            console.log(SubVector);
+
+        /* slice => extrae y quita los elementos del vector original */
+
+
+            const SubVector2 = VectorSuma.slice(2,3);
+
+            console.log(SubVector2);
+            console.log(VectorSuma);
+
+        
+        /* recorrido con el metodo forEach */
+
+            // es decir el ciclo for each, recibe como parametro una arrow function
+            // y esa arrow function es una funcion callback.
+
+            VectorSuma.forEach((element)=>{
+
+                console.log(element);
+
+            })
+
+            VectorSuma.forEach(element => {
+                console.log(element);
+            })
+            
+
+            let Suma = 0;
+
+            VectorSuma.forEach(element => {
+
+                Suma = Suma + element;
+
+            })
+
+            console.log(`la Suma total es ${Suma}`);
+        
+
+            /* primero => el metodo forEach sería una función o un metodo de orden superior 
+               segundo => porque puede recibir como parametro otra funcion, y esa función
+               es definida por el usuario. y se llama funcion callBack
+
+               en el cuerpo de la función, el usuario o programador implementa lo que quiere
+               o lo que necesite.
+            */
+
+            /* filter 
+            
+            FILTRAR DATOS DE UN VECTOR Y GUARDARLOS EN OTRO
+            
+            */
+
+        
+
+    })
+
+
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+
+window.onload = function()
+{
+
+    let idBtnVectores = document.getElementById("idBtnVectores");
+    let idBAccederIndividualmente = document.getElementById("idBAccederIndividualmente");
+    let idBtnCambiarValores = document.getElementById("idBtnCambiarValores");
+    let idBtFuncionalidadesVarias_push = document.getElementById("idBtFuncionalidadesVarias_push");
+    let idBtFuncionalidadesVarias_pop = document.getElementById("idBtFuncionalidadesVarias_pop");
+    let idBtFuncionalidadesVarias_shift = document.getElementById("idBtFuncionalidadesVarias_shift");
+    let idBtFuncionalidadesVarias_unshift = document.getElementById("idBtFuncionalidadesVarias_unshift");
+    let idBtFuncionalidadesVarias_splice = document.getElementById("idBtFuncionalidadesVarias_splice");
+    let idBtFuncionalidadesVarias_indexof = document.getElementById("idBtFuncionalidadesVarias_indexof");
+    let idBtFuncionalidadesVarias_find = document.getElementById("idBtFuncionalidadesVarias_find");
+    let idBtFuncionalidadesVarias_filter = document.getElementById("idBtFuncionalidadesVarias_filter");
+    let idBtnRecorridoTradicional = document.getElementById("idBtnRecorridoTradicional");
+    let idBtnRecorridoForEach = document.getElementById("idBtnRecorridoForEach");
+    let idBtnRecorridoMap = document.getElementById("idBtnRecorridoMap");
+    let divContainerPruebas = document.getElementById("divContainerPruebas");
+    let idBtnReduce = document.getElementById("idBtnReduce");
+    let idBtnSort = document.getElementById("idBtnSort");
+    let idBtnReverse = document.getElementById("idBtnReverse");
+    let idBtnSpreadOperator = document.getElementById("idBtnSpreadOperator");
+
+    console.log(idBtnVectores);
+
+    /*********************************/
+    /* (01) Declaración de Vectores */
+    /*********************************/
+
+    /* Declaración literal de un Vector ó Array */
+
+    let vectorGenerico = [1,5,7,1,-15,25,44,288,77,88,"HOLA COMO ESTAS","JORGE",44,28,-127,25,44,112,28,44,99,-101,"-101"];
+
+
+    /***************************************************************/
+    /* (02) Mostramos el Contenido de un Vector por el Console.log */
+     /***************************************************************/
+
+    idBtnVectores.onclick = function()
+    {
+        /* en JavaScript es tan simple mostrarlo al vector como
+        mostrarlo por una consola */
+
+        console.log("1 - mostramos el contenido de un vector");
+        console.log("vector originalmente ",vectorGenerico);
+
+    }
+
+    /***********************************************/
+    /* (03) Accediendo a las Posiciones del Vector */
+    /***********************************************/
+
+    idBAccederIndividualmente.onclick = function()
+    {
+        /* muestro el contenido del vector en la posición 2 */
+        console.log("2 - mostramos elementos puntuales de un vector ");
+
+        console.log(vectorGenerico[2]);
+
+        /* muestro el contenido del vector en la posicion 5*/
+
+        console.log(vectorGenerico[5]);
+
+        /* recupero y guardo en una variable el contenido del vector en la posicion 10 */
+
+        let datoEnPosicion10 = vectorGenerico[10];
+    
+        /* muestro el dato recuperado */
+
+        console.log(datoEnPosicion10);
+  
+    }
+
+    /*******************************************************/
+    /* (04) Cambiando Valores en las Posiciones del Vector */
+    /*******************************************************/
+
+    idBtnCambiarValores.onclick = function()
+    {
+
+        console.log("3 - modificamos elementos de un vector ");
+        /* muestro como estaba originalmente el vector */
+        console.log("vector originalmente ",vectorGenerico);
+
+        /* le estoy asignando un valor al vector en la posición 2 */
+        vectorGenerico[2] = "RIQUELME JUAN ROMAN";
+
+        /* estoy asignandole un valor en una posición */
+        vectorGenerico[400] = 1560.20; //me completa con 391 posiciones vacias //
+
+        /* muestro como quedo el vector despues */
+        console.log("vector modificado ",vectorGenerico);
+
+    }
+
+    /********************************************************************************************/
+    /* (05) Funcionalidades Varias - push . agrega un elemento en la ultima posicion del vector */
+    /********************************************************************************************/
+
+    idBtFuncionalidadesVarias_push.onclick = function()
+    {
+
+        console.log("4 - agregamos elementos al final del vector");
+
+        /* muestro como estaba originalmente el vector */
+        console.log("vector originalmente",vectorGenerico);
+
+        /* push => agregar un elemento a un vector al final de todos los elementos */
+        vectorGenerico.push("este valor se agregará al final");
+
+        /* muestro como quedo el vector despues de agregar el elemento */
+        console.log("vector modificado",vectorGenerico);
+        
+
+    }
+
+    /***************************************************************************************/
+    /* (06) Funcionalidades Varias - POP. saca el último elemento del vector y lo devuelve */
+     /***************************************************************************************/
+
+    idBtFuncionalidadesVarias_pop.onclick = function()
+    {
+
+        console.log("4 - quitamos el último elemento del vector");
+
+        /* muestro como estaba originalmente el vector */
+        console.log("vector originalmene ", vectorGenerico);
+
+        /* quito el último elemento del vector y lo guardo en una variable */
+        let ultimoelemento = vectorGenerico.pop();
+
+        /* muestro el elemento quitado */
+        console.log("elemento quitado ",ultimoelemento);
+
+        /* muestro el vector como quedo despues de la eliminación */
+        console.log("vector modificado ",vectorGenerico);
+
+    }
+
+    /*****************************************/
+    /* (07) - Funcionalidades Varias - shif */
+    /*****************************************/
+
+    idBtFuncionalidadesVarias_shift.onclick = function()
+    {
+
+        console.log("5 - quitamos el primer elemento del vector");
+
+        /* mostramos como esta el vector antes de la eliminación */
+        console.log("vector originalmente ",vectorGenerico);
+
+        /* remueve el primer elemento del vector */
+        let primerElemento = vectorGenerico.shift();    
+
+        /* muestro el elemento quitado de la priemra posicion del vector */
+        console.log("elemento quitado ",primerElemento);
+
+        /* muestro como quedo el vector */
+        console.log("vector modificado ",vectorGenerico);
+        
+    }
+
+    /******************************************/
+    /* (08) - Funcionalidades Varias - unshif */
+    /******************************************/
+
+    idBtFuncionalidadesVarias_unshift.onclick = function()
+    {
+
+        console.log("6 - agregamos al principio del vector");
+
+        /* muestro como estaba el vector originalmente */
+        console.log("vector originalmente ",vectorGenerico);
+
+        /* le agrego un dato al principio del vector */
+        vectorGenerico.unshift("esto se debería agregar al principio");
+
+        /* muestro como quedó el vector */
+        console.log("vector modificado ",vectorGenerico);
+
+    }
+
+    /*******************************************/
+    /* (09) - Funcionalidades Varias - splice */
+    /*******************************************/
+
+    idBtFuncionalidadesVarias_splice.onclick = function()
+    {
+
+        console.log("7 - eliminamos elementos contiguos ");
+
+        /* muestro el vector como estaba originalmente */
+        console.log(vectorGenerico);
+
+        /* le quito 4 elementos y los almaceno en una variable */
+        let elementosQuitados = vectorGenerico.splice(2,4); //desde la posicion 2 voy a sacar 1*/
+
+        /* muestro los elementos quitados del vector */
+        console.log("elementos contiguos eliminados",elementosQuitados);
+
+        /* muestro como quedó el vector despues de quitarle los datos */
+        console.log("vector modificado ",vectorGenerico);
+        
+    }
+
+    /******************************/
+    /* (10) indexOf y lastIndexOf */
+    /******************************/
+
+    idBtFuncionalidadesVarias_indexof.onclick = function()
+    {
+
+        console.log("8 - primera posición de un elemento indexOf, segunda posicón de un elemento lastIndexOf");
+
+        console.log(vectorGenerico);
+
+        /* devuelve el índice donde se encuentra por primera vez el elemento 44*/
+        console.log(vectorGenerico.indexOf(-44)); 
+
+        /* obtiene el índice donde se encuentra por segunda vez el elemento 44 */
+        console.log(vectorGenerico.lastIndexOf(-44));
+
+    }
+
+    /**************************/
+    /* (11) find y findIndex */
+    /**************************/
+
+    idBtFuncionalidadesVarias_find.onclick = function()
+    {
+
+        console.log("11 - find y findIndex");
+
+        /* muestro el vector original */
+        console.log("Vecor Original ",vectorGenerico);
+
+        /* find busca el elemento y lo devuelve*/
+        console.log("Resultado de find de buscar elementos negativos ",vectorGenerico.find((element)=>element < 0));
+
+        /* find busca el elemento y devuelve su posición */
+        console.log("Resulado de findIndex de buscar elementos negativos ",vectorGenerico.findIndex((element)=>element < 0));
+            
+    }
+
+
+    /*************************************************************************************************************/
+    /* (12) filter y devuelve todos los elementos que coinciden con el predicado que va dentro de los parentesis */
+    /*************************************************************************************************************/
+
+    idBtFuncionalidadesVarias_filter.onclick = function()
+    {
+
+        console.log("12 - filter con sus 4 formas de pasarle el parametro a la función filter");
+
+        /* como esta el vector originalmente */
+
+            console.log("vector original ",vectorGenerico);
+
+        /* forma 1: esta es la forma más corta, resumida y presumiblemente la mas usada */
+            console.log("forma resumida de invocar a filter ",vectorGenerico.filter(element=>element < 0));
+
+        /* forma 2 :esta es una forma un poquito mas larga, donde la arrow functions está completa */
+            console.log("forma un poquito mas larga de invocar a filter ",vectorGenerico.filter((element)=>{return element < 0}));
+
+        /* forma 3: esta es la forma tradicional, con una funcion anonima */
+            console.log("forma tradicional con una funcion anonima para buscar los elemenos que cumplan la condición");
+            let valoresBuscados = vectorGenerico.filter(function(element)
+            {
+                if(element < 0) return true;
+                if(element >=0) return false;
+            })
+
+
+            console.log("forma tradicional con una función anonima ",valoresBuscados);
+
+
+        /* forma 4: esta es la forma tradicional, donde primero declaramos la función, luego se la pasamos al metodo */
+
+        const fnNumeroEsNegativo = function(element)
+        {
+            if(element < 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        let valoresBuscados2 = vectorGenerico.filter(fnNumeroEsNegativo);
+
+        console.log("forma 5 con una función definida previamente y pasada como parametro de filter",valoresBuscados2);
+    }
+
+    /*************************************************************************************************************/
+    /* (13) Recorrido Tradicional con CICLO FOR */
+    /*************************************************************************************************************/
+
+    idBtnRecorridoTradicional.onclick = function()
+    {
+        console.log("13 - Recorrido tradicional de un Vector con un Ciclo For");
+
+        for(let i = 0;i<vectorGenerico.length;i++)
+        {
+            console.log(`Elemento ${i} ${vectorGenerico[i]}`);
+        }
+    }
+
+    /*************************************************************************************************************/
+    /* (14) Recorrido con CICLO FOR EACH */
+    /*************************************************************************************************************/
+
+    idBtnRecorridoForEach.onclick = function()
+    {
+        console.log("14 - Recorrido de los elementos de un vector con forEach");
+
+        vectorGenerico.forEach((element,indice)=>{
+            console.log(`Elemento ${indice} ${element}`);
+        })
+    }
+
+    /*************************************************************************************************************/
+    /* (15) Transformacion con MAP */
+    /*************************************************************************************************************/
+
+    idBtnRecorridoMap.onclick = function()
+    {
+        console.log("15 - Transformación de elementos con MAP y devolve otro array");
+
+        console.log("vector original ",vectorGenerico);
+
+        let vectorResultado = vectorGenerico.map((element,indice)=>
+            {
+                return `<h1>${indice} ${element}</h1>`
+            })
+
+        console.log("vector resultado ",vectorResultado);
+
+        divContainerPruebas.innerHTML = vectorResultado;
+
+    }
+
+    /******************************************************************/
+    /* (16) Transformacion con reduce y reduceright                   */
+    /******************************************************************/
+
+     /*
+    
+        el método reduce() en JavaScript es una herramienta poderosa para operar 
+        sobre arrays, ya que permite reducir (o acumular) todos los elementos 
+        de un array en un solo valor. A continuación, te explico en detalle cómo funciona, 
+        con ejemplos para ilustrar su uso.
+        Descripción del Método reduce()
+        El método reduce() aplica una función a un acumulador y a cada elemento del array
+        (de izquierda a derecha) para reducirlo a un solo valor. La sintaxis básica es:
+
+    */
+
+    idBtnReduce.onclick = function()
+    {
+        console.log("16 - Funciones de Reducción - reduce");
+
+        vectorDeNumeros = [10,10,20,25];
+
+        let acumulador = 0; // según la documentación puede estar o no declarada
+
+        console.log(vectorDeNumeros);
+
+        let resultado = vectorDeNumeros.reduce((acumulador,element,indice)=>
+            {
+                // esto demuestra que el acumulador en la primera iteración es el primer elemento //
+                console.log(`acumulador ${acumulador} en posicion ${indice}`);
+
+                // esto va mostrando los datos del vector //
+                console.log(`elemento ${element} en posicion ${indice}`);
+
+                return acumulador + element;
+            })
+
+        console.log(resultado);
+
+    }
+  
+    /******************************************************************/
+    /* (17) Sort                                                      */
+    /******************************************************************/
+
+    idBtnSort.onclick = function()
+    {
+        console.log("17 - Funciones de Ordenamiento sort");
+
+        /* ejemplo 1 - El método sort() en JavaScript se utiliza
+        para ordenar los elementos de un array en su lugar y 
+        devuelve el array ordenado. Por defecto, los elementos se
+        ordenan como cadenas de texto en orden alfabético.  
+        */
+
+        const frutas = ['naranja', 'manzana', 'banana', 'cereza'];
+
+        console.log("Vector Originalmente ",frutas);
+        frutas.sort();
+        console.log("Vector Ordenado" , frutas); // Imprime ["cereza", "manzana", "naranja", "plátano"]
+
+        /*
+
+        Resumen
+        sort() ordena los elementos de un array en su lugar y devuelve el array ordenado.
+        Sin una función de comparación, los elementos se convierten en cadenas de texto y 
+        se ordenan lexicográficamente.
+        Para ordenación numérica u otras ordenaciones específicas, 
+        se debe proporcionar una función de comparación.
+        La función de comparación define el criterio de ordenación y 
+        debe devolver un número para determinar el orden de dos elementos.
+
+        */
+        
+
+        const numeros = [10, 5, 20, 15];
+
+        console.log(numeros);
+
+        numeros.sort((a, b) => a - b); // orden ascendente 
+
+        /*
+        
+            a - b: Significa la resta de a menos b.
+
+                Si a es menor que b (por ejemplo, 5 - 10), 
+                el resultado será negativo, y a se posicionará antes que b.
+
+                Si a es mayor que b (por ejemplo, 20 - 15), 
+                el resultado será positivo, y a se posicionará después 
+                que b.
+
+                Si a es igual a b (por ejemplo, 10 - 10),
+                el resultado será cero, y el orden relativo no 
+        
+        */
+
+        console.log("Vector original",numeros); // Imprime [20, 15, 10, 5]
+        numeros.sort((a, b) => b - a); // orden ascendente 
+        console.log("Vector Modificado",numeros);
+
+    }
+
+
+    /******************************************************************/
+    /* (18) Reverse                                                   */
+    /******************************************************************/
+
+    idBtnReverse.onclick = function()
+    {
+
+        console.log("18 - Funciones Reverse");
+
+        const numeros = [10, 5, 20, 15];
+
+        console.log("Vector Original",numeros);
+
+        console.log("Vector Transformado al revés",numeros.reverse())
+
+    }
+
+
+    idBtnSpreadOperator.onclick = function()
+    {
+
+
+        /* las variables del tipo vector y constantes son una especie de punteros
+        que apuntan a un conjunto de elementos con un nombre único. cuando 
+        cambio creo otra variable y le digo que es igual a otra variable 
+        en realidad lo que estoy diciendole es que copio el apuntador a esa
+        posición */
+
+
+        /* (00 - el problema de la copia de variables del tipo vector u objeto ) */
+
+            const numeros1 = [10, 5, 20, 15];
+
+            console.log(numeros1);
+
+            const numeros2 = numeros1;
+
+            console.log(numeros2);
+
+            numeros2.push(100);
+            numeros2.push(200);
+
+            console.log(numeros1);
+            console.log(numeros2);
+
+        /* (1ro) - El Spread Operador como simbolo de clonación de vectores u objetos */
+
+            const Vector1 = ["uno","dos",3,"cuatro"];
+
+            const Vector2 = [...Vector1];
+
+            Vector2.push("cinco");
+            Vector2.push("seis");
+            Vector2.push(7);
+
+            console.log(Vector1);
+            console.log(Vector2);
+
+        /* (2do) - El Spread Operator como unificador de dos Arrays */
+
+            const Vector3 = [1, 2, 3];
+            const Vector4 = [4, 5, 6];
+            const vectorUnido = [...Vector3, ...Vector4];
+
+            console.log(vectorUnido); // [1, 2, 3, 4, 5, 6]
+
+        /* (3ro) - El Spread Operator como ampliación de un vector */
+
+            const Vector5 = ["uno","dos","tres"];
+
+            const Vector6 = [...Vector5,"cuatro","cinco"];
+
+            console.log(Vector6);
+
+        /* (4to) - Copia superficial de objetos */
+
+            const originalObj = { a: 1, b: 2 };
+            const copiedObj = { ...originalObj };
+            
+            console.log(copiedObj); // { a: 1, b: 2 }
+        
+        /* (5to) - Combinar las propiedades de los Objetos en un solo */
+
+            let objeto1 = {clienteCuit:"2324010663",clienteNombre:"MALDONADO DANIEL"};
+
+            let objeto2 = {clienteDomicilio:"BARRIO PARQUE LA GRUTA"};
+
+            let objeto3 = {...objeto1,...objeto2};
+
+            console.log(objeto3);
+
+        /* (6to) - Clonar un objeto y agregarle atributos nuevos */
+
+            let objeto4 = {proveedorID:"200",proveedorCuit:"27-2749209-2"}
+
+            let objeto5 = {...objeto4,proveedorDomicilio:"BARRIO IPONA - CORDOBA CAPITAL"};
+
+            console.log(objeto5);
+
+        /* (7mo) - Declarar una funcion que reciba tres parametros y los sume */
+
+            const SumaTresParametros = (parametro1,parametro2,parametro3)=>
+                {
+                    let Resultado = parametro1 + parametro2 + parametro3;
+                    return Resultado;
+                }
+
+            const VectorConValores = [10,20,30,40]
+            console.log(VectorConValores);
+
+            let ResultadoSuma = SumaTresParametros(...VectorConValores);
+            console.log(ResultadoSuma);
+
+
+
+        /* (8vo) - Definir una función que recibirá múltiples parametros */
+
+            const Sumar = (...elementos)=>
+            {
+                console.log(elementos);
+
+                let Suma = 0;
+                elementos.forEach(element=>{
+                    
+                    Suma = Suma + element;
+
+                })
+
+                console.log("La suma es: ",Suma);
+
+                return Suma;
+
+            }   
+            
+
+            Sumar(2,3,4,5,6);
+
+
+
+        /* (9no) Convertir Nodos/Collections a Arrays
+        El Spread Operator puede convertir objetos parecidos a arrays (como NodeLists) en arrays reales.*/
+
+            const nodeList = document.querySelectorAll('*');
+            const nodeArray = [...nodeList];
+            
+            console.log("elementos como una lista",nodeList);
+            console.log("elemenos como un array",nodeArray); // Array of div elements
+        
+
+          
+
+
+    }
+
+    /*
+    
+ 
+
+    */
+
+}
+
+/*********************************** LO QUE ESTA FALTANDO  ***********************************************/
+
+/*
+
+
+
+4. Propiedades Útiles
+length: Número de elementos en el array.
+
+let length = arr.length;
+
+5. ES6 y Nuevas Características
+
+Spread Operator: Expande un array en lugares donde se esperan cero o más elementos.
+
+let arr2 = [...arr, 5, 6];
+
+Destructuring Assignment: Asignación de variables desde arrays.
+
+let [first, second] = arr;
+Array.from() y Array.of(): Creación de arrays a partir de objetos iterables y lista de argumentos respectivamente.
+
+let arrFrom = Array.from('hello'); // ['h', 'e', 'l', 'l', 'o']
+let arrOf = Array.of(1, 2, 3); // [1, 2, 3]
+
+6. Array.prototype.includes()
+Verificar si un array contiene un elemento específico.
+
+let hasElement = arr.includes(2);
+
+7. Multidimensional Arrays
+Arrays de arrays (matrices).
+
+let matrix = [[1, 2], [3, 4]];
+let value = matrix[0][1]; 
+
+
+8. Métodos de Array en ECMAScript 2019 y Posteriores
+flat() y flatMap(): Aplanar arrays anidados.
+javascript
+Copiar código
+let flattened = [1, [2, 3], [4, [5]]].flat(2); // [1, 2, 3, 4, 5]
+let flatMapped = arr.flatMap(x => [x, x * 2]);
+
+*/
+
+
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+
+/* aqui lo que estoy haciendo 
+es crearme un vector de Paises
+y que este a nivel global de toda
+la aplicación */
+
+const vectorDePaises = ["ARGENTINA","BRASIL","ESTADOS UNIDOS","ECUADOR","PERU","VENEZUELA","CANADA","COLOMBIA","PUERTO RICO"];
+
+/* es muy probable que venga
+desde una fuente externa. 
+que puedeser
+
+    1) Base de datos propia. WebServices
+    2) WebServices de un tercero
+    3) localStorage
+
+*/
+
+
+window.addEventListener("load",()=>
+    {
+        console.log("running");
+
+        const idSelectorDinamico1 = document.querySelector("#idSelectorDinamico1");
+        const idBtnGenerarContenedor = document.querySelector("#idBtnGenerarContenedor");
+        const contenedor = document.querySelector("#contenedor");
+       
+        console.log(idSelectorDinamico1);
+        console.log(idBtnGenerarContenedor);
+
+        // aqui lo que hago es recorrer el vector de Paises //
+        vectorDePaises.forEach((element,indice)=>
+            {
+                console.log(element,indice);
+
+                let opcionDinamica = `<option value=${indice}>${element}</option>`;
+
+                console.log(opcionDinamica);
+
+                idSelectorDinamico1.innerHTML = idSelectorDinamico1.innerHTML + opcionDinamica;
+
+            })
+
+        idBtnGenerarContenedor.addEventListener("click",()=>{
+
+            vectorDePaises.forEach((element,indice)=>
+                {
+                    let divDinamico = `<div>${element}</div>`;
+                    let checkBoxDinamico = `<input type='checkbox' id=${indice}>`;
+                    let botonDinamico = `<input type='button' value='${element}'>`;
+
+                    contenedor.innerHTML = contenedor.innerHTML + divDinamico + checkBoxDinamico + botonDinamico;
+
+                })
+
+        })
+    })
+
+

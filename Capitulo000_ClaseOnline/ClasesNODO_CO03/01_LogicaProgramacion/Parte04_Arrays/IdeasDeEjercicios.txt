@@ -1,0 +1,7 @@
+
+1) Ejercicio donde tengan que actualizar los precios de productos.
+
+un vector de productos, un vector de precios
+
+
+2) 
