@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas en HTML</title>
+  <link rel="stylesheet" href="cap004_listasenhtml.css">
+</head>
+<body>
+  <header>
+    <h1>Listas en HTML</h1>
+    <p>Ejemplos prácticos de listas no ordenadas, ordenadas, anidadas y de definición.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Listas No Ordenadas (`&lt;ul&gt;`)</h2>
+      <ul>
+        <li>Pan</li>
+        <li>Leche</li>
+        <li>Queso</li>
+        <li>Huevos</li>
+      </ul>
+
+      <h3>Lista no ordenada anidada</h3>
+      <ul>
+        <li>Frutas
+          <ul>
+            <li>Manzana</li>
+            <li>Banana</li>
+            <li>Pera</li>
+          </ul>
+        </li>
+        <li>Verduras
+          <ul>
+            <li>Zanahoria</li>
+            <li>Lechuga</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Listas Ordenadas (`&lt;ol&gt;`)</h2>
+      <ol>
+        <li>Precalentar el horno</li>
+        <li>Mezclar los ingredientes</li>
+        <li>Hornear durante 30 minutos</li>
+        <li>Dejar enfriar</li>
+      </ol>
+
+      <h3>Lista ordenada con letras mayúsculas</h3>
+      <ol type="A">
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+      </ol>
+
+      <h3>Lista ordenada iniciando en otro número</h3>
+      <ol start="5">
+        <li>Paso cinco</li>
+        <li>Paso seis</li>
+      </ol>
+
+      <h3>Lista ordenada anidada</h3>
+      <ol>
+        <li>Introducción</li>
+        <li>Contenido principal
+          <ol>
+            <li>Subtema 1</li>
+            <li>Subtema 2</li>
+          </ol>
+        </li>
+        <li>Conclusión</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Listas de Definición (`&lt;dl&gt;`)</h2>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado para estructurar contenido en la web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Lenguaje para aplicar estilos visuales a las páginas web.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Lenguaje de programación que permite interactividad en la web.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Curso de HTML5. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
