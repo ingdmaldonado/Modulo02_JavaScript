@@ -1,0 +1,63 @@
+
+- 1) Recordar la declaración de Vectores
+- 2) Recordar que no se puede fácilmente la clonación de Vectores
+	Se debe usar Spread Operator ...
+- 3) Objetos Literales
+-4 ) las Constantes no permiten modificación de datos a excepto que
+	- sean Vectores
+	- sean Objetos Literales
+
+-5) métodos de Vectores
+	- forEach
+	- filter
+	- find
+	- map
+
+	
+
+- Objetos Literales
+- Vectores de Objetos Literales
+- Procesos con Objetos Literales
+
+	- forEach
+
+IDEAS DE EJERCICIOS
+
+	- creamos vector con objetos literales que contenga
+	los datos de los alumnos del nodo. con los cursos
+
+	- recorrer los alumnos determinando quienes tienen 
+	desaprobado un curso ó deben recursarlo al módulo.
+
+	- contar cuantos alumnos tienen aprobado el módulo 1
+	- contar cuantos alumnos tienen desaprobado el módulo 1
+	- contar cuantos alumnos tienen aprobado el módulo 2
+	- contar cuantos alumnos tienen desaprobado el módulo 2
+	- contar cuantos alumnos tienen aprobado el módulo 3
+	- contar cuantos alumnos tienen desaprobado el módulo 3
+	- contar cuantos alumnos tienen aprobado el módulo 4
+	- contar cuantos alumnos tienen desaprobado el módulo 4
+
+
+	- Recorrido de productos y actualización de precios
+	x categoría.
+
+	- Facturación de una Empresa de SERVICIOS que tenga
+	consumo.
+
+	- 
+
+EJERCICIO NRO. 02: VECTOR DE PRODUCTOS Y VECTOR DE ACTUALIZACION DE precios
+
+	- Realizar una función que reciba como parametro un vector de productos
+	y que reciba como parametro el codigo del producto y que retorne el producto
+	con todos sus datos.
+	
+	- Recorrer productos actualizando los precios de la lista de precios
+
+EJERCICIO NRO. 03: VECTOR DE CLIENTES, CONSUMOS DE AGUA, FACTURAS
+
+
+EJERCICIO NRO. 04: REGISTRO DE MULTAS DE TRANSITO CON FOTOMULTAS Y CLIENTES
+
+
