@@ -1,0 +1,46 @@
+
+	=> Metodos de Vectores
+
+		forEach
+		map
+		filter
+
+		find (x)
+		sort (x)
+		every (x)
+		reduce(x)
+	
+	=> Spread Operator versus Rest Operator
+		
+		Spread => expandiendo (en invocación de funciones)
+		Rest => juntando (en definición de funciones)
+
+	=> Destructuring
+
+	=> JSON => JavaScript Objet Notation
+
+	=> Try/Catch
+
+	=> Módulos en JavaScript
+
+	=> Persistencia en el Navegador
+		- Cookies
+		- localStorage
+		- sessionStorage
+		- indexDB
+
+	=> DOM DINAMICO
+
+	=> APIs
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
