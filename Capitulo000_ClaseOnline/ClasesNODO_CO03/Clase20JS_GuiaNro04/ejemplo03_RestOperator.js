@@ -30,7 +30,7 @@ const usuario = {
   console.log(otrosDatos);  // { nombre: "Lucas", edad: 30, rol: "admin" }
   
   /*
-  Ejercicio:
+  Ejercicio: Guia Nro. 04 - Ejercicio 11
   Dado el siguiente objeto, extraé la propiedad "puesto" y agrupá el resto en un nuevo objeto llamado "infoPersonal". Mostralos por consola.
   (No mostrar la solución aquí).
   */

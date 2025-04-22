@@ -1,0 +1,99 @@
+
+        /* solución punto a */
+
+        console.log("a) Todos los productos:");
+        productos.forEach(({ nombre, precioCosto, margen, stock }) => 
+            {
+                const ganancia = precioCosto * (margen / 100);
+                const importeBase = precioCosto + ganancia;
+                const iva = importeBase * 0.21;
+                const ingresosBrutos = importeBase * 0.03;
+                const precioFinal = importeBase + iva + ingresosBrutos;
+
+                console.log(`Producto: ${nombre} | Costo: $${precioCosto} | Ganancia: $${ganancia.toFixed(2)} | Precio Final: $${precioFinal.toFixed(2)} | Stock: ${stock}`);
+            });
+
+        /* solución punto b */
+
+        console.log("b) Productos con margen menor o igual al 20%:");
+        productos.forEach(({ nombre, precioCosto, margen }) => 
+            {
+                if (margen <= 20) 
+                    {
+                        const ganancia = precioCosto * (margen / 100);
+                        const importeBase = precioCosto + ganancia;
+                        const iva = importeBase * 0.21;
+                        const ingresosBrutos = importeBase * 0.03;
+                        const precioFinal = importeBase + iva + ingresosBrutos;
+
+                        console.log(`Producto: ${nombre} | Margen: ${margen}% | Precio Final: $${precioFinal.toFixed(2)}`);
+                    }
+            });
+
+        /* solución punto c */
+
+        console.log("c) Productos con Ingresos Brutos mayores a $4.000:");
+        productos.forEach(({ nombre, precioCosto, margen }) => 
+            {
+                const ganancia = precioCosto * (margen / 100);
+                const importeBase = precioCosto + ganancia;
+                const ingresosBrutos = importeBase * 0.03;
+            
+                if (ingresosBrutos > 4000) 
+                    {
+                        console.log(`Producto: ${nombre} | Ingresos Brutos: $${ingresosBrutos.toFixed(2)}`);
+                    }
+            });   
+            
+        /* solución punto d */
+        console.log("d) Productos con Precio Final entre $20.000 y $30.000:");
+        productos.forEach(({ nombre, precioCosto, margen }) => 
+            {
+              const ganancia = precioCosto * (margen / 100);
+              const importeBase = precioCosto + ganancia;
+              const iva = importeBase * 0.21;
+              const ingresosBrutos = importeBase * 0.03;
+              const precioFinal = importeBase + iva + ingresosBrutos;
+            
+              if (precioFinal >= 20000 && precioFinal <= 30000) 
+                {
+                    console.log(`Producto: ${nombre} | Precio Final: $${precioFinal.toFixed(2)}`);
+                }
+            });
+
+        /* solución punto e */
+        console.log("e) Productos con IVA en los rangos $2.000–$4.000 ó $8.000–$12.000:");
+        productos.forEach(({ nombre, precioCosto, margen }) => {
+        const ganancia = precioCosto * (margen / 100);
+        const importeBase = precioCosto + ganancia;
+        const iva = importeBase * 0.21;
+            
+        if ((iva >= 2000 && iva <= 4000) || (iva >= 8000 && iva <= 12000)) 
+            {
+                console.log(`Producto: ${nombre} | IVA: $${iva.toFixed(2)}`);
+            }
+        });
+
+
+         // Recorrido con forEach + búsqueda con find
+        clientes.forEach(({ dni, apellido, nombre, codigoPostal }) => 
+            {
+
+                
+        // Buscar la localidad correspondiente
+            const localidadEncontrada = localidades.find(loc => loc.codigoPostal === codigoPostal);
+  
+            // Verificar si se encontró una localidad (por si hay código mal cargado)
+            if (localidadEncontrada) 
+                {
+                    console.log(`Cliente: ${apellido}, ${nombre}`);
+                    console.log(`DNI: ${dni}`);
+                    console.log(`Código Postal: ${codigoPostal}`);
+                    console.log(`Localidad: ${localidadEncontrada.nombreLocalidad}`);
+                    console.log("────────────────────────────");
+                } else 
+                {
+                    console.log(`Cliente con DNI ${dni} tiene un código postal no registrado (${codigoPostal})`);
+                    console.log("────────────────────────────");
+                }
+            });

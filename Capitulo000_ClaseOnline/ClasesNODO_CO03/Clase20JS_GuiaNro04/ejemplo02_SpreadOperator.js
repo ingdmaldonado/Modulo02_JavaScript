@@ -1,9 +1,9 @@
 
 
-/*
+/*****************************************************
 (1) Uso de Spread Operator para clonar objetos
 Permite crear una copia superficial de un objeto.
-*/
+******************************************************/
 
 /*
 Ejemplo:
@@ -19,7 +19,7 @@ const producto = {
   console.log(productoActualizado);
   
   /*
-  Ejercicio:
+  Ejercicio: Guia Nro. 04 - Ejercicio 08
   Dado el siguiente objeto, creá una copia llamada usuarioInactivo que mantenga el mismo contenido pero con la propiedad activo igual a false.
   (No mostrar la solución aquí).
   */
@@ -29,10 +29,10 @@ const producto = {
     activo: true
   };
   
-  /*
+  /*************************************************************
   (2) Uso de Spread Operator para combinar objetos
   Se pueden fusionar dos objetos en uno nuevo.
-  */
+  **************************************************************/
   
   /*
   Ejemplo:
@@ -44,20 +44,20 @@ const producto = {
   console.log(perfilCompleto);
   
   /*
-  Ejercicio:
+  Ejercicio: Guia Nro. 04 - Ejercicio 09
   Dado los siguientes objetos, combiná ambos en uno solo llamado datosCompletos.
   (No mostrar la solución aquí).
   */
   const contacto = { email: "marcos@example.com", telefono: "123456789" };
   const ubicacion = { ciudad: "Córdoba", pais: "Argentina" };
   
-  /*
+  /**************************************************************
   (3) Uso de Spread Operator en arrays
   Permite clonar o combinar arrays.
-  */
+  *************************************************************/
   
   /*
-  Ejemplo:
+  Ejemplo: 
   Se tiene un array de productos y se desea agregar uno nuevo sin modificar el original.
   */
   const productos = ["mouse", "teclado", "monitor"];
@@ -66,7 +66,7 @@ const producto = {
   console.log(nuevosProductos);
   
   /*
-  Ejercicio:
+  Ejercicio: Guia Nro. 04 - Ejercicio 10
   Dado los siguientes arrays, unilos en uno nuevo llamado todos.
   (No mostrar la solución aquí).
   */
