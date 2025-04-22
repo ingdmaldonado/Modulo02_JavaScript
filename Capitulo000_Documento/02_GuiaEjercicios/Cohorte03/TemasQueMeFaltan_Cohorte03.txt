@@ -1,31 +1,43 @@
 
+---------------------------------------
+-------------- LISTOS -----------------
+---------------------------------------
+
 	=> Metodos de Vectores
 
-		forEach
-		map
-		filter
+		forEach (listo)
+		map (listo)
+		filter (listo)
 
-		find (x)
-		sort (x)
-		every (x)
-		reduce(x)
+	=> Destructuring (listo)
 	
+---------------------------------------
+------------ PENDIENTES ---------------
+---------------------------------------
+
+	find (x) - buscar
+	sort (x) - ordenar
+	every (x) - todos
+	some (X) - alguno
+	reduce(x) - totalizador
+
+
 	=> Spread Operator versus Rest Operator
 		
 		Spread => expandiendo (en invocación de funciones)
 		Rest => juntando (en definición de funciones)
 
-	=> Destructuring
+	=> JSON => JavaScript Objet Notation (HOY)
 
-	=> JSON => JavaScript Objet Notation
+	=> Try/Catch (HOY)
 
-	=> Try/Catch
+	=> ASINCRONISMO
 
-	=> Módulos en JavaScript
+	=> Módulos en JavaScript 
 
-	=> Persistencia en el Navegador
+	=> Persistencia en el Navegador (HOY)
 		- Cookies
-		- localStorage
+		- localStorage (HOY)
 		- sessionStorage
 		- indexDB
 
