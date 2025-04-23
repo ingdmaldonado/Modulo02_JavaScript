@@ -191,7 +191,7 @@ window.addEventListener("load",()=>{
             const botonDinamico = document.createElement("input");
             botonDinamico.type = "button";
             botonDinamico.id = boton.idBoton;
-            botonDinamico.innerText = boton.textoBoton;
+            botonDinamico.value = boton.textoBoton;
 
             botonDinamico.addEventListener("click",()=>{
                 alert(`Has pulsado el botón ${boton.textoBoton}`);
@@ -256,7 +256,7 @@ window.addEventListener("load",()=>{
                 checkBoxDinamico.name = "enfermedades";
 
                 const labelDinamico = document.createElement("label");
-                labelDinamico.innerText = nombreEnfermedad;
+                labelDinamico.textContent = nombreEnfermedad;
                 labelDinamico.setAttribute("for",checkBoxDinamico.id);
 
                 const objetoDinamico = {checkBoxDinamico,labelDinamico};
@@ -282,7 +282,19 @@ window.addEventListener("load",()=>{
             idContenedorCheckBox.appendChild(document.createElement("br"));          
 
         });
+    })
 
-   
+    idBtnVerCheckBoxElegidos.addEventListener("click",()=>
+      {
+        checkBoxGenerados.forEach(({checkBoxDinamico,labelDinamico}) => 
+          {
+            //console.log(checkBoxDinamico);
+            //console.log(labelDinamico);
 
-})
+            if(checkBoxDinamico.checked)
+            {
+                console.log(checkBoxDinamico);
+            }
+          })
+      })
+});
