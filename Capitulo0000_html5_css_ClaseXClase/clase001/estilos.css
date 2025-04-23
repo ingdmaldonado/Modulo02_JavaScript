@@ -1,0 +1,144 @@
+
+
+/* 
+  ===========================================================
+  📘 Guía de Unidades de Medida en CSS
+
+  | Unidad | Significado                              | Relación / Base                            | Ejemplo               |
+  |--------|-------------------------------------------|---------------------------------------------|------------------------|
+  | px     | Píxeles. Unidad fija                      | Absoluto: no varía con el entorno          | font-size: 16px;       |
+  | em     | Relativo al tamaño del elemento padre     | Multiplica el tamaño del contenedor        | font-size: 2em;        |
+  | rem    | Relativo al tamaño del <html> (raíz)      | Multiplica el tamaño del html              | font-size: 1.5rem;     |
+  | %      | Porcentaje respecto al contenedor         | Escala en relación al contenedor           | width: 80%;            |
+  | vw     | Viewport width: ancho de la ventana       | 1vw = 1% del ancho visible del navegador   | font-size: 5vw;        |
+  | vh     | Viewport height: alto de la ventana       | 1vh = 1% del alto visible del navegador    | height: 50vh;          |
+
+  🧠 Tip: Usá `rem` para consistencia global y `em` para modularidad dentro de secciones.
+  🔗 Recurso: https://developer.mozilla.org/es/docs/Web/CSS/length
+  ===========================================================
+
+  ===========================================================
+  ✏️ Guía de text-decoration en CSS
+
+  | Valor                | Efecto visual                  | Ejemplo de uso                          |
+  |----------------------|-------------------------------|------------------------------------------|
+  | none                 | Sin decoración                | text-decoration: none;                  |
+  | underline            | Subraya el texto              | text-decoration: underline;             |
+  | overline             | Línea sobre el texto          | text-decoration: overline;              |
+  | line-through         | Tacha el texto                | text-decoration: line-through;          |
+  | underline overline   | Línea arriba y abajo          | text-decoration: underline overline;    |
+
+  CSS3 permite más control con:
+  - text-decoration-line: underline, overline, line-through
+  - text-decoration-style: solid, dotted, dashed, wavy
+  - text-decoration-color: especifica el color de la línea
+
+  Más info: https://developer.mozilla.org/es/docs/Web/CSS/text-decoration
+  ===========================================================
+*/
+
+/* Estilos para encabezados */
+h1 { color: navy; font-size: 2.5rem; }
+h2 { color: darkgreen; font-size: 2rem; }
+h3 { color: maroon; font-size: 1.75rem; }
+h4 { color: teal; font-size: 1.5rem; }
+h5 { color: purple; font-size: 1.25rem; }
+h6 { color: gray; font-size: 1rem; }
+
+/* Estilos para etiquetas semánticas */
+strong { font-weight: bold; }
+em { font-style: italic; }
+mark { background-color: yellow; }
+small { font-size: 0.8em; color: darkgray; }
+
+/* Colores en distintos formatos */
+.color-nombre { color: blue; }
+.color-hex { color: #ff5733; }
+.color-rgb { color: rgb(60, 179, 113); }
+.color-rgba { color: rgba(255, 0, 0, 0.5); }
+
+/* Tamaños de fuente */
+.texto-px { font-size: 24px; }
+.texto-em { font-size: 2em; }
+.texto-rem { font-size: 1.5rem; }
+.texto-percent { font-size: 120%; }
+.texto-vw { font-size: 5vw; }
+
+/* Decoraciones de texto */
+.decoracion-subrayado { text-decoration: underline; }
+.decoracion-overline { text-decoration: overline; }
+.decoracion-tachado { text-decoration: line-through; }
+.decoracion-wavy {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+/* Alineación de texto */
+.texto-izquierda { text-align: left; }
+.texto-centro { text-align: center; }
+.texto-derecha { text-align: right; }
+.texto-justificado { text-align: justify; }
+
+.bloque-color {
+    font-family: sans-serif;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .color-ejemplo-1 {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+  
+  .color-ejemplo-2 {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  .color-ejemplo-3 {
+    background-color: #fff8e7;
+    color: #2563eb;
+  }
+  
+  .color-ejemplo-4 {
+    background-color: #6d28d9;
+    color: #f9fafb;
+  }
+  
+  .color-ejemplo-5 {
+    background-color: #e0f2fe;
+    color: #0f172a;
+  }
+
+  .dec-solid {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+  }
+  
+  .dec-dotted {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: darkgreen;
+  }
+  
+  .dec-dashed {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: navy;
+  }
+  
+  .dec-double {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: crimson;
+  }
+  
+  .dec-wavy {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: darkorange;
+  }
