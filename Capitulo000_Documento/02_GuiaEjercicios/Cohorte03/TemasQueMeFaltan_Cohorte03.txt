@@ -1,7 +1,7 @@
 
----------------------------------------
--------------- LISTOS -----------------
----------------------------------------
+----------------------------------------------------------------------
+-------------- LISTOS ------------------------------------------------
+----------------------------------------------------------------------
 
 	=> Metodos de Vectores
 
@@ -10,17 +10,6 @@
 		filter (listo)
 
 	=> Destructuring (listo)
-	
----------------------------------------
------------- PENDIENTES ---------------
----------------------------------------
-
-	find (x) - buscar
-	sort (x) - ordenar
-	every (x) - todos
-	some (X) - alguno
-	reduce(x) - totalizador
-
 
 	=> Spread Operator versus Rest Operator
 		
@@ -29,20 +18,34 @@
 
 	=> JSON => JavaScript Objet Notation (HOY)
 
-	=> Try/Catch (HOY)
-
-	=> ASINCRONISMO
-
-	=> Módulos en JavaScript 
-
-	=> Persistencia en el Navegador (HOY)
-		- Cookies
-		- localStorage (HOY)
+	=> Persistencia en el Navegador (listo)
+		- Cookies 
+		- localStorage (listo)
 		- sessionStorage
 		- indexDB
 
+
+----------------------------------------------------------------------
+-------------- HOY 24.04.2025 ----------------------------------------
+----------------------------------------------------------------------
+
+	
+	find (x) - buscar
+	sort (x) - ordenar
+	every (x) - todos
+	some (X) - alguno
+	reduce(x) - totalizador
+
+	=> Módulos en JavaScript (En el Proyecto !!!)
 	=> DOM DINAMICO
 
+
+----------------------------------------------------------------------
+------------ PENDIENTES ----------------------------------------------
+----------------------------------------------------------------------
+
+	=> Try/Catch (HOY)
+	=> ASINCRONISMO
 	=> APIs
 
 	
