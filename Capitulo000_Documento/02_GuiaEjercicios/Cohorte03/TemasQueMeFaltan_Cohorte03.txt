@@ -30,13 +30,12 @@
 ----------------------------------------------------------------------
 
 	
-	find (x) - buscar
+	find (x) // findIndex - buscar
 	sort (x) - ordenar
 	every (x) - todos
 	some (X) - alguno
 	reduce(x) - totalizador
 
-	=> Módulos en JavaScript (En el Proyecto !!!)
 	=> DOM DINAMICO
 
 

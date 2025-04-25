@@ -55,3 +55,60 @@ export const paises = [
     { id: 90, nombrePais: "ISLAS SALOMON", continentePais: "OCEANIA", poblacionPais: 700000, capital: "HONIARA", bandera: "https://flagcdn.com/w320/sb.png", codigoAlpha2: "SB", codigoAlpha3: "SLB" }
   ];
   
+
+  export const costoPasajes = [
+  { idPais: 32, precioIda: 340, precioRegreso: 360, precioIdaYVuelta: 630 },
+  { idPais: 76, precioIda: 450, precioRegreso: 430, precioIdaYVuelta: 790 },
+  { idPais: 152, precioIda: 295, precioRegreso: 310, precioIdaYVuelta: 545 },
+  { idPais: 858, precioIda: 230, precioRegreso: 250, precioIdaYVuelta: 440 },
+  { idPais: 600, precioIda: 260, precioRegreso: 275, precioIdaYVuelta: 480 },
+  { idPais: 68, precioIda: 320, precioRegreso: 315, precioIdaYVuelta: 570 },
+  { idPais: 604, precioIda: 410, precioRegreso: 390, precioIdaYVuelta: 720 },
+  { idPais: 218, precioIda: 360, precioRegreso: 350, precioIdaYVuelta: 640 },
+  { idPais: 170, precioIda: 385, precioRegreso: 370, precioIdaYVuelta: 680 },
+  { idPais: 862, precioIda: 325, precioRegreso: 345, precioIdaYVuelta: 600 },
+  
+  { idPais: 250, precioIda: 950, precioRegreso: 920, precioIdaYVuelta: 1700 },
+  { idPais: 276, precioIda: 980, precioRegreso: 960, precioIdaYVuelta: 1750 },
+  { idPais: 724, precioIda: 920, precioRegreso: 940, precioIdaYVuelta: 1670 },
+  { idPais: 380, precioIda: 910, precioRegreso: 890, precioIdaYVuelta: 1620 },
+  { idPais: 826, precioIda: 970, precioRegreso: 940, precioIdaYVuelta: 1720 },
+  { idPais: 752, precioIda: 930, precioRegreso: 910, precioIdaYVuelta: 1660 },
+  { idPais: 528, precioIda: 880, precioRegreso: 870, precioIdaYVuelta: 1580 },
+  { idPais: 756, precioIda: 860, precioRegreso: 840, precioIdaYVuelta: 1530 },
+  { idPais: 40, precioIda: 870, precioRegreso: 890, precioIdaYVuelta: 1560 },
+  { idPais: 56, precioIda: 895, precioRegreso: 865, precioIdaYVuelta: 1590 },
+  
+  { idPais: 156, precioIda: 1300, precioRegreso: 1280, precioIdaYVuelta: 2300 },
+  { idPais: 356, precioIda: 1250, precioRegreso: 1220, precioIdaYVuelta: 2200 },
+  { idPais: 392, precioIda: 1350, precioRegreso: 1320, precioIdaYVuelta: 2400 },
+  { idPais: 410, precioIda: 1220, precioRegreso: 1200, precioIdaYVuelta: 2150 },
+  { idPais: 704, precioIda: 1100, precioRegreso: 1070, precioIdaYVuelta: 1950 },
+  { idPais: 764, precioIda: 1080, precioRegreso: 1060, precioIdaYVuelta: 1900 },
+  { idPais: 496, precioIda: 1050, precioRegreso: 1020, precioIdaYVuelta: 1850 },
+  { idPais: 364, precioIda: 1180, precioRegreso: 1160, precioIdaYVuelta: 2100 },
+  { idPais: 682, precioIda: 1230, precioRegreso: 1210, precioIdaYVuelta: 2200 },
+  { idPais: 376, precioIda: 1150, precioRegreso: 1120, precioIdaYVuelta: 2050 },
+  
+  { idPais: 566, precioIda: 980, precioRegreso: 960, precioIdaYVuelta: 1750 },
+  { idPais: 818, precioIda: 920, precioRegreso: 910, precioIdaYVuelta: 1650 },
+  { idPais: 710, precioIda: 890, precioRegreso: 870, precioIdaYVuelta: 1580 },
+  { idPais: 404, precioIda: 880, precioRegreso: 860, precioIdaYVuelta: 1550 },
+  { idPais: 231, precioIda: 870, precioRegreso: 840, precioIdaYVuelta: 1530 },
+  { idPais: 288, precioIda: 850, precioRegreso: 820, precioIdaYVuelta: 1490 },
+  { idPais: 504, precioIda: 890, precioRegreso: 860, precioIdaYVuelta: 1550 },
+  { idPais: 24, precioIda: 830, precioRegreso: 810, precioIdaYVuelta: 1460 },
+  { idPais: 788, precioIda: 810, precioRegreso: 790, precioIdaYVuelta: 1410 },
+  { idPais: 12, precioIda: 820, precioRegreso: 800, precioIdaYVuelta: 1430 },
+  
+  { idPais: 36, precioIda: 1400, precioRegreso: 1350, precioIdaYVuelta: 2500 },
+  { idPais: 554, precioIda: 1380, precioRegreso: 1320, precioIdaYVuelta: 2450 },
+  { idPais: 242, precioIda: 1250, precioRegreso: 1200, precioIdaYVuelta: 2200 },
+  { idPais: 598, precioIda: 1320, precioRegreso: 1260, precioIdaYVuelta: 2350 },
+  { idPais: 882, precioIda: 1280, precioRegreso: 1220, precioIdaYVuelta: 2250 },
+  { idPais: 776, precioIda: 1240, precioRegreso: 1190, precioIdaYVuelta: 2200 },
+  { idPais: 548, precioIda: 1290, precioRegreso: 1240, precioIdaYVuelta: 2300 },
+  { idPais: 296, precioIda: 1270, precioRegreso: 1210, precioIdaYVuelta: 2250 },
+  { idPais: 585, precioIda: 1200, precioRegreso: 1150, precioIdaYVuelta: 2100 },
+  { idPais: 90, precioIda: 1230, precioRegreso: 1170, precioIdaYVuelta: 2150 }
+  ];

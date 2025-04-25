@@ -10,7 +10,9 @@ window.addEventListener("load",()=>
         const idBtnPaisElegido = document.querySelector("#idBtnPaisElegido");
 
         const paises = fnObtenerTodosLosPaises();
-        console.log(paises);        
+        console.log(paises);  
+        
+        const contenedor = document.querySelector("#idContenedorPaises");
         
         
         fnCompletarSelelector(paises,idSelectorPais);
@@ -21,4 +23,23 @@ window.addEventListener("load",()=>
             const paisElegido = fnObtenerPaisPorId(parseInt(idSelectorPais.value));
             console.log(paisElegido);        
         });     
+
+
+        paises.forEach(({ nombrePais, bandera }) => {
+            const divPais = document.createElement("div");
+        
+            const nombre = document.createElement("p");
+            nombre.textContent = nombrePais;
+        
+            const img = document.createElement("img");
+            img.src = bandera;
+            img.alt = `Bandera de ${nombrePais}`;
+            img.width = 80;
+        
+            divPais.appendChild(nombre);
+            divPais.appendChild(img);
+        
+            contenedor.appendChild(divPais);
+          });
+
     })
