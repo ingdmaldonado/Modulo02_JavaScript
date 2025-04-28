@@ -1,0 +1,49 @@
+
+/* 
+  Archivo: ejemplo03-colores.css
+  Tema: Aplicación de colores al texto en CSS
+*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  h1 {
+    color: black; /* Color negro clásico para el título */
+  }
+  
+  /* Color definido por nombre */
+  .color-nombre {
+    color: red; /* Color rojo usando nombre */
+  }
+  
+  /* Color definido por valor hexadecimal */
+  .color-hexadecimal {
+    color: #3498db; /* Azul suave (hexadecimal) */
+  }
+  
+  /* Color definido en formato RGB */
+  .color-rgb {
+    color: rgb(46, 204, 113); /* Verde suave */
+  }
+  
+  /* Color definido en formato RGBA */
+  .color-rgba {
+    color: rgba(155, 89, 182, 0.7); /* Violeta semitransparente */
+  }
+  
+  /* Texto sin color personalizado 
+  .sin-color {
+  }
+  */
+  
+  /* 
+  Explicación:
+  - Nombres: palabras reservadas por CSS como red, blue, green, etc.
+  - Hexadecimal: #RRGGBB.
+  - RGB: define cada componente de color (0 a 255).
+  - RGBA: igual que RGB, más canal alpha (transparencia de 0 a 1).
+  */
+  

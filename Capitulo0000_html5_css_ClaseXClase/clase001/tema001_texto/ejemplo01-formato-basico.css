@@ -1,0 +1,43 @@
+/* 
+  Archivo: ejemplo01-formato-basico.css
+  Tema: Formato básico de texto en HTML
+  Descripción: Estilos generales para el primer ejemplo de formato de texto.
+*/
+
+/* Estilos generales de toda la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente de tipo sans-serif para mejor legibilidad */
+    background-color: #f9fafb; /* Fondo muy claro, agradable para leer */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    margin: 0; /* Eliminamos márgenes del navegador */
+  }
+  
+  /* Estilo para el título principal */
+  h1 {
+    text-align: center; /* Centramos el texto horizontalmente */
+    color: #0d47a1; /* Azul fuerte para destacar */
+    margin-bottom: 40px; /* Espacio debajo del título */
+    font-size: 2rem; /* Tamaño de fuente del título */
+  }
+  
+  /* Estilo para todos los párrafos */
+  p {
+    font-size: 1.2rem; /* Tamaño de fuente un poco mayor que el normal */
+    color: #333333; /* Gris oscuro para mejor contraste */
+    margin-bottom: 20px; /* Espacio entre párrafos */
+    line-height: 1.6; /* Altura de línea para mejor lectura */
+  }
+  
+  /* 
+  Explicaciones de las propiedades utilizadas:
+  - font-family: define el tipo de fuente del texto.
+  - background-color: establece el color de fondo del body.
+  - padding: crea espacio interno entre el borde del body y su contenido.
+  - margin: elimina los márgenes externos por defecto del navegador.
+  - text-align: centra el texto del título.
+  - color: define el color del texto.
+  - margin-bottom: separa visualmente los elementos.
+  - font-size: controla el tamaño del texto.
+  - line-height: mejora la separación entre líneas de un párrafo.
+  */
+  

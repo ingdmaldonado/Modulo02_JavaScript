@@ -55,3 +55,40 @@ body {
 .caja-ejemplo-5 {
   margin: 30px; /* 30px en todos los lados */
 }
+
+/* Explicación sobre la propiedad margin:
+
+La propiedad margin controla el espacio externo alrededor de los elementos.
+
+Dependiendo de cuántos valores pongamos, se interpreta así:
+
+- 1 valor: 
+  margin: 20px;
+  ➔ Se aplica el mismo margen a los 4 lados (arriba, derecha, abajo, izquierda).
+
+- 2 valores: 
+  margin: 20px 10px;
+  ➔ El primer valor es para arriba y abajo, el segundo para derecha e izquierda.
+
+- 3 valores:
+  margin: 20px 10px 5px;
+  ➔ Primer valor: arriba, segundo: derecha e izquierda, tercero: abajo.
+
+- 4 valores:
+  margin: 20px 15px 10px 5px;
+  ➔ Orden de sentido horario:
+      1° arriba (top),
+      2° derecha (right),
+      3° abajo (bottom),
+      4° izquierda (left).
+
+Este orden es siempre en sentido de las agujas del reloj.
+
+Ejemplo visual para 4 valores:
+Top ➔ Right ➔ Bottom ➔ Left
+*/
+
+/* Ejemplo real:
+margin: 20px 15px 10px 5px;
+(20 arriba, 15 derecha, 10 abajo, 5 izquierda)
+*/

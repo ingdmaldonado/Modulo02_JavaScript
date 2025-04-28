@@ -1,0 +1,94 @@
+/* 
+  Archivo: ejemplo02-subrayados.css
+  Tema: Subrayados y decoraciones de texto en CSS
+*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo general de los párrafos */
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Tipos básicos de decoraciones */
+  .subrayado-simple {
+    text-decoration: underline; /* Línea debajo del texto */
+  }
+  
+  .sobrerayado {
+    text-decoration: overline; /* Línea arriba del texto */
+  }
+  
+  .tachado-line-through {
+    text-decoration: line-through; /* Línea a través del texto (tachado) */
+  }
+  
+  .subrayado-overline {
+    text-decoration: underline overline; /* Línea arriba y abajo */
+  }
+  
+  .sin-decoracion {
+    text-decoration: none; /* Sin decoraciones */
+  }
+  
+  /* Estilos de subrayado (style) */
+  .subrayado-solid {
+    text-decoration-line: underline;
+    text-decoration-style: solid; /* Línea sólida (default) */
+  }
+  
+  .subrayado-dotted {
+    text-decoration-line: underline;
+    text-decoration-style: dotted; /* Línea punteada */
+  }
+  
+  .subrayado-dashed {
+    text-decoration-line: underline;
+    text-decoration-style: dashed; /* Línea discontinua */
+  }
+  
+  .subrayado-double {
+    text-decoration-line: underline;
+    text-decoration-style: double; /* Línea doble */
+  }
+  
+  .subrayado-wavy {
+    text-decoration-line: underline;
+    text-decoration-style: wavy; /* Línea ondulada */
+  }
+  
+  /* Subrayado con colores personalizados */
+  .subrayado-rojo {
+    text-decoration-line: underline;
+    text-decoration-color: red; /* Subrayado rojo */
+  }
+  
+  .subrayado-azul {
+    text-decoration-line: underline;
+    text-decoration-color: blue; /* Subrayado azul */
+  }
+  
+  .subrayado-verde {
+    text-decoration-line: underline;
+    text-decoration-color: green; /* Subrayado verde */
+  }
+  
+  /* Comentarios importantes:
+  - text-decoration-line: define qué tipo de línea aplicar (underline, overline, line-through).
+  - text-decoration-style: define el estilo visual de la línea (solid, dotted, dashed, double, wavy).
+  - text-decoration-color: define el color de la línea, independiente del color del texto.
+  */
+  

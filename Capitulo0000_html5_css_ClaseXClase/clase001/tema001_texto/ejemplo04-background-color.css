@@ -1,0 +1,49 @@
+/* 
+  Archivo: ejemplo04-background-color.css
+  Tema: Aplicación de fondo usando background-color en CSS
+*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  h1 {
+    color: black; /* Texto negro */
+  }
+  
+  /* Fondo definido por nombre */
+  .fondo-nombre {
+    background-color: yellow; /* Fondo amarillo */
+  }
+  
+  /* Fondo definido por valor hexadecimal */
+  .fondo-hexadecimal {
+    background-color: #ffcc00; /* Amarillo dorado */
+  }
+  
+  /* Fondo definido en formato RGB */
+  .fondo-rgb {
+    background-color: rgb(173, 216, 230); /* Azul suave */
+  }
+  
+  /* Fondo definido en formato RGBA */
+  .fondo-rgba {
+    background-color: rgba(255, 99, 71, 0.5); /* Rojo semitransparente */
+  }
+  
+  /* Sin fondo especial 
+  .sin-fondo {
+    No aplicamos background-color adicional 
+  }
+    */
+
+  
+  /*
+  Notas:
+  - background-color establece el color detrás del contenido del elemento.
+  - Puede definirse por nombre, hexadecimal, rgb o rgba.
+  - rgba agrega transparencia controlada (0 completamente transparente, 1 completamente opaco).
+  */
+  

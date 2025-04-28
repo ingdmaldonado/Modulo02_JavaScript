@@ -1,0 +1,70 @@
+/* 
+  Archivo: ejemplo05-bordes.css
+  Tema: Aplicación de bordes en CSS
+*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  h1 {
+    color: black;
+  }
+  
+  /* 
+  IMPORTANTE SOBRE LOS BORDES:
+  - Se pueden aplicar bordes a cada lado del elemento: arriba, derecha, abajo, izquierda.
+  - El orden siempre sigue el sentido horario: top → right → bottom → left.
+  */
+  
+  /* Borde en los 4 lados (todos) */
+  .borde-todo {
+    border: 2px solid black; /* 2px de grosor, línea sólida, color negro */
+  }
+  
+  /* Borde solo arriba */
+  .borde-arriba {
+    border-top: 2px solid blue; /* Solo se dibuja arriba */
+  }
+  
+  /* Borde solo a la derecha */
+  .borde-derecha {
+    border-right: 2px solid green; /* Solo a la derecha */
+  }
+  
+  /* Borde solo abajo */
+  .borde-abajo {
+    border-bottom: 2px solid red; /* Solo en la parte inferior */
+  }
+  
+  /* Borde solo a la izquierda */
+  .borde-izquierda {
+    border-left: 2px solid orange; /* Solo a la izquierda */
+  }
+  
+  /* Borde arriba y abajo (combinados) */
+  .borde-parcial {
+    border-top: 2px dashed purple; /* Línea discontinua arriba */
+    border-bottom: 2px dotted teal; /* Línea punteada abajo */
+  }
+  
+  .texto_linea
+  {
+    border-bottom: 2px dashed purple;
+    border-top: 4px solid orange;
+  }
+
+
+  /*
+  Notas:
+  - border: aplica borde a todos los lados.
+  - border-top, border-right, border-bottom, border-left: aplican solo en un lado específico.
+  - Tipos de línea más comunes:
+      - solid: línea sólida
+      - dashed: línea discontinua
+      - dotted: línea punteada
+  - El sentido horario siempre es: arriba → derecha → abajo → izquierda.
+  */
+  
