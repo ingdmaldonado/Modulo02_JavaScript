@@ -1,0 +1,275 @@
+/* 
+  Archivo: ejemplo07-border-radius-parte1.css
+  Tema: Aplicación uniforme de border-radius
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 2rem;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+  }
+  
+  /* Caja sin redondeo (para comparar) */
+  .caja-sin-radio {
+    border: 2px solid #555;
+    padding: 1rem;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    /* No tiene border-radius, las esquinas quedan rectas */
+  }
+  
+  /* Caja con borde redondeado de 5px */
+  .caja-redondeada-5 {
+    border: 2px solid #1e90ff;
+    padding: 1rem;
+    background-color: #e6f0ff;
+    border-radius: 5px; /* Esquinas suavemente redondeadas */
+    margin-bottom: 1rem;
+  }
+  
+  /* Caja con borde redondeado de 20px */
+  .caja-redondeada-20 {
+    border: 2px solid #27ae60;
+    padding: 1rem;
+    background-color: #eafaf1;
+    border-radius: 20px; /* Redondeo notable */
+    margin-bottom: 1rem;
+  }
+  
+  /* Caja con borde redondeado de 50px (más curvado) */
+  .caja-redondeada-50 {
+    border: 2px solid #e67e22;
+    padding: 1rem;
+    background-color: #fef5e7;
+    border-radius: 50px; /* Esquinas muy redondeadas */
+    margin-bottom: 1rem;
+  }
+  
+  /*
+  IMPORTANTE:
+  - border-radius acepta cualquier unidad válida: px, %, rem, etc.
+  - Si se coloca un solo valor, se aplica a las 4 esquinas por igual.
+  - Un alto border-radius puede generar apariencia de "burbuja" o botón redondo.
+  */
+  
+
+  /* ========================================= */
+/* 🔷 Redondeado por esquina específica      */
+/* ========================================= */
+
+/* Solo redondear la esquina superior izquierda */
+.caja-esquina-superior-izq {
+    border: 2px solid #2980b9;
+    background-color: #eaf2f8;
+    padding: 1rem;
+    border-top-left-radius: 25px; /* Solo esa esquina */
+    margin-bottom: 1rem;
+  }
+  
+  /* Solo redondear la esquina inferior derecha */
+  .caja-esquina-inferior-der {
+    border: 2px solid #c0392b;
+    background-color: #fdecea;
+    padding: 1rem;
+    border-bottom-right-radius: 25px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Redondear dos esquinas opuestas */
+  .caja-dos-esquinas {
+    border: 2px solid #16a085;
+    background-color: #e8f8f5;
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cada esquina con un valor distinto */
+  .caja-cada-esquina-diferente {
+    border: 2px solid #8e44ad;
+    background-color: #f5eef8;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  /*
+  Notas importantes:
+  - border-top-left-radius: redondea solo la esquina superior izquierda.
+  - Las 4 propiedades individuales permiten diseños muy personalizados.
+  - El valor puede ser en px, rem o % según lo que se necesite.
+  */
+  
+  /* =============================================== */
+/* 🔵 border-radius en porcentaje para formas      */
+/* =============================================== */
+
+/* Círculo perfecto: requiere ancho = alto */
+.caja-circular {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%; /* Círculo perfecto */
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ovalado horizontal: ancho > alto */
+  .caja-oval-horizontal {
+    width: 200px;
+    height: 100px;
+    border-radius: 50% / 25%;
+    background-color: #1abc9c;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ovalado vertical: alto > ancho */
+  .caja-oval-vertical {
+    width: 100px;
+    height: 200px;
+    border-radius: 25% / 50%;
+    background-color: #e67e22;
+    text-align: center;
+    line-height: 200px;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /*
+  Notas:
+  - border-radius: 50% => transforma un cuadrado en círculo.
+  - border-radius: X% / Y% => permite generar óvalos.
+  - Para que funcione correctamente, el contenedor debe tener width y height definidos.
+  */
+
+/*
+  ---------------------------------------------
+  EXPLICACIÓN: border-radius con dos valores
+  ---------------------------------------------
+
+  Sintaxis completa:
+    border-radius: valor-horizontal / valor-vertical;
+
+  ✔ El primer valor (antes del '/') controla el radio en el eje horizontal (X).
+  ✔ El segundo valor (después del '/') controla el radio en el eje vertical (Y).
+
+  ✔ Si usás porcentajes (%):
+     - El valor horizontal se calcula en base al ancho del elemento.
+     - El valor vertical se calcula en base a la altura del elemento.
+
+  📌 Ejemplo:
+    border-radius: 25% / 50%;
+
+    ▸ Aplica 25% del ancho como redondeo en horizontal.
+    ▸ Aplica 50% de la altura como redondeo en vertical.
+
+  📐 Resultado:
+    ▸ Se obtiene una forma ovalada (elipse), no un círculo perfecto.
+    ▸ Este formato permite crear óvalos y formas orgánicas suaves.
+
+  🧠 Razonamiento:
+    ▸ Imaginá una plantilla curva distinta para cada eje.
+    ▸ Con eso podés personalizar la forma que toman las esquinas.
+
+  🧪 Recomendación:
+    ▸ Usalo cuando el ancho y el alto son diferentes y querés controlar el radio de curva en ambos sentidos.
+    ▸ Ejemplo común: botones con esquinas ovaladas, tarjetas con diseño elegante.
+
+*/
+
+  
+
+/* ================================================== */
+/* 🔧 Border-radius en situaciones reales de proyectos */
+/* ================================================== */
+
+/* Avatar circular (foto de usuario o iniciales) */
+.avatar-usuario {
+    width: 80px;
+    height: 80px;
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%; /* círculo perfecto */
+    margin-bottom: 1rem;
+  }
+  
+  /* Botón moderno con esquinas suaves */
+  .boton-suave {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px; /* esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-suave:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Alerta de éxito (usada en formularios) */
+  .alerta-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 5px solid #28a745;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tarjeta moderna (card) */
+  .tarjeta-contenido {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+/* ================================================= */
+/* Comparación entre elementos bloque vs inline      */
+/* ================================================= */
+
+/* Estilo de bloque con borde (p, div, etc.) */
+.bloque-con-borde {
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo aplicado a elementos en línea (span, label, etc.) */
+  .inline-con-borde {
+    border: 2px solid #e74c3c;
+    background-color: #fdecea;
+    padding: 0.2rem 0.4rem;
+    margin: 0 0.3rem;
+    display: inline; /* por si acaso, aseguramos comportamiento */
+  }
+  
+  /*
+  Notas importantes:
+  - Los elementos inline solo ocupan el espacio necesario.
+  - Su borde sigue la forma del contenido, no toda la línea.
+  - Los elementos en bloque ocupan todo el ancho disponible por defecto.
+  */
+  

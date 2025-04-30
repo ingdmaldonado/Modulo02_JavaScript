@@ -1,0 +1,162 @@
+
+/* 
+  Clase 08 - BOX MODEL
+  ---------------------
+  Cada elemento en HTML se comporta como una caja rectangular.
+  Esa caja está formada por:
+    ▸ El contenido
+    ▸ El padding (espacio interno)
+    ▸ El borde (border)
+    ▸ El margen (margin - espacio externo)
+
+  Referencia visual del modelo de caja:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/box-model.png
+
+  Representación textual:
+
+     ┌──────────────────────────────┐
+     │         margin               │
+     │  ┌────────────────────────┐  │
+     │  │       border           │  │
+     │  │  ┌──────────────────┐  │  │
+     │  │  │     padding       │  │  │
+     │  │  │  ┌────────────┐   │  │  │
+     │  │  │  │  content   │   │  │  │
+     │  │  │  └────────────┘   │  │  │
+     │  │  └──────────────────┘  │  │
+     │  └────────────────────────┘  │
+     └──────────────────────────────┘
+
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 2rem;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Caja con todos los componentes visibles */
+  .caja-modelo {
+    background-color: #eaf2f8; /* color del contenido */
+    padding: 20px;             /* espacio interno */
+    border: 4px solid #2980b9; /* borde visible */
+    margin: 40px;              /* espacio exterior */
+    color: #2c3e50;
+    font-size: 1.1rem;
+  }
+  
+  /*
+    Explicación técnica:
+  
+    - El color de fondo (background-color) afecta el área del padding + contenido.
+    - El borde rodea al padding y al contenido.
+    - El margen empuja la caja hacia afuera, separándola de otros elementos.
+    - El tamaño final del elemento es:
+        ▸ width + padding + border
+        ▸ Y separado del resto por margin
+  
+    ➕ Para centrar una caja horizontalmente:
+       margin: 0 auto;
+  
+    🧠 En el próximo ejemplo mostraremos cómo usar box-sizing para cambiar el cálculo del tamaño total.
+  */
+  
+  /* =========================================== */
+/* 🔄 Comparación: content-box vs border-box   */
+/* =========================================== */
+
+/* Caja con box-sizing por defecto */
+.caja-content-box {
+    width: 300px;
+    padding: 20px;
+    border: 4px solid #c0392b;
+    background-color: #fdecea;
+    margin-bottom: 1rem;
+    box-sizing: content-box; /* Valor por defecto */
+  }
+  
+  /* Caja con border-box (ancho incluye todo) */
+  .caja-border-box {
+    width: 300px;
+    padding: 20px;
+    border: 4px solid #27ae60;
+    background-color: #eafaf1;
+    margin-bottom: 1rem;
+    box-sizing: border-box; /* Valor recomendado */
+  }
+  
+  /*
+    Explicación:
+    ▸ content-box (por defecto):
+       - width SÓLO aplica al contenido.
+       - el padding y el borde SE SUMAN al ancho final.
+       - Resultado: la caja se agranda inesperadamente.
+  
+    ▸ border-box:
+       - width incluye contenido + padding + border.
+       - Resultado: la caja mantiene su ancho EXACTO.
+  
+    ✅ Es buena práctica global usar:
+       * {
+         box-sizing: border-box;
+       }
+  */
+  
+  /*
+  📦 BOX-SIZING – ¿Cómo se calcula el tamaño total de una caja?
+
+  ▸ box-sizing: content-box (VALOR POR DEFECTO)
+     - El ancho declarado (width) se aplica solo al "contenido".
+     - El padding y el borde se SUMAN al ancho total de la caja.
+     - Resultado: la caja es más grande de lo que esperás.
+     - Es como decir: "la caja se ajusta al contenido, y luego se agranda".
+
+  ▸ box-sizing: border-box (VALOR RECOMENDADO)
+     - El ancho declarado incluye: contenido + padding + borde.
+     - Resultado: la caja mide exactamente lo que le dijiste.
+     - Es como decir: "el contenido se adapta al tamaño fijo de la caja".
+
+  ✅ En diseño moderno se recomienda usar:
+     * {
+       box-sizing: border-box;
+     }
+
+  Esto mejora el control de dimensiones en layouts complejos.
+*/
+
+  /* Contenedor con fondo para ver la diferencia */
+.contenedor-comparativo {
+    background-color: #ddd;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  /* Estilo base compartido */
+  .box-content-box,
+  .box-border-box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    background-color: #eaf2f8;
+    color: #2c3e50;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Solo cambia esta propiedad */
+  .box-content-box {
+    box-sizing: content-box;
+  }
+  
+  .box-border-box {
+    box-sizing: border-box;
+  }
+  

@@ -1,0 +1,184 @@
+/* 
+  Archivo: ejemplo06-bordes-combinados.css
+  Tema: Estilos de borde en CSS con nombres descriptivos
+*/
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  h1 {
+    color: black;
+    margin-bottom: 2rem;
+  }
+  
+  /*
+  IMPORTANTE:
+  Los estilos de borde se definen con la propiedad border-style.
+  Estos son todos los valores posibles:
+  
+  - solid: línea sólida
+  - dotted: línea punteada
+  - dashed: línea discontinua
+  - double: doble línea
+  - inset: hundido
+  - outset: saliente
+  - groove: tipo surco (efecto tridimensional)
+  - ridge: tipo relieve (efecto tridimensional)
+  - none: sin borde
+  - hidden: oculto (similar a none, reservado para tablas)
+  */
+  
+  /* Estilos aplicados con nombres de clase descriptivos */
+  .borde-solido {
+    border: 3px solid black;
+  }
+  
+  .borde-conpuntos {
+    border: 3px dotted crimson;
+  }
+  
+  .borde-conguiones {
+    border: 3px dashed steelblue;
+  }
+  
+  .borde-doble {
+    border: 4px double darkorange;
+  }
+  
+  .borde-hundido {
+    border: 4px inset gray;
+  }
+  
+  .borde-saliente {
+    border: 4px outset black;
+  }
+  
+  .borde-surco {
+    border: 5px groove darkcyan;
+  }
+  
+  .borde-relieve {
+    border: 5px ridge darkmagenta;
+  }
+  
+  .borde-ninguno {
+    border-style: none;
+    border-width: 3px;
+    border-color: red;
+  }
+  
+  .borde-oculto {
+    border-style: hidden;
+    border-width: 3px;
+    border-color: green;
+  }
+
+  /* Combinación de 4 bordes diferentes por lado */
+.borde-multicolor-1 {
+    border-top: 3px solid red;
+    border-right: 4px dotted green;
+    border-bottom: 5px dashed blue;
+    border-left: 6px double purple;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  /* Combinación con distintos anchos y estilos más complejos */
+  .borde-multiancho {
+    border-top: 2px groove darkorange;
+    border-right: 5px outset teal;
+    border-bottom: 4px ridge brown;
+    border-left: 6px inset navy;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: #f0f0f0;
+  }
+  
+  /*
+  Notas:
+  - Esto demuestra que cada lado del borde puede tener su estilo, grosor y color.
+  - Ideal para entender la flexibilidad total del modelo de caja en CSS.
+  */
+  
+  /* Borde igual en los 4 lados */
+.borde-uniforme {
+    border: 3px solid black;
+    margin-top: 2rem;
+    padding: 0.8rem;
+  }
+  
+  /* Borde en sentido horario: top, right, bottom, left */
+  .borde-horario {
+    border-width: 2px 4px 6px 8px; /* sentido horario */
+    border-style: solid dashed dotted double;
+    border-color: red green blue purple;
+    padding: 0.8rem;
+  }
+  
+  /* Borde con 2 valores: vertical | horizontal */
+  .borde-vertical-horizontal {
+    border-width: 5px 10px; /* top-bottom | left-right */
+    border-style: solid;
+    border-color: teal;
+    padding: 0.8rem;
+  }
+
+  /* ===================================================== */
+/* 🔧 Ejemplos comunes en proyectos reales               */
+/* Estos patrones aparecen frecuentemente en sitios web */
+/* ===================================================== */
+
+/* Estilo común en campos de formularios */
+.borde-input-clasico {
+    border: 1px solid #ccc; /* Gris claro */
+    padding: 0.6rem;
+    font-size: 1rem;
+    background-color: #fafafa;
+  }
+  
+  /* Tarjeta visual (común en paneles de administración o cards) */
+  .borde-card-simple {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Botón moderno con bordes suaves */
+  .borde-boton-modern {
+    border: 1px solid #007BFF;
+    border-radius: 5px; /* Borde redondeado */
+    color: white;
+    background-color: #007BFF;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: fit-content;
+  }
+  
+  /* Título de sección con borde izquierdo */
+  .borde-izquierdo-seccion {
+    border-left: 5px solid #00b894;
+    padding-left: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Enlace subrayado moderno */
+  .link-subrayado {
+    border-bottom: 2px solid #1e90ff;
+    display: inline-block;
+    padding-bottom: 2px;
+    text-decoration: none; /* Quitar subrayado clásico */
+    color: #1e90ff;
+  }
+  
+  /* Hover para mostrar uso práctico */
+  .link-subrayado:hover {
+    border-color: #0056b3;
+  }
+  
+  

@@ -1,0 +1,94 @@
+
+/* ========================================== */
+/* Clase 08: MÁRGENES                         */
+/* ========================================== */
+
+/* Ejemplo 1: margin con un solo valor (aplica a los 4 lados) */
+.margen-unico {
+    margin: 20px;
+    background-color: #eaf2f8;
+    padding: 1rem;
+    border: 2px solid #2980b9;
+  }
+  
+  /* Ejemplo 2: margin con 4 valores (sentido horario) */
+  .margen-horario {
+    margin: 10px 20px 30px 40px;
+    background-color: #fdecea;
+    padding: 1rem;
+    border: 2px solid #c0392b;
+  }
+  
+  /* Ejemplo 3: margin con 2 valores (vertical | horizontal) */
+  .margen-vertical-horizontal {
+    margin: 15px 30px; /* vertical arriba/abajo | horizontal izq/der */
+    background-color: #e8f8f5;
+    padding: 1rem;
+    border: 2px solid #16a085;
+  }
+  
+  /* Ejemplo 4: margin por lado individual */
+  .margen-por-lado {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    background-color: #f5eef8;
+    padding: 1rem;
+    border: 2px solid #8e44ad;
+  }
+  
+  /*
+  MARGIN – Espaciado exterior
+
+  margin: 20px;               → aplica 20px a los 4 lados
+  margin: 10px 20px;          → 10px arriba/abajo, 20px izq/der
+  margin: 10px 20px 30px 40px;
+    ▸ sentido horario: TOP – RIGHT – BOTTOM – LEFT
+
+  También podés usar:
+    margin-top, margin-right, margin-bottom, margin-left
+
+  Admite valores en px, rem, %, em, auto (muy usado para centrar)
+*/
+
+/* ================================================= */
+/* Comparación visual entre margin y padding         */
+/* ================================================= */
+
+/* margin genera espacio fuera del borde */
+.ejemplo-margin {
+    margin: 40px;
+    padding: 1rem;
+    background-color: #fef9e7;
+    border: 2px solid #f1c40f;
+  }
+  
+  /* padding genera espacio dentro del borde */
+  .ejemplo-padding {
+    margin-bottom: 1rem;
+    padding: 40px;
+    background-color: #d6eaf8;
+    border: 2px solid #3498db;
+  }
+  
+  /* combinación de ambos */
+  .ejemplo-margin-padding {
+    margin: 20px;
+    padding: 20px;
+    background-color: #e8f8f5;
+    border: 2px solid #2ecc71;
+  }
+  
+  /*
+  COMPARACIÓN CLAVE:
+
+  ▸ margin → espacio externo: separa el elemento de los demás.
+  ▸ padding → espacio interno: separa el contenido del borde del elemento.
+
+  Visualmente:
+    - margin aleja la caja de su entorno.
+    - padding agranda la caja por dentro, sin moverla de lugar.
+
+  En muchos casos se usan ambos para lograr el diseño deseado.
+*/

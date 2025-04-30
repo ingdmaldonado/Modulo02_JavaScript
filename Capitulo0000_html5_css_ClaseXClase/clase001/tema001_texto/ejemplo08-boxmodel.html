@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejemplo08-boxmodel.css">
+    <title>Clase 08 - BoxModel</title>
+</head>
+<body>  
+    <h1>Modelo de Caja en CSS (Box Model)</h1> 
+    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#/media/File:box-model-standard-small.png" target="_blank">BOX MODEL - MOZILLA</a>
+
+    <!-- Caja con padding, border y margin -->
+    <div class="caja-modelo">
+    Esta caja tiene contenido, padding, un borde visible y un margen externo.
+    </div>
+
+    <h2>Uso de box-sizing: content-box vs border-box</h2>
+
+    <!-- Caja por defecto (content-box) -->
+    <div class="caja-content-box">box-sizing: content-box (valor por defecto)</div>
+
+    <!-- Caja moderna (border-box) -->
+    <div class="caja-border-box">box-sizing: border-box (recomendado)</div>
+
+    <h2>Comparación visual clara entre content-box y border-box</h2>
+
+    <div class="contenedor-comparativo">
+      <div class="box-content-box">soy una caja con content box</div>
+      <div class="box-border-box">soy una caja con borderr box</div>
+    </div>
+    
+</body>
+</html>

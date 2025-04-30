@@ -1,0 +1,157 @@
+/* Clase 09 - BOX SHADOW
+   ----------------------
+   Sintaxis: box-shadow: offsetX offsetY blur spread color inset;
+   Todos los valores excepto "inset" son obligatorios.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  div[class^="sombra"] {
+    width: 300px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+  }
+  
+  /* Sombra básica: desplazada abajo y derecha */
+  .sombra-basica {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    /* offsetX | offsetY | blur | color */
+  }
+  
+  /* Sombra más difusa */
+  .sombra-suave {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Sombra más intensa y definida */
+  .sombra-intensa {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Sombra interna */
+  .sombra-interna {
+    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Varias sombras combinadas */
+  .sombra-multiple {
+    box-shadow:
+      2px 2px 5px rgba(0, 0, 0, 0.3),
+      -2px -2px 5px rgba(255, 0, 0, 0.2);
+  }
+  
+  /*
+    Explicación rápida:
+  
+    ▸ offsetX: desplazamiento horizontal de la sombra
+    ▸ offsetY: desplazamiento vertical
+    ▸ blur-radius: difuminado de la sombra
+    ▸ spread-radius: expansión de la sombra (opcional)
+    ▸ color: color de la sombra
+    ▸ inset: hace que la sombra sea interna en lugar de externa
+  
+    ✅ Puedes combinar varias sombras separadas por coma.
+  */
+  
+  /* Sombra con spread-radius */
+.sombra-con-spread {
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+}
+
+/*
+  En este caso:
+    ▸ blur: 10px (difuminado)
+    ▸ spread: 5px (expansión visible)
+  ➕ Esto genera una sombra más amplia, como si flotara.
+*/
+
+/* Tarjeta moderna profesional */
+.tarjeta-sombra {
+  width: 320px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+  font-family: Arial, sans-serif;
+}
+
+/*
+  Este diseño es común en interfaces modernas (Material Design, Bootstrap).
+  La sombra suave en el eje Y (0 8px 20px) da sensación de profundidad real.
+*/
+
+
+/* Sombras de colores vivos */
+
+.sombra-roja {
+  width: 280px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.5); /* rojo */
+}
+
+.sombra-azul {
+  width: 280px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 15px 5px rgba(0, 102, 255, 0.5); /* azul fuerte */
+}
+
+.sombra-verde {
+  width: 280px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 15px 5px rgba(0, 255, 128, 0.5); /* verde neón */
+}
+
+/* Ejemplo divertido: sombra múltiple multicolor */
+.sombra-arcoiris {
+  width: 280px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow:
+    2px 2px 0px #e74c3c,
+    4px 4px 0px #f1c40f,
+    6px 6px 0px #2ecc71,
+    8px 8px 0px #3498db,
+    10px 10px 0px #9b59b6;
+}
+
+/*
+  Este último genera un efecto escalonado tipo sombra arcoiris.
+  Muy usado en estilos llamativos, portafolios o interfaces creativas.
+*/
