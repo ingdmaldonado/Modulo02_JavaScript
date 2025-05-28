@@ -1,0 +1,60 @@
+
+
+export async function obtenerUniversidades() 
+{
+    try {
+      const response = await fetch('http://universities.hipolabs.com/search?country=Argentina');
+      const data = await response.json();
+
+      return data;
+         
+    } 
+    catch (error)
+    {
+      console.error('Error al obtener las universidades:', error);
+      return null;
+    }
+}
+
+
+export async function obtenerPronosticoTiempo() {
+    const url = 'https://ws.smn.gob.ar/map_items/weather';
+
+    https://ws.smn.gob.ar/map_items/weather
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();       
+
+        return data;
+
+    } catch (error) 
+    {
+        console.error('Error al obtener el pronóstico del tiempo:', error);
+        return null;
+    }
+
+}
+
+
+export async function obtenerPaisesYCapitales() 
+{
+    const url = 'https://restcountries.com/v3.1/all';
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        // Procesar y mostrar países y capitales
+        data.forEach(pais => {
+            console.log(`País: ${pais.name.common}, Capital: ${pais.capital ? pais.capital[0] : 'N/A'}`);
+        });
+
+        return data;
+
+    } catch (error) {
+        console.error('Error al obtener países y capitales:', error);
+
+        return null;
+    }
+}
