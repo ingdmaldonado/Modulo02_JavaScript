@@ -1,0 +1,70 @@
+https://www.youtube.com/watch?v=0hrJGWrCux0
+
+/****************************************************/
+1) instalar live server
+/****************************************************/
+
+
+/****************************************************/
+2) instalar prettier - code formatter
+/****************************************************/
+
+¿Para qué sirve?
+✅ Corrige el formato del código automáticamente
+
+Ajusta indentación (espacios, tabulaciones)
+
+Ordena llaves { } y paréntesis ( )
+
+Rompe líneas largas (según configuraciones)
+
+Quita espacios innecesarios
+
+Ordena propiedades en CSS o atributos en HTML (según las reglas)
+
+✅ Evita discusiones de estilo en equipos
+
+Todos los desarrolladores trabajan bajo las mismas reglas de formato.
+
+No importa cómo escribas, importa qué escribas → Prettier se encarga del resto.
+
+✅ Ahorrás tiempo
+
+No tenés que preocuparte de detalles como “¿uso 2 o 4 espacios?”, “¿va punto y coma?”, “¿abro corchetes en la misma línea?”
+→ Prettier lo hace por vos al guardar el archivo.
+
+✅ Mejora la legibilidad
+
+Código formateado correctamente = más fácil de leer y mantener.
+
+✅ Funciona en múltiples lenguajes
+
+JavaScript, TypeScript, HTML, CSS, JSON, Markdown, YAML, entre otros.
+
+
+/****************************************************/
+3) instalar - pesticide
+/****************************************************/
+
+¿Qué es Pesticide?
+Pesticide for Chrome (o extensiones similares) es una herramienta que dibuja bordes de colores alrededor de todos los elementos HTML en una página,
+para ayudarte a visualizar claramente el modelo de caja (box model) de cada uno.
+
+📌 ¿Para qué sirve?
+✅ Ver los límites reales de cada elemento (margin, border, padding, content)
+✅ Detectar problemas de alineación, solapamiento, espaciado
+✅ Depurar layouts complejos
+✅ Ayudar en tareas de maquetado y responsive design
+✅ Enseñar visualmente cómo se construye la estructura de una página
+
+La herramienta Pesticide marca visualmente los elementos de una página como si estuviera “cazando” errores de diseño o alineación,
+como si fueran plagas que hay que detectar y eliminar.
+
+Es un nombre gracioso/metafórico que juega con el concepto de encontrar problemas invisibles en el layout.
+
+<link rel="stylesheet" href="https://unpkg.com/pesticide@1.4.0/css/pesticide.min.css">
+
+🟡 Paso 1 → Ir al Chrome Web Store
+
+🟡 Paso 2 → Instalar
+✅ Haz clic en “Añadir a Chrome”
