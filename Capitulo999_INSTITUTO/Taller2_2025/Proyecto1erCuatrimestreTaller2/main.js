@@ -9,9 +9,10 @@ window.addEventListener('load', () => {
   const idBtnPruebas = document.querySelector('#idBtnPruebas');
 
   idBtnProvincias.addEventListener('click', async () => {
-    try {
-      const data = await fnObtenerProvincias();
-      console.log('Provincias:', data);
+    try 
+    {
+      const data = await fnObtenerProvincias(); // aqui llamo a esta función que es asincrna y devuelve provincias
+      console.log('Provincias:', data); // muestro el resultado
     } catch (error) {
       console.error(error);
     }

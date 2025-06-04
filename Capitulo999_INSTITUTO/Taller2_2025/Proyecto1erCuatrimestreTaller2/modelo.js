@@ -1,14 +1,33 @@
 
 /* función asíncrona que permite obtener las provincias de Argentina */
 
+/* 
+  API REST => JSON => ABIERTA
+
+    ABIERTA: no necesitas registrarte previamente en una página
+    para que te de un token y en función de eso poder acceder
+    a la api. es la mas simple de todas y puedo pegar el link
+    en el navegador y ver
+
+    SEGURIDAD: registrar, te dan un TOKEN y con eso recién
+    podes acceder a la API.
+
+*/
+
+
 export const fnObtenerProvincias = async () => {
-  try {
+  try { 
+    /*  aqui pongo el bloque de codigos de cosas que quiero
+    que se ejecuten en bloque y si falla algo, salir por el catch
+    */
+
     const URL = `https://apis.datos.gob.ar/georef/api/provincias`;
-    const respuesta = await fetch(URL);   
-    const data = await respuesta.json();
+    const respuesta = await fetch(URL);   // 1) request a esa api => respuesta (formato propio del request)
+    const data = await respuesta.json(); // 2) convertir el resultado del fetch => JSON
     return data;
   } catch (error) 
   {
+    /* El catch es el bloque que se dispara cuando algo del try falla. */
     console.error('se produjo un error: ', error);
     throw error;
   }
