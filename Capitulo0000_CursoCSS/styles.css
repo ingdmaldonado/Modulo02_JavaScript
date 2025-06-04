@@ -1,0 +1,32 @@
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+
+/* Element selector */
+body
+{
+    background-color: #f7f7f7; // color gris
+    color: #333; // color gris oscuro
+}
+
+/* Class selector */
+.hero
+{
+    padding:100px;
+    color:red;
+}
+
+.hero__title
+{
+    color:black;
+}
+
+/* Element selector */
+div
+{
+    color: blue;
+}
