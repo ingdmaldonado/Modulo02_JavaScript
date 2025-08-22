@@ -1,0 +1,23 @@
+
+
+	- sort en Vectores
+
+	- Destructuring
+
+	- Spread Operator
+
+	- Rest Operator
+
+	- Clonación de Objetos y Vectores
+
+	- JSON
+
+	- Persistencia Local
+		* sessionStorage
+		* localStorage
+		* indexDB
+		* cookies
+
+	- Try/Catch
+
+	- ASINCRONISMO Y APIS
