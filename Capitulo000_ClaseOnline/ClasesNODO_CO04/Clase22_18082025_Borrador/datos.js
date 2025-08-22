@@ -1,4 +1,4 @@
-// datos.js — 50 países (banderas reales de flagcdn.com)
+
 export const paises = [
   { id: "ar", nombre: "Argentina", capital: "Buenos Aires", idioma: "Español", continente: "América del Sur", bandera: "https://flagcdn.com/w80/ar.png" },
   { id: "br", nombre: "Brasil", capital: "Brasília", idioma: "Portugués", continente: "América del Sur", bandera: "https://flagcdn.com/w80/br.png" },
