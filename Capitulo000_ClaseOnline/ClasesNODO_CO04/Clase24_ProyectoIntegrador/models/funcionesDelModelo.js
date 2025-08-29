@@ -1,7 +1,4 @@
-
-// paises.modelo.js
-
-//const URL = "https://restcountries.com/v3.1/all";       
+    
 
 const URLAfrica = "https://restcountries.com/v3.1/region/africa";
 const URLAmericas = "https://restcountries.com/v3.1/region/americas"; // ← usar "americas"
@@ -10,9 +7,10 @@ const URLEurope = "https://restcountries.com/v3.1/region/europe";
 const URLOceania = "https://restcountries.com/v3.1/region/oceania";
 
 
-export const obtenerPaisesAmerica = async () => {
-  try {
-    const resp = await fetch(URLAfrica);
+export const obtenerPaisesAmerica = async (URL) => {
+  try {    
+
+    const resp = await fetch(URL);
    
     const data = await resp.json();
 
