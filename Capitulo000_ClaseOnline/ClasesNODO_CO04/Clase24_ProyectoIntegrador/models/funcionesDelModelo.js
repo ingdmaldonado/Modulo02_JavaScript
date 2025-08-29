@@ -29,3 +29,9 @@ export const obtenerPaisesAmerica = async (URL) => {
     };
   }
 };
+
+
+// Devuelve el valor si existe, o "Sin dato" si no está definido/null
+export const getDatoSeguro = (valor) => {
+  return valor ? valor : "Sin dato";
+};
