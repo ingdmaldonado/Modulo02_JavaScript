@@ -1,0 +1,31 @@
+1) Eliminar el Selector ese que pusimos
+En el HTML. 
+
+2) Me esta faltando envolver con un try/catch el fetch
+que se hace dentro de la función 
+	fnRecuperarDatosDeApi
+
+3) ESTANDARIZAMOS Y UNIFICAMOS LA MISMA SALIDA =  Devolver datos un poquito mas estandarizados.
+
+  	respuesta = {
+                ok: response.ok,
+                status: response.status,
+                statusText: response.statusText,
+                datos: datos
+            }
+
+  	respuesta = {
+                ok: false,
+                status: 500,
+                statusText: error.message,
+                datos: null
+            }
+
+
+4) Creamos la Carpeta Vista => donde tendremos todas las funciones
+que se encarguen de la "Renderización" y dibujo de elementos dinámicos en el dinámicos
+
+
+
+
+
