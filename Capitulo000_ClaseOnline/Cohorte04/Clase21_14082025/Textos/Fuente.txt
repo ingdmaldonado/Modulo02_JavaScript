@@ -1,0 +1,124 @@
+
+------------------------------------------------------------------
+1) ORIGEN DE LOS DATOS:
+------------------------------------------------------------------
+
+    Origen de los Datos Abiertos al Público 
+
+    https://www.afip.gob.ar/genericos/cInscripcion/archivoCompleto.asp
+
+------------------------------------------------------------------
+2) ESTRUCTURA ORIGINAL DEL ARCHIVO:
+------------------------------------------------------------------
+
+    Nombre	Posición	Longitud	Comentarios (*)
+
+        CUIT 	1 / 11	11	
+        DENOMINACION 	12 / 41	30	 
+        IMP GANANCIAS	42 / 43	2	'NI', 'AC', 'EX', 'NC'
+        IMP IVA	44 / 45	2	'NI', 'AC', 'EX', 'NA', 'XN', 'AN'
+        MONOTRIBUTO	46 / 47	2	"Código categoría tributaria" 'BT', 'AP', 'AC', 'AL', 'AV', 'AT', y 'A' a 'K'
+        INTEGRANTE SOC	48	1	'N' , 'S'
+        EMPLEADOR	49	1	'N', 'S'
+        ACTIVIDAD MONOTRIBUTO	51 / 52	2	´00´, ´01´, ´02´, ´03´, ´04´,´05´,´06´,´07´, ´08´, ´09´, ´10´, ´11´
+
+------------------------------------------------------------------
+3) ESTRUCTURA DEL OBJETO
+------------------------------------------------------------------
+
+    PadronAFIPId,
+    PadronAFIPCUIT,
+    PadronAFIPDenominacion,
+    PadronAFIPImpGanancias,
+    PadronAFIPImpIVA,
+    PadronAFIPMonotributo,
+    PadronAFIPIntegranteSoc,
+    PadronAFIPEmpleador,
+    PadronAFIPActividadMonotributo
+
+------------------------------------------------------------------
+4) PARA ACCEDER A LOS ATRIBUTOS
+------------------------------------------------------------------
+
+    
+    element.PadronAFIPId,
+    element.PadronAFIPCUIT,
+    element.PadronAFIPDenominacion,
+    element.PadronAFIPImpGanancias,
+    element.PadronAFIPImpIVA,
+    element.PadronAFIPMonotributo,
+    element.PadronAFIPIntegranteSoc,
+    element.PadronAFIPEmpleador,
+    element.PadronAFIPActividadMonotributo
+
+-------------------------------------------------------------------
+5) PARA MOSTRAR LOS ATRIBUTOS POR CONSOLA
+-------------------------------------------------------------------
+
+    console.log(`PadronAFIPId: ${element.PadronAFIPId}`);
+    console.log(`PadronAFIPCUIT: ${element.PadronAFIPCUIT}`);
+    console.log(`PadronAFIPDenominacion: ${element.PadronAFIPDenominacion} `);
+    console.log(`PadronAFIPImpGanancias: ${element.PadronAFIPImpGanancias}`);
+    console.log(`PadronAFIPImpIVA: ${element.PadronAFIPImpIVA}`);
+    console.log(`PadronAFIPMonotributo: ${element.PadronAFIPMonotributo}`);
+    console.log(`PadronAFIPIntegranteSoc: ${element.PadronAFIPIntegranteSoc}`);
+    console.log(`PadronAFIPEmpleador: ${element.PadronAFIPEmpleador}`);
+    console.log(`PadronAFIPActividadMonotributo: ${element.PadronAFIPActividadMonotributo}`);
+
+-------------------------------------------------------------------
+4) BUSQUEDAS PROPUESTAS 
+-------------------------------------------------------------------
+
+
+Enunciados con forEach
+Recorrido básico (mostrar):
+Recorrer todos los elementos mostrando ID, CUIT y DENOMINACIÓN (usar trim() en la denominación).
+
+Contar empleadores:
+Recorrer y contar cuántos tienen PadronAFIPEmpleador === 'S'.
+
+Ganancias ACTIVO Y Empleadores (AND):
+Recorrer y contar los que cumplen ambas condiciones:
+PadronAFIPImpGanancias === 'AC' && PadronAFIPEmpleador === 'S'.
+
+Monotributo en categorías 03, 05 o 07 (OR):
+Recorrer y contar los que tienen alguna de estas categorías: 03, 05 o 07.
+(Si la categoría viene como string, comparar strings; si es numérica, comparar números.)
+
+CUIT que comienzan con “30”:
+Recorrer y mostrar los contribuyentes cuyo CUIT comience con "30" (startsWith('30')).
+
+Exentos en IVA (contar):
+Recorrer y contar cuántos tienen PadronAFIPImpIVA === 'EX'.
+
+NO monotributistas (NOT):
+Recorrer y contar cuántos no son monotributistas:
+PadronAFIPMonotributo !== 'AC' o directamente una bandera que indique que no están en Monotributo (según tu dato).
+
+Integrantes de sociedad (mostrar):
+Recorrer y mostrar la denominación de quienes son PadronAFIPIntegranteSoc === 'S'.
+
+Denominación que comienza con “S” (contar):
+Recorrer y contar cuántos tienen PadronAFIPDenominacion.trim().startsWith('S').
+
+CUIT con dígito final impar (contar):
+Recorrer y contar cuántos terminan en 1,3,5,7 o 9.
+Pista: tomar el último carácter del CUIT y chequear si está en ['1','3','5','7','9'].
+
+IVA ACTIVO O EXENTO (OR):
+Recorrer y contar los que cumplen al menos una:
+PadronAFIPImpIVA === 'AC' || PadronAFIPImpIVA === 'EX'.
+
+NI en Ganancias Y NO Empleadores (AND + NOT):
+Recorrer y contar los que tienen PadronAFIPImpGanancias === 'NI' y además no son empleadores:
+PadronAFIPEmpleador !== 'S'.
+
+Denominación contiene “SUCESION” (mostrar):
+Recorrer y mostrar los que incluyan la palabra "SUCESION" (usar includes('SUCESION') sobre la denominación trim() y en mayúsculas para evitar problemas de casing).
+
+Monotributo ACTIVO Y IVA NI (AND):
+Recorrer y contar los que tienen PadronAFIPMonotributo === 'AC' y PadronAFIPImpIVA === 'NI'.
+
+Ganancias NI O Integrante de Sociedad (OR):
+Recorrer y contar los que cumplen alguna:
+PadronAFIPImpGanancias === 'NI' || PadronAFIPIntegranteSoc === 'S'.

@@ -1,0 +1,18 @@
+
+/* estoy usando un selector de tipo */
+body
+{
+    background-color: blue;
+}
+
+/* estoy usando un selector de clase */
+.tituloPrincipal
+{
+    color: yellow;
+}
+
+/* estoy usando un selector por ID */
+#tituloSecundario
+{
+    color: red;
+}

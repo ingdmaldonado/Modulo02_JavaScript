@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map y Dom Dinamico</title>
+</head>
+<body>
+    <h1>Map - Dom Dinamico</h1>
+    <h1>EJEMPLO DE HTML DINAMICO - SELECTOR</h1>
+    <h3>Este es un Selector Estatico</h3>
+    <select>
+        <option>ARGENTINA</option>
+        <option>BRASIL</option>
+        <option>URUGUAY</option>
+    </select>
+    <h3>Este es un Selector Dinamico</h3>
+    <select id="idSelectorDePaises">
+       
+    </select>
+    <hr>
+    <hr>
+    <h1>EJEMPLO DE HTML DINAMICO - TABLA DINAMICA</h1>
+    <table border="2px">
+        <thead>
+            <th>Nombre Pais</th>
+            <th>Capital</th>
+            <th>Bandera</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ARGENTINA</td>
+                <td>BUENOS AIRES</td>
+                <td>BANDERA1</td>
+            </tr>
+            <tr>
+                <td>FRANCIA</td>
+                <td>PARIS</td>
+                <td>BANDERA2</td>
+            </tr>
+            <tr>
+                <td>ALEMANIA</td>
+                <td>BERLIN</td>
+                <td>BANDERA3</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Esta es la Tabla Dinamica</h3>
+     <table border="2px">
+        <thead>
+            <th>Nombre Pais</th>
+            <th>Capital</th>
+            <th>Bandera</th>
+        </thead>
+        <tbody id="idCuerpoDeTabla">
+           
+        </tbody>
+    </table>
+    <hr>
+    <hr>
+    <div id="idContenedorPrincipal">
+        <div>
+            <h2>Pais:ARGENTINA</h2>
+            <h3>Capital:BUENOS AIRES</h3>
+            <img src="">
+        </div>
+
+    </div>
+    
+    <script src="ejemplo01.js" type="module"></script>
+</body>
+</html>
