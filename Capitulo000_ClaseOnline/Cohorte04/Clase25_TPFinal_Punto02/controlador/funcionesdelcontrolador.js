@@ -82,11 +82,13 @@ export const incisoB = (paises) => {
        population: 888888,
        flags: { png: "https://ejemplo.com/bandera.png" }
    };
+   
    function mostrarPais({ name, capital, population, flags }) {
        console.log(name.common, capital[0], population, flags.png);
    }
    mostrarPais(paisEjemplo);
    ========================================================= */
+
 export const incisoC = (paises) => {
   paises.forEach(({ name, capital = ["Sin dato"], population, flags }) => {
     console.log(

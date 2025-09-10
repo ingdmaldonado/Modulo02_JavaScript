@@ -67,3 +67,55 @@ window.addEventListener("load",()=>
 })
 
 
+
+/* =========================================================
+   INCISO A — Destructuring dentro de la función callback
+   Ejemplo didáctico previo: */
+
+   const paisEjemplo1 = {
+       name: { common: "País Demo" },
+       population: 123456,      
+       flags: { png: "https://ejemplo.com/bandera.png" }
+   };
+   const { name, capital = ["Sin dato"], population, flags } = paisEjemplo1;
+
+   console.log(name.common)
+   console.log(capital);
+   console.log(population);
+   console.log(flags);
+
+  /* ========================================================= */
+
+
+  
+/* =========================================================
+   INCISO B — Destructuring con alias
+   Ejemplo didáctico previo: */
+   const paisEjemplo2 = {
+       name: { common: "País Alias" },
+       capital: ["Capital Demo"],
+       population: 999999,
+       flags: { png: "https://ejemplo.com/bandera.png" }
+   };
+   const { name: nombre, capital: cap, population: poblacion, flags: bandera } = paisEjemplo2;
+  
+   console.log(nombre);
+   console.log(cap);
+   console.log(poblacion);
+   console.log(bandera);
+
+
+  /* ========================================================= */
+
+  function mostrarPais({ name, capital, population, flags }) 
+  {
+    console.log("----- dentro de la funcion ------");
+    console.log(name.common);
+    console.log(capital[0]);
+    console.log(population);
+    console.log(flags.png);       
+   }
+
+   mostrarPais(paisEjemplo1);
+
+   mostrarPais(paisEjemplo2);
