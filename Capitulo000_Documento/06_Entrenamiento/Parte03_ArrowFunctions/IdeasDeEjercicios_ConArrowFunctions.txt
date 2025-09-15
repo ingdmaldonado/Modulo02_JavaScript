@@ -1,0 +1,32 @@
+Ejercicio Nro. 01:
+Realizar una arrow function, que reciba dos parámetros, la cantidad de productos y el precio
+que tiene un producto determinado. las Reglas de negocio que tiene la empresa es la siguiente.
+
+Si la cantidad de productos es menor o igual a 20 el precio es el mismo, 
+Si la cantidad de productos es mayor a 20 y menor o igual a 30 el precio tiene un descuento del 5%
+Si la cantidad de productos es mayor a 30 y menor o igual a 50 el precio tiene un descuento del 7%
+Si la cantidad de productos es mayor a 50 tiene un descuento del 8,5%
+
+La función debe devolver el precio final del producto y además.
+Invoque la función probando todos los casos.
+
+Ejercicio Nro. 02:
+Realizar una arrow function que reciba como parámetro el monto de ingresos declarados de un contribuyente.
+La función debe devolver el porcentaje de alícuota que corresponde, de acuerdo con la siguiente tabla:
+
+Tramo I (hasta $2.604.000.000) → 3%
+Tramo II (más de $2.604.000.000 y hasta $21.575.000.000) → 3,9%
+Tramo III (más de $21.575.000.000) → 4,8%
+
+
+Ejercicio Nro. 03: Realizar una arrow function que reciba dos parámetros:
+
+precioProducto → precio base del producto.
+formaPago → número que indica la forma de pago:
+
+1 → Contado: 10% de descuento.
+2 → Tarjeta de Crédito: recargo del 12%.
+3 → Tarjeta de Débito: precio sin recargo ni descuento.
+
+La función debe devolver el precio final a pagar.
+Luego invocar la función probando los tres casos.
