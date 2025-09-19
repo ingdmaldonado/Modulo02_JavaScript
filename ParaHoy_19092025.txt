@@ -1,0 +1,45 @@
+
+
+	- Esquema de ENTRADA / PROCESO / SALIDA
+
+	- Capturar valores desde el teclado
+
+	- Las operaciones de comparación lógicas básicas >, <, =, >=, <=
+ 		. A > B => se lee A es mayor a B
+		. A < B => se lee A es menor a B
+		. A = B => se lee A es igual a B
+		. A >= B => se lee A es mayor o igual que B
+		. A <= B => se lee A es menor o igual que B
+		. A == B => se lee A es igual a B (sin considerar el tipo de datos)
+		. A == B => se lee A es igual a B (considerando además del valor el tipo)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------	
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Ejercicio Nro. 4: Introducción y conceptos básicos
+Realizar un programa que permita ingresar el importe total de una compra que realiza un cliente y sobre el mismo aplicarle un descuento del 15%. 
+Mostrar por consola el importe total de la compra y el descuento del 15% como así también el importe restante final.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------	
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Ejercicio Nro. 07: Introducción y conceptos básicos
+Realizar un programa que permita ingresar el sueldo bruto de un trabajador y calcular su sueldo neto, aplicando los siguientes descuentos obligatorios según la legislación de Argentina.
+
+Aportes jubilatorios 11%
+Obra Social 3%
+PAMI 3%
+
+-----------------------------------------------------------------------------------------------------------------------------------------------	
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Ejercicio Nro. 08: Estructuras condicionales if/else
+Realizar un programa que permita ingresar dos números y que realice todas las comparaciones lógicas que se pueden realizar entre ellos. Como ser
+
+Numero1 > Numero2
+Numero1 < Numero2
+Numero1 == Numero2
+
+-----------------------------------------------------------------------------------------------------------------------------------------------	
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Ejercicio Nro.09: Estructuras condicionales if/else
+Realizar un programa que permita ingresar la edad de una persona y determine si es niño (0 a 12 años), adolescente (13 a 17 años), adulto (18 a 64 años), adulto mayor (más de 64 años).
