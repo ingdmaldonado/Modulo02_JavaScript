@@ -1,0 +1,29 @@
+/* CSS clásico para comparar con Tailwind en la sección 1 */
+.btn-css {
+  background-color: #2563eb; /* similar a bg-blue-600 */
+  color: #fff;
+  padding: 10px 16px;        /* ~ px-4 py-2 en Tailwind (16px, 8px) */
+  border-radius: 8px;        /* ~ rounded-lg */
+  margin-right: 8px;
+  transition: background-color .2s ease;
+}
+.btn-css:hover {
+  background-color: #1d4ed8; /* ~ hover:bg-blue-700 */
+}
+
+/* grid mínima para comparar bloques en paralelo */
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* caja de ejemplo CSS “clásico” */
+.caja-css {
+  background-color: #10b981; /* ~ bg-emerald-600 */
+  color: #fff;
+  padding: 16px;  /* = 1rem = p-4 */
+  margin: 8px;    /* = 0.5rem = m-2 */
+  border-radius: 8px;
+}

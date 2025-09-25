@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tailwind – Introducción (Comparativa)</title>
+
+  <!-- Nuestro CSS “clásico” para comparar -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Tailwind por CDN (para demos en HTML puro) -->
+  <!-- Doc oficial: https://tailwindcss.com/docs/installation/play-cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-gray-50">
+
+  <h1 class="text-2xl font-semibold mb-6">
+    Introducción a Tailwind — Comparativa con CSS clásico
+  </h1>
+
+  <!-- NOTA DOCENTE:
+       En HTML puro se usa 'class'.
+       En React/Next.js se usa 'className' (porque 'class' es palabra reservada).
+       Aquí trabajamos con HTML puro, por eso verás 'class'.
+  -->
+
+  <!-- ========================= -->
+  <!-- 1) Mismo componente: CSS clásico vs Tailwind -->
+  <!-- ========================= -->
+  <section class="mb-10">
+    <h2 class="text-xl font-medium mb-4">1) Mismo botón, dos enfoques</h2>
+
+    <!-- Con CSS clásico -->
+    <button class="btn-css">Guardar (CSS clásico)</button>
+
+    <!-- Con Tailwind -->
+    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      Guardar (Tailwind)
+    </button>
+  </section>
+
+  <!-- ========================= -->
+  <!-- 2) Padding y Margin: lógica de abreviaturas -->
+  <!-- ========================= -->
+  <section class="mb-10">
+    <h2 class="text-xl font-medium mb-4">2) Padding / Margin — Abreviaturas</h2>
+
+    <div class="demo-grid">
+      <!-- CSS clásico -->
+      <div class="caja-css">
+        <strong>CSS:</strong>
+        <pre>padding: 16px; margin: 8px; border-radius: 8px;</pre>
+      </div>
+
+      <!-- Tailwind -->
+      <div class="bg-emerald-600 text-white p-4 m-2 rounded-lg">
+        <strong>Tailwind:</strong>
+        <pre>p-4 (1rem), m-2 (0.5rem), rounded-lg</pre>
+      </div>
+    </div>
+
+    <p class="mt-4 text-sm text-gray-700">
+      Regla: <code>p</code>=padding, <code>m</code>=margin, <code>x</code>=eje X, <code>y</code>=eje Y,
+      <code>t</code>=top, <code>b</code>=bottom, <code>l</code>=left, <code>r</code>=right.
+      Ej.: <code>px-6</code> =&gt; padding-left/right 1.5rem; <code>py-2</code> =&gt; padding-top/bottom 0.5rem.
+    </p>
+  </section>
+
+  <!-- ========================= -->
+  <!-- 3) Escala de espaciado (rem -> px) -->
+  <!-- ========================= -->
+  <section class="mb-10">
+    <h2 class="text-xl font-medium mb-4">3) Escala de espaciado</h2>
+
+    <div class="space-y-2">
+      <p class="bg-red-200 p-1">p-1 → 0.25rem → 4px</p>
+      <p class="bg-red-300 p-2">p-2 → 0.5rem → 8px</p>
+      <p class="bg-red-400 p-3">p-3 → 0.75rem → 12px</p>
+      <p class="bg-red-500 p-4 text-white">p-4 → 1rem → 16px</p>
+      <p class="bg-red-600 p-8 text-white">p-8 → 2rem → 32px</p>
+    </div>
+
+    <p class="mt-3 text-sm text-gray-700">
+      Por defecto, <code>1rem = 16px</code>. Documentación oficial: 
+      <a class="text-blue-700 underline" href="https://tailwindcss.com/docs/customizing-spacing" target="_blank" rel="noreferrer">Spacing Scale</a>.
+    </p>
+  </section>
+
+  <!-- ========================= -->
+  <!-- 4) Valores especiales útiles -->
+  <!-- ========================= -->
+  <section class="mb-10">
+    <h2 class="text-xl font-medium mb-4">4) Valores especiales</h2>
+
+    <!-- Centro horizontal con mx-auto -->
+    <div class="w-64 bg-purple-600 text-white p-3 mx-auto rounded">
+      Caja centrada (mx-auto)
+    </div>
+
+    <!-- Margen negativo (solo para entender que existe; usar con criterio) -->
+    <div class="mt-4 bg-gray-200 p-4 relative">
+      <span class="inline-block bg-gray-900 text-white p-2 -mt-4 rounded">
+        Margen negativo (-mt-4)
+      </span>
+    </div>
+
+    <!-- Valor arbitrario -->
+    <p class="mt-4 p-[10px] bg-amber-300 rounded">
+      Valor arbitrario: <code>p-[10px]</code> =&gt; padding exacto 10px
+    </p>
+  </section>
+
+  <!-- ========================= -->
+  <!-- 5) “class” (HTML) vs “className” (React/Next) -->
+  <!-- ========================= -->
+  <section class="mb-10">
+    <h2 class="text-xl font-medium mb-4">5) class vs className</h2>
+
+    <div class="demo-grid">
+      <div>
+        <p class="font-medium mb-2">HTML puro:</p>
+        <pre>&lt;div class="bg-slate-200 p-2 rounded"&gt;Usa <strong>class</strong>&lt;/div&gt;</pre>
+      </div>
+      <div>
+        <p class="font-medium mb-2">JSX (React/Next.js):</p>
+        <pre>
+&lt;div className="bg-slate-200 p-2 rounded"&gt;
+  Usa <strong>className</strong>
+&lt;/div&gt;
+        </pre>
+      </div>
+    </div>
+
+    <p class="mt-2 text-sm text-gray-700">
+      En JSX <code>class</code> es palabra reservada, por eso se usa <code>className</code>.
+      Doc React: 
+      <a class="text-blue-700 underline" href="https://react.dev/reference/react-dom/components/common#classname" target="_blank" rel="noreferrer">className</a>.
+    </p>
+  </section>
+
+  <footer class="mt-12 text-sm text-gray-600">
+    Referencia principal: <a class="text-blue-700 underline" href="https://tailwindcss.com" target="_blank" rel="noreferrer">tailwindcss.com</a>
+  </footer>
+</body>
+</html>
