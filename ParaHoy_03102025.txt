@@ -1,0 +1,290 @@
+
+
+/*********************************** EJERCICIO NRO. 01 ***********************************************/
+
+/* un programa que permita
+a un cajero de un local comercial
+realizar cobros con tarjeta de crédito.
+deberá ingresar el importe a cobrar
+e indicar conque tarjeta de crédito abonara.
+
+    1 - VISA BNA - Tarjeta de Banco Nacion - 0% recargo
+    2 - VISA FRANCES - Tarjeta - 5% recargo
+    3 - MASTERCARD MACRO - 12,5% recargo
+    4 - NARANJA - 17% recargo.
+*/
+{
+    // estas variables son globales a todo este bloque de codigo//
+    let importeFacturado = 0; // ingresar el importe
+    let tarjetaDePago = 0; // indicar la tarjeta de credito
+    let recargoTarjeta = 0; // aqui voy a almacenar el recargo dependiendo de la tarjeta de credito
+
+    importeFacturado = Number(prompt("Indique el importe facturado"));
+    tarjetaDePago = Number(prompt("por favor indique tarjeta 1.visa bna 2.visa frances. 3. master macro."));
+
+    console.log(importeFacturado);
+    console.log(tarjetaDePago);
+
+    switch(tarjetaDePago)
+    {
+        case 1:
+            {
+                console.log("visa del banco nacion");
+                recargoTarjeta = 0;
+                break;
+            }
+        case 2:
+            {
+                console.log("visa del banco frances");
+                recargoTarjeta = (importeFacturado * 5)/100;
+                break;
+            }
+        case 3:
+            {
+                console.log("mastercard del banco macro");
+                recargoTarjeta = (importeFacturado * 12.5)/100;
+                break;
+            }
+        case 4:
+            {
+                console.log("tarjeta naranja");
+                recargoTarjeta = (importeFacturado * 17)/100;
+                break;
+            }
+        default:
+            {
+                console.log("tarjeta o medio no aceptado");
+                recargoTarjeta = 0;
+            }
+    }
+
+    let totalACobrar = importeFacturado + recargoTarjeta;
+    console.log(`El importe facturado es ${importeFacturado} el recargo es ${recargoTarjeta} y total a pagar ${totalACobrar}`);
+}
+
+/*********************************** EJERCICIO NRO. 02 ***********************************************/
+
+
+/* Realizar un programa que permita a un Bioquímico
+ingresar los valores de glucosa en sangre y determine
+y muestre las alertas que se deberían imprimir 
+en el análisis de sangre en ayunas. 
+la tabla de valoración es la siguiente:
+
+
+unidad (miligramos por decilitro).
+
+- un nivel de 70 a 99 mg/dl (3.9 y 5.5 mmol/l) se considera normal.
+
+-un nivel de 100 a 125 mg/dl (5.6 a 6.9 mmol/l) 
+significa que usted tiene una alteración de la glucosa en ayunas,
+un tipo de prediabetes. 
+Esto incrementa el riesgo de desarrollar 
+diabetes tipo 2.
+
+-un nivel de 126 mg/dl (7 mmol/l) o mayor casi siempre 
+significa que usted tiene diabetes.
+
+https://medlineplus.gov/spanish/ency/article/003482.htm
+
+*/
+
+{
+
+    let nivelDeGlucosaEnSangre = 0;
+
+    nivelDeGlucosaEnSangre = prompt("Ingrese su nivel de glucosa en Sangre");
+
+    if(!isNaN(nivelDeGlucosaEnSangre))
+    {
+        nivelDeGlucosaEnSangre = Number(nivelDeGlucosaEnSangre);
+    }
+    else
+    {
+        alert("por favor ingrese un número válido")
+    }
+
+    switch(true)
+    {
+
+        case (nivelDeGlucosaEnSangre >= 70) && (nivelDeGlucosaEnSangre < 100):
+            console.log(`valores normales`);
+            break;
+        
+        case (nivelDeGlucosaEnSangre >= 100) && (nivelDeGlucosaEnSangre < 125):
+            console.log(`riesgo de prediabetes tipo 2`);
+            break;
+
+        case (nivelDeGlucosaEnSangre >= 125):
+            console.log(`diabetes`);
+            break;
+
+        default:
+            console.log(`valores bajos. consulte a su médico`);
+            break;
+
+    }
+
+}
+
+/*********************************************************************************************************/
+
+
+/*
+
+Un banco de plaza local, desea realizar
+un simulador de plazos fijos, con la intención
+de captar clientes y fomentar el ahorro,
+para ello contratará un programador FULL STACK
+que permita construir una aplicación web con 
+el objetivo de simular las siguientes reglas de negocio
+
+El gerente del Banco nos indica que la aplicación 
+debería solicitar que ingrese
+
+	1) El capital a Ingresar
+	2) La cantidad de meses en los que realizará el plazo fijo
+
+para Montos de Capital de:
+ 
+ - 500.000 a 1.500.000 la rentabilidad será del 6% mensual
+ - 1.500.000 hasta 5.000.000 la rentabilidad será del 7,5% mensual
+ - 5.000.000 hasta 25.000.000 la rentabilidad será del 8,5% mensual
+ - para valores que superen esa magnitud la tasa mensual será del 9,5%
+
+
+    Recibe Depositos e Plazo fijo => paga una tasa. tasa pasiva
+
+    Prestamos (compra autos, compras casas, ...) => tasa activa.
+
+    Diferencia => Diferencia (tasa activa - tasa pasiva)
+
+*/
+
+{
+    console.log("funcionando");
+
+    // aqui declaro las variables y las inicializo //
+    let capitalADepositar = 0; // declaro e inicializo
+    let cantidadMesesDelPlazoFijo = 0; // declaro e inicializo
+    let rentabilidadMensual = 0; 
+
+    // aqui solicito que el usuario ingrese los datos //
+    capitalADepositar = Number(prompt("Ingrese el capital a invertir"));
+    cantidadMesesDelPlazoFijo = Number(prompt("Cantidad de Meses del Plazo fijo"));
+
+    console.log(`Dinero a Invertir ${capitalADepositar} y la cantidad de meses ${cantidadMesesDelPlazoFijo}`);
+    
+    // evaluo el primer rango. entre 500 mil y 1.500 mil //
+    if((capitalADepositar >= 500000) && (capitalADepositar <= 1500000))
+    {
+        rentabilidadMensual = capitalADepositar * 6/100;
+        console.log("caso 1");
+    }   
+    else
+    {   // evaluo que este entre 1.500 mil y 5 millones //
+        if((capitalADepositar > 1500000) && (capitalADepositar <= 5000000))
+        {
+            rentabilidadMensual = capitalADepositar * 7.5/100;
+            console.log("caso 2");
+        }
+        else
+        {
+            // evaluo si esta entre 5 millones y 25 millones //
+            if((capitalADepositar > 5000000) && (capitalADepositar <= 25000000))
+            {
+                rentabilidadMensual = capitalADepositar * 8.5/100;
+                console.log("caso 3");
+            }
+            else
+            {
+                if(capitalADepositar > 25000000)
+                {
+                    rentabilidadMensual = capitalADepositar * 9.5/100;
+                    console.log("caso 4");
+                }
+                else
+                {
+                    console.log("El Banco no recibe depositos de ese importe. solamente depositos mayores a 500.mil pesos");
+                }
+            }
+        }  
+    }
+
+    console.log(`Para su Capital Ingresado ${capitalADepositar} la rentabilidad mensual será ${rentabilidadMensual}`);
+
+
+}
+
+/***************************************************************************************************************************************/
+
+
+/* Resumen de lo que vimos
+
+    - incorporar código js al html
+    - bloques de código {}
+    - estructuras de datos simples. 
+        * string
+        * numericas
+    - estructuras condicionales
+        * if/else
+        * operadores ternarios
+        * switch
+    - javaScript es un lenguaje débilmente tipado
+
+    - estructuras repetitivas clásicas
+        * for
+        * while
+        * do while
+        * contadores, acumuladores, calculo de porcentajes.
+*/ 
+{
+
+    /* declaro e inicializo una variable
+    donde totalizar los precios de los productos
+    que un cliente esta llevando o comprando */
+    let totalAPagar = 0;
+
+    /* aqui declaro e inicializo una variable
+    que me permitirá ir contabilizando los 
+    productos que van pasando por la caja */
+    let cantidadDeProductosComprados = 0;
+
+    for(let iterador = 1; iterador <= 4;iterador = iterador + 1)
+    {
+        /* proceso que se repetirá tantas veces como el iterador nos indique
+        o mientras se cumpla esa condición */
+
+        let precioProducto = 0;
+
+        precioProducto = Number(prompt(`Ingrese el precio del producto ${iterador}`));
+
+        console.log(precioProducto);
+
+        // acumulador //
+        totalAPagar = totalAPagar + precioProducto;
+
+        // contabilizando => contadores //
+        cantidadDeProductosComprados = cantidadDeProductosComprados + 1;
+
+        console.log(totalAPagar);
+    }    
+    
+    /* al finalizar. estaría en condiciones 
+    de mostrar los totales 
+    */
+
+    console.log(`La Cantidad de productos comprados es: ${cantidadDeProductosComprados}`);
+
+    console.log(`El total a pagar es: ${totalAPagar}`);
+
+    /* 
+        primero: es una estructura
+        que me permite repetir código cuando conozco
+        de antemano, la cantidad de iteraciones que tengo
+        que hacer. 
+    */
+
+}
+
+
