@@ -1,0 +1,170 @@
+
+*** CONSTANTES ***
+
+*** CICLO WHILE ***
+
+*** RECORRIDO DE CADENAS ****
+
+*** BANDERAS. FLAGS ***
+
+
+
+
+
+
+**************************************************************************
+
+Ejercicio Nro. 12:
+Una Frigorífico posee una cinta transportadora y clasificadora de huevos para consumo humano. La cinta no tan solo los transporta sino también los clasifica según su peso. es decir, al final de la cinta existe una balanza electrónica de alta precisión que evalúa su peso y los clasifica.
+a) XL, súper grandes: peso ≥ 73 gramos.
+b) L, grandes: peso ≥ 63 gramos y < 73 gramos.
+c) M, medianos: peso ≥ 53 gramos y < 63 gramos.
+Nota: considere como descartados aquellos que no estén dentro del rango de valores aceptables.
+Determinar lo siguiente:
+1)
+Cantidad total de Huevos (Todas las categorías)
+2)
+Cantidad total de Huevos XL
+3)
+Cantidad total de Huevos L
+4)
+Cantidad total de Huevos M
+5)
+Cantidad total de Huevos descartados
+6)
+Determinar el % de Huevos XL sobre el Total
+7)
+Determinar el % de Huevos L sobre el Total
+8)
+Determinar el % de Huevos M sobre el Total
+Consideraciones: para realizar el ejercicio debe utilizar solamente código JavaScript, sin interacción con el DOM y cargar los datos de entrada por medio de prompt.
+
+
+Ejercicio Con Cadenas
+
+Ejercicio para Determinar Variables Booleanas
+
+************************************************************************
+
+{
+
+    console.log("funcionnado");
+
+    let precioProducto = 0;
+
+     /* declaro e inicializo una variable
+    donde totalizar los precios de los productos
+    que un cliente esta llevando o comprando */
+    let totalAPagar = 0;
+
+    /* aqui declaro e inicializo una variable
+    que me permitirá ir contabilizando los 
+    productos que van pasando por la caja */
+    let cantidadDeProductosComprados = 0;
+
+    let continua = "SI"
+
+    while(continua ==="SI")
+    {
+        /* mientras la variable continua === "SI" 
+        se repetira todo este bloque de código.
+        */
+        precioProducto = Number(prompt(`Ingrese el precio del producto`));
+
+        totalAPagar = totalAPagar + precioProducto;
+
+        cantidadDeProductosComprados = cantidadDeProductosComprados + 1;
+
+        continua = prompt("ud. desea continuar ? (SI/NO)");
+
+    }
+
+    console.log(`El Total a pagar es: ${totalAPagar}`);
+    console.log(`Cantidad productos comprados: ${cantidadDeProductosComprados}`);
+
+    /* ESTRUCTURAS REPETITIVAS 
+    
+    - Ciclo for
+    - Ciclo While
+    - Contadores
+    - Acumuladores
+
+    
+    
+    
+    */
+
+}
+
+/**********************************************************************************************************/
+
+
+{
+    console.log("funcionando");
+
+    /* acumulando la edad de todos nosotros */
+    let edadTotalDelGrupo = 0;
+
+    /* esta variable me permitirá ir 
+    leyendo la edad de cada una de las
+    personas */
+    let edadDeUnaPersona = 0;
+
+    /* esta variable tendrá el contador
+    de personas cargadas */
+
+    let cantidadDePersonas = 0;
+
+    /* vamos a crearnos una variable
+    que sea la condición de corte del ciclo */
+
+    let continuaCargando = "SI";
+
+    /* Vamos a crearnos dos variables
+    contadoras. que me permitan ir
+    registrando la cantidad de personas
+    por grupo etario. o por rango de edad*/
+
+    let contadorDe20a40 = 0;
+    let contadorDe40EnAdelante = 0;
+
+    while(continuaCargando ==="SI")
+    {
+
+        // es un contador de personas registradas //
+        cantidadDePersonas = cantidadDePersonas + 1;
+
+        /* primer preguntar por la edad de una persona */
+        edadDeUnaPersona = Number(prompt(`Ingrese la edad de la persona ${cantidadDePersonas}`));
+
+        if((edadDeUnaPersona>= 20) && (edadDeUnaPersona <= 40))
+        {
+            contadorDe20a40 = contadorDe20a40 + 1;
+        }
+        else
+        {
+            if(edadDeUnaPersona > 40)
+            {
+                contadorDe40EnAdelante = contadorDe40EnAdelante + 1;
+            }
+        }
+
+
+        console.log(`La edad leida es: ${edadDeUnaPersona}`);
+
+        // es un acumulador de años de personas //
+        edadTotalDelGrupo = edadTotalDelGrupo + edadDeUnaPersona;
+
+        console.log(`La Edad Acumulada hasta ahora es :${edadTotalDelGrupo} y la cantidad de Personas: ${cantidadDePersonas}`);
+
+        continuaCargando = prompt("desea continuar ? (SI/NO)");
+    }
+
+    let promedioDeEdad = 0;
+
+    promedioDeEdad = edadTotalDelGrupo / cantidadDePersonas;
+
+    console.log(`La edad promedio de todos es ${promedioDeEdad}`);
+
+}
+
