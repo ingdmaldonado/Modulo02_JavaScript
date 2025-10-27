@@ -1,4 +1,22 @@
 
+- declaración de funciones flecha ó arrow function
+
+- variables booleanas
+
+- recorrido de cadenas
+
+- procesos de búsqueda en cadenas
+
+- funciones que reciben cadenas y resuelven algo.
+
+- variables booleanas
+
+- el break dentro de cadenas.
+
+
+
+
+
 
 /*********************************** EJERCICIO NRO. 01 ***********************************************/
 
