@@ -4,6 +4,13 @@
 - variables booleanas
 
 - recorrido de cadenas
+	* contar cantidad de vocales
+	* determinar si tiene dos letras "o"
+	* encontrar la tercera "B" y salir
+	* contar cantidad de consonantes
+	* Verificar si una cadena contiene un número
+
+
 
 - procesos de búsqueda en cadenas
 
