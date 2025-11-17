@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <title>Document0</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trabajo Práctico N° 3</h1>
+        <h2>Listados de Ejercicios</h2>
+        <h2>Sosa Santiago Ezequiel</h2>
+        
+        <!-- Menú superior con botones rectangulares -->
+        <div class="menu-superior">
+            <div class="botones-menu">
+                <a href="index01.html" class="btn-rectangular">Ej N° 13</a>
+                <a href="index02.html" class="btn-rectangular">Ej N° 14-15</a>
+                <a href="index03.html" class="btn-rectangular">Ej N° 16</a>
+                <a href="index04.html"class="btn-rectangular">Ej N° 17</a>
+                <a href="index05.html" class="btn-rectangular">Ej N° 18</a>
+                <a href="index06.html" class="btn-rectangular">Ej N° 19</a>
+                <a href="index07.html" class="btn-rectangular">Ej N° 20</a>
+                <a href="index08.html" class="btn-rectangular">Ej N° 21-22</a>
+                <a href="index09.html" class="btn-rectangular">Ej N° 23</a>
+                <a href="index10.html" class="btn-rectangular">Ej N° 24</a>
+                <a href="index11.html" class="btn-rectangular">Ej N° 25</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h1>Calcular Sobretasa de Bebida</h1>
+
+        <label for="idtipo">Tipo de bebida:</label>
+        <select id="idtipo">
+        <option value="1">1 - Agua plástica</option>
+        <option value="2">2 - Agua retornable</option>
+        <option value="3">3 - Gaseosa azucarada plástica</option>
+        <option value="4">4 - Gaseosa azucarada retornable</option>
+        <option value="5">5 - Energética</option>
+        <option value="6">6 - Otra bebida</option>
+        </select>
+
+        <label for="idimporte">Importe base ($):</label>
+        <input type="number" id="idimporte" placeholder="Ej: 1000">
+
+        <button id="idcalcular">Calcular</button>
+
+        <div id="resultado"></div>
+    </div>
+    
+
+    <script src="controlador03.js" type="module"></script>
+</body>
+</html>

@@ -1,3 +1,11 @@
+
+import {Pabellones,TipoDeStand} from "./datos.js";
+
+
+console.log(Pabellones);
+
+console.log(TipoDeStand);
+
 const capturarValor = (elementoDOM) => {
   const nombre = elementoDOM.target.name;
   const valor = elementoDOM.target.value;

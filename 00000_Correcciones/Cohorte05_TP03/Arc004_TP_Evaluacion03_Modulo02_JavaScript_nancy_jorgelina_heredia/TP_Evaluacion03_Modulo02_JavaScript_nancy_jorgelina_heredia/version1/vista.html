@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Nro. 03 - DOM y Arrow Functions</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>TRABAJO PRÁCTICO NRO. 03 - JAVASCRIPT - MANEJO DEL DOM y ARROW FUNCTION</h1>
+    <div class="container">
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 13: Precio de Venta</h2>
+            <div class="form-group">
+                <label for="e13-importe">Importe de Compra:</label>
+                <input type="number" id="e13-importe" placeholder="Ej: 1000">
+            </div>
+            <div class="form-group">
+                <label for="e13-margen">Margen de Ganancia (%):</label>
+                <input type="number" id="e13-margen" placeholder="Ej: 25">
+            </div>
+            <button id="btn-e13">Calcular Precio</button>
+            <p>Precio de Venta: $<strong id="res-e13">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 14: Promedio Alumno</h2>
+            <div class="form-group">
+                <label for="e14-n1">Nota 1:</label>
+                <input type="number" id="e14-n1" min="0" max="10" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="e14-n2">Nota 2:</label>
+                <input type="number" id="e14-n2" min="0" max="10" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="e14-n3">Nota 3:</label>
+                <input type="number" id="e14-n3" min="0" max="10" step="0.01">
+            </div>
+            <button id="btn-e14">Calcular Promedio</button>
+            <p>Promedio: <strong id="res-e14">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 15: Estado de Nota</h2>
+            <div class="form-group">
+                <label for="e15-promedio">Nota Promedio:</label>
+                <input type="number" id="e15-promedio" placeholder="Ej: 8.5" step="0.01">
+            </div>
+            <button id="btn-e15">Evaluar Estado</button>
+            <p>Estado: <strong id="res-e15">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 16: Sobretasa Bebidas</h2>
+            <div class="form-group">
+                <label for="e16-importe">Importe Base:</label>
+                <input type="number" id="e16-importe" placeholder="Ej: 500">
+            </div>
+            <div class="form-group">
+                <label for="e16-tipo">Tipo de Bebida:</label>
+                <select id="e16-tipo">
+                    <option value="1">1- Agua (plástico)</option>
+                    <option value="2">2- Agua (retornable)</option>
+                    <option value="3">3- Gaseosa Azuc. (plástico)</option>
+                    <option value="4">4- Gaseosa Azuc. (retornable)</option>
+                    <option value="5">5- Energéticas</option>
+                    <option value="6">6- Otra</option>
+                </select>
+            </div>
+            <button id="btn-e16">Calcular Sobretasa</button>
+            <p>Sobretasa (Impuesto): $<strong id="res-e16">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 17: Facturación Agua</h2>
+            <div class="form-group">
+                <label for="e17-consumo">Metros Cúbicos ($m^3$) leídos:</label>
+                <input type="number" id="e17-consumo" placeholder="Ej: 65">
+            </div>
+            <button id="btn-e17">Calcular Importe Base</button>
+            <p>Importe Base a Pagar: $<strong id="res-e17">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 18: Tasa de Subsuelo</h2>
+            <div class="form-group">
+                <label for="e18-base">Importe Base Factura:</label>
+                <input type="number" id="e18-base" placeholder="Ej: 20000">
+            </div>
+            <button id="btn-e18">Calcular Tasa (3%)</button>
+            <p>Tasa Subsuelo: $<strong id="res-e18">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 19: Tasa Fiscalización ENRE</h2>
+            <div class="form-group">
+                <label for="e19-base">Importe Base Factura:</label>
+                <input type="number" id="e19-base" placeholder="Ej: 20000">
+            </div>
+            <button id="btn-e19">Calcular Tasa (1.2%)</button>
+            <p>Tasa ENRE: $<strong id="res-e19">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 20: Dosis Insulina</h2>
+            <div class="form-group">
+                <label for="e20-glucosa">Nivel de Glucosa:</label>
+                <input type="number" id="e20-glucosa" placeholder="Ej: 200">
+            </div>
+            <div class="form-group">
+                <label for="e20-peso">Peso Corporal (kg):</label>
+                <input type="number" id="e20-peso" placeholder="Ej: 75">
+            </div>
+            <div class="form-group">
+                <label for="e20-tipo">Tipo Diabetes:</label>
+                <select id="e20-tipo">
+                    <option value="1">Tipo 1</option>
+                    <option value="2">Tipo 2</option>
+                </select>
+            </div>
+            <button id="btn-e20">Calcular Dosis</button>
+            <p>Dosis Recomendada: <strong id="res-e20">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 21: Contar Vocales</h2>
+            <div class="form-group">
+                <label for="e21-texto">Cadena de Texto:</label>
+                <input type="text" id="e21-texto" placeholder="Hola Mundo">
+            </div>
+            <button id="btn-e21">Contar Vocales</button>
+            <p>Cantidad de Vocales: <strong id="res-e21">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 22: Contar Consonantes</h2>
+            <div class="form-group">
+                <label for="e22-texto">Cadena de Texto:</label>
+                <input type="text" id="e22-texto" placeholder="Hola Mundo 123">
+            </div>
+            <button id="btn-e22">Contar Consonantes</button>
+            <p>Cantidad de Consonantes: <strong id="res-e22">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 23: ¿Tiene dos "S"?</h2>
+            <div class="form-group">
+                <label for="e23-palabra">Palabra:</label>
+                <input type="text" id="e23-palabra" placeholder="Sistemas">
+            </div>
+            <button id="btn-e23">Verificar</button>
+            <p>¿Contiene al menos dos 's'?: <strong id="res-e23">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 24: ¿Tiene tres espacios?</h2>
+            <div class="form-group">
+                <label for="e24-texto">Cadena de Texto:</label>
+                <input type="text" id="e24-texto" placeholder="Esto es una prueba">
+            </div>
+            <button id="btn-e24">Verificar</button>
+            <p>¿Contiene al menos tres espacios?: <strong id="res-e24">---</strong></p>
+        </section>
+
+        <section class="ejercicio-card">
+            <h2>Ejercicio 25: ¿No contiene números?</h2>
+            <div class="form-group">
+                <label for="e25-texto">Cadena de Texto:</label>
+                <input type="text" id="e25-texto" placeholder="PuraLetra">
+            </div>
+            <button id="btn-e25">Verificar</button>
+            <p>¿No contiene números?: <strong id="res-e25">---</strong></p>
+        </section>
+
+    </div>
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

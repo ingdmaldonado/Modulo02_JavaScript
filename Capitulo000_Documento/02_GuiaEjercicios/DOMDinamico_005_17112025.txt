@@ -1,0 +1,64 @@
+Para la organización del Festival Nacional e Internacional del Poncho 2026, se desea
+realizar una aplicación Web que permita a las personas licitar los lugares del Predio
+disponibles para la comercialización de productos. Para ello sabemos que aquel comerciante
+que desea adquirir/licitar un lugar para la comercialización necesita indicar
+
+1) El Pabellón al que desea asistir
+
+2) El Tipo de Stand que desea Elegir
+
+3) Ingresar sus datos Personales
+
+	CUIT (no puede estar vacío)
+
+	APELLIDO Y NOMBRE (no puede estar vacío)
+
+4) El Importe que desea ofrecer sobre el STAND (Tiene que ser mayor a cero)
+
+	REGISTRAR TODOS ESTOS DATOS EN UN VECTOR DE OFERENTES
+
+
+
+
+
+export const Pabellones = [
+
+  {
+    pabellonId:1,
+    pabellonTipo:"Cerrado",
+    pabellonConstruccion:"Material",
+    pabellonNombre:"Pabellon Principal - Escenario Mayor Espectáculo"
+  },
+  {
+    pabellonId:2,
+    pabellonTipo:"Cerrado",
+    pabellonConstruccion:"Material",
+    pabellonNombre:"Pabellon Secundario - Guilermina Zárate"
+  },
+  {
+    pabellonId:3,
+    pabellonTipo:"Abierto",
+    pabellonConstruccion:"Aire Libre",
+    pabellonNombre:"Pabellon - Patio de las Provincias"
+  }
+];
+
+
+export const TipoDeStand = 
+[
+  {
+    tipoId:1,
+    tipoStandNombre:"STAND 5 X 3",
+    precioBase:4800000
+  },
+  {
+    tipoId:1,
+    tipoStandNombre:"STAND 3 X 3",
+    precioBase:3500000
+  },
+  {
+    tipoId:1,
+    tipoStandNombre:"STAND 2 X 2",
+    precioBase:2400000
+  }
+];

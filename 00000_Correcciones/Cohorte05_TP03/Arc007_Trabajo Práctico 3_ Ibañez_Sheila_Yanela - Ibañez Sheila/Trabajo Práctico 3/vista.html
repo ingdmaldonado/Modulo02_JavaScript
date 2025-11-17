@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        #titulo {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .cajas-puntos {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cajas-puntos:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .titulo-puntos {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        label {
+            display: inline-block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            margin-top: 10px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        div[id^="resultado"],
+        div[id^="clasificacion"] {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            min-height: 20px;
+        }
+
+        div[id^="resultado"] p,
+        div[id^="clasificacion"] p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        br {
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 20px;
+            }
+
+            #titulo {
+                font-size: 1.8em;
+            }
+
+            .titulo-puntos {
+                font-size: 1.2em;
+            }
+
+            input[type="number"],
+            input[type="text"],
+            select {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1 id="titulo">Trabajo Práctico N° 3</h1>
+        <!-- punto 13 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 13- Calculo de precio de venta</h2>
+
+            <label for="importeCompra">Importe compra ($):</label>
+            <input type="number" id="importeCompra" step="0.01" placeholder="Ej 1000.00"> <br><br>
+
+            <label for="margenGanancia">Margen de ganancia (%):</label>
+            <input type="number" id="margenGanancia" step="0.01" placeholder="Ej: 20"> <br> <br>
+
+            <button id="btnCalcularGanancia"> Calcular precio de venta </button> <br> <br>
+
+            <div id="resultadoPrecioVenta"></div>
+        </div>
+        <!-- punto 14 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 14- Promedio de Notas</h2>
+
+            <label for="nota1"> Nota 1:</label>
+            <input type="number" id="nota1" step="0.01" placeholder="Ej: 8.5"> <br> <br>
+
+            <label for="nota2"> Nota 2:</label>
+            <input type="number" id="nota2" step="0.01" placeholder="Ej: 4"> <br> <br>
+
+            <label for="nota3"> Nota 3:</label>
+            <input type="number" id="nota3" step="0.01" placeholder="Ej: 9.3"> <br> <br>
+
+            <button id="btnCalcularPromedio">Calcular Promedio</button> <br> <br>
+            <div id="resultadoPromedio"></div>
+        </div>
+        <!-- punto 15 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 15- Calificación según promedio</h2>
+
+            <label for="notaPromedio"> Ingrese su promedio de nota:</label>
+            <input type="number" id="notaPromedio" step="0.01" placeholder="Ej: 8.5"> <br> <br> 
+            <button id="btnCalificacion">Clasificar nota</button> <br> <br>
+            <div id="clasificacionPromedio"></div>
+        </div>
+        <!-- punto 16 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 16- Cálculo de impuesto sobre bebidas</h2>
+            
+            <label for="importeBase">Importe base de la bebida ($):</label>
+            <input type="number" id="importeBase" step="0.01" placeholder="Ej: 1000.00"> <br><br>
+            
+            <label for="tipoBebida">Tipo de bebida:</label>
+            <select id="tipoBebida">
+                <option value="">-- Seleccione una opción --</option>
+                <option value="1">Agua en envases plásticos (5‰)</option>
+                <option value="2">Agua en envases retornables (1‰)</option>
+                <option value="3">Gaseosas azucaradas en envases plásticos (7‰)</option>
+                <option value="4">Gaseosas azucaradas en envases retornables (2‰)</option>
+                <option value="5">Bebidas energéticas (15‰)</option>
+                <option value="6">Otras bebidas no clasificadas (1‰)</option>
+            </select> <br><br>
+            
+            <button id="btnCalcularImpuesto"> Calcular impuesto </button> <br> <br>
+            <div id="resultadoImpuesto"></div>
+        </div>
+        <!-- punto 17 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 17- Cálculo de factura de agua (Aguas de Catamarca)</h2>
+            
+            <label for="metrosCubicos">Metros cúbicos consumidos:</label>
+            <input type="number" id="metrosCubicos" step="0.01" placeholder="Ej: 55" min="0"> <br><br>
+            
+            <button id="btnCalcularAgua"> Calcular importe </button> <br> <br>
+            <div id="resultadoAgua"></div>
+        </div>
+        <!-- punto 18 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 18- Cálculo de Tasa de Subsuelo (Aguas de Catamarca)</h2>
+            
+            <label for="importeBaseSubsuelo">Importe Base:</label>
+            <input type="number" id="importeBaseSubsuelo" step="0.01" placeholder="Ej: 1500" min="0"> <br><br>
+            
+            <button id="btnCalcularTasaSubsuelo"> Calcular Tasa </button> <br> <br>
+            <div id="resultadoTasaSubsuelo"></div>
+        </div>
+        <!-- punto 19 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 19- Cálculo de Tasa de Fiscalización ENRE</h2>
+            
+            <label for="importeTasaFiscalizacion">Importe Base:</label>
+            <input type="number" id="importeTasaFiscalizacion" step="0.01" placeholder="Ej: 1500" min="0"> <br><br>
+            
+            <button id="btnCalcularTasaFiscaliacion"> Calcular Tasa </button> <br> <br>
+            <div id="resultadoTasaFiscalizacion"></div>
+        </div>
+        <!-- punto 20 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 20- Cálculo de dosis de insulina</h2>
+            
+            <label for="nivelGlucosa">Nivel de glucosa en sangre (mg/dL):</label>
+            <input type="number" id="nivelGlucosa" step="0.01" placeholder="Ej: 200" min="0"> <br><br>
+            
+            <label for="pesoCorporal">Peso corporal (kg):</label>
+            <input type="number" id="pesoCorporal" step="0.01" placeholder="Ej: 70" min="0"> <br><br>
+            
+            <label for="tipoDiabetes">Tipo de diabetes:</label>
+            <select id="tipoDiabetes">
+                <option value="">-- Seleccione una opción --</option>
+                <option value="tipo1">Tipo 1</option>
+                <option value="tipo2">Tipo 2</option>
+            </select> <br><br>
+            
+            <button id="btnCalcularInsulina"> Calcular dosis de insulina </button> <br> <br>
+            <div id="resultadoInsulina"></div>
+        </div>
+
+        <!-- Punto 21 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 21- Contador de vocales</h2>
+            
+            <label for="textoVocales">Ingrese un texto:</label>
+            <input type="text" id="textoVocales" placeholder="Ej: Hola esto es un trabajo practico" style="width: 300px;"> <br><br>
+            
+            <button id="btnContarVocales"> Contar vocales </button> <br> <br>
+            <div id="resultadoVocales"></div>
+        </div>
+        <!-- Punto 22 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 22- Contador de consonantes</h2>
+            
+            <label for="textoConsonantes">Ingrese un texto:</label>
+            <input type="text" id="textoConsonantes" placeholder="Ej: Trabajo practico" style="width: 300px;"> <br><br>
+            
+            <button id="btnContarConsonantes"> Contar consonantes </button> <br> <br>
+            <div id="resultadoConsonantes"></div>
+        </div>
+        <!-- Punto 23 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 23- Verificar si contiene al menos dos letras "S"</h2>
+            
+            <label for="palabraS">Ingrese una palabra:</label>
+            <input type="text" id="palabraS" placeholder="Ej: Sistemas" style="width: 300px;"> <br><br>
+            
+            <button id="btnVerificarS"> Verificar </button> <br> <br>
+            <div id="resultadoS"></div>
+        </div>
+        <!-- Punto 24 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 24- Verificar si contiene al menos tres espacios</h2>
+            
+            <label for="textoEspacios">Ingrese un texto:</label>
+            <input type="text" id="textoEspacios" placeholder="Ej: Hola que tal" style="width: 300px;"> <br><br>
+            
+            <button id="btnVerificarEspacios"> Verificar espacios </button> <br> <br>
+            <div id="resultadoEspacios"></div>
+        </div>
+        <!-- Punto 25 -->
+        <div class="cajas-puntos">
+            <h2 class="titulo-puntos"> 25- Verificar si NO contiene dígitos numéricos</h2>
+            
+            <label for="textoNumeros">Ingrese un texto:</label>
+            <input type="text" id="textoNumeros" placeholder="Ej: Hola Doplomatura" style="width: 300px;"> <br><br>
+            
+            <button id="btnVerificarNumeros"> Verificar </button> <br> <br>
+            <div id="resultadoNumeros"></div>
+        </div>
+    </div>
+
+    <script type="module" src="controlador.js"></script>
+    <script type="module" src="modelo.js"></script>
+</body>
+</html>
