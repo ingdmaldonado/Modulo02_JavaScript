@@ -1,0 +1,1 @@
+export const tasaFiscalizacionENRE = (importeBase) => Number((importeBase * 0.012).valueOf());

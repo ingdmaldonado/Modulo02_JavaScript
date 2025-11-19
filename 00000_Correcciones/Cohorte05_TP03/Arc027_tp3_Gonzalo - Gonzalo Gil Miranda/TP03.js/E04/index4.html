@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E16 - SobreTasa Bebida</title></head>
+<body>
+<h1>E16 - SobreTasa Bebida</h1>
+<input id="importe" type="number" step="0.01" value="2000">
+<select id="tipo"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+<button id="btn">Calcular</button>
+<pre id="out"></pre>
+<script type="module">
+import { calcularImpuestoBebida } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const imp = Number(document.getElementById('importe').value);
+const tipo = Number(document.getElementById('tipo').value);
+document.getElementById('out').textContent = JSON.stringify(calcularImpuestoBebida(imp, tipo), null, 2);
+});
+</script>
+</body>
+</html>

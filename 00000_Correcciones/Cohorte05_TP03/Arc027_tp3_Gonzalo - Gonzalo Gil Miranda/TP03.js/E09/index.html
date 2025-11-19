@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E21 - Contar Vocales</title></head>
+<body>
+<h1>E21 - Contar Vocales</h1>
+<input id="txt" type="text" value="Hola Mundo">
+<button id="btn">Analizar</button>
+<pre id="out"></pre>
+<script type="module">
+import { analizarVocales } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const txt = document.getElementById('txt').value;
+document.getElementById('out').textContent = JSON.stringify(analizarVocales(txt), null, 2);
+});
+</script>
+</body>
+</html>

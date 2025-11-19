@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>E13 - Calcular Precio de Venta</title>
+</head>
+<body>
+<h1>E13 - Calcular Precio de Venta</h1>
+<label>Importe Compra: <input id="importe" type="number" step="0.01" value="1000"></label><br>
+<label>Margen %: <input id="margen" type="number" step="0.1" value="30"></label><br>
+<button id="btn">Calcular</button>
+<pre id="out"></pre>
+
+
+<script type="module">
+import { procesarVenta } from './controlador.js';
+const btn = document.getElementById('btn');
+btn.addEventListener('click', () => {
+const imp = Number(document.getElementById('importe').value);
+const marg = Number(document.getElementById('margen').value);
+const res = procesarVenta(imp, marg);
+document.getElementById('out').textContent = JSON.stringify(res, null, 2);
+});
+</script>
+</body>
+</html>

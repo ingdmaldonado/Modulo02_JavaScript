@@ -1,0 +1,1 @@
+export const tasaSubsuelo = (importeBase) => Number((importeBase * 0.03).valueOf());

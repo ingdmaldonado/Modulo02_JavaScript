@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E20 - Dosis Insulina</title></head>
+<body>
+<h1>E20 - Dosis Insulina</h1>
+<label>Glucosa: <input id="glu" type="number" value="200"></label><br>
+<label>Peso: <input id="peso" type="number" value="70"></label><br>
+<label>Tipo: <select id="tipo"><option value="1">1</option><option value="2">2</option></select></label><br>
+<button id="btn">Calcular</button>
+<pre id="out"></pre>
+<script type="module">
+import { planInsulina } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const glu = Number(document.getElementById('glu').value);
+const peso = Number(document.getElementById('peso').value);
+const tipo = Number(document.getElementById('tipo').value);
+document.getElementById('out').textContent = JSON.stringify(planInsulina(glu,peso,tipo), null, 2);
+});
+</script>
+</body>
+</html>

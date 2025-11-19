@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E19 - Fiscalizacion ENRE</title></head>
+<body>
+<h1>E19 - Fiscalizacion ENRE</h1>
+<input id="importe" type="number" value="10000">
+<button id="btn">Calcular</button>
+<pre id="out"></pre>
+<script type="module">
+import { resumenFiscalizacion } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const imp = Number(document.getElementById('importe').value);
+document.getElementById('out').textContent = JSON.stringify(resumenFiscalizacion(imp), null, 2);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export const promedioTresNotas = (n1, n2, n3) => Number(((n1 + n2 + n3) / 3).valueOf());

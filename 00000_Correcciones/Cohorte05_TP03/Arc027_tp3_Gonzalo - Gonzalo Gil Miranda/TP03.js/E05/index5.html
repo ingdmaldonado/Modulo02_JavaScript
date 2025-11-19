@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E17 - Factura Agua</title></head>
+<body>
+<h1>E17 - Factura Agua</h1>
+<label>Consumo (m3): <input id="m3" type="number" value="60"></label>
+<button id="btn">Calcular</button>
+<pre id="out"></pre>
+<script type="module">
+import { facturaAgua } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const m3 = Number(document.getElementById('m3').value);
+document.getElementById('out').textContent = JSON.stringify(facturaAgua(m3), null, 2);
+});
+</script>
+</body>
+</html>

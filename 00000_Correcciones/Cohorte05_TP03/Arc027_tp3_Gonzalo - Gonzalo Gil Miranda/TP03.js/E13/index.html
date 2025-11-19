@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E25 - No contiene dígitos</title></head>
+<body>
+<h1>E25 - No contiene dígitos</h1>
+<input id="txt" type="text" value="Hola123">
+<button id="btn">Analizar</button>
+<pre id="out"></pre>
+<script type="module">
+import { validarSinDigitos } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const txt = document.getElementById('txt').value;
+document.getElementById('out').textContent = JSON.stringify(validarSinDigitos(txt), null, 2);
+});
+</script>
+</body>
+</html>

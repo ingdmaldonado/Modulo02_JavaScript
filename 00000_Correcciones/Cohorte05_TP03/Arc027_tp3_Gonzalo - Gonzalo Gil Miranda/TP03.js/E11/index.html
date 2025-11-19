@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>E23 - Tiene al menos dos 's'</title></head>
+<body>
+<h1>E23 - Tiene al menos dos 's'</h1>
+<input id="txt" type="text" value="salsa">
+<button id="btn">Analizar</button>
+<pre id="out"></pre>
+<script type="module">
+import { analizarS } from './controlador.js';
+document.getElementById('btn').addEventListener('click', () => {
+const txt = document.getElementById('txt').value;
+document.getElementById('out').textContent = JSON.stringify(analizarS(txt), null, 2);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+import { calcularPrecioVenta } from './modelo.js';
+export const procesarVenta = (importeCompra, margenPorc) => ({ importeCompra, margenPorc, precioVenta: calcularPrecioVenta(importeCompra, margenPorc) });
