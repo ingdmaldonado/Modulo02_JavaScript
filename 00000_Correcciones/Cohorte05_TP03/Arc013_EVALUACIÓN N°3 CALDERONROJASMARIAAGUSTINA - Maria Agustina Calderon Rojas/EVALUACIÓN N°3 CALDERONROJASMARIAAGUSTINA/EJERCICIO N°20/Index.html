@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio N°20 - Dosis de Insulina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 380px;
+        }
+        h2 {
+            text-align: center;
+            color: #0073e6;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        p {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Dosis Recomendada de Insulina 💉</h2>
+
+        <label for="glucosa">Nivel de glucosa (mg/dL):</label>
+        <input type="number" id="glucosa" placeholder="Ej: 200">
+
+        <label for="peso">Peso corporal (kg):</label>
+        <input type="number" id="peso" placeholder="Ej: 75">
+
+        <label for="tipo">Tipo de diabetes:</label>
+        <select id="tipo">
+            <option value="">Seleccione...</option>
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+        </select>
+
+        <button id="btnCalcular">Calcular Dosis</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script type="module">
+        import { controladorDosisInsulina } from './controlador.js';
+
+        document.getElementById("btnCalcular").addEventListener("click", () => {
+            const glucosa = parseFloat(document.getElementById("glucosa").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+            const tipo = document.getElementById("tipo").value;
+            const salida = document.getElementById("resultado");
+
+            const respuesta = controladorDosisInsulina(glucosa, peso, tipo);
+
+            if (respuesta.error) {
+                salida.textContent = respuesta.error;
+                salida.style.color = "red";
+            } else {
+                salida.textContent = `💉 Dosis recomendada: ${respuesta.resultado.toFixed(2)} unidades`;
+                salida.style.color = "green";
+            }
+
+            // Mostrar detalles por consola
+            console.log("Nivel de glucosa:", glucosa);
+            console.log("Peso corporal:", peso);
+            console.log("Tipo de diabetes:", tipo);
+            console.log("Dosis calculada:", respuesta.resultado);
+        });
+    </script>
+</body>
+</html>

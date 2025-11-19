@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio N°17 - Cálculo del Importe de Agua</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f4fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 380px;
+        }
+        h2 {
+            text-align: center;
+            color: #0077cc;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        p {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Factura Agua Potable - ECSAPEM</h2>
+
+        <label for="consumo">Consumo mensual (m³):</label>
+        <input type="number" id="consumo" placeholder="Ej: 55">
+
+        <button id="btnCalcular">Calcular Importe</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script type="module">
+        import { controladorImporteAgua } from './controlador.js';
+
+        document.getElementById("btnCalcular").addEventListener("click", () => {
+            const consumo = parseFloat(document.getElementById("consumo").value);
+            const salida = document.getElementById("resultado");
+
+            const respuesta = controladorImporteAgua(consumo);
+
+            if (respuesta.error) {
+                salida.textContent = respuesta.error;
+                salida.style.color = "red";
+            } else {
+                salida.textContent = `💧 Importe base a pagar: $${respuesta.resultado.toFixed(2)}`;
+                salida.style.color = "green";
+            }
+
+            // Mostrar en consola también (opcional)
+            console.log("Consumo ingresado:", consumo);
+            console.log("Importe base calculado:", respuesta.resultado);
+        });
+    </script>
+</body>
+</html>

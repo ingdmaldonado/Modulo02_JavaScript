@@ -1,0 +1,4 @@
+ Apellido y nombre: Nughes Juan Manuel
+ Telefono: 3834000426
+ Email: juannughes@gmail.com
+ Cohorte: 05

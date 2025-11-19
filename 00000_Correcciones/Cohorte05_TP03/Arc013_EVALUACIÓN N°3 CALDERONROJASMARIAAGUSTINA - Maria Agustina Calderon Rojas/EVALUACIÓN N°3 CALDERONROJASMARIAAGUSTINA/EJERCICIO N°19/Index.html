@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio N°19 - Tasa ENRE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 360px;
+        }
+        h2 {
+            text-align: center;
+            color: #0066cc;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+        p {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Tasa de Fiscalización ENRE</h2>
+
+        <label for="importe">Importe Base ($):</label>
+        <input type="number" id="importe" placeholder="Ej: 25000">
+
+        <button id="btnCalcular">Calcular Tasa ENRE</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script type="module">
+        import { controladorTasaENRE } from './controlador.js';
+
+        document.getElementById("btnCalcular").addEventListener("click", () => {
+            const importe = parseFloat(document.getElementById("importe").value);
+            const salida = document.getElementById("resultado");
+
+            const respuesta = controladorTasaENRE(importe);
+
+            if (respuesta.error) {
+                salida.textContent = respuesta.error;
+                salida.style.color = "red";
+            } else {
+                salida.textContent = `💧 Tasa ENRE (1.2%): $${respuesta.resultado.toFixed(2)}`;
+                salida.style.color = "green";
+            }
+
+            // Mostrar en consola para control
+            console.log("Importe base ingresado:", importe);
+            console.log("Tasa ENRE calculada:", respuesta.resultado);
+        });
+    </script>
+</body>
+</html>

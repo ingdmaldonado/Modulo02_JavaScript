@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico - Evaluacion 0</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-gray-900 bg-slate-100">
+    <h1 class="p-4 text-2xl font-bold text-center text-blue-900">
+        TRABAJO PRÁCTICO NRO. 03
+    </h1>
+    <h2 class="mb-4 p-2 text-xl font-semibold text-center text-blue-700">
+        JAVASCRIPT – MANEJO DEL DOM y ARROW FUNCTION
+    </h2>
+    
+    <!-- ////////////////// EJERCICIO 13 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 13
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba dos parámetros de entrada. El parámetro 1 será el importe de compra de un producto, el segundo será el margen de ganancia que se aplicará sobre ese producto, la función debe retornar el precio de venta que será igual a aplicarle el % de margen de ganancia. La función debe retornar el precio de venta (sin impuestos).
+    </p>
+    <p class="m-2 mb-2 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- QUISE INTENTAR MODIFICAR LOS ELEMENTOS DEL DOM 
+     PERO NO TUVE TIEMPO Y TODAVÍA ME ESTÁ COSTANDO UN POCO
+     COMPRENDER ESTE TEMA ASÍ QUE VOY A SEGUIR PRACTICANDO
+     PARA EL PRÓXIMO TRABAJO PRÁCTICO
+
+    <label for="idImpCompra" class="m-2 p-2">Ingrese el importe de compra</label>
+    <input type="number" placeholder="Importe de Compra" id="idImpCompra" class="m-1 ml-3 mb-3 p-1 border rounded-md">
+    <br>
+    <label for="idMarGanancia" class="m-2 p-2">Ingrese el % que desea obtener de ganacia</label>
+    <input type="number" placeholder="Margen de Ganacia" id="idMarGanancia" class="m-1 ml-3 p-1 border rounded-md">
+    <br>
+    <button id="IdBtnAceptar" class="mb-6 border rounded-md m-4 p-1 ">Aceptar</button> -->
+
+
+    <!-- ////////////////// EJERCICIO 14 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 14
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro las 3 notas que obtuvo un alumno en los distintos trabajos prácticos de una materia y que a partir de esas notas obtenga el promedio de las mismas.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 15 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 15
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro una nota promedio y que según la nota recibida como parámetro devuelva un texto que diga los siguientes mensajes:
+    </p>
+    <ul class="ml-6 p-2">
+        <li class="list-disc">Si la nota <= 4 debe devolver <b>“Desaprobado”</b></li>
+        <li class="list-disc">Si la nota > 4 y nota <= 7 debe devolver <b>“Aprobado”</b></li>
+        <li class="list-disc">Si la nota >7 y nota <=9 debe devolver <b>“Muy Bueno”</b></li>
+        <li class="list-disc">Si la nota = 10 debe devolver <b>“Excelente”</b></li>
+    </ul>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un texto</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 16 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 16
+    </h3>
+    <p class="m-2 p-2">
+        El Gobierno Nacional desea aplicar un impuesto (Sobre Tasa) a las bebidas en función de la siguiente clasificación y tipo.
+    </p>
+    <ol class="ml-6 p-2">
+        <li class="list-decimal">Bebidas Agua en envases plásticos = 5‰ (cinco por mil)</li>
+        <li class="list-decimal">Bebidas Agua en envases retornables = 1‰ (uno por mil)</li>
+        <li class="list-decimal">Bebidas Gaseosas Azucaradas en envases plásticos = 7‰ (siete por mil)</li>
+        <li class="list-decimal">Bebidas Gaseosas Azucaradas en envases retornables = 2‰ (dos por mil)</li>
+        <li class="list-decimal">Bebidas Energéticas = 15‰ (quince por mil)</li>
+        <li class="list-decimal">Cualquier otra bebida no clasificada = 1‰ (uno por mil)</li>
+    </ol>
+    <p class="m-2 p-2">
+        La función debe recibir el Importe Base de la Bebida, debe calcular y retornar la sobre Tasa, la recaudación de ese impuesto tendrá destino a la protección del medio ambiente.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 17 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 17
+    </h3>
+    <p class="m-2 p-2">
+        Una empresa de distribución de agua potable "Aguas de Catamarca ECSAPEM" utiliza un esquema de facturación por bloques de consumo, donde el precio por metro cúbico aumenta a medida que el usuario consume más. Este tipo de sistema se aplica con el objetivo de promover el uso responsable del recurso y penalizar el consumo excesivo.
+    </p>
+    <p class="m-2 p-2">
+        El cálculo del importe base se realiza a partir de los metros cúbicos leídos en el medidor del cliente. Para ello, la empresa define tres bloques de facturación. El primer bloque corresponde a los primeros 50 metros cúbicos, que se facturan a razón de 350 pesos por metro cúbico. El segundo bloque comprende los siguientes 20 metros cúbicos, es decir desde el metro cúbico número 51 hasta el 70, los cuales se facturan a un valor de 555,20 pesos por metro cúbico. Finalmente, todo consumo que supere los 70 metros cúbicos se considera dentro del bloque excedente o de castigo, y se factura a razón de 1.552,20 pesos por metro cúbico.
+    </p>
+    <p class="m-2 p-2">
+        Cabe aclarar que los clientes cuyo consumo mensual sea inferior a 50 metros cúbicos igualmente abonan un mínimo de 50 metros cúbicos, de modo que ese sea el valor base de cálculo.
+    </p>
+    <p class="m-2 p-2">
+        La tarea consiste en definir una arrow function llamada calcularImporteAgua que reciba como parámetro el total de metros cúbicos leídos y devuelva el importe base a pagar por el cliente según el esquema tarifario antes descripto.
+    </p>
+    <table class="m-auto border-2 border-black rounded-md">
+        <tbody>
+            <tr class="bg-gray-300 font-semibold">
+                <td class="p-1 border text-center">Consumo (m³)</td>
+                <td class="p-1 border text-center">Cálculo aplicado</td>
+                <td class="p-1 border text-center">Importe final ($)</td>
+            </tr>
+            <tr>
+                <td class="border text-center">30</td>
+                <td class="border text-center">50 × 350,00</td>
+                <td class="p-1 border text-center">17.500,00</td>
+            </tr>
+            <tr>
+                <td class="p-1 border text-center">50</td>
+                <td class="p-1 border text-center">(50 × 350,00) + (5 × 555,20)</td>
+                <td class="p-1 border text-center">20.276,00</td>
+            </tr>
+            <tr>
+                <td class="p-1 border text-center">85</td>
+                <td class="p-1 border text-center">(50 × 350,00) + (20 × 555,20) + (15 × 1.552,20)</td>
+                <td class="p-1 border text-center">57.214,00</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 18 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 18
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro el Importe Base de una factura de “Servicios Públicos de Aguas de Catamarca” y a partir de ese importe base calcule y devuelva la Tasa de Subsuelo, que es un importe que corresponde al 3% del importe Base ingresado como parámetro de la arrow function.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 19 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 19
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro el Importe Base de una factura de “Servicios Públicos de Aguas de Catamarca” y partir de ese importe base calcule y devuelva la Tasa de Fiscalización ENRE (Ente Regulador de Servicios Públicos) que corresponde al 1,2 % del importe Base ingresado como parámetro de la arrow function.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 20 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 20
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una aplicación web que permita calcular y determinar la dosis de insulina recomendada para un paciente diabético; Basada en tres datos importantes para el cálculo.
+    </p>
+    <ol class="ml-6 p-2">
+        <li class="list-decimal">Nivel de glucosa en sangre</li>
+        <li class="list-decimal">Peso Corporal (en kilogramos)</li>
+        <li class="list-decimal">Tipo de diabetes</li>
+        <ol class="ml-4 p-2">
+            <li class="list-disc">Tipo 1</li>
+            <li class="list-disc">Tipo 2</li>
+        </ol>
+    </ol>
+    <p class="m-2 p-2">
+        Para Tipo 1: El cálculo es el 50% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre, este último término solamente si la glucosa es mayor a 180.
+    </p>
+    <p class="m-2 p-2">
+        Para Tipo 2: El cálculo es el 20% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre, este último término solamente si la glucosa es mayor a 180.
+    </p>
+    <p class="m-2 p-2">
+        La función debe retornar la dosis de insulina recomendada y recibir como parámetros de entrada (argumentos) nivel de glucosa, peso corporal y tipo de diabetes.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Salidas de la aplicación:</b> la aplicación debe indicar la insulina recomendada para el paciente.
+    </p>
+
+    <!-- ////////////////// EJERCICIO 21 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 21
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro una cadena de texto y que devuelva la cantidad de vocales “mayúsculas y/o minúsculas” que tiene la misma.
+    </p>
+    <p class="m-2 p-2">
+        Debe recorrer la cadena con un ciclo for, desde el primer carácter hasta el último, analizar cada uno de los caracteres y determinar si es una vocal o no. No debe utilizar métodos de strings como replace(), split() o expresiones regulares.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número.</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 22 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 22
+    </h3>
+    <p class="m-2 p-2">
+        Realizar una arrow function que reciba como parámetro una cadena de texto y devuelva cuántas consonantes contiene (mayúsculas o minúsculas). Es decir consideramos consonante a todo carácter que NO SEA VOCAL.
+    </p>
+    <p class="m-2 p-2">
+        Debe recorrer la cadena con un ciclo for, analizar cada carácter y determinar si es una letra que no sea vocal.
+    </p>
+    <p class="m-2 p-2">
+        No debe utilizar métodos de strings como replace(), split() o expresiones regulares.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un número.</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 23 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 23
+    </h3>
+    <p class="m-2 p-2">
+        Definir una arrow function que reciba una palabra y determine si contiene al menos dos letras “s” (mayúsculas o minúsculas).
+    </p>
+    <p class="m-2 p-2">
+        La función debe recorrer la palabra con un ciclo for, utilizando un contador o una bandera booleana.
+    </p>
+    <p class="m-2 p-2">
+        Debe devolver true si se cumplen las dos apariciones y false en caso contrario.
+    </p>
+    <p class="m-2 p-2">
+        No puede utilizar métodos como includes() o indexOf().
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un boolean (true ó false).</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 24 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 24
+    </h3>
+    <p class="m-2 p-2">
+        Definir una arrow function que reciba como parámetro una cadena de texto y determine si la misma contiene al menos tres espacios en blanco.
+    </p>
+    <p class="m-2 p-2">
+        La función debe recorrer la cadena carácter por carácter utilizando un ciclo for.
+    </p>
+    <p class="m-2 p-2">
+        Durante el recorrido, deberá contar la cantidad de espacios que se encuentren.
+    </p>
+    <p class="m-2 p-2">
+        En el momento en que se detecte el tercer espacio en blanco, la función debe interrumpir inmediatamente el ciclo mediante la instrucción break y devolver el valor lógico true.
+    </p>
+    <p class="m-2 p-2">
+        Si al finalizar el recorrido completo no se encontraron tres espacios, la función debe devolver false.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un boolean (true ó false).</b>
+    </p>
+
+    <!-- ////////////////// EJERCICIO 25 //////////////// -->
+    <h3 class="bg-slate-300 m-2 p-1 text-lg text-blue-500 text-center font-semibold border rounded-md">
+        Ejercicio Nro. 25
+    </h3>
+    <p class="m-2 p-2">
+        Definir una arrow function que reciba como parámetro una cadena de texto y determine si la misma no contiene ningún dígito numérico (del 0 al 9).
+    </p>
+    <p class="m-2 p-2">
+        La función debe recorrer la cadena carácter por carácter utilizando un ciclo for. Durante el recorrido, analizar cada carácter y comprobar si se encuentra dentro del rango de los números '0' a '9'.
+    </p>
+    <p class="m-2 p-2">
+        Si se detecta algún número, se debe interrumpir inmediatamente el bucle con break y devolver el valor lógico false, ya que la cadena deja de cumplir la condición “no contiene números”.
+
+    </p>
+    <p class="m-2 p-2">
+        En caso de recorrer la cadena completa sin encontrar ningún número, la función deberá devolver true.
+    </p>
+    <p class="m-2 mb-10 p-2">
+        <b>Nota: Debe devolver un boolean (true ó false).</b>
+    </p>
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>
