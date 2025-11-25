@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trabajo Práctico Nro.03 | DOM</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+        }
+
+        .main-header {
+            background: linear-gradient(90deg, #1E293B, #020618);
+        }
+
+        .fade-in {
+            animation: fadeIn 320ms ease-out both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+        <h1 class="text-2xl font-bold text-center py-6 px-4 md:py-8 md:px-6">Trabajo Práctico 03 — JavaScript, DOM y
+            Arrow
+            Functions
+        </h1>
+    </header>
+
+    <main class="w-[90%] mx-auto mt-4 sm:w-[85%] md:w-[80%] lg:w-[60%] xl:w-[40%] pb-18">
+        <h2 class="text-xl font-semibold text-center mb-8">Trabajo Práctico 03: Formulario de ejercicios</h2>
+        <section class="w-[90%] mx-auto grid grid-cols-1 gap-12">
+            <!-- Ejercicio nro 13 -->
+            <article class="w-full">
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold mb-1">
+                        Ejercicio 13 — Precio de venta de producto
+                    </h3>
+                    <p class="text-sm text-slate-700">
+                        Calcular precio de venta según importe de compra del producto y margen de ganancia.
+                    </p>
+                </header>
+
+                <form>
+                    <div class="flex flex-col gap-2">
+                        <label for="importe-producto" class="text-sm font-medium text-slate-700">
+                            Importe de compra
+                        </label>
+                        <div>
+                            <input id="importe-producto" type="text" autocomplete="off" placeholder="0.00"
+                                class="w-full mt-1 px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p
+                                class="text-sm mt-1 px-2 py-1 text-white bg-red-500 rounded-lg hidden error-msg show fade-in">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2 mt-2">
+                        <label for="margen-ganancia" class="text-sm font-medium text-slate-700 ">
+                            Margen de ganancia (%)
+                        </label>
+                        <div>
+                            <input id="margen-ganancia" type="text" autocomplete="off" placeholder="20"
+                                class="w-full px-3 mt-1 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p
+                                class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden error-msg show fade-in">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 mt-2">
+                        <button id="btn-calcular-precio-venta" type="button"
+                            class="w-full px-4 py-2 rounded-lg bg-sky-600 text-white font-medium hover:bg-sky-500 transition-colors duration-300 ease-linear cursor-pointer">
+                            Calcular precio de venta
+                        </button>
+                    </div>
+                </form>
+                <div id="resultado-precio-venta"
+                    class="hidden justify-center items-center gap-2 mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                    <h4 class="font-semibold">Precio de venta:</h4>
+                    <p id="texto-precio-venta" class="font-semibold"></p>
+                </div>
+            </article>
+
+            <!-- Ejercicio nro 14 -->
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Ejercicio 14 — Calcular promedio de notas</h3>
+                    <p class="text-sm text-slate-700">Ingresa las tres notas del alumno (0 - 10).</p>
+                </header>
+
+                <form class="grid gap-3">
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="flex flex-col">
+                            <input id="primera-nota" type="text" placeholder="Nota 1" autocomplete="off"
+                                class="px-2 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden fade-in"></p>
+                        </div>
+                        <div class="flex flex-col">
+                            <input id="segunda-nota" type="text" placeholder="Nota 2" autocomplete="off"
+                                class="px-2 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                        </div>
+                        <div class="flex flex-col">
+                            <input id="tercera-nota" type="text" placeholder="Nota 3" autocomplete="off"
+                                class="px-2 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                        </div>
+                    </div>
+
+                    <button id="btn-calcular-promedio" type="button"
+                        class="w-full  mt-2 px-4 py-2 rounded-lg bg-sky-600 text-white font-medium hover:bg-sky-500 transition-colors duration-300 ease-linear cursor-pointer">
+                        Calcular promedio
+                    </button>
+
+                    <div id="resultado-promedio-notas"
+                        class="hidden mt-3 items-center justify-center gap-2 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <h4 class="font-semibold">Promedio:</h4>
+                        <p id="texto-promedio-notas" class="font-semibold"></p>
+                    </div>
+                </form>
+            </article>
+
+            <!-- Ejercicio Nro 15 -->
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">Ejercicio 15 — Clasificar nota promedio</h3>
+                    <p class="text-sm text-slate-700">Clasifica la nota promedio según regla.</p>
+                </header>
+
+                <form class="grid gap-3">
+                    <label class="text-sm text-slate-700 font-medium">Nota promedio</label>
+                    <div class="flex flex-col">
+                        <input id="nota-promedio" type="text" placeholder="7.5" autocomplete="off"
+                            class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-200 ease-linar">
+                        <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden fade-in"></p>
+                    </div>
+
+                    <button id="btn-clasificar-nota" type="button"
+                        class="w-full px-4 py-2 rounded-lg bg-sky-600 cursor-pointer text-white hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                        Clasificar
+                    </button>
+
+                    <div id="clasificacion-nota"
+                        class="hidden justify-center items-center gap-2 mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <h4 class="font-semibold fade-in">Clasificación:</h4>
+                        <p id="texto-clasificacion-nota" class="font-semibold fade-in"></p>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">Ejercicio 16 — Calcular sobre tasa de bebidas</h3>
+                </header>
+
+                <form class="grid gap-3">
+                    <label class="text-sm font-medium text-slate-700">Importe base</label>
+                    <div class="flex flex-col">
+                        <input id="importe-bebida" type="text" autocomplete="off" placeholder="0.00"
+                            class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linear">
+                        <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                    </div>
+
+                    <label class="text-sm font-medium text-slate-700">Tipo de bebida</label>
+                    <select id="tipo-bebida"
+                        class="px-3 py-2 rounded-md border border-slate-400 cursor-pointer focus:outline-none ">
+                        <option value="1">Agua - envase plástico</option>
+                        <option value="2">Agua - envase retornable</option>
+                        <option value="3">Gaseosa azucarada - plástico</option>
+                        <option value="4">Gaseosa azucarada - retornable</option>
+                        <option value="5">Bebida energética</option>
+                        <option value="6">Otra</option>
+                    </select>
+
+                    <button id="btn-calcular-sobretasa" type="button"
+                        class="w-full px-4 py-2 rounded-lg bg-sky-600 cursor-pointer text-white hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                        Calcular sobre tasa
+                    </button>
+
+                    <div id="resultado-sobretasa"
+                        class="hidden justify-center items-center gap-2 mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <h4 class="font-semibold">Sobre Tasa:</h4>
+                        <p id="texto-sobretasa" class="font-semibold"></p>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">Ejercicio 17 — Calcular importe de agua</h3>
+                </header>
+
+                <form class="grid gap-3">
+                    <label class="text-sm font-medium text-slate-700">Metros cúbicos (m³) consumidos </label>
+                    <div class="flex flex-col">
+                        <input id="metros-cubicos" type="text" placeholder="0.00" autocomplete="off"
+                            class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                        <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                    </div>
+                    <button id="btn-calcular-importe-agua" type="button"
+                        class="w-full px-4 py-2 rounded-lg bg-sky-600 cursor-pointer text-white hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                        Calcular importe
+                    </button>
+
+                    <div id="importe-agua"
+                        class="hidden justify-center items-center gap-2 mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <h4 class="font-semibold">Importe a pagar:</h4>
+                        <p id="texto-importe-agua" class="font-semibold"></p>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">
+                        Ejercicio 18/19 — Calcular tasa de subsuelo y tasa de fiscalización ENRE
+                    </h3>
+                </header>
+
+                <form class="grid gap-3">
+                    <label for="importe-factura" class="text-sm text-slate-700">Importe factura</label>
+                    <div class="flex flex-col">
+                        <input id="importe-factura" type="text" placeholder="0.00" autocomplete="off"
+                            class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                        <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                    </div>
+
+                    <button id="btn-calcular-tasas" type="button"
+                        class="w-full px-4 py-2 rounded-lg bg-sky-600 cursor-pointer text-white hover:bg-sky-500 transition-colors duration-300 ease-linar">Calcular
+                        tasas
+                    </button>
+
+                    <div id="resultado-tasas"
+                        class="hidden justify-around mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <p class="fade-in flex flex-col gap-1 items-center"><strong>Tasa de subsuelo:</strong> <span
+                                id="texto-tasa-subsuelo" class="font-semibold"></span></p>
+                        <p class="fade-in flex flex-col gap-1 items-center"><strong>Tasa de fiscalización:</strong>
+                            <span id="texto-tasa-fiscalizacion" class="font-semibold"></span>
+                        </p>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">Ejercicio 20 — Calcular dosis de insulina</h3>
+                </header>
+
+                <form class="grid gap-3" autocomplete="none">
+                    <div class="flex flex-col gap-2">
+                        <label for="peso-corporal" class="text-sm text-slate-700">Peso corporal (kg)</label>
+                        <div class="flex flex-col">
+                            <input id="peso-corporal" type="text" placeholder="0.00" autocomplete="off"
+                                class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="nivel-glucosa" class="text-sm text-slate-700">Nivel de glocosa en sangre</label>
+                        <div class="flex flex-col">
+                            <input id="nivel-glucosa" type="text" placeholder="0.00" autocomplete="off"
+                                class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                            <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-start gap-12 mb-4">
+                        <p class="text-sm text-slate-700">Tipo de diavetes</p>
+                        <label class="flex items-center gap-2  cursor-pointer text-sm text-slate-700">
+                            <input id="diavetes-tipo-1" name="tipo-diabetes" type="radio" checked>
+                            Tipo 1
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm text-slate-700">
+                            <input id="diavetes-tipo-2" name="tipo-diabetes" type="radio">
+                            Tipo 2
+                        </label>
+                    </div>
+
+                    <button id="btn-calcular-dosis-insulina" type="button"
+                        class="w-full px-4 py-2 rounded-lg bg-sky-600 cursor-pointer text-white hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                        Calcular dosis
+                    </button>
+
+                    <div id="dosis-insulina"
+                        class="hidden justify-center items-center gap-2 mt-3 rounded-md p-3 bg-amber-500 text-white fade-in">
+                        <h4 class="font-semibold">Dosis recomendada:</h4>
+                        <p class="font-semibold"><span id="texto-dosis-insulina"></span> UI</p>
+                    </div>
+                </form>
+            </article>
+
+            <article>
+                <header class="mb-4">
+                    <h3 class="text-lg font-semibold">Ejercicios 21–25 — Texto y conteos</h3>
+                </header>
+
+                <form class="grid gap-3">
+                    <label for="texto" class="text-sm text-slate-700">Ingrese un texto</label>
+                    <div class="flex flex-col">
+                        <input id="texto" type="text" placeholder="Ingrese aquí un texto" autocomplete="off"
+                            class="px-3 py-2 rounded-md border border-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300 ease-linar">
+                        <p class="text-sm px-2 mt-1 py-1 text-white bg-red-500 rounded-lg hidden  fade-in"></p>
+                    </div>
+
+                    <div id="contenedor-botones" class="grid grid-cols-2 gap-2">
+                        <button id="btn-contar-vocales" type="button"
+                            class="btn-grupo px-3 py-2 rounded-lg bg-sky-600 text-white cursor-pointer hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                            Contar vocales
+                        </button>
+
+                        <button id="btn-contar-consonantes" type="button"
+                            class="btn-grupo px-3 py-2 rounded-lg text-white  bg-sky-600 cursor-pointer hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                            Contar consonantes
+                        </button>
+                        <div class="col-span-2">
+                            <p class="text-center col-span-4 mb-2 text-slate-700">Determinar si</p>
+                            <div class="grid gap-2">
+                                <button id="btn-comprobar-letras-s" type="button"
+                                    class="btn-grupo px-3 col-span-1 py-2 rounded-lg text-white bg-sky-600 cursor-pointer hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                                    Contiene almenos 2 letras "S"
+                                </button>
+
+                                <button id="btn-comprobar-espacios-blancos" type="button"
+                                    class="btn-grupo px-3 col-span-1 py-2 rounded-lg text-white  bg-sky-600 cursor-pointer hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                                    Contiene almentos 3 espacios en blanco
+                                </button>
+
+                                <button id="btn-comprobar-contiene-numeros" type="button"
+                                    class=" btn-grupo col-span-1 px-3 py-2 rounded-lg text-white  bg-sky-600 cursor-pointer hover:bg-sky-500 transition-colors duration-300 ease-linar">
+                                    No contiene números
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="resultado-textos"
+                        class="hidden justify-center mt-3 rounded-md p-3 bg-amber-500 text-white font-semibold fade-in">
+                        <p id="texto-cantidad-vocales" class="texto-resultado fade-in"></p>
+                        <p id="texto-cantidad-consonantes" class="texto-resultado fade-in"></p>
+                        <p id="texto-resultado-comprobar-letras-s" class="texto-resultado fade-in"></p>
+                        <p id="texto-resultado-espacios-blancos" class="texto-resultado fade-in"></p>
+                        <p id="texto-resultado-contiene-numeros" class="texto-resultado fade-in"></p>
+                    </div>
+                </form>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>

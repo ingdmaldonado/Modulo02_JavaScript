@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Nro. 03 - JavaScript DOM y Arrow Function</title>
+</head>
+<style>
+section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .resultado {
+            font-weight: bold;
+            color: #006400; 
+            margin-top: 10px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+
+</style>
+<body>
+    <h1>Diplomatura Web Full Stack - Ejercicios JavaScript</h1>
+    <h2>Prueba del Ejercicio Nº 13: Cálculo de Precio de Venta</h2>
+    
+    <p>Ingresa el Importe de Compra y el Margen de Ganancia para calcular el Precio de Venta.</p>
+
+    <div>
+
+        <label for="importeCompra">Importe de Compra ($):</label>
+        <input type="number" id="importeCompra" value="1000" min="0">
+        <input type="number" id="importeCompra" value="1000" min="0">
+    </div>
+    
+    <div>
+        <label for="margenGanancia">Margen de Ganancia (%):</label>
+        <input type="number" id="margenGanancia" value="25" min="0" max="100">
+    </div>
+
+    <button id="btnCalcular">Calcular Precio de Venta</button>
+
+    <hr>
+    
+    <h3>Resultado:</h3>
+    <p id="resultadoE13">El Precio de Venta (sin impuestos) aparecerá aquí.</p>
+
+    <script type="module" src="./controlador.js"></script>
+
+
+<h2>Ejercicios Nº 14 y 15: Promedio y Clasificación de Notas</h2>
+
+    <section id="seccion-e14-e15">
+       
+        <input type="number" id="nota1" placeholder="Nota 1 (0-10)" min="0" max="10" value="8">
+        <input type="number" id="nota2" placeholder="Nota 2 (0-10)" min="0" max="10" value="7">
+        <input type="number" id="nota3" placeholder="Nota 3 (0-10)" min="0" max="10" value="9">
+        <button data-ejercicio="14-15">Calcular</button>
+        <p class="resultado">Promedio (E14): <span id="resE14">--</span></p>
+        <p class="resultado">Clasificación (E15): <span id="resE15">--</span></p>
+         <script type="module" src="./controlador2.js"></script>
+    </section>
+
+   
+
+
+    <h2>Ejercicio Nº 16: Cálculo de Sobre Tasa a Bebidas</h2>
+    <section id="seccion-e16">
+       
+        <input type="number" id="importeBaseE16" placeholder="Importe Base ($)" value="500">
+        <select id="clasificacionBebida">
+            <option value="1">1 - Agua Plástico (5%)</option>
+            <option value="3">3 - Gaseosa Azuc. Plástico (7%)</option>
+            <option value="5">5 - Bebida Energética (15%)</option>
+            <option value="6">6 - Otra Bebida (1%)</option>
+        </select>
+        <button data-ejercicio="16">Calcular Sobre Tasa</button>
+        <p class="resultado">Monto de Sobre Tasa: <span id="resE16">--</span></p>
+        <script type="module" src="./controlador3.js"></script>
+    </section> 
+
+    
+    
+
+<section id="seccion-e17-e19">
+        <h2>E17-E19: Facturación de Aguas de Catamarca</h2>
+        <input type="number" id="m3Consumidos" placeholder="Metros Cúbicos (m³)" value="85" min="0">
+        <button data-ejercicio="17-19">Calcular Factura</button>
+        <p class="resultado">Importe Base (E17): <span id="resE17">--</span></p>
+        <p class="resultado">Tasa de Subsuelo (E18, 3%): <span id="resE18">--</span></p>
+        <p class="resultado">Tasa ENRE (E19, 1.2%): <span id="resE19">--</span></p>
+    
+
+    <h2>Ejercicio Nº 17: Cálculo de Importe de Agua</h2>
+    <script type="module" src="./controlador4.js"></script>
+    <h2>Ejercicio Nº 18: Cálculo de Tasa de Subsuelo</h2>
+    <script type="module" src="./controlador5.js"></script>
+    <h2>Ejercicio Nº 19: Cálculo de Tasa de Fiscalización ENRE</h2>
+    <script type="module" src="./controlador6.js"></script>
+    </section>
+
+
+    <section id="seccion-e20">
+        <h2>E20: Dosis de Insulina Recomendada</h2>
+        <input type="number" id="glucosaE20" placeholder="Glucosa (mg/dL)" value="200" min="0">
+        <input type="number" id="pesoE20" placeholder="Peso (kg)" value="70" min="0">
+        <div>
+            Tipo de Diabetes:
+            <input type="radio" name="tipoDiabetes" id="tipo1" value="1" checked> <label for="tipo1">Tipo 1</label>
+            <input type="radio" name="tipoDiabetes" id="tipo2" value="2"> <label for="tipo2">Tipo 2</label>
+        </div>
+        <button data-ejercicio="20">Calcular Dosis</button>
+        <p class="resultado">Dosis de Insulina: <span id="resE20">--</span></p>
+   
+    <script type="module" src="./controlador7.js"></script>
+     </section>
+
+     <section id="seccion-e21-e22">
+        <h2>E21 y E22: Contador de Vocales y Consonantes</h2>
+        <textarea id="cadenaTexto" rows="3" cols="50" placeholder="Escribe una cadena de texto..." required>Hola Mundo con JavaScript 123!</textarea>
+        <button data-ejercicio="21-22">Analizar Cadena</button>
+        <table>
+            <tr><th>Elemento</th><th>Cantidad</th></tr>
+            <tr><td>Vocales (E21)</td><td id="resE21">--</td></tr>
+            <tr><td>Consonantes (E22)</td><td id="resE22">--</td></tr>
+        </table>
+    <h2>Ejercicio Nº 21: Contar Vocales</h2>
+    <script type="module" src="./controlador8.js"></script>
+    <h2>Ejercicio Nº 22: Contar Consonantes</h2>
+    <script type="module" src="./controlador9.js"></script>
+</section>
+
+<section id="seccion-e23-e25">
+        <h2>E23-E25: Validación de Cadenas</h2>
+        <input type="text" id="palabraValidar" placeholder="Ingresa una palabra o frase..." value="Esta es una frase espaciosa">
+        <button data-ejercicio="23-25">Validar</button>
+        <p class="resultado">E23: ¿Contiene 2 o más 's'/'S'? <span id="resE23">--</span></p>
+        <p class="resultado">E24: ¿Contiene 3 o más espacios? <span id="resE24">--</span></p>
+        <p class="resultado">E25: ¿No contiene dígitos (0-9)? <span id="resE25">--</span></p>
+   
+    <h2>Ejercicio Nº 23: Contar Letras 'S'</h2>
+    <script type="module" src="./controlador10.js"></script>
+    <h2>Ejercicio Nº 24: Contar Espacios</h2>
+    <script type="module" src="./controlador11.js"></script>
+    <h2>Ejercicio Nº 25: No Contiene Dígitos</h2>
+    <script type="module" src="./controlador12.js"></script>
+     </section>
+</body>
+</html>
