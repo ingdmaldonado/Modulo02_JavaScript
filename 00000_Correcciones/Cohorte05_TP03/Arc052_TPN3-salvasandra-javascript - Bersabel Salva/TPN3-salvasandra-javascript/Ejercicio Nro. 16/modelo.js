@@ -1,0 +1,40 @@
+/* Ejercicio Nro. 16:
+El Gobierno Nacional desea aplicar un impuesto (Sobre Tasa) a las bebidas en función de la siguiente clasificación y tipo.
+1 – Bebidas Agua en envases plásticos = 5 ‰ (cinco por mil)
+2 – Bebidas Agua en envases retornables = 1 ‰ (uno por mil)
+3 – Bebidas Gaseosas Azucaradas en envases plásticos = 7 ‰ (siete por mil)
+4 – Bebidas Gaseosas Azucaradas en envases retornables = 2 ‰ (dos por mil)
+5 – Bebidas Energéticas = 15 ‰ (quince por mil)
+6 – Cualquier otra bebida no clasificada = 1 ‰ (uno por mil).
+La función debe recibir el Importe Base de la Bebida, debe calcular y retornar la sobre Tasa, la recaudación de ese impuesto tendrá destino a la protección del medio ambiente.
+Nota: Debe devolver un número
+*/
+
+export const calcularSobreTasa = (importeBase, tipoBebida) => {
+    let tasaMil; // variable sin valor inicial
+  
+    switch (tipoBebida) {
+      case 1:
+        tasaMil = 5; // agua en plástico
+        break;
+      case 2:
+        tasaMil = 1; // agua retornable
+        break;
+      case 3:
+        tasaMil = 7; // gaseosa azucarada en plástico
+        break;
+      case 4:
+        tasaMil = 2; // gaseosa azucarada retornable
+        break;
+      case 5:
+        tasaMil = 15; // energética
+        break;
+      default:
+        tasaMil = 1; // cualquier otra bebida
+        break;
+    }
+  
+    let sobreTasa = (importeBase * tasaMil) / 1000; // cálculo en milésimos
+    return sobreTasa;
+  };
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class=" p-6 bg-slate-100 text-slate-800">
+
+    <div class="mx-auto max-w-2xl ">
+
+        <h1 class="mt-4 p-3 bg-gray-100 text-center text-3xl font-bold   text-indigo-900 rounded" >Trabajo Práctico Nro.03</h1>
+        <section class="bg-white p-6 rounded-lg shadow-md mb-6 border-t-4 border-indigo-500">
+            <!-- numero del ejercicio  -->
+            <h2><span class="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 rounded">Ej-13</span><strong class="ml-2">Calcular Precio de Venta [Aplique el uso del DOM]</strong></h2>
+
+            <!-- inputs de entrada -->
+            <div class="my-5">
+                <p>
+                    <label  class="block text-sm font-medium text-gray-700 mb-1"> Importe de Compra ($)
+                        <input type="number" id="inputImporteDeCompra" class="w-full p-2 border border-gray-300 rounded focus:outline-none" placeholder="0.00">
+                    </label>
+                </p>
+                <p>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Margen de Ganancia (%)
+                        <input type="number" id="inputMargenDeGanancia" class="w-full p-2 border border-gray-300 rounded focus:outline-none" placeholder="Ej: 30">
+                    </label>
+                </p>
+
+                <button id="btnCalcularPrecioVenta" class="w-full bg-indigo-600 text-white font-medium py-2 px-4 rounded hover:bg-indigo-700"> Calcular Precio Final</button>
+               
+                <div id="idCajaResultado" class="mt-4 p-3 bg-gray-100 text-center text-lg font-bold   text-indigo-900 rounded hidden">
+                    <p id="idResultado"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md mb-6 border-t-4 border-indigo-500">
+            <h2><span class="px-2.5 py-0.5 bg-indigo-100 text-indigo-800 rounded">(Ejercicios del 14 al 25)</span><strong class="ml-2"> [Ejercicios sin uso del DOM] </strong></h2>
+            <br>
+            <p>Me enfoque solamentante en el "desarrollo de las funciones arrow", dado que el DOM no es tan relevante para este trabajo práctico. <br><br> <strong>Todos los resultados fueron obtenidos por consola.</strong> </p>
+        </section>
+    </div>
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  p {
+    margin-top: 0.75rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+</style>
+  <meta charset="UTF-8" />
+  <title>TP N°03 - JavaScript</title>
+</head>
+<body>
+  <h1>Trabajo Práctico N°03 - JavaScript</h1>
+
+  <!-- Ejercicio 13 -->
+  <section>
+    <h2>Ejercicio 13: Precio de Venta</h2>
+    <input type="number" id="importeCompra" placeholder="Importe de compra" />
+    <input type="number" id="margenGanancia" placeholder="% Margen de ganancia" />
+    <button onclick="ej13()">Calcular</button>
+    <p id="resultado13"></p>
+  </section>
+
+  <!-- Ejercicio 14 -->
+  <section>
+    <h2>Ejercicio 14: Promedio de Notas</h2>
+    <input type="number" id="nota1" placeholder="Nota 1" />
+    <input type="number" id="nota2" placeholder="Nota 2" />
+    <input type="number" id="nota3" placeholder="Nota 3" />
+    <button onclick="ej14()">Calcular</button>
+    <p id="resultado14"></p>
+  </section>
+
+  <!-- Ejercicio 15 -->
+  <section>
+    <h2>Ejercicio 15: Evaluación de Nota</h2>
+    <input type="number" id="notaEvaluar" placeholder="Nota promedio" />
+    <button onclick="ej15()">Evaluar</button>
+    <p id="resultado15"></p>
+  </section>
+
+  <!-- Agregá más secciones similares para los ejercicios 16 al 25 -->
+
+  <script type="module" src="controladores.js"></script>
+
+  <!-- Ejercicio 16 -->
+<section>
+  <h2>Ejercicio 16: Sobre Tasa a Bebidas</h2>
+  <input type="number" id="importeBebida" placeholder="Importe base" />
+  <input type="number" id="tipoBebida" placeholder="Tipo de bebida (1 a 6)" />
+  <button onclick="ej16()">Calcular</button>
+  <p id="resultado16"></p>
+</section>
+
+<!-- Ejercicio 17 -->
+<section>
+  <h2>Ejercicio 17: Importe Agua</h2>
+  <input type="number" id="consumoAgua" placeholder="Consumo en m³" />
+  <button onclick="ej17()">Calcular</button>
+  <p id="resultado17"></p>
+</section>
+
+<!-- Ejercicio 18 -->
+<section>
+  <h2>Ejercicio 18: Tasa Subsuelo</h2>
+  <input type="number" id="importeSubsuelo" placeholder="Importe base" />
+  <button onclick="ej18()">Calcular</button>
+  <p id="resultado18"></p>
+</section>
+
+<!-- Ejercicio 19 -->
+<section>
+  <h2>Ejercicio 19: Tasa Fiscalización ENRE</h2>
+  <input type="number" id="importeFiscalizacion" placeholder="Importe base" />
+  <button onclick="ej19()">Calcular</button>
+  <p id="resultado19"></p>
+</section>
+
+<!-- Ejercicio 20 -->
+<section>
+  <h2>Ejercicio 20: Dosis de Insulina</h2>
+  <input type="number" id="glucosa" placeholder="Nivel de glucosa" />
+  <input type="number" id="peso" placeholder="Peso corporal (kg)" />
+  <input type="number" id="tipoDiabetes" placeholder="Tipo de diabetes (1 o 2)" />
+  <button onclick="ej20()">Calcular</button>
+  <p id="resultado20"></p>
+</section>
+
+<!-- Ejercicio 21 -->
+<section>
+  <h2>Ejercicio 21: Contar Vocales</h2>
+  <input type="text" id="textoVocales" placeholder="Texto" />
+  <button onclick="ej21()">Contar</button>
+  <p id="resultado21"></p>
+</section>
+
+<!-- Ejercicio 22 -->
+<section>
+  <h2>Ejercicio 22: Contar Consonantes</h2>
+  <input type="text" id="textoConsonantes" placeholder="Texto" />
+  <button onclick="ej22()">Contar</button>
+  <p id="resultado22"></p>
+</section>
+
+<!-- Ejercicio 23 -->
+<section>
+  <h2>Ejercicio 23: ¿Contiene dos 's'?</h2>
+  <input type="text" id="textoS" placeholder="Palabra" />
+  <button onclick="ej23()">Verificar</button>
+  <p id="resultado23"></p>
+</section>
+
+<!-- Ejercicio 24 -->
+<section>
+  <h2>Ejercicio 24: ¿Contiene tres espacios?</h2>
+  <input type="text" id="textoEspacios" placeholder="Texto" />
+  <button onclick="ej24()">Verificar</button>
+  <p id="resultado24"></p>
+</section>
+
+<!-- Ejercicio 25 -->
+<section>
+  <h2>Ejercicio 25: ¿No contiene números?</h2>
+  <input type="text" id="textoNumeros" placeholder="Texto" />
+  <button onclick="ej25()">Verificar</button>
+  <p id="resultado25"></p>
+</section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Nro. 17:</title>
+</head>
+<body>
+    <h1>
+    La tarea consiste en definir una arrow function llamada calcularImporteAgua que reciba como parámetro
+el total de metros cúbicos leídos y devuelva el importe base a pagar por el cliente según el esquema tarifario antes
+descripto.
+Consumo (m3) Cálculo aplicado Importe final ($)
+30 50 × 350,00 17.500,00
+55 (50 × 350,00) + (5 × 555,20) 20.276,00
+85 (50 × 350,00) + (20 × 555,20) + (15 × 1.552,20) 57.214,00
+
+Nota: Debe devolver un número
+    </h1>
+    <label for="idMetrosCubicos">Metros Cúbicos Consumidos (m³):</label>
+    <input type="number" id="idMetrosCubicos" step="0.01" min="0">
+    <br><br>
+    <button id="idBtnCalcularImporte">Calcular Importe a Pagar</button>
+    <br>
+    <h3 id="idResultadoImporte">El Importe a Pagar es:</h3>
+    <script src="controlador17.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 20</title>
+</head>
+<body>
+    <h1>Ejercicio 20 - Calculadora de Insulina</h1>
+    
+    <label>Nivel de Glucosa (mg/dL):</label>
+    <input type="number" id="idGlucosa">
+    <br><br>
+    
+    <label>Peso Corporal (kg):</label>
+    <input type="number" id="idPeso">
+    <br><br>
+    
+    <label>Tipo de Diabetes:</label>
+    <select id="idTipoDiabetes">
+        <option value="">Seleccione...</option>
+        <option value="1">Tipo 1</option>
+        <option value="2">Tipo 2</option>
+    </select>
+    <br><br>
+    
+    <button id="idBtnCalcular">Calcular Dosis</button>
+    <br><br>
+    
+    <div id="idResultado"></div>
+    
+    <h3>resultados:</h3>
+    <div id="idListaResultados"></div>
+    
+    <script type="module" src="controlador20.js"></script>
+</body>
+</html>

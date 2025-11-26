@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPN3 DOM + Arrow Functions</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f7f7f7;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    div {
+        background: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        max-width: 400px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        width: 100%;
+        background: #005bbb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        background: #004499;
+    }
+
+    pre {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        max-width: 400px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* Centrar todo el contenido */
+    body > div, pre {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+</head>
+<body>
+
+<h1>TP DOM + Arrow Functions – Ejercicios </h1>
+
+<div>
+    <h3>Ejercicio 13 – Precio de Venta</h3>
+    <input id="costo13" type="number" placeholder="Costo">
+    <input id="margen13" type="number" placeholder="Margen %">
+    <button onclick="ej13()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 14 – Promedio</h3>
+    <input id="n1" type="number">
+    <input id="n2" type="number">
+    <input id="n3" type="number">
+    <button onclick="ej14()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 15 – Clasificación Nota</h3>
+    <input id="nota" type="number">
+    <button onclick="ej15()">Clasificar</button>
+</div>
+
+<div>
+    <h3>Ejercicio 16 – Sobre Tasa</h3>
+    <input id="importe16" type="number" placeholder="Importe">
+    <input id="tipo16" type="number" placeholder="Tipo 1-6">
+    <button onclick="ej16()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 17 – Importe Agua</h3>
+    <input id="m3" type="number" placeholder="Metros cúbicos">
+    <button onclick="ej17()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 18 – Tasa Subsuelo</h3>
+    <input id="importe18" type="number">
+    <button onclick="ej18()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 19 – Fiscalización ENRE</h3>
+    <input id="importe19" type="number">
+    <button onclick="ej19()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 20 – Dosis Insulina</h3>
+    <input id="glucosa20" type="number" placeholder="Glucosa">
+    <input id="peso20" type="number" placeholder="Peso">
+    <input id="tipo20" type="number" placeholder="1 o 2">
+    <button onclick="ej20()">Calcular</button>
+</div>
+
+<div>
+    <h3>Ejercicio 21 – Contar Vocales</h3>
+    <input id="cad21" type="text">
+    <button onclick="ej21()">Contar</button>
+</div>
+
+<div>
+    <h3>Ejercicio 22 – Contar Consonantes</h3>
+    <input id="cad22" type="text">
+    <button onclick="ej22()">Contar</button>
+</div>
+
+<div>
+    <h3>Ejercicio 23 – Contiene dos S</h3>
+    <input id="cad23" type="text">
+    <button onclick="ej23()">Verificar</button>
+</div>
+
+<div>
+    <h3>Ejercicio 24 – Tres espacios</h3>
+    <input id="cad24" type="text">
+    <button onclick="ej24()">Verificar</button>
+</div>
+
+<div>
+    <h3>Ejercicio 25 – Sin números</h3>
+    <input id="cad25" type="text">
+    <button onclick="ej25()">Verificar</button>
+</div>
+
+<h2>Resultado:</h2>
+<pre id="resultado" style="background:#eee; padding:10px;"></pre>
+
+<script type="module" src="controlador.js"></script>
+</body>
+</html>
