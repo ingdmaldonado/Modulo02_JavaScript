@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticos Nodo Tecnológico</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        header { background: #0074D9; color: #fff; padding: 20px 0; text-align: center; }
+        main { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; }
+        h2 { color: #0074D9; }
+        button {color: #0074D9;}
+        label {color: #0074D9;}
+        p {color: #0074D9;}
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #0074D9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+    </style>
+</head>
+<body>
+   <header>
+        <img src="img/cib3rshield.jpg" alt="Logo Nodo cib3rshield" style="height:60px; vertical-align:middle; margin-right:15px; border-radius:8px;">
+        <h1 style="display:inline-block; vertical-align:middle;">Prácticas y Ejercicios - Nodo Tecnológico</h1>
+        <p>Acceso rápido a todos los trabajos prácticos y ejercicios de clase</p>
+    </header>
+    <main>
+        <section>
+            <h2>Trabajos Prácticos</h2>
+            <ul>
+                <li><a href=" ">TP1 - Ejercicio 1</a></li>
+                <li><a href=" ">TP2 - Ejercicio 2</a></li>
+                <li><a href=" ">TP3 - Ejercicio 3</a></li>
+                <li><a href=" ">TP4 - Ejercicio 4</a></li>
+                <li><a href=" ">TP5 - Ejercicio 5</a></li>
+                <li><a href=" ">TP FINAL - Ejercicio 5</a></li>
+                <!-- Para agregar más enlaces de trabajos prácticos -->
+            </ul>
+        </section>
+        <section>
+            <h2>Prácticas de Clase</h2>
+            <ul>
+                <li><a href=" ">Clase de Consulta 1</a></li>
+                <li><a href=" ">Clase de Consulta 2</a></li>
+                <li><a href=" ">Clase de Consulta 3</a></li>
+                <li><a href=" ">Clase de Consulta 4</a></li>
+                <li><a href=" ">Clase de Consulta 5</a></li>
+                <li><a href=" ">Clase de Consulta 6</a></li>
+                <li><a href=" ">Clase de Consulta 7</a></li>
+                <li><a href=" ">Clase de Consulta 8</a></li>
+                <!-- Para agregar más enlaces de las clases -->
+            </ul>
+        </section>
+        <script src="controlador.js" type="module"></script>
+    
+    <div class="card">
+    <h2>Promedio de 3 notas</h2>
+    <p>Ingrese las tres notas obtenidas en los trabajos prácticos.</p>
+
+    <label for="nota1">Nota 1</label>
+    <input id="nota1" type="number" step="0.01" min="0" max="10" placeholder="Ej: 7.5">
+
+    <label for="nota2">Nota 2</label>
+    <input id="nota2" type="number" step="0.01" min="0" max="10" placeholder="Ej: 8">
+
+    <label for="nota3">Nota 3</label>
+    <input id="nota3" type="number" step="0.01" min="0" max="10" placeholder="Ej: 9.25">
+
+    <button id="calcular">Calcular promedio</button>
+
+    <div id="salida" class="resultado" aria-live="polite" style="display:none;"></div>
+  </div>
+
+  <script type="module" src="./controlador.js"></script>
+  </main>
+
+</body>
+</html>

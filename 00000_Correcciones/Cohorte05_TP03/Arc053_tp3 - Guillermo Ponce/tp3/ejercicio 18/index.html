@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticos Nodo Tecnológico</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        header { background: #0074D9; color: #fff; padding: 20px 0; text-align: center; }
+        main { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; }
+        h2 { color: #0074D9; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        a { color: #0074D9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        body{font-family:Arial,Helvetica,sans-serif;background:#f4f6fb;margin:0;padding:24px;color:#223}
+        .card{max-width:520px;margin:36px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+        label{display:block;margin-top:12px;font-weight:600;color:#005fa3}
+        input[type=number]{width:100%;padding:8px;margin-top:8px;border:1px solid #d6dbe4;border-radius:6px}
+        button{margin-top:16px;padding:10px 14px;background:#0074D9;color:#fff;border:none;border-radius:6px;cursor:pointer}
+        .resultado{margin-top:16px;padding:12px;background:#f1f9ff;border-left:4px solid #0074D9;border-radius:6px}
+        .error{color:#c62828;font-weight:700}
+        small{color:#556}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/cib3rshield.jpg" alt="Logo Nodo cib3rshield" style="height:60px; vertical-align:middle; margin-right:15px; border-radius:8px;">
+        <h1 style="display:inline-block; vertical-align:middle;">Prácticas y Ejercicios - Nodo Tecnológico</h1>
+        <p>Acceso rápido a todos los trabajos prácticos y ejercicios de clase</p>
+    </header>
+    <main>
+        <section>
+            <h2>Trabajos Prácticos</h2>
+            <ul>
+                <li><a href=" ">TP1 - Ejercicio 1</a></li>
+                <li><a href=" ">TP2 - Ejercicio 2</a></li>
+                <li><a href=" ">TP3 - Ejercicio 3</a></li>
+                <li><a href=" ">TP4 - Ejercicio 4</a></li>
+                <li><a href=" ">TP5 - Ejercicio 5</a></li>
+                <li><a href=" ">TP FINAL - Ejercicio 5</a></li>
+                <!-- Para agregar más enlaces de trabajos prácticos -->
+            </ul>
+        </section>
+        <section>
+            <h2>Prácticas de Clase</h2>
+            <ul>
+                <li><a href=" ">Clase de Consulta 1</a></li>
+                <li><a href=" ">Clase de Consulta 2</a></li>
+                <li><a href=" ">Clase de Consulta 3</a></li>
+                <li><a href=" ">Clase de Consulta 4</a></li>
+                <li><a href=" ">Clase de Consulta 5</a></li>
+                <li><a href=" ">Clase de Consulta 6</a></li>
+                <li><a href=" ">Clase de Consulta 7</a></li>
+                <li><a href=" ">Clase de Consulta 8</a></li>
+                <!-- Para agregar más enlaces de las clases -->
+            </ul>
+        </section>
+    </main>
+        <div class="card">
+        <h2>Calcular Tasa ENRE</h2>
+            <p style="color: #0074D9;">Ingrese el importe base de la factura de Servicios Públicos de Aguas de Catamarca.</p>
+
+            <label for="importe">Importe Base ($)</label>
+            <input id="importe" type="number" step="0.01" min="0" placeholder="Ej: 20276.00">
+
+            <small>Nota: Se calcula el 1,2 % del importe base (Tasa de Fiscalización ENRE).</small>
+
+            <button id="calcular">Calcular tasa ENRE</button>
+
+            <div id="salida" class="resultado" aria-live="polite" style="display:none;"></div>
+        </div>
+
+<script type="module" src="./controlador.js"></script>
+</body>
+</html>
