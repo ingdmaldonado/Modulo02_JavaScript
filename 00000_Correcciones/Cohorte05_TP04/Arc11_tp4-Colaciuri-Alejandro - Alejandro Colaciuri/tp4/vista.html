@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, th, td{
+        text-align: center;
+    }
+</style>
+<body>
+    <h2>tp4-Ejercicio Nro. 18: ( spread operator … y métodos de vectores) </h2>
+
+    <p>Un profesor de programación tiene 4 curso o cohortes, en donde en cada cohorte existen alumnos 
+diferentes que cursaron su módulo de “fundamentos de programación con JavaScript”, el profesor tiene en un 
+vector diferente los alumnos y sus notas finales del cursado. “Se aprueba con notas > 4”. El listado de alumnos 
+es el siguiente:</p>
+
+<ol>
+    <li>
+        Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier 
+        cohorte) los recorra con un forEach y muestre por consola, el apellido y el nombre. 
+        Invoque esa misma función, pasándole como parámetro el vector de la cohorte01, luego el vector de 
+        la cohorte02 y así sucesivamente hasta la cuarta cohorte. 
+    </li>
+
+    <li>
+        El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son 
+        iguales, utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solo 
+        vector. Muestre por consola el vector resultante.
+    </li>
+    <li>
+        Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el 
+        otro alumnosDesaprobados.
+        Para crear el vector de alumnos aprobados, aplique el método filter sobre el Vector que tiene todos
+        los alumnos cuando la nota > 5;
+        Para crear el vector de alumnos desaprobados, aplique el método filter sobre el Vector que tiene
+        todos los alumnos cuando la nota <= 5;
+    </li>
+    <li>
+        Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los
+        datos de todos esos alumnos por nota de menor a mayor.
+    </li>
+    <li>
+        Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el 
+        método “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud.
+        Desee. 
+    </li>
+    <!-- en esta seccion hice un tabla con el listado de alumnos - en la misma inserto los theads y tbody con los alumnos acumulados al pulsar el boton -->
+    <hr>
+    <h3>Escuela Truchingui</h3>
+    <button id="idBtnlistarAlumnos">Listar alumnos</button>
+    <br><br>
+    <table id="tablaAlumnos">
+        <thead id="theadAlumnos">
+        </thead>
+
+        <tbody id="tbodyAlumnos">
+        </tbody>
+    </table>
+<!-- aca busco el alumno por dni con find -->
+    <hr>
+    <br>
+    <label for="idDniBuscado">Ingrese el dni del alumno</label>
+    <input type="number" id="idDniBuscado"><br>
+    <button id="idbtnBuscarAlumno">Buscar alumno</button>
+    <br>
+    <h3 id="idMostrarAlumno"></h3>
+    <hr>
+
+    <li>
+        Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es 
+        decir la cantidad de alumnos que tienen nota > 5; para ello utilicen el método reduce que tienen los 
+        vectores incorporados para contabilizar. Realice esto de dos formas 
+        <ul>
+            <li>
+                Usando una arrow function que a dentro utilice un condicional if/else para saber si la nota > 
+                5 y por lo tanto contabilizar los aprobados; 
+            </li>
+            <li>
+                Usando una arrow function que a dentro utilice un operador ternario para saber si la nota > 
+                5 y por lo tanto contabilizar los aprobados; 
+            </li>
+        </ul>
+        <p>
+            Ambas formas deben llegar al mismo resultado, únicamente que se implementaron de dos formas 
+            diferentes.
+        </p>
+    </li>
+</ol>
+<script src="controlador.js" type="module"></script>
+</body>
+</html>

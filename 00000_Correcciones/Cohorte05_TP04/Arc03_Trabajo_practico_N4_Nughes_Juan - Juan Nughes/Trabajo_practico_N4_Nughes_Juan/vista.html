@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Trabajo practico Nro. 04</title>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <h1 class="text-4xl text-center  bg-gray-800 text-white shadow-lg">Gestión de Alumnos</h1>
+
+<!-- Muestro los alumnos de la cohorte Nro. 1 -->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+    <h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Alumnos de la cohorte Nro. 01</h2>
+<p id="idCohortes" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idbtnMostrarCohorteUno" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!-- Muestro los alumnos Unificados -->
+
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Alumnos unificados</h2>
+<p id="idTodasLasCohortes" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idbtnAlumnosUnificados" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!-- Muestro los alumnos aprobados -->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Alumnos Aprobados</h2>
+<p id="idAlumnosAprobados" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idBtnAlumnosAprobados" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!-- Muestro los alumnos Desaprobados -->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Alumnos Desprobados</h2>
+<p id="idAlumnosDesaprobados" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idBtnAlumnosDesaprobados" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!-- Muestro los datos ordenados-->
+
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Notas de alumnos ordenadas de menor a mayor </h2>
+<p id="idAlmunosOrdenados" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idBtnAlumnosOrdenados" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!--Buscar un alumno por su DNI-->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Alumno buscado</h2>
+<p id="idAlumnoBuscado" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idbtnAlumnoBuscado" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!--Contar aprobados-->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Cantidad de Alumnos Aprobados</h2>
+<p id="ContarAlumnosAprobados" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idbtnContarAlumnosAprobados" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+<!--Contar Desaaprobados-->
+<div class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+<h2 class="p-2 mb-5 text-2xl border border-black bg-slate-300 rounded-lg ">Cantidad de Alumnos Aprobados</h2>
+<p id="ContarAlumnosAprobados2" class="w-1/2 p-2 border rounded mb-2 bg-gray-100 shadow-sm">Hacer click en `Mostrar` para obtener los datos.</p>
+<button id="idbtnContarAlumnosAprobados2" class="border-collapse bg-gray-400 p-1">Mostrar</button>
+</div>
+
+    <script src="controlador.js" type="module"></script>
+
+    <!-- FOOTER -->
+  <footer class="border shadow-sm ms-1 p-4 bg-gray-200 rounded-lg">
+    <p  class=" p-6 border rounded mb-2 bg-blue-600 shadow-sm"> Alumno: Nughes Juan</p>
+    <p class=" p-6 border rounded mb-2 bg-yellow-300">Contacto: juanmanuelnughes@gmail.com |
+     Wsp: 3834000426</p>
+    <p class=" p-6 border rounded mb-2 bg-blue-600  shadow-sm">Equipo: Boquita </p>
+
+</body>
+</html>

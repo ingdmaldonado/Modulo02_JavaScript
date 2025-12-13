@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N°04 - JavaScript | Gestión de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="controlador.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trabajo Práctico Nro. 04 – JavaScript</h1>
+            <h2>Gestión de Cohortes y Notas</h2>
+        </header>
+
+        <main class="controls">
+            <!-- Ejercicio 1 y 2 -->
+            <div class="card">
+                <h3>Recorridos y Unificación</h3>
+                <button id="btnMostrarApellidos">1. Mostrar Apellidos (forEach)</button>
+                <button id="btnUnificar">2. Unificar Cohortes (Spread)</button>
+            </div>
+
+            <!-- Ejercicio 3 y 4 -->
+            <div class="card">
+                <h3>Filtros y Ordenamiento</h3>
+                <button id="btnFiltrar">3. Filtrar Aprobados/Desaprobados</button>
+                <button id="btnOrdenar">4. Ordenar por Nota (Sort)</button>
+            </div>
+
+            <!-- Ejercicio 5 -->
+            <div class="card">
+                <h3>Búsqueda</h3>
+                <input type="text" id="inputDNI" placeholder="Ingrese DNI (Solo números)">
+                <button id="btnBuscarDNI">5. Buscar por DNI (Find)</button>
+            </div>
+
+            <!-- Ejercicio 6 -->
+            <div class="card">
+                <h3>Estadísticas (Reduce)</h3>
+                <button id="btnContarIf">6a. Contar Aprobados (If/Else)</button>
+                <button id="btnContarTernario">6b. Contar Aprobados (Ternario)</button>
+            </div>
+
+            <!-- Extras: JSON -->
+            <div class="card">
+                <h3>Formato JSON</h3>
+                <button id="btnMostrarJson">Generar JSON</button>
+                <button id="btnParsearJson">Parsear JSON</button>
+            </div>
+        </main>
+
+        <section class="results">
+            <h3>Consola de Salida</h3>
+            <div id="output">Esperando acciones...</div>
+            
+            <h3>Visualizador JSON</h3>
+            <pre id="jsonOutput"></pre>
+        </section>
+    </div>
+</body>
+</html>

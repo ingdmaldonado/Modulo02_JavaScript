@@ -1,0 +1,38 @@
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: #03a9f4;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0288d1;
+}
+
+pre {
+    background: #121212;
+    padding: 20px;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+}

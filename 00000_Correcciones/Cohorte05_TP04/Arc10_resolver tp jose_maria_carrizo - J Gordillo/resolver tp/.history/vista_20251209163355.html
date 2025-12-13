@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TP 04 - JavaScript - Cohortes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1>TP 04 - JavaScript</h1>
+  <h2>Cohortes de alumnos</h2>
+
+  <section class="bloque">
+    <h3>1) Mostrar alumnos por cohorte</h3>
+    <button id="btnCohorte1">Mostrar cohorte 01</button>
+    <button id="btnCohorte2">Mostrar cohorte 02</button>
+    <button id="btnCohorte3">Mostrar cohorte 03</button>
+    <button id="btnCohorte4">Mostrar cohorte 04</button>
+    <p class="nota">Abrí la consola del navegador para ver Apellido, Nombre.</p>
+  </section>
+
+  <section class="bloque">
+    <h3>2) Unificar alumnos (Spread)</h3>
+    <button id="btnUnificar">Unificar 4 cohortes</button>
+  </section>
+
+  <section class="bloque">
+    <h3>3) Aprobados / Desaprobados (filter)</h3>
+    <button id="btnFiltros">Mostrar aprobados y desaprobados</button>
+  </section>
+
+  <section class="bloque">
+    <h3>4) Ordenar por nota (sort)</h3>
+    <button id="btnOrdenar">Ordenar por nota</button>
+  </section>
+
+  <section class="bloque">
+    <h3>5) Buscar alumno por DNI (find)</h3>
+    <input type="text" id="inputDni" placeholder="Ingrese DNI" />
+    <button id="btnBuscar">Buscar</button>
+  </section>
+
+  <section class="bloque">
+    <h3>6) Contar aprobados (reduce)</h3>
+    <button id="btnContar">Contar aprobados (nota &gt; 5)</button>
+  </section>
+
+  <section class="bloque">
+    <h3>Salida</h3>
+    <pre id="salida">Acá se van a mostrar los resultados...</pre>
+  </section>
+
+  <script type="module" src="controlador.js"></script>
+</body>
+</html>

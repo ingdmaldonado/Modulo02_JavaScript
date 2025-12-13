@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>TP - 03 Jorge Luis Alejandro Vera</title>
+    
+</head>
+<body class="bg-zinc-950 text-white">
+
+<!-- Titulo -->
+
+<h1 class="m-5 mt-12 font-semibold text-5xl font-['Work_Sans'] text-center cursor-default">Trabajo practico <span class="text-green-400">#4</span></h1>
+<h4 class="m-5 font-semibold font-['Work_Sans'] text-center cursor-default">Jorge Luis Alejandro Vera</h4>
+<hr class="text-green-400 my-10 text-center mx-auto w-[20%]">
+<h2 class="m-5 font-semibold text-2xl font-['Work_Sans'] text-center cursor-default">Metodos de vectores</h2>
+
+<div class="p-2 mx-auto w-[80%]">
+    <p class="text-center text-shadow-lg/50 font-['Work_Sans']">Un profesor de programación tiene 4 cursos o cohortes, en donde en cada cohorte existen alumnos
+    diferentes que cursaron su módulo de “fundamentos de programación con JavaScript”, el profesor tiene en un
+    vector diferente los alumnos y sus notas finales del cursado. <span class="text-green-400">Se aprueba con notas > 4</span>.</p>
+</div>
+
+<!-- Interfaz completa -->
+
+    <div class="flex flex-wrap mb-15 mt-15 bg-green-500 md:max-w-[80%] lg:max-w-[40%] max-w-[80%] h-[70%] mx-auto rounded-md shadow-xl/25 shadow-green-400">
+
+        <!-- PRIMER PANEL -->
+
+        <div class="relative w-[50%] p-3">
+
+            <!-- Pantalla donde se muestran los resultados -->
+
+            <div>
+                <textarea  id="idVisorResultados" class="w-[100%] max-h-[345px] min-h-[345px] rounded-lg bg-zinc-950  text-green-400 outline-none cursor-default text-center font-['Work_Sans'] text-lg" placeholder="alumnos" readonly></textarea>
+            </div>
+
+            <!-- Botones Cohorte 01 a 04 -->
+
+            <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">Mostrar cohorte</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                <button id="idMostrarCohorte01" class="bg-green-700 px-2 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm 2xl:text-lg 2xl:px-4 lg:text-lg lg:px-4 md:text-lg md:px-4">01</button>
+                <button id="idMostrarCohorte02" class="bg-green-700 px-2 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm 2xl:text-lg 2xl:px-4 lg:text-lg lg:px-4 md:text-lg md:px-4">02</button>
+                <button id="idMostrarCohorte03" class="bg-green-700 px-2 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm 2xl:text-lg 2xl:px-4 lg:text-lg lg:px-4 md:text-lg md:px-4">03</button>
+                <button id="idMostrarCohorte04" class="bg-green-700 px-2 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm 2xl:text-lg 2xl:px-4 lg:text-lg lg:px-4 md:text-lg md:px-4">04</button>
+            </div>
+
+            <!-- Buscador por DNI -->
+
+            <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">Buscar alumno con DNI</p>
+            <div class="flex">
+                <label for="idBuscadorDNI">
+                    <input type="number" id="idBuscadorDNI" class="bg-white rounded-md outline-lime-500 text-center text-zinc-950 mx-auto font-bold max-w-[70%]"><button id="idBtnBuscarDni" class="bg-green-700 max-w-[30%] ml-2 p-1 my-1 rounded-md hover:scale-110 duration-300 text-sm">Buscar</button>
+                </label>
+            </div>
+        </div>
+        
+        <!-- SEGUNDO PANEL -->
+
+        <div class="relative w-[50%] p-3">
+
+            <!-- Filtrador de aprobados y desaprobados -->
+
+            <div>
+                <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">Filtrar aprobados y desaprobados</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                
+                <button id="idFiltroAprobados" class="bg-green-700 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm">Aprobó</button>
+
+                <button id="idFiltroDesaprobados" class="bg-green-700 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm">desaprobó</button>
+            </div>
+            </div>
+
+            <!-- Ordenar notas de mayor a menor o al reves -->
+
+            <div>
+                <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">Notas</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                <button id="idMayorNota" class="bg-green-700 w-20 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm"><img src="img/notasMasAltas.png" alt="notas mas altas primero" class="size-5 mx-auto"></a></button>
+                <button id="idMenorNota" class="bg-green-700 w-20 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm"><img src="img/notasMasBajas.png" alt="notas mas altas primero" class="size-5 mx-auto"></button>
+            </div>
+            </div>
+
+            <!-- Contador de aprobados -->
+
+            <div>
+                <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">¿Cuantos aprobaron?</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                <button id="idContadorAprobados" class="bg-green-700 w-20 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm text-center text-shadow-lg/50 font-['Work_Sans']">Contar</a></button>
+            </div>
+            </div>
+
+            <!-- Contador de desaprobados (creo que no está en la consigna pero creo que no está de más) -->
+
+            <div>
+                <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">¿Cuantos desaprobaron?</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                <button id="idContadorDesaprobados" class="bg-green-700 w-20 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm text-center text-shadow-lg/50 font-['Work_Sans']">Contar</a></button>
+            </div>
+            </div>
+
+            <!-- El unificador de los vectores con spread -->
+
+            <div>
+                <p class="text-center my-1 text-shadow-lg/50 font-['Work_Sans'] cursor-default">Mostrar todas las cohortes</p>
+            <div class="flex place-content-evenly bg-white p-1 rounded-md">
+                <button id="idUnirCohortes" class="bg-green-700 w-20 p-1 my-1 rounded-md hover:scale-110 hover:bg-green-400 duration-300 text-sm text-center text-shadow-lg/50 font-['Work_Sans']">Unir</a></button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-2 my-15 mx-auto w-[80%]">
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">1)</span> Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier 
+        cohorte) los recorra con un forEach y muestre por consola, el apellido y el nombre. 
+        Invoque esa misma función, pasándole como parámetro el vector de la cohorte01, luego el vector de 
+        la cohorte02 y así sucesivamente hasta la cuarta cohorte.</p> 
+<hr class="text-green-400 my-3">
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">2)</span> El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son 
+        iguales, utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solovector. Muestre por consola el vector resultante.</p>
+<hr class="text-green-400 my-3">
+         
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">3)</span> Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el 
+        otro alumnosDesaprobados. 
+        Para crear el vector de alumnos aprobados, aplique el método filter sobre el Vector que tiene todos 
+        los alumnos cuando la nota > 5; 
+        Para crear el vector de alumnos desaprobados, aplique el método filter sobre el Vector que tiene 
+        todos los alumnos cuando la nota <= 5;</p>
+<hr class="text-green-400 my-3">
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">4)</span> Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los 
+        datos de todos esos alumnos por nota de menor a mayor.</p>
+<hr class="text-green-400 my-3">
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">5)</span> Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el 
+        método “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud. 
+        Desee.</p>
+        <hr class="text-green-400 my-3">
+    <p class="text-shadow-lg/50 font-['Work_Sans']">
+        <span class="text-green-400">6)</span> Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es 
+        decir la cantidad de alumnos que tienen nota > 5; para ello utilicen el método reduce que tienen los 
+        vectores incorporados para contabilizar. Realice esto de dos formas <br>
+        <span class="text-green-400">a.</span> Usando una arrow function que a dentro utilice un condicional if/else para saber si la nota > 
+        5 y por lo tanto contabilizar los aprobados; <br>
+        <span class="text-green-400">b.</span> Usando una arrow function que a dentro utilice un operador ternario para saber si la nota > 
+        5 y por lo tanto contabilizar los aprobados; 
+        Ambas formas deben llegar al mismo resultado, únicamente que se implementaron de dos formas 
+        diferentes.</p>
+    </div>
+
+
+    <script type="module" src="controlador.js"></script>
+    <script type="module" src="modulo.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TP4 - Cohortes JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #08058a;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+}
+
+button {
+    margin: 5px 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #3876f0;
+    color: rgb(243, 239, 15);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #1f4fb8;
+}
+
+.resultado {
+    background: rgb(228, 226, 142);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 150px;
+    border: 1px solid #f0ee6f;
+    white-space: pre-wrap;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Trabajo Práctico N° 4 </h1>
+
+    <section class="contenedor">
+        <button id="btnMostrarListados">Mostrar Alumnos por Cohorte</button>
+        <button id="btnUnificar">Unificar Cohortes</button>
+        <button id="btnAprobados">Mostrar Aprobados / Desaprobados</button>
+        <button id="btnOrdenar">Ordenar por Nota</button>
+        <button id="btnBuscar">Buscar Alumno por DNI</button>
+        <button id="btnContar">Contar Aprobados</button>
+
+        <div id="resultado" class="resultado"></div>
+    </section>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

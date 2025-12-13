@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP 04 - JavaScript - Cohortes</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-icon">👨‍🎓</div>
+        <div class="header-text">
+          <h1>TP 04 - JavaScript</h1>
+          <h2>Cohortes de alumnos</h2>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card stat-blue">
+          <p class="stat-number">4</p>
+          <p class="stat-label">Cohorte 01</p>
+        </div>
+        <div class="stat-card stat-green">
+          <p class="stat-number">3</p>
+          <p class="stat-label">Cohorte 02</p>
+        </div>
+        <div class="stat-card stat-purple">
+          <p class="stat-number">5</p>
+          <p class="stat-label">Cohorte 03</p>
+        </div>
+        <div class="stat-card stat-orange">
+          <p class="stat-number">6</p>
+          <p class="stat-label">Cohorte 04</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Panel de Control -->
+    <div class="control-panel">
+      <!-- Columna 1 -->
+      <section class="bloque">
+        <h3>📚 1) Mostrar alumnos por cohorte</h3>
+        <button id="btnCohorte1" class="btn btn-blue">Mostrar cohorte 01</button>
+        <button id="btnCohorte2" class="btn btn-green">Mostrar cohorte 02</button>
+        <button id="btnCohorte3" class="btn btn-purple">Mostrar cohorte 03</button>
+        <button id="btnCohorte4" class="btn btn-orange">Mostrar cohorte 04</button>
+        <p class="nota">💡 Abrí la consola del navegador para ver Apellido, Nombre.</p>
+      </section>
+
+      <!-- Columna 2 -->
+      <section class="bloque">
+        <h3>🔗 2) Unificar alumnos (Spread)</h3>
+        <button id="btnUnificar" class="btn btn-indigo">Unificar 4 cohortes</button>
+        
+        <h3 style="margin-top: 1.5rem;">🔍 3) Aprobados / Desaprobados (filter)</h3>
+        <button id="btnFiltros" class="btn btn-teal">Mostrar aprobados y desaprobados</button>
+      </section>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="control-panel">
+      <section class="bloque">
+        <h3>📈 4) Ordenar por nota (sort)</h3>
+        <button id="btnOrdenar" class="btn btn-pink">Ordenar por nota (menor a mayor)</button>
+      </section>
+
+      <section class="bloque">
+        <h3>🔎 5) Buscar alumno por DNI (find)</h3>
+        <div class="input-group">
+          <input type="text" id="inputDni" placeholder="Ingrese DNI (ej: 12345678)" class="input-dni" />
+          <button id="btnBuscar" class="btn btn-cyan btn-small">Buscar</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tercera fila -->
+    <section class="bloque bloque-full">
+      <h3>🏆 6) Contar aprobados (reduce)</h3>
+      <button id="btnContar" class="btn btn-violet">Contar aprobados (nota &gt; 4)</button>
+      <p class="nota">Se implementa con if/else y con operador ternario.</p>
+    </section>
+
+    <!-- Panel de Resultados -->
+    <section class="bloque bloque-full">
+      <h3>📋 Salida</h3>
+      <pre id="salida">Acá se van a mostrar los resultados...</pre>
+    </section>
+
+    <!-- Footer con explicación -->
+    <footer class="footer">
+      <h3>📚 Conceptos aplicados en este TP:</h3>
+      <ul>
+        <li>✅ <strong>forEach:</strong> Iterar sin retornar nuevo array</li>
+        <li>✅ <strong>Spread Operator (...):</strong> Unificar arrays sin mutación</li>
+        <li>✅ <strong>filter():</strong> Crear nuevos arrays según condición</li>
+        <li>✅ <strong>sort():</strong> Ordenar elementos (con spread para no mutar)</li>
+        <li>✅ <strong>find():</strong> Buscar primer elemento que cumple condición</li>
+        <li>✅ <strong>reduce():</strong> Reducir array a un único valor (contador)</li>
+        <li>✅ <strong>Arrow Functions:</strong> Sintaxis concisa para funciones</li>
+        <li>✅ <strong>Destructuring:</strong> Extraer valores de objetos/arrays</li>
+        <li>✅ <strong>Rest Operator:</strong> Agrupar elementos restantes</li>
+      </ul>
+    </footer>
+  </div>
+
+  <script type="module" src="controlador.js"></script>
+</body>
+</html>

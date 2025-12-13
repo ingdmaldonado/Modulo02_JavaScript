@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.bloque {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button {
+  margin: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#salida {
+  background: #111;
+  color: #eee;
+  padding: 8px;
+  border-radius: 4px;
+  max-height: 260px;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+.nota {
+  font-size: 0.8rem;
+  color: #555;
+}

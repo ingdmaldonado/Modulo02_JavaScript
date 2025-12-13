@@ -1,0 +1,75 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+
+    /* GENERO DOS CONTENEDORES EN 2 COLUMNAS (BOTONES Y REULTADOS) */
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    /* COLUMNA IZQ */
+    .sidebar {
+        width: 25%;
+        background: #2f4050;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .sidebar h3 {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .sidebar button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        background: #1ab394;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .sidebar button:hover {
+        background: #18a383;
+    }
+
+    /* COLUMNA DER */
+    .content {
+        flex: 1;
+        padding: 20px;
+        background: white;
+        box-sizing: border-box;
+    }
+
+    /* Titulo */
+    #idTitulo {
+        margin-top: 0;
+        color: #2f4050;
+    }
+
+    /* Tabla */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background: #f0f0f0;
+    }
+</style>

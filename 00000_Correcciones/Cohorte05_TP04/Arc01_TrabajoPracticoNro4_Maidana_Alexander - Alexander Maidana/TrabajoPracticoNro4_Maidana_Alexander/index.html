@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TP04 - Cohortes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>TP04 — Programación con JavaScript</h1>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="control-row">
+        <button id="btn-listar" class="btn">
+          Listar apellidos y nombres
+        </button>
+        <button id="btn-ordenar" class="btn">Listar por nota de menor a mayor</button>
+        <button id="btn-contar" class="btn">
+          Contar cantidad de alumnos aprobados
+        </button>
+        <button id="btn-listar-aprobados" class="btn">Listar alumnos aprobados</button>
+        <button id="btn-listar-desaprobados" class="btn">Listar alumnos desaprobados</button>
+      </div>
+
+      <div class="control-row">
+        <label for="dni-buscar">Buscar por DNI:</label>
+        <input id="dni-buscar" type="text" inputmode="numeric" placeholder="ej: 12345678" />
+        <button id="btn-buscar" class="btn">Buscar</button>
+      </div>
+    </section>
+
+    <section class="resultados">
+      <h2>Resultados</h2>
+      <div id="output" class="output">Aqui se mostraran los resultados</div>
+    </section>
+  </main>
+
+  <script src="controlador.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+
+
+Por si corrige el profe
+
+
+Nombre y apellido: Jorge Luis Alejandro Vera
+
+Cohorte: 5
+
+Telefono: 3834986308
+
+hincha de: boca
+
+para verlo desde el navegador (alternativa al live server): https://tp4verajorge.netlify.app/
