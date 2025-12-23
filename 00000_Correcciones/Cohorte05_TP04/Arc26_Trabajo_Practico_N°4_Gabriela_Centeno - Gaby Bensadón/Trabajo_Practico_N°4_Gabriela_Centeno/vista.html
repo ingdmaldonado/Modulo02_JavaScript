@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------- TAILWIND + CSS ------------->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!------------------------------------------>
+
+    <!------------- FUENTES GOOGLE ------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!------------------------------------------>
+    <title>TRABAJO PRÁCTICO NRO. 04 – JAVASCRIPT</title>
+
+    <!------------- CSS ------------->
+    <style>
+        .label {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .input-dni {
+            border: 3px solid #555;
+            background: #4B5563;
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 60%;
+            color: white;
+        }
+
+        .botonesPunto1 {
+
+            border: 3px solid #6e6d6dff;
+            background: #1F2937B3;
+            padding: 3px;
+            width: 20%;
+            cursor: pointer;
+            margin: 12px;
+
+        }
+
+        .botonPunto4 {
+
+            border: 3px solid #6e6d6dff;
+            background: #1F2937B3;
+            padding: 3px;
+            width: 60%;
+            cursor: pointer;
+            margin: 12px;
+
+        }
+
+        .botones {
+            border: 3px solid #6e6d6dff;
+            background: #1F2937B3;
+            padding: 3px;
+            width: 30%;
+            cursor: pointer;
+            margin: 10px;
+
+        }
+
+        .ejemplos {
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+    </style>
+
+    <!------------------------------------------>
+
+</head>
+
+<body class="m-7 p-3 bg-gray-900 text-white text-justify text-base font-['zain']">
+    <main class="bg-gray-600/30 p-10 rounded-lg">
+        <h1 class="text-center text-2xl mb-6 p-2 uppercase font-['Fredericka_The_Great']">
+            TRABAJO PRÁCTICO NRO. 04 – JAVASCRIPT</h1>
+
+        <h2 class="font-['Fredericka_The_Great'] text-lg capitalize pb-2">Ejercicio N°18</h2>
+        <p>
+            Un profesor de programación tiene 4 cursos o cohortes, en donde en cada cohorte existen alumnos diferentes
+            que cursaron su módulo de "Fundamentos de Programación con JavaScript". El profesor tiene en un vector
+            diferente los alumnos y sus notas finales del cursado. Se aprueba con notas mayores a 4
+        </p>
+
+        <ol class="list-decimal pl-6">
+            <li>
+                <p class="p-2">
+                    Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier cohorte)
+                    los
+                    recorra con un forEach y muestre por consola, el apellido y el nombre.
+                    Invoque esa misma función, pasándole como parámetro el vector de la cohorte01, luego el vector de la
+                    cohorte02 y así sucesivamente hasta la cuarta cohorte.
+                </p>
+                <div id="idPunto1"
+                    class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-2 mb-3 text-amber-200 font-mono"></div>
+            </li>
+            <li>
+                <p class="p-2">
+                    El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son
+                    iguales,
+                    utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solo vector.
+                    Muestre
+                    por consola el vector resultante.
+                </p>
+                <div id="idPunto2"
+                    class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+                </div>
+            </li>
+            <li>
+                <p class="p-2">
+                    Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el otro
+                    alumnosDesaprobados.
+                <ul class="list-disc px-6 mb-2">
+                    <li>
+                        <p>
+                            Para crear el vector de alumnos aprobados, aplique el método filter sobre el Vector que
+                            tiene todos los alumnos cuando la nota > 4;
+                        </p>
+                        <div id="idPunto3A"
+                            class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Para crear el vector de alumnos desaprobados, aplique el método filter sobre el Vector que
+                            tiene todos los alumnos cuando la nota <= 4 </p>
+
+                                <div id="idPunto3B"
+                                    class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                                </div>
+                    </li>
+                </ul>
+                </p>
+            </li>
+            <li>
+                <p class="p-2">
+                    Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los
+                    datos de todos esos alumnos por nota de menor a mayor.
+                </p>
+                <div id="idPunto4"
+                    class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                </div>
+            </li>
+            <li>
+                <p class="p-2">
+                    Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el método
+                    “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud. Desee.
+                </p>
+
+                <div id="idPunto5"
+                    class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                </div>
+            </li>
+            <li>
+                <p class="p-2">
+                    Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es decir
+                    la
+                    cantidad de alumnos que tienen nota > 4; para ello utilicen el método reduce que tienen los vectores
+                    incorporados para contabilizar. Realice esto de dos formas. <br>
+                    <small><em> *Ambas formas deben llegar al mismo resultado, únicamente que se implementaron de dos
+                            formas diferentes.</em></small>
+                <ul class="list-disc px-6 mb-2">
+                    <li>
+                        <p>
+                            Usando una arrow function que a dentro utilice un condicional if/else para saber si la nota
+                            > 4
+                            y por lo tanto contabilizar los aprobados;
+                        </p>
+                        <div id="idPunto6A"
+                            class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            Usando una arrow function que a dentro utilice un operador ternario para saber si la nota >
+                            4 y
+                            por lo tanto contabilizar los aprobados;
+                        </p>
+                        <div id="idPunto6B"
+                            class=" text-sm mx-auto bg-gray-400/20 rounded-md max-w-lg p-6 mb-3 text-amber-200 font-mono">
+
+                        </div>
+                    </li>
+                </ul>
+                </p>
+            </li>
+        </ol>
+
+    </main>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

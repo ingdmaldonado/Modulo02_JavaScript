@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Nro 4 - Ejercicio 18 (JS)</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+    <header>
+        <h1>📚 Trabajo Práctico Nro 4 - Ejercicio 18 (JavaScript)</h1>
+        <h2>Uso de Spread Operator y Métodos de Vectores</h2>
+    </header>
+
+    <main>
+        <section class="resultados">
+            <h3>✅ Alumnos Totales Unificados</h3>
+            <p>Cantidad total de alumnos: <strong id="totalAlumnos">...</strong></p>
+        </section>
+        
+        <section class="resultados">
+            <h3>📊 Alumnos por Estado de Nota (Filter)</h3>
+            <p>Alumnos **Aprobados** (Nota > 5): <strong id="aprobadosCount">...</strong></p>
+            <p>Alumnos **Desaprobados** (Nota <= 5): <strong id="desaprobadosCount">...</strong></p>
+        </section>
+        
+        <section class="resultados">
+            <h3>⬇️ Ordenamiento por Nota (Sort)</h3>
+            <p>Alumno con la **Menor Nota** (Primero en la lista ordenada): <strong id="menorNota">...</strong></p>
+            <p>Alumno con la **Mayor Nota** (Último en la lista ordenada): <strong id="mayorNota">...</strong></p>
+        </section>
+
+        <section class="resultados">
+            <h3>🔎 Búsqueda por DNI (Find)</h3>
+            <p>Alumno encontrado con DNI "89012345": <strong id="alumnoBuscado">...</strong></p>
+        </section>
+        
+        <section class="resultados">
+            <h3>🔢 Conteo de Aprobados (Reduce)</h3>
+            <p>Total de Aprobados (Nota > 5) Contabilizado: <strong id="aprobadosReduce">...</strong></p>
+            <p>Resultado de **ambos** Reduce (If/Else y Ternario): <strong id="resultadoDobleReduce">...</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Los resultados detallados también se pueden ver en la **Consola del Navegador** (F12).</p>
+    </footer>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

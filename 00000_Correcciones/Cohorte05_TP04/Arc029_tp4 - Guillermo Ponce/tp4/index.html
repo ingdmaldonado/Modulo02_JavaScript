@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticos Nodo Tecnológico</title>
+            <style>
+                body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fb;margin:0;padding:24px}
+                .card{max-width:520px;margin:32px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+                label{display:block;margin-top:12px;font-weight:600}
+                input[type=number]{width:100%;padding:8px;margin-top:6px;border:1px solid #d6dbe4;border-radius:6px}
+                button{margin-top:16px;padding:10px 14px;background:#0074D9;color:#fff;border:none;border-radius:6px;cursor:pointer}
+                .resultado{margin-top:16px;padding:12px;background:#f1f7ff;border-left:4px solid #0074D9;border-radius:6px}
+                .error{color:#c62828;font-weight:600}
+                header { background: #0074D9; color: #fff; padding: 20px 0; text-align: center; }
+                main { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; }
+                h2 { color: #0074D9; }
+                ul { list-style: none; padding: 0; }
+                li { margin-bottom: 10px; }
+                a { color: #0074D9; text-decoration: none; }
+                a:hover { text-decoration: underline; }                
+            </style>
+</head>
+<body>
+    <header>
+        <img src="img/cib3rshield.jpg" alt="Logo Nodo cib3rshield" style="height:60px; vertical-align:middle; margin-right:15px; border-radius:8px;">
+        <h1 style="display:inline-block; vertical-align:middle;">Prácticas y Ejercicios - Nodo Tecnológico</h1>
+        <p>Acceso rápido a todos los trabajos prácticos y ejercicios de clase</p>
+    </header>
+    <main>
+        <section>
+            <h2>Trabajos Prácticos</h2>
+            <ul>
+                <li><a href=" ">TP1 - Ejercicio 1</a></li>
+                <li><a href=" ">TP2 - Ejercicio 2</a></li>
+                <li><a href=" ">TP3 - Ejercicio 3</a></li>
+                <li><a href=" ">TP4 - Ejercicio 4</a></li>
+                <li><a href=" ">TP5 - Ejercicio 5</a></li>
+                <li><a href=" ">TP FINAL - Ejercicio 5</a></li>
+                <!-- Para agregar más enlaces de trabajos prácticos -->
+            </ul>
+        </section>
+        <section>
+            <h2>Prácticas de Clase</h2>
+            <ul>
+                <li><a href=" ">Clase de Consulta 1</a></li>
+                <li><a href=" ">Clase de Consulta 2</a></li>
+                <li><a href=" ">Clase de Consulta 3</a></li>
+                <li><a href=" ">Clase de Consulta 4</a></li>
+                <li><a href=" ">Clase de Consulta 5</a></li>
+                <li><a href=" ">Clase de Consulta 6</a></li>
+                <li><a href=" ">Clase de Consulta 7</a></li>
+                <li><a href=" ">Clase de Consulta 8</a></li> 
+                <li><a href=" ">Clase de Consulta 9</a></li>
+                <li><a href=" ">Clase de Consulta 10</a></li>
+                <!-- Para agregar más enlaces de las clases -->
+            </ul>
+        </section>
+        <section>
+            <h2>TP4 - Ejercicio 18</h2>
+            <p style="color: #0074D9;">Interfaz para ejecutar las operaciones: unificar cohortes, filtrar, ordenar, buscar y contar aprobados.</p>
+            <div class="controls" style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0">
+                <button id="btn-log" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">1) Mostrar apellido y nombre (por cohorte)</button>
+                <button id="btn-merge" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">2) Unificar cohortes (spread)</button>
+                <button id="btn-filter" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">3) Crear aprobados / desaprobados</button>
+                <button id="btn-sort" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">4) Ordenar por nota (menor → mayor)</button>
+                <button id="btn-count-if" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">6a) Contar aprobados (if/else)</button>
+                <button id="btn-count-tern" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">6b) Contar aprobados (ternario)</button>
+                <button id="btn-json" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">Mostrar JSON del primero</button>
+                <button id="btn-destruct" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">Destructuring ejemplo</button>
+                <button id="btn-find" style="background:#0074D9;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer">5) Buscar por DNI</button>
+                <input id="dni-input" type="text" placeholder="Buscar por DNI" style="padding:8px;border:1px solid #d6dbe4;border-radius:6px;margin-left:8px" />    
+            </div>
+            <label style="display:block;margin-top:12px;font-weight:600; color: #0074D9;" >Salida (consola y aquí):</label>
+            <pre id="output" style="background:#f1f7ff;border-left:4px solid #0074D9;padding:12px;border-radius:6px;overflow:auto;max-height:360px">Presione un botón para ejecutar una acción.</pre>
+        </section>
+        <script type="module" src="./controlador.js"></script>
+        </main>
+    </body>
+</html>

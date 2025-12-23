@@ -1,0 +1,5 @@
+nombre y apellido: Ponce Guillermo
+cohorte: 5 modulo 2 javascript
+telefono: 3834731269	
+Correo: guillermo.ponce.guillermo@gmail.com
+Hincha de: CABJ el mas grande del mundo

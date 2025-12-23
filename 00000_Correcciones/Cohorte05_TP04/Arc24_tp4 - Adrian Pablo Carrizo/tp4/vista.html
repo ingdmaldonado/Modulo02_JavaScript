@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trabajo Práctico 04 - Ejercicio 18</h1>
+        <div class="ejercicio">
+            <h3>1. Mostrar Alumnos por Cohorte</h3>
+            <button id="btnMostrarCohortes">Mostrar Todos los Alumnos por Cohorte</button>
+            <div id="resultadoCohortes" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>2. Unificar Cohortes (Spread Operator)</h3>
+            <button id="btnUnificarCohortes">Unificar Todas las Cohortes</button>
+            <div id="resultadoUnificar" class="resultado" style="display:none;"></div>
+        </div>
+        <div class="ejercicio">
+            <h3>3. Separar Aprobados y Desaprobados</h3>
+            <button id="btnSepararAlumnos">Separar Aprobados y Desaprobados</button>
+            <div id="resultadoSeparar" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>4. Ordenar por Nota</h3>
+            <button id="btnOrdenarNotas">Ordenar Alumnos por Nota</button>
+            <div id="resultadoOrdenar" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>5. Buscar Alumno por DNI</h3>
+            <div class="input-group">
+                <label for="inputDni">DNI a buscar:</label>
+                <input type="text" id="inputDni" placeholder="Ej: 12345678">
+                <button id="btnBuscarAlumno">Buscar</button>
+            </div>
+            <div id="resultadoBuscar" class="resultado" style="display:none;"></div>
+        </div>
+        
+        <div class="ejercicio">
+            <h3>6. Contar Aprobados</h3>
+            <button id="btnContarAprobadosIf">Contar con IF/ELSE</button>
+            <button id="btnContarAprobadosTernario">Contar con Operador Ternario</button>
+            <div id="resultadoContar" class="resultado" style="display:none;"></div>
+        </div>
+    </div>
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

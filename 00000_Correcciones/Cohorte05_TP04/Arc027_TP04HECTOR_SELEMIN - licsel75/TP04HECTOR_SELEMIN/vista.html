@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP04</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#000a02] text-white font-sans min-h-screen flex flex-col">
+
+
+    <!-- Header    -->
+
+    <header class="border-2 border-yellow-400 rounded-2xl p-2 m-2">
+        <nav
+            class="bg-[#000a02] text-white text-center font-[small-caps] flex items-center justify-center flex-row sm:flex-col lg:flex-row lg:justify-around lg:items-center min-h-[70px] border-2 border-yellow-400 rounded-2xl p-2">
+
+            <h1 class="py-3 lg:py-0 text-xl">Selemin Salim Héctor <span class="text-yellow-400">TP04</span></h1>
+
+        </nav>
+    </header>
+
+    <div style="margin-top: 15px; ">
+
+        <!--  EJERCICIO NÚMERO 1 -->
+
+        <textarea
+            class="bg-[#001804] text-white text-center  border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none">1- Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier
+cohorte) los recorra con un forEach y muestre por consola, el apellido y el nombre.
+Invoque esa misma función, pasándole como parámetro el vector de la cohorte01, luego el vector de
+la cohorte02 y así sucesivamente hasta la cuarta cohorte.</textarea>
+
+
+    </div>
+
+
+
+    <div class="mb-10 flex justify-center">
+        <div class="w-[320px] text-center">
+            <label class="block mb-2 text-lg font-semibold">Seleccione una Cohorte</label>
+
+            <select id="seletCohortes" class="w-full bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-3
+                   focus:outline-none focus:ring-2 focus:ring-yellow-500 transition">
+                <!--  <option value="cohorte01">cohorte01</option>
+                <option value="cohorte02">cohorte02</option>
+                <option value="cohorte03">cohorte03</option>
+                <option value="cohorte04">cohorte04</option> -->
+            </select>
+        </div>
+    </div>
+
+
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnSin"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Sin Destructuring
+                </button>
+            </div>
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnCon"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Con Destructuring
+                </button>
+            </div>
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnConParam"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Con Destructuring como parámetro
+                </button>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+    <div style="margin-top: 15px; ">
+        <label id=encabezadoSalida class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Listado de
+            Alumnos</label>
+
+
+        <textarea id="salida"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+    <!--  EJERCICIO NÚMERO 2 -->
+
+
+
+
+    <textarea
+        class="bg-[#001804] text-white text-center border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none">2- El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son
+iguales, utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solo
+vector. Muestre por consola el vector resultante.</textarea>
+
+    <div class="inline-block mx-auto border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg mt-4">
+        <button id="btnVectorUnificado"
+            class="px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+            Unificar vector
+        </button>
+    </div>
+
+    <div style="margin-top: 15px; ">
+        <label id=vetorUnificado class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Vector
+            unificado</label>
+
+
+        <textarea id="salida2"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+
+
+
+    <!--  EJERCICIO NÚMERO 3 -->
+
+
+
+
+
+
+    <textarea
+        class="bg-[#001804] text-white text-center border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none">3)
+Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el otro alumnosDesaprobados.
+Para crear el vector de alumnos aprobados, aplique el método filter sobre el Vector que tiene todos los alumnos cuando la nota > 5;
+Para crear el vector de alumnos desaprobados, aplique el método filter sobre el Vector que tiene todos los alumnos cuando la nota <= 5;</textarea>
+
+    <div class="inline-block mx-auto border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg mt-4">
+        <button id="btnClasificar"
+            class="px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+            Separa entre aprobados y desaprobados
+        </button>
+    </div>
+
+    <div style="margin-top: 15px; ">
+        <label class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Aprobados</label>
+
+
+        <textarea id="salidaAprobados"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+    <div style="margin-top: 15px; ">
+        <label class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Desaprobados</label>
+
+
+        <textarea id="salidaDesaprobados"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+    <!--  EJERCICIO NÚMERO 4 -->
+
+
+
+    <textarea
+        class="bg-[#001804] text-white text-center border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none mb-10">4- Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los datos de todos esos alumnos por nota de menor a mayor.
+    </textarea>
+
+
+
+
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnASC"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Orden Ascendente
+                </button>
+            </div>
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnDESC"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Orden Descendente
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div style="margin-top: 15px; ">
+        <label id="encabezadoSalidaEnORendeSegunNota"
+            class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Listado de
+            Alumnos </label>
+
+
+        <textarea id="salidaEnOrdenSegunNota"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+
+    <!--  EJERCICIO NÚMERO 5 -->
+
+
+
+
+    <textarea
+        class="bg-[#001804] text-white text-center border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none mb-10">5)
+Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el método “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud. Desee.
+    </textarea>
+
+
+
+
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <label for="txtDni" class="text-white font-semibold mb-2">
+                    Ingrese DNI del alumno
+                </label>
+
+                <input id="txtDni" type="text" class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-3
+               focus:outline-none focus:ring-2 focus:ring-yellow-500 transition" placeholder="Ej: 40123456">
+
+            </div>
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnBuscarPorDni"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    BUSCAR POR DNI
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div style="margin-top: 15px; ">
+        <label id="" class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Listado de
+            Alumnos </label>
+
+
+        <textarea id="salidaPorDNI"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--  EJERCICIO NÚMERO 6-->
+
+
+
+    <textarea
+        class="bg-[#001804] text-white text-center border-2 border-yellow-400 rounded-xl p-4 w-full h-40 resize-none mb-10">6)
+Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es decir la cantidad de alumnos que tienen nota > 5; para ello utilicen el método reduce que tienen los vectores incorporados para contabilizar. Realice esto de dos formas
+a.
+Usando una arrow function que a dentro utilice un condicional if/else para saber si la nota > 5 y por lo tanto contabilizar los aprobados;
+b.
+Usando una arrow function que a dentro utilice un operador ternario para saber si la nota > 5 y por lo tanto contabilizar los aprobados;
+Ambas formas deben llegar al mismo resultado, únicamente que se implementaron de dos formas diferentes.
+    </textarea>
+
+
+
+
+    <section class="max-w-6xl mx-auto px-6 pb-16">
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnAprobadosReduceIfElse"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Cantidad de aprobados usando reduce con ifElse
+                </button>
+            </div>
+
+
+            <div
+                class="border-2 border-yellow-400 rounded-2xl p-6 bg-[#001804] shadow-lg flex flex-col justify-between">
+
+                <button id="btnAprobadosReduceTErnario"
+                    class="mt-4 inline-block px-4 py-2 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition">
+                    Cantidad de aprobados usando reduce con operadorTernario
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <div style="margin-top: 15px; ">
+        <label id="encabezadoSalidaCantidadAlumnosAprobados"
+            class="block mb-2 text-lg font-semibold mb-10 flex justify-center ">Cantidad de alumnos aprobados 
+             </label>
+
+
+        <textarea id="salidaCantidadAlumnosAprobados"
+            class="bg-[#001804] text-white border-2 border-yellow-400 rounded-xl p-4 w-full h-64 resize-none mb-10"></textarea>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer
+        class="mt-auto w-full mx-auto flex flex-col text-center gap-4 px-4 py-4 text-white border-2 border-yellow-400 rounded-2xl">
+
+        <div class="flex flex-col md:flex-row md:justify-between">
+            <h2 class="py-3 md:py-0 text-xl font-semibold">Selemin Salim Héctor <span class="text-yellow-400">S&S</span>
+            </h2>
+            <p class="flex justify-center md:justify-start items-center gap-3">
+                Síguenos
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="img/icon_face_black.png" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="img/icon_insta_black.png" alt="Instagram" class="w-6 h-6">
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <img src="img/icon_x_black.png" alt="X" class="w-6 h-6">
+                </a>
+            </p>
+        </div>
+        <p class="text-sm md:text-base">2025 &copy; Todos los derechos reservados</p>
+    </footer>
+
+
+
+
+    <script src="controlador.js" type="module"></script>
+
+</body>
+
+</html>

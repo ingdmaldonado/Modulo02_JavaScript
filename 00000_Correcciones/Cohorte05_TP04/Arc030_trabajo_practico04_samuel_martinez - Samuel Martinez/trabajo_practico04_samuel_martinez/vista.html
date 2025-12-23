@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico - 04</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body class="bg-black text-center mt-4">
+    <script type="module" src="controlador.js"></script>
+
+    <h1 class="text-4xl">Trabajo Practico - 4</h1>
+    <h2 class="text-3xl">Samuel Martinez</h2>
+    
+    <div class="m-3 text-left text-xl mt-3">
+        <h2 class="text-2xl">Ejercicio 1</h2>
+        <p class=" text-xl mt-2" >
+            Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier
+            cohorte) los recorra con un forEach y muestre por consola, el apellido y el nombre.
+        </p><br>
+        <button class=" border px-1 border-gray text-2xl" id="idCohorte1">  1  </button>
+        <button class="border px-1 text-2xl" id="idCohorte2">  2  </button>
+        <button class="border px-1 text-2xl" id="idCohorte3">  3  </button>
+        <button class="border px-1 text-2xl" id="idCohorte4">  4  </button>
+    </div>
+
+    <div class="text-left text-xl m-3">
+        <h2 class="text-2xl">Ejercicio 2</h2>
+        <P class=" text-xl mt-2">
+            El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son
+            iguales, utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solo
+            vector. Muestre por consola el vector resultante.
+        </P>
+        <button class="px-1 border text-2xl" id="idTodasLasCohortes"> todas las cohortes </button>
+    </div>
+    <div class="text-left text-xl m-3"> 
+        <h2 class="text-2xl">Ejercicio 3</h2>
+        <p class=" text-xl mt-2">  
+            Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el
+            otro alumnosDesaprobados.
+        </p>
+        <button class="px-1 border text-2xl" id="btnAprobados"> aprobados </button>
+        <button class="px-1 border text-2xl" id="btnDesaprobados"> desaprobados </button>
+    </div>
+    <div class="text-left text-xl m-3">
+        <h2 class="text-2xl">Ejercicio 4</h2>
+        <p class=" text-xl mt-2">
+            Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los
+            datos de todos esos alumnos por nota de menor a mayor.
+        </p>
+        <button class="px-1 border text-2xl" id="btnOrdenNotas"> orden de notas </button>
+    </div>
+    <div class="text-left text-xl m-3">
+        <h2 class="text-2xl">Ejecicio 5</h2>
+        <p class=" text-xl mt-2">
+            Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el
+            método “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud.
+            Desee.
+        </p>
+        <input class="border border-gray text-2xl" type="number" name="dni" id="buscarPorDNI">
+        <button class="border border-gray px-1 text-2xl" id="btnBuscarDNI"> buscar </button>
+    </div>
+    <div class="text-left text-xl m-3">
+        <h2 class="text-2xl">Ejercicio 6</h2>
+        <p class=" text-xl mt-2">
+            Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es
+            decir la cantidad de alumnos que tienen nota > 5; para ello utilicen el método reduce que tienen los
+            vectores incorporados para contabilizar.
+        </p>
+        <button class="px-1 border text-2xl" id="btnAprobadosIf"> aprobados metodo 1 </button>
+        <button class="px-1 border text-2xl" id="btnAprobadosTernario"> aprobados metodo 2</button>
+    </div>
+</body>
+</html>
