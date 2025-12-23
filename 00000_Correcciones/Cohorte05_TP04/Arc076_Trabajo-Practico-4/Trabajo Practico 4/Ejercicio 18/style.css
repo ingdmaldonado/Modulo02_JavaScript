@@ -1,0 +1,79 @@
+* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e9eef3, #f8fafc);
+    min-height: 100vh;
+    padding: 30px;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f2937;
+    font-size: 1.8rem;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+}
+
+/* Botones */
+button {
+    padding: 12px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Área de salida */
+pre {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+

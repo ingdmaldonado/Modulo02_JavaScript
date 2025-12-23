@@ -1,0 +1,89 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0056b3;
+}
+
+h1 { color: #0056b3; margin: 0; padding: 10px; }
+h2 { color: #666; font-size: 1.1rem; margin-top: 0; }
+
+.botones-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    flex: 1 1 150px;
+}
+
+button:hover { background-color: #0056b3; }
+
+#contenedorResultados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resultado-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.resultado-box h3 {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th { background-color: #f8f9fa; color: #333; }
+tr:hover { background-color: #f1f1f1; }
+
+.aprobado { color: green; font-weight: bold; }
+.desaprobado { color: #dc3545; font-weight: bold; }
+
+.texto-grande { font-size: 1.2rem; }
+strong { color: #0056b3; }
