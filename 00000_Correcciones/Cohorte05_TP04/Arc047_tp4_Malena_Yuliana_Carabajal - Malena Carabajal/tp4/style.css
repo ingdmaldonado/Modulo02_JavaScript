@@ -1,0 +1,25 @@
+body{
+    background-color: #e6e6e6;
+}
+button {
+
+    background-color: rgb(73, 79, 111);
+    color: #cdcbcb;
+    border: #bbb7b7;
+    width: 250px;
+    height: 30px;
+    margin: 5px;
+
+}
+
+button:hover{
+    background-color: rgb(47, 50, 71);
+    color: #cdcbcb;
+}
+
+pre {
+    width: 400px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    background-color: white;
+}

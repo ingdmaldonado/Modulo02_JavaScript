@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1>Trabajo Practico N°4</h1>
+
+    <div class="container">
+        <div class="alumnos">
+            <div>
+                <h2>Alumnos</h2>
+                <button class="botones" id="btnCohorte1"> COHORTE 1 </button>
+                <button class="botones" id="btnCohorte2"> COHORTE 2 </button>
+                <button class="botones" id="btnCohorte3"> COHORTE 3 </button>
+                <button class="botones" id="btnCohorte4"> COHORTE 4 </button>
+            </div>
+
+            <div id="cohorte">
+                <ul id="listaAlumnos">
+                </ul>
+            </div>
+
+            <div class="container">
+                <button class="botones" id="btnAprobados">Mostrar Alumnos Aprobados</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="busqueda">
+                <h2>Búsqueda por DNI</h2>
+                <input type="text" id="inputDNI" placeholder="Ingrese el DNI">
+                <button class="botonBuscar" id="btnBuscar">Buscar</button>
+            </div>
+            
+            <div id="resultadoBusqueda">
+                <div id="infoAlumno"></div>
+            </div>
+            
+        </div>
+    </div>
+        
+    <script src="controlador.js" type="module"> </script>
+</body>
+</html>

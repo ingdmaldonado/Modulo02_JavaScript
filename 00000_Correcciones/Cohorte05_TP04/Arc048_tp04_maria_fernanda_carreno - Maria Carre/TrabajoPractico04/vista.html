@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico N° 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100 p-8 min-h-screen font-sans">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-6 sm:p-10">
+
+        <h1
+            class="text-3xl sm:text-4xl text-center font-extrabold text-indigo-700 mb-6 border-b-2 border-indigo-200 pb-2">
+            Trabajo Práctico N° 4
+        </h1>
+        <!---PUNTO 1--------------------------------------------------------------->
+        <div class="mb-10 p-6 bg-teal-50  rounded-lg border border-indigo-200">
+            <h2 class="text-2xl font-semibold text-indigo-600 mb-3">
+                Punto 1
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                Mostrar por consola, Apellido y Nombre de los alumnos de cada cohorte- Usamos FOREACH
+            </h3>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <input type="text" id="idCohorte" placeholder="Ingresar la Cohorte: cohorte01, cohorte02, cohorte03, cohorte04"
+                    class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition duration-150 ease-in-out">
+                <button id="idBtnForEach"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    ForEach
+                </button>
+            </div>
+
+        </div>
+        <!---PUNTO 2--------------------------------------------------------------->
+        <div class="mb-6 p-6 bg-teal-50 rounded-lg border border-teal-200">
+            <h2 class="text-2xl font-semibold text-teal-600 mb-3">
+                Punto 2
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                Unificar los alumnos de las distintas cohortes en un solo Vector- Usamos SPREAD OPERATOR
+            </h3>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-end">
+                <button id="idBtUnificar"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Spread
+                </button>
+            </div>
+             <hr class="my-8 border-t-2 border-gray-400 bg-transparent">
+            <!---Opcion b--------------------------------------------------------------->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <h4 class="italic font-medium">Alumnos de Todas las Cohortes</h4>
+                <button id="idMostrarPorPantalla"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Mostrar por Pantalla
+                </button>
+            </div>
+            <div id="idContenedorAlumnos"></div>
+        </div>
+        <!---PUNTO 3--------------------------------------------------------------->
+        <div class="mb-10 p-6 bg-teal-50 rounded-lg border border-indigo-200">
+            <h2 class="text-2xl font-semibold text-indigo-600 mb-3">
+                Punto 3
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                De Todas las Cohortes Mostrar los Alumnos Aprobados y Desaprobados- Usamos FILTER
+            </h3>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-end">
+                <button id="idBtnFilter"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Filter
+                </button>
+            </div>
+            <hr class="my-8 border-t-2 border-gray-400 bg-transparent">
+
+            <!---Opcion MOSTRAR POR PANTALLA LOS RESULTADOS-------------------------->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <h4 class="italic font-medium">Alumnos Aprobados y <span class="text-red-600">Desaprobados</span></h4>
+                <button id="idBtnMostrarEstadoAlumno"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Mostrar por Pantalla
+                </button>
+            </div>
+            <div id="idContenedorAprobados"class="text"></div>
+            <hr class="my-8 border-t-2 border-gray-400 bg-transparent">            
+            <div id="idContenedorDesaprobados" class="text-red-400"></div>
+
+        </div>
+        <!---PUNTO 4--------------------------------------------------------------->
+        <div class="mb-6 p-6 bg-teal-50 rounded-lg border border-teal-200">
+            <h2 class="text-2xl font-semibold text-teal-600 mb-3">
+                Punto 4
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                De todas las Cohortes ordenar Alumnos por nota, de menor a mayor- Usamos SORT
+            </h3>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-end">
+                <button id="idBtnSort"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Sort
+                </button>
+
+            </div>
+            <hr class="my-8 border-t-2 border-gray-400 bg-transparent">
+
+            <!---Opcion b--------------------------------------------------------------->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <h4 class="italic font-medium">Alumnos por Nota de menor a mayor</h4>
+                <button id="idMostrarAlumnosporNota"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Mostrar por Pantalla
+                </button>
+            </div>
+            <div id="idContenedorAlumnosPorNota"></div>
+        </div>
+        <!---PUNTO 5--------------------------------------------------------------->
+        <div class="mb-10 p-6 bg-teal-50  rounded-lg border border-indigo-200">
+            <h2 class="text-2xl font-semibold text-indigo-600 mb-3">
+                Punto 5
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                Buscar Alumno por dni
+            </h3>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <input type="text" id="idDni" placeholder="Ingresar DNI"
+                    class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500 shadow-sm transition duration-150 ease-in-out">
+                <button id="idBtnFind"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Find
+                </button>
+            </div>            
+        </div>
+        <!---PUNTO 6--------------------------------------------------------------->
+        <div class="mb-6 p-6 bg-teal-50 rounded-lg border border-teal-200">
+            <h2 class="text-2xl font-semibold text-teal-600 mb-3">
+                Punto 6
+            </h2>
+            <h3 class="text-lg font-medium text-gray-700 mb-4">
+                Contar la cantidad de Alumnos Aprobados(Nota >5)
+            </h3>
+            <!---Opcion a--------------------------------------------------------------->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <h4 class="italic font-medium">a. Usando una arrow function que a dentro utilice un condicional if/else
+                    para saber si la nota> 5 y por lo tanto contabilizar los aprobados; </h4>
+
+                <button id="idBtnReduce"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Total Alumnos Aprobados
+                </button>
+            </div>
+            <hr class="my-8 border-t-2 border-gray-400 bg-transparent">
+            <!---Opcion b--------------------------------------------------------------->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                <h4 class="italic font-medium">b-Usando una arrow function que a dentro utilice un operador ternario
+                    para saber si la nota > 5 y por lo tanto contabilizar los aprobados; </h4>
+
+                <button id="idBtnReduce1"
+                    class="px-6 py-3 bg-teal-500 text-white font-bold rounded-lg hover:bg-teal-600 transition duration-150 ease-in-out shadow-md hover:shadow-lg">
+                    Total Alumnos Aprobados
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="controlador.js" type="module"></script>
+</body>
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico N° 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1>Trabajo Práctico N° 4</h1>
+    <h2>Punto 1</h2>
+    <h3>Mostrar alumnos de cada cohorte(por Consola)</h3>
+    
+    <input type="text" id="idCohorte" placeholder="Ingresar la Cohorte">
+    <button id="idBtnForEach">Mostrar Alumnos-ForEach</button>
+
+    <h2>Punto 5</h2>
+    <h3>Buscar Alumno por dni</h3>
+    <input type="text" id="idDni" placeholder="Ingresar DNI">
+    <button id="idBtnFind">Buscar- Find</button>
+    
+    <script src="controlador.js" type="module"></script>
+
+    
+    
+</body>
+</html>-->

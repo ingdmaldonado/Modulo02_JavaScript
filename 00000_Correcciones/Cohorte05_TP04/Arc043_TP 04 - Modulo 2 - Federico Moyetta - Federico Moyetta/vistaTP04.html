@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico Nro. 04 - Federico Moyetta</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-blue-400">
+    
+    <header class="p-6">
+        <h1 class="font-sans font-black text-3xl text-center mb-4 text-shadow-lg text-shadow-white text-shadow-lg">Trabajo Práctico Nro. 04 de Federico Moyetta</h1>
+    </header>
+    <article class="flex flex-wrap justify-evenly">
+
+    <article class="text-center mb-4">
+        <h1 class="font-sans font-black text-2xl text-center mb-4 text-shadow-lg text-shadow-white text-shadow-lg">Alumnos</h1>
+        <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbtnAlumCons">Ver Alumnos por Consola</button>
+    </article>
+    <article class="box-border flex flex-wrap justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Cohorte 1
+            </h2>
+            <div class="justify-center">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbutton1">Ver Cohorte 1</button>
+            </div>
+            <div id="contenedorCohorte1"></div>
+        </div>
+
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Cohorte 2
+            </h2>
+            <div class="justify-center">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbutton2">Ver Cohorte 2</button>
+            </div>
+            <div id="contenedorCohorte2"></div>
+        </div>
+
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Cohorte 3
+            </h2>
+            <div class="justify-center">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbutton3">Ver Cohorte 3</button>
+            </div>
+            <div id="contenedorCohorte3"></div>
+        </div>
+
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Cohorte 4
+            </h2>
+            <div class="justify-center">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbutton4">Ver Cohorte 4</button>
+            </div>
+            <div id="contenedorCohorte4"></div>
+        </div>
+        
+    </article>
+
+    <article class="box-border flex flex-wrap justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div id="fusionCohortes" class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Listado de Todas las Cohortes Juntas
+            </h2>
+            <div class="justify-center">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbtnFusion">Ver Fusion de Cohortes</button>
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbtnOrdenar">Ordenar por Nota de Menor a Mayor</button>
+            </div>
+            <div id="contenedorListado"></div>
+        </div>
+    </article>
+
+    <article class="box-border flex flex-wrap justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Listado de Alumnos Aprobados de todas las Cohortes
+            </h2>
+            <div class="items-center flex gap-2">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbtnAprobados">Ver Aprobados</button>
+                <label for="cantAprob">Cantidad</label>
+                <input class="border-1 rounded-md p-1 w-20 text-right bg-white" type="number" id="cantAprob" readonly>
+            </div>
+            <div id="divAprobados"></div>
+        </div>
+    </article>
+
+    <article class="box-border flex flex-wrap justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Listado de Alumnos Desaprobados de todas las Cohortes
+            </h2>
+            <div class="items-center flex gap-2">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400" id="idbtnDesaprobados">Ver Desaprobados</button>
+                <label for="cantDesaprob">Cantidad</label>
+                <input class="border-1 rounded-md p-1 w-20 text-right bg-white" type="number" id="cantDesaprob" readonly>
+            </div>
+            <div id="divDesaprobados"></div>
+        </div>
+    </article>
+
+    <article class="box-border justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Buscar Alumnos por DNI
+            </h2>
+            <div class="flex flex-col gap-2">
+                <label for="ingreseDni">Ingrese el DNI</label>
+                <input class="border-1 rounded-md p-2 text-right bg-white" type="number" id="ingreseDni">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400 mb-2" id="idbtnBusquedaDNI">Buscar por DNI</button>
+            </div>
+            <div id="buscarXDni"></div>
+        </div>
+    </article>
+
+    <article class="box-border justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Contar Aprobados con if/else
+            </h2>
+            <div class="flex flex-col gap-2">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400 mb-2" id="btnAprobIfEl">Ver Aprobados Método If/Else</button>
+                <label for="aprobadosIfEl">Aprobados (If/Else)</label>
+                <input class="border-1 rounded-md p-2 text-right bg-white" type="number" id="aprobadosIfEl" readonly>
+            </div>
+        </div>
+    </article>
+
+    <article class="box-border justify-evenly mx-6 sm:flex sm:gap-3 mb-6">
+        <div class="border-2 border-slate-400 rounded-md bg-emerald-300 w-75 min-w-60 p-2 mb-2">
+            <h2 class="font-semibold text-2xl text-center p-3">
+                Contar Aprobados con Op. Ternario
+            </h2>
+            <div class="flex flex-col gap-2">
+                <button class="border-1 rounded-md p-2 bg-slate-600 text-white hover:bg-slate-400 mb-2" id="btnAprobOpTern">Ver Aprobados Método Op. Ternario</button>
+                <label for="aprobOpTern">Aprobados Op. Tern.</label>
+                <input class="border-1 rounded-md p-2 text-right bg-white" type="number" id="aprobOpTern" readonly>
+            </div>
+        </div>
+    </article>
+</article>
+
+<footer class="flex flex-wrap flex-row border-2 rounded-md p-3 m-3 bg-red-700">
+    <h3 class="font-sans font-black text-blue-900 text-3xl text-center mb-4 text-shadow-lg text-shadow-white text-shadow-lg">Creado por FM</h3>
+</footer>
+    <script src="ControladorTP04.js" type="module"></script>
+</body>
+</html>

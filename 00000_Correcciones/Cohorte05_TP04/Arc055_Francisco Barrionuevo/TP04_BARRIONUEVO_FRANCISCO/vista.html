@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 04 - JavaScript - Objetos y Vectores</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Trabajo Práctico Nro. 04</h1>
+        <P>BARRIONUEVO FRANCISCO ROBERTO</P>
+        <p>Objetos, Spread Operator, Métodos de Vectores</p>
+    </header>
+
+    <main>
+        <!-- EJERCICIO 18 - PUNTO 1 -->
+        <section class="ejercicio">
+            <h2>Punto 1 - Mostrar alumnos con forEach</h2>
+            <p>Recorre cada cohorte con forEach y muestra apellido y nombre</p>
+            <div class="formulario">
+                <button id="btnPunto1">Mostrar Alumnos de todas las Cohortes</button>
+                <div id="resultadoPunto1" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 18 - PUNTO 2 -->
+        <section class="ejercicio">
+            <h2>Punto 2 - Unificar cohortes con Spread Operator</h2>
+            <p>Une las 4 cohortes en un solo vector usando el operador spread (...)</p>
+            <div class="formulario">
+                <button id="btnPunto2">Unificar Cohortes</button>
+                <div id="resultadoPunto2" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 18 - PUNTO 3 -->
+        <section class="ejercicio">
+            <h2>Punto 3 - Filtrar Aprobados y Desaprobados</h2>
+            <p>Usa el método filter para separar aprobados (nota > 5) y desaprobados (nota <= 5)</p>
+            <div class="formulario">
+                <button id="btnPunto3" disabled>Filtrar Alumnos</button>
+                <p class="nota">* Primero debe unificar las cohortes (Punto 2)</p>
+                <div id="resultadoPunto3" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 18 - PUNTO 4 -->
+        <section class="ejercicio">
+            <h2>Punto 4 - Ordenar por Nota con Sort</h2>
+            <p>Ordena todos los alumnos por nota de menor a mayor usando sort</p>
+            <div class="formulario">
+                <button id="btnPunto4" disabled>Ordenar por Nota</button>
+                <p class="nota">* Primero debe unificar las cohortes (Punto 2)</p>
+                <div id="resultadoPunto4" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 18 - PUNTO 5 -->
+        <section class="ejercicio">
+            <h2>Punto 5 - Buscar Alumno por DNI con Find</h2>
+            <p>Busca un alumno por su DNI usando el método find</p>
+            <div class="formulario">
+                <label for="inputDni">Ingrese el DNI a buscar:</label>
+                <input type="text" id="inputDni" placeholder="Ej: 12345678">
+                <button id="btnPunto5" disabled>Buscar Alumno</button>
+                <p class="nota">* Primero debe unificar las cohortes (Punto 2)</p>
+                <p class="nota">DNIs disponibles: 12345678, 56789012, 89012345, 67890124, etc.</p>
+                <div id="resultadoPunto5" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- EJERCICIO 18 - PUNTO 6 -->
+        <section class="ejercicio">
+            <h2>Punto 6 - Contar Aprobados con Reduce</h2>
+            <p>Cuenta la cantidad de aprobados usando reduce de dos formas: con if/else y con operador ternario</p>
+            <div class="formulario">
+                <button id="btnPunto6" disabled>Contar Aprobados</button>
+                <p class="nota">* Primero debe unificar las cohortes (Punto 2)</p>
+                <div id="resultadoPunto6" class="resultado"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>TP 04 - BARRIONUEVO FRANCISCO ROBERTO</p>
+    </footer>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>
