@@ -1,0 +1,91 @@
+
+GUIA DE CREACION DEL PROYECTO DEL BACK-END
+
+
+1) Instalar Node
+
+    no tildar la casilla de verificación
+
+2) verificar que esté instalado
+
+    en la línea de comandos ejecutar el código
+
+	node -v
+
+3) Crear nuestro primer Proyecto Node. 
+    Crear una carpeta y abrirla con Visual Studio Code
+
+4) Iniciar el Proyecto : npm init -y
+Esto crea el archivo package.json con la configuración inicial.
+
+5) Instalar Express.js
+
+    npm install express
+
+6) Hacer las primeras pruebas
+
+    - declarar variables
+    - constantes
+    - hacer operaciones con variables
+
+7) Instalar nodemon
+
+    npm install -g nodemon
+
+8) verificar que este instalado
+
+    nodemon -v 
+
+9) en lugar de ejecutar
+
+    node index.js
+
+    nodemon index.js
+
+
+10) Configurar el package.json para que 
+se utilice de forma normalizada el arranque
+
+En tu package.json, dentro de "scripts", agregá por ejemplo:
+
+"scripts": {
+  "dev": "nodemon index.js",
+  "start": "node index.js"
+}
+
+11) Para arrancar los proyectos ahora. se tendrá la 
+siguiente forma.
+
+    Para iniciar con nodemon:
+
+    npm run dev => modo desarrollo
+
+    npm start => mode servidor publicado
+
+
+    "start" → es el comando estándar que usarías en producción o cuando no querés reinicio automático.
+
+    "dev" → es el modo de desarrollo que usa nodemon para reiniciar automáticamente ante cualquier cambio.
+
+12) Ahora realizaremos dos metodos GET para hacer consultas desde
+el FRONT END.
+
+    // GET /clientes → devuelve todos los clientes en formato JSON
+    ServidorWeb.get("/clientes", (req, res) => {
+        res.json(clientes);
+    });
+
+    // GET /productos → devuelve todos los productos en formato JSON
+    ServidorWeb.get("/productos", (req, res) => {
+        res.json(productos);
+    });
+
+13) Probamos esos EndPoint desde el Navegador
+
+14) Crearemos un pequeño FRONT END para 
+que sea la parte que se despliega en el cliente.
+creamos una carpeta que se llame "public"
+
+
+ServidorWeb.use(ClaseExpress.static("public"));
+

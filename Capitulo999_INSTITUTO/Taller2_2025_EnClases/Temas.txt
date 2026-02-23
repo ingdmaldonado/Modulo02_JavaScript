@@ -1,0 +1,21 @@
+Rest operator
+Spread Operator
+objetos literales
+destructuring
+forEach
+filter
+map
+estado aplicación
+modulos
+
+// Redirige a otra página
+window.location.href = "https://www.ejemplo.com/otra-pagina.html";
+
+window.location.assign("https://www.ejemplo.com/otra-pagina.html");
+window.location.replace("https://www.ejemplo.com/otra-pagina.html");
+
+
+DOM DINAMICO
+JSON
+persistencia navegador
+paso de datos entre paginas

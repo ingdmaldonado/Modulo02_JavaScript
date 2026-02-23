@@ -1,0 +1,32 @@
+
+
+1) Etiquetas de linea (se reservan todo el espacio de la linea para ella sola)
+
+h1 ... h6
+parrafos <p>
+
+Etiquetas NO linea => <label> comparten el espacio con otras Etiquetas
+
+2) Etiquetas de Texto
+    <strong>
+    <mark>
+    <em>
+    <small>
+
+3) 
+
+    <etiqueta></etiqueta>
+
+
+crear un proyecto. que tenga un 
+archivo HTML5 que tenga para
+acceder a los links que ustedes
+diariamente consultan.
+
+link para descargar una foto de ustedes
+
+link para descargar un archivo PDF
+
+link para descargar un archivo de WORD
+
+

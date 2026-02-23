@@ -1,0 +1,15 @@
+Destructuring
+Spread Operator
+Rest Operator
+Try/Catch
+
+Persistencia Navegador
+	localStorage
+	sessionStorage
+	cookies
+	
+JSON
+Asincronismo - Promesas
+DOM-DINAMICO
+
+

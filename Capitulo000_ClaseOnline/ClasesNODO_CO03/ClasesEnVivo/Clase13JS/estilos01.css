@@ -1,0 +1,60 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para etiquetas */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilo para el input de número */
+input[type="number"] {
+    width: 120px;
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Estilo para los botones */
+input[type="button"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Cambiar color cuando se pasa el mouse por el botón */
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el resultado */
+#idLblResultado {
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}

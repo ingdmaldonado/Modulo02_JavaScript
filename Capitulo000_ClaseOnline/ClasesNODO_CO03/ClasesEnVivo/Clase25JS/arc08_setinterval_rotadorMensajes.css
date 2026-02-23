@@ -1,0 +1,9 @@
+#idMensaje {
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 10px;
+  color: #333;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  width: fit-content;
+}

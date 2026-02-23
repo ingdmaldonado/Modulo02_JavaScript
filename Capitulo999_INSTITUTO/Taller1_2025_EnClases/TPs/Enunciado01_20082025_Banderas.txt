@@ -1,0 +1,16 @@
+Dada dos cadenas
+
+cadena1 = "soy de boooca";
+
+cadena2 = "AAA_BBB";
+
+/*para que el programa principal
+sea valido. 
+la primera cadena debe tener 
+mas de dos letras "o"*/
+
+/*para que el programa principal
+sea valido la cadena 2 debe 
+tener tres letras "A" y ninguna
+letra "C" */
+

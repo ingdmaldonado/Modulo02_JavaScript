@@ -1,0 +1,57 @@
+1) S.G.B.D.R
+PostGre
+SQLServer
+ORACLE
+MySQL
+
+2) 
+	Como Crear una Base de datos
+	Como crear una tabla de una base de datos
+	Sql =>
+		select		
+		insert
+		update
+		delete
+
+
+DBA => DATABASE ADMINISTRATOR 
+ADMINISTRADOR DE LA BASE DE DATOS
+
+	
+
+
+3) Ventajas que tiene los SGBDR
+
+	- unicidad => tener registros únicos
+	que no dependen del programador
+
+	PRIMARY KEY
+
+	- No aceptar valores nulos
+
+	- restricciones / contrains => UNICIDAD
+
+
+PRINCIPIOS
+
+	* LOS REGISTROS TIENEN QUE SER UNICOS
+	* A GUARDAR A GUARDAR CADA COSA EN SU LUGAR
+	* CADA TABLA DEBE TENER SU PROPIO PRIMARY KEY
+	* PUEDE TENER UNA FOREING KEY 
+
+RELACIONES ENTRE TABLAS (2 TABLAS NADA MAS)
+
+	* (1 - N) => PADRE A HIJOS  - 90%
+	* (1 - 1) => 
+	* (N - M) => MUCHOS A MUCHOS - 10%
+
+
+PADRE => HIJO
+
+	
+
+
+
+
+
+		

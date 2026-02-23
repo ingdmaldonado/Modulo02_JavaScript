@@ -1,0 +1,31 @@
+
+
+VECTORES:
+
+// MANIPULAR LOS ELEMENTOS DE UN VECTOR //
+    push
+    pop
+    shift
+    unshif
+
+
+
+// METODOS QUE ME PERMITEN TRABAJAR CON EL VECTOR //
+
+    forEach => recorre todos los elementos de un vector
+    find => encontrar un producto en un vector
+    filter => me permite filtrar los elementos de un vector 
+        por alguna condicion
+
+    
+    some => si alguno cumple una condicion
+    every => si todos cumplen una condición
+
+    reduce =>
+
+
+// FUNCIONES CALLBACK 
+
+    Funciones que se pasan como parametro de otra funcion.
+
+    

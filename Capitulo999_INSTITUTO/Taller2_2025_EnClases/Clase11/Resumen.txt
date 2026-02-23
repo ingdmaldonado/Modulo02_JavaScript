@@ -1,0 +1,42 @@
+1ro) Entrevista con 
+el dueño del comercio
+o el dueño de la idea
+
+2do) DIAGRAMA ENTIDAD
+RELACION => DER
+
+3ro) PROCESO DE NORMALIZACION
+PROCESO que permite eliminar
+redundancia de atributos, filas
+y columnas en una Base de datos.
+
+	1) Unicidad de datos en tablas
+	2) Eliminar dependencias transitivas
+	3) Eliminar columnas que tengan dependencia entre ellas.
+		
+
+4to) CONSTRUCCIÓN DE LA BASE DE DATOS
+
+5to) CONSTRUIR EL BACK-END
+	NODE => JS
+
+6to) FRONT END => HTML5 + CSS(SOSA) + JS
+
+	REACT =>
+
+	
+
+	CARLOS EUSEBIO (ABUELO)
+	ADN1
+
+	MAMA MIRANDA
+	ADN2
+	ADN1
+
+	MIRANDA ESTANISLADO
+	ADN3
+	ADN2
+	
+
+
+

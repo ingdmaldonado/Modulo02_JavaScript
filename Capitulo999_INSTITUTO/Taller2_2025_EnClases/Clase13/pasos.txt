@@ -1,0 +1,17 @@
+
+
+1) LOS VERBOS HTTP
+
+🔹 GET → Consultar datos
+
+Sirve para leer información de la base de datos.
+
+Ejemplos en nuestra API:
+
+/cliente → todos los clientes
+
+/cliente/pornombre?clientenombre=DANIEL → buscar por nombre
+
+/cliente/3 → buscar por ID
+
+/cliente/porcuit/23240106639 → buscar por CUIT

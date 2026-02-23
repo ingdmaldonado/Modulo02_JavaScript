@@ -1,0 +1,20 @@
+
+
+/* PARTE 01 */
+	const objeto = {};
+
+		- agregar atributos
+		- quitar atributos
+		- modificar valores
+
+/* PARTE 02 */
+	const vector = [];
+
+	- agregar al final (push)
+	- agregar al principio (unshift)
+	- quitar del final (pop)
+	- quitar del principio (shift)
+	- quitar del medio (splice)
+
+/* PARTE 03 => RECORRIDO DE VECTORES
+DE OBJETOS LITERALES */

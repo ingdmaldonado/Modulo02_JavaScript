@@ -1,0 +1,12 @@
+Realizar un proceso que analice
+las siguientes condiciones. 
+dadas 3 cadenas determinar lo siguiente.
+
+la primera cadena debe tener
+minimo 3 letras "a".
+
+la segunda cadena debe no debe
+comenzar con vocal
+
+la tercera cadena debe no debe
+tener en su interior la letra @

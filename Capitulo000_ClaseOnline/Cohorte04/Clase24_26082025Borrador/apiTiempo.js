@@ -11,6 +11,9 @@ export async function obtenerPronosticoTiempo() {
 
         // Aquí puedes manipular los resultados, por ejemplo, mostrando los pronósticos
         data.forEach(pronostico => {
+
+            console.log(pronostico);
+
             console.log(`Ciudad: ${pronostico.name}`);
             console.log(`Temperatura: ${pronostico.weather.tempDesc}`);
             console.log(`Estado: ${pronostico.weather.description}`);
