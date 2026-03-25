@@ -1,0 +1,26 @@
+
+
+1) Destructuring => Descomposicion 
+de Objetos y/o Vectores en partes pequeñas.
+
+2) Spread Operator => Operador de Propagacion.
+
+    UNIFICAR COSAS = objeto 1 + objeto 2
+
+    UNIFICAR COSAS = Vector 1 + Vector2 
+
+3) Rest Operator => Permite definir
+una función con múltiples parametros.
+
+
+/* 
+    forEach
+    map
+    some
+    every
+    filter
+    find
+
+    sort => ordenamiento 
+
+*/

@@ -1,0 +1,36 @@
+
+/* esto es un comentario en CSS */
+
+/* selectores en CSS
+
+    - selectores de etiqueta
+    - selectores por IDENTIFICACION
+    - selectores de clase
+*/
+
+/* selector por ID */
+#titulo1
+{
+    color: red;
+}
+
+/* selector por ID*/
+#titulo2
+{
+    color: blue;
+    font-style: italic;
+    font-size: 150px;
+    background-color: yellow;
+    text-decoration:line-through;
+}
+
+/* selector por CLASE */
+.texto_general
+{
+    color: brown;
+}
+
+label
+{
+    color:deeppink;
+}

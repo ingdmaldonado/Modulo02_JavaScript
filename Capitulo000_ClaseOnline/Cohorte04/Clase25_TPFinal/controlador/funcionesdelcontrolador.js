@@ -9,7 +9,9 @@ export const fnClickEnBotonRecuperarPaises = async (endPoint)=>
         y le voy a pasar como parametro la ruta
         al endPoint */
 
-       let datos = await fnRecuperarDatosDeApi("https://restcountries.com/v3.1/region/europe");
+       let datos = await fnRecuperarDatosDeApi(endPoint);
+
+       //console.log(datos);
 
        /* si una función definida. a dentro
        tiene procesos asíncronos que 
@@ -23,3 +25,40 @@ export const fnClickEnBotonRecuperarPaises = async (endPoint)=>
        return (datos);
 
     }
+
+
+    /* aqui estará toda la lógica necesaria y suficiente
+    para conectarme a dos endPoint diferentes. recuperar
+    los datos de dos regiones distintas */
+
+    export const fnClickEnBotonSpreadOperator = async (endPoint1,endPoint2)=>
+      {
+
+         let vectorUnificado = [];
+
+         /* consulta al Primer EndPoint */
+         const resultado1 = await fnRecuperarDatosDeApi(endPoint1);
+        // console.log(resultado1);
+
+         /* consulta al Segundo EndPoint */
+         const resultado2 = await fnRecuperarDatosDeApi(endPoint2);
+        // console.log(resultado2);
+
+         if((resultado1.resultado) && (resultado2.resultado))
+         {
+            /* aqui vamos a utilizar spread operator.
+            que es el operador de propagacion. */
+
+            vectorUnificado = [...resultado1.datos,...resultado2.datos];
+
+         }
+         else
+         {
+            alert("algo fallo");
+         }
+
+         //console.log(vectorUnificado);
+
+         return vectorUnificado; // aqui estoy devolviendo los datos fusionados.
+
+      }

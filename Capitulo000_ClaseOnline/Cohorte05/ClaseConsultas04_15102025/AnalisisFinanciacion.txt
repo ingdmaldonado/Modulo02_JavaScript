@@ -1,0 +1,30 @@
+
+diferenciaAFinanciar = 30.000.000
+
+1) 12 cuotas con el 9.9% anual
+
+	interesFinanciacion = (30.000.000 * 9,9)/100;
+
+	totalPagar = 30.000.000,00 + interes
+
+	valorCuota = totalAPagar / 12;
+
+2) 24 cuotas con el 22% anual
+
+	interesFinanciacion = (30.000.000 * 44)/100;
+
+	totalAPagar = 30.000.000 + interes
+
+	valorCuota = totalAPagar / 24;
+
+3) 36 cuotas con el 33% anual
+
+	interesFinanciacion = (30.000.000 * 99)/100;
+
+	totalAPagar = 30.000.000 + interes
+
+	valorCuota = totalAPagar / 36;
+
+
+	
+

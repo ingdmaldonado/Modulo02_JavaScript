@@ -1,0 +1,70 @@
+
+1) Instalar NODE 22.18
+
+2) Controlar la versión entrando
+a la linea de comandos. Con
+
+cmd > node -v
+
+3) otra opción. es desde Visual Studio Code
+abrir la terminal. y ejecutar los comandos
+necesarios.
+
+
+4) Desde la Terminal. Creamos e inicializamos
+el proyecto NODE => Servidor WEB
+
+    npm init -y
+
+nota: esto debería crear el archivo package.json
+
+5) Primera sentencia javaScript del lado 
+del servidor.
+
+    console.log("Servidor Web Node running");
+
+6) Ejecutar el archivo index.js en la linea
+de comandos. ejecuto.
+
+    node index.js
+
+7) Instalar express.
+
+express => es un framework para construir
+de forma mas simple un servidor web con node.
+
+8) importamos la clase en el archivo index.js
+
+    
+    const ClaseExpress = require("express");
+
+    /* instanciar un objeto de la clase express */
+
+    const ServidorWeb = ClaseExpress();
+
+9) Configuramos el puerto
+    
+    const PORT = 3000;
+
+10) Ponemos el Servidor en MODO LISTENING
+
+    
+ServidorWeb.listen(PORT,()=>{
+
+    console.log("Servidor Web Node running");
+
+})
+
+11) instalamos nodemon => este modulo 
+esta en las maquinas de desarrollo de los programadores.
+
+NO ESTA EN EL SERVIDOR DE PRODUCCION.
+
+    npm install -g nodemon
+
+    
+
+-g significa global
+
+
+

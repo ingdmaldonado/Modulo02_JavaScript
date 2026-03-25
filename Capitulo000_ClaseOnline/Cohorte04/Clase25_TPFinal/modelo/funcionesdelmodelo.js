@@ -77,15 +77,42 @@ export const fnRecuperarDatosDeApi = async (endPoint)=>
         
         */
 
-        /* (1er. Punto) Me conecto al BackEn y le pido recuperame los datos del EndPoint */
+       /* Dentro del bloque
+       try. va el código que quiero
+       intentar ejecutar. 
+       */
        
-        let response = await fetch(endPoint); // fetch me permite hacer un request
+        let respuesta;
 
-        /* (2do. Punto) Convertir esos datos a formato JSON */
+        try {
 
-        let datos = await response.json();
+             /* (1er. Punto) Me conecto al BackEn y le pido recuperame los datos del EndPoint */
+
+            let response = await fetch(endPoint); // fetch me permite hacer un request
+
+            /* (2do. Punto) Convertir esos datos a formato JSON */
+
+            let datos = await response.json();
+
+            // estandarizar la salida //
+            respuesta = {
+                resultado:true,
+                estado:"datos recibidos",
+                datos,
+            }
+            
+        } catch (error) {
+            
+            // estandarizar la salida //
+            respuesta = {
+                resultado:false,
+                estado:error.message,
+                datos:"",
+            }            
+        }
+    
         
-        return datos;
+        return respuesta;
 
     };
 
@@ -100,3 +127,38 @@ tengo dos MOMENTOS
     para funcionar.
 
 */
+
+
+/* Momento1 => Momento de la definición 
+de la función */
+
+export const fnRecuperarPaisesDelocalStorage = ()=>
+    {
+        console.log(`aqui debería recuperar los paises`);
+
+        /* (1ro) Recuperar los datos del localStorage */
+
+        let paisesDelLocalStorage = localStorage.getItem("vectorSimplificado");
+
+        /* (2do) Mostramos esos datos por consola 
+        estan en formato String y en formato JSON
+            JSON => JavaScript Object notation
+        */
+
+        //console.log(paisesDelLocalStorage);
+
+        /* (3er) Convertir esos datos a formato OBJETO */
+
+        let paisesConvertidos = [];
+
+        if(paisesDelLocalStorage) // si los datos que venian en formato string existen
+        {
+            paisesConvertidos = JSON.parse(paisesDelLocalStorage);
+
+        }
+
+        //console.log(paisesConvertidos);
+
+        return paisesConvertidos;
+
+    }

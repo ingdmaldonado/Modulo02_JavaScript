@@ -1,0 +1,47 @@
+1) TITULO
+2) DESCRIPCIÓN DE LA PROBLMÁTICA
+3) OBJETIVO DE LA APLICACIÓN WEB
+	Gestionar la venta y comercializaciónn
+de vehiculos nuevos ó usados, alquiler de vehiculos
+
+4) DEFINIR EL DIAGRAMA ENTIDAD RELACIÓN
+y EL MODELO RELACIONAL.
+	Relaciones entre Entidades
+	
+
+5) DEFINICIÓN DE LOS LIMITES
+	Descripción precisa de
+las acciones que se podrán manejar
+con el sistema.
+	- administrar los clientes
+		altas
+		bajas
+		modificaciones
+		consultas
+	- administración automática del
+	whatsapp del comercio 
+
+6) Para cada establecimiento de los 
+puntos definidos en los limites. determinar
+un tiempo de ejecución. de cada paso.
+tiempo optimista, tiempo pesimista. 
+calcular sobre el promedio.
+
+7) Diseño de la Base de DATOS (relacional)
+
+8) BackEnd
+
+9) Pruebas a Fondo con PostMAN
+
+10) FrontEnd
+
+11) Documentación
+
+12) Capacitación
+
+
+
+
+
+
+	

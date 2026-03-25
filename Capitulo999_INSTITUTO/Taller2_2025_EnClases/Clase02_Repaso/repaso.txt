@@ -1,0 +1,16 @@
+
+
+1) como declarar variables
+2) como asignarle valores a las variables
+3) recomendación de crear variables 
+usando camelCase
+4) operaciones con variables
+5) ESTRUCTURAS REPETITIVAS
+
+    5.a) condicional if/else => variables continuas
+    5.b) operador ternario => inicializar variables en función de una condición
+    5.c) switch (variables discretas)
+
+6) ESTRUCTURAS REPETITIVAS
+
+    
