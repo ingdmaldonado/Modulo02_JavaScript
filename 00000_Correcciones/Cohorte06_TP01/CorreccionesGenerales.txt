@@ -1,0 +1,11 @@
+
+1) Usar Backsticks siempre !!!.
+
+2) Utilizar la comparación ESTRICTA con triple igual (===) en lugar del doble igual (==)
+
+3) Cuando se solicita ingresar un dato por teclado, siempre tipificar, codificar las entradas.
+	1 - Perfumería
+	2 - Electrodomésticos
+
+Que no ingrese la PALABRA !!!. que ingrese el código que equivale al tipo.
+
