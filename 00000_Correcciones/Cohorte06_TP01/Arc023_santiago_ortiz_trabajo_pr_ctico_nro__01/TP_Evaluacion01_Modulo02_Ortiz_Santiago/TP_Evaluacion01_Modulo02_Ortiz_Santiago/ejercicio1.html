@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*Ejercicio Nro. 01: 
+Realizar un programa que permita el Ingreso de 2 (dos números) (A y B) utilizando variables y realice las 
+siguientes operaciones. -          -          -          -          
+Muestre la suma de ambos (A + B) 
+Muestre la resta (A – B) 
+Muestre el Producto de ambos (A * B) 
+Muestre el Cociente entre ambos (A / B) 
+Nota: En este último caso, verificar que sucede cuando B es igual a cero. Que sucede con el programa */
+
+let valorA = Number(prompt("Elija el primer valor."));
+let valorB = Number(prompt("Elija el segundo valor."));
+
+let suma = valorA + valorB;
+let resta = valorA - valorB;
+let producto = (valorA * valorB);
+let cociente = (valorA / valorB);
+
+console.log ("La suma de", + valorA + "y", + valorB + "es", + suma)
+console.log ("La resta de", + valorA + "y", + valorB + "es", + resta)
+console.log ("El producto de", + valorA + "y", + valorB + "es", + producto)
+console.log ("El cociente de", + valorA + "y", + valorB + "es", + cociente)
+
+if (valorB === 0) {
+    console.log ("No se puede dividir en cero.")
+}
+</script>
+</body>
+</html>

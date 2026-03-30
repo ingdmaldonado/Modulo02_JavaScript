@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Venta de Alimentos para Perros</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.contenedor{
+    background: white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+select, input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+#resultado{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h2>Venta de Alimentos para Perros</h2>
+
+<label>Producto</label><br>
+
+<select id="producto">
+<option value="1">Dogui x 21 kg</option>
+<option value="2">Tiernitos x 21 kg</option>
+<option value="3">Dogpro x 21 kg</option>
+</select>
+
+<br>
+
+<label>Cantidad</label><br>
+
+<input type="number" id="cantidad">
+
+<br>
+
+<button onclick="calcular()">Calcular Total</button>
+
+<h3 id="resultado"></h3>
+
+</div>
+
+<script src="eje7.js"></script>
+
+</body>
+</html>

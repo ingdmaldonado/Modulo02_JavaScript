@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*Ejercicio Nro. 02:
+Realizar un programa que permita ingresar el importe total de una compra que realiza un cliente y sobre
+el mismo aplicarle un descuento del 15%. Mostrar por consola el importe total de la compra y el descuento del
+15% como así también el importe restante final.*/
+
+// Importe total
+let importeTotal = Number(prompt("Ingrese el total de compras"));
+console.log ("El total de compras es:" + importeTotal);
+
+// Aplicando descuento
+let descuento = (importeTotal * 0.15);
+console.log ("El descuento con el 15% es de:" + descuento);
+
+// Importe restante
+let impRestante = importeTotal - descuento;
+console.log ("El importe restante es" + impRestante)
+</script>
+</body>
+</html>

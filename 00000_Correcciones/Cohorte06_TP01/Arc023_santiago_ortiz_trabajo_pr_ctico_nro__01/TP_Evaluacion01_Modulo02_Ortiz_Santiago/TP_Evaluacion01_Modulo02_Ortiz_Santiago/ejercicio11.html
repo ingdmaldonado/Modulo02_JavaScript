@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let importe = parseFloat(prompt("Ingrese el importe de la compra."))
+        let zona = prompt("Ingrese su zona (Centro, Oeste, Norte, Sur, Este)")
+
+        let envio;
+        switch (zona.toLowerCase()) {
+            case "centro" :
+                envio = 2500;
+                break;
+            case "oeste" :
+                envio = 3750;
+                break;
+            case "norte": 
+                envio = 4225;
+                break;
+            case "sur":
+                envio = 5222.50;
+                break;
+            case "este":
+                envio = 4288,50
+                break;
+            default:
+                console.log ("Zona invalida.");
+                envio = 0;
+        }
+
+let totalFinal = importe + envio;
+
+console.log("Importe compra:", + importe);
+console.log("Costo de envío:", + envio);
+console.log("Total final:", + totalFinal);

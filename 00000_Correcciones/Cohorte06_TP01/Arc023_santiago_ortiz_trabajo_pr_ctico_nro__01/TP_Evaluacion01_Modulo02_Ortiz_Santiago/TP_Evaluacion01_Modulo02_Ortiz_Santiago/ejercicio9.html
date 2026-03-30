@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let cantidad = parseInt(prompt("Ingrese la cantidad de pasajes:"));
+    let precio = parseFloat(prompt("Ingrese el precio por pasaje:"));
+
+    let total = cantidad * precio;
+    let descuento = 0;
+
+    if (cantidad > 3 && total > 500000) {
+    descuento = total * 0.15;
+} else if (cantidad > 3 && total > 250000) {
+  descuento = total * 0.11;
+}
+
+let final = total - descuento;
+
+console.log("Total:", + total);
+console.log("Descuento:", + descuento);
+console.log("Total final:", + final);
+    </script>
+</body>
+</html>

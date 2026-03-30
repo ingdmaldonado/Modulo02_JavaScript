@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let compra = parseFloat(prompt("Ingrese el importe de la compra:"));
+    let descuento = compra * 0.5;
+    if (descuento > 80000) {
+        descuento = 80000;
+}
+
+let totalFinal = compra - descuento;
+
+console.log("Descuento aplicado:", + descuento);
+console.log("Total final:", + totalFinal);
+    </script>
+</body>
+</html>

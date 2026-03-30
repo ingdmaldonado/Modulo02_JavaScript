@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let importe = parseFloat(prompt("Ingrese importe de compra:"));
+        let metodo = prompt("Ingrese forma de pago (efectivo, debito, credito):");
+
+    let descuento = 0;
+
+switch (metodo.toLowerCase()) {
+  case "Efectivo":
+    descuento = importe * 0.10;
+    break;
+  case "Debito":
+    descuento = importe * 0.05;
+    break;
+  case "Credito":
+    descuento = 0;
+    break;
+  default:
+    console.log("Método no válido");
+}
+
+let totalFinal = importe - descuento;
+
+console.log("Descuento:", + descuento);
+console.log("Total final:", + totalFinal);
+    </script>
+</body>
+</html>

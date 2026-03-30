@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let dia = prompt("Ingrese día de la compra (viernes, sabado, domingo):");
+let importe = parseFloat(prompt("Ingrese importe de la compra:"));
+
+let reintegro = 0;
+
+if (
+  dia.toLowerCase() === "viernes" ||
+  dia.toLowerCase() === "sabado" ||
+  dia.toLowerCase() === "domingo"
+) {
+  reintegro = importe * 0.5;
+
+  if (reintegro > 80000) {
+    reintegro = 80000;
+  }
+} else {
+  reintegro = 0;
+}
+
+let totalFinal = importe - reintegro;
+
+console.log("Día:", dia);
+console.log("Importe:", + importe);
+console.log("Reintegro:", + reintegro);
+console.log("Total final:", + totalFinal);
+    </script>
+</body>
+</html>
