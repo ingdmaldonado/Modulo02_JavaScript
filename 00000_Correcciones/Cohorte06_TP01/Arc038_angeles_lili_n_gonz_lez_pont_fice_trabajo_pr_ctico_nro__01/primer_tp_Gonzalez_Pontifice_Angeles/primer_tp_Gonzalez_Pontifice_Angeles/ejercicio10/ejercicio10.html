@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Nro. 10 - Descuentos por Forma de Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Comercio - Descuentos según Forma de Pago</h1>
+    <p>Ingresa el importe total y el código de la forma de pago para calcular el descuento.</p>
+
+    <label for="importe">Importe total de la compra ($):</label>
+    <input type="number" id="importe" min="1" placeholder="Ej: 120000" required>
+
+    <label for="codigo">Código de forma de pago:</label>
+    <input type="number" id="codigo" min="1" max="3" placeholder="1 = Efectivo, 2 = Débito, 3 = Crédito" required>
+
+    <button id="btnCalcular">Calcular Total Final</button>
+
+    <div id="resultado"></div>
+
+    <script src="controlador.js"></script>
+</body>
+</html>

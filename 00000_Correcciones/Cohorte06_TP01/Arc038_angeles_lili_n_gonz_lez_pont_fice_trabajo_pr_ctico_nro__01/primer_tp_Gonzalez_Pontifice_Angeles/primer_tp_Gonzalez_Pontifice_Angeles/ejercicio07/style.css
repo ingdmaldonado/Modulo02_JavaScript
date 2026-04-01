@@ -1,0 +1,55 @@
+
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 950px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+caption {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 12px;
+    margin-bottom: 0;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 14px 10px;
+    text-align: center;
+    border: 1px solid #1a2533;
+}
+
+th.col-descuento {
+    background-color: #d40063;           
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1.05em;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f1f9;
+}
+
+/* Resaltar las columnas de descuentos */
+td.precio-normal {
+    background-color: #fff;
+}
+
+td.precio-descuento {
+    background-color: #e6f7ff;
+    font-weight: bold;
+    color: #006666;
+}
