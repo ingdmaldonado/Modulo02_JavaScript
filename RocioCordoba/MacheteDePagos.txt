@@ -1,0 +1,39 @@
+---------------------------------------------------------------------------------------------------
+ALQUILER => TRANSFERENCIA =>
+CBU:072071218800003556822
+Alias:DUDA.GALLO.PALETA
+Titular de la cuenta:Visintini Carolina
+---------------------------------------------------------------------------------------------------
+EXPENSAS => POR LA BNA => AGENDA DE PAGOS => 
+Al Comprobante de las Expensas lo envían por Mail
+---------------------------------------------------------------------------------------------------
+MUNICIPALIDAD
+https://tributariomuni.gob.ar/samweb/index.php?r=/objeto/objeto/index&to=1
+Identificador de Inmueble:
+040404506600059
+---------------------------------------------------------------------------------------------------
+AGUAS CORDOBESAS
+https://www.aguascordobesas.com.ar/espacioClientes/
+
+AQUI => https://www.aguascordobesas.com.ar/espacioClientes/seccion/gestionDeuda
+Unidad de Facturación:715888
+
+---------------------------------------------------------------------------------------------------
+ECO-GAS
+
+---------------------------------------------------------------------------------------------------
+INTERNET-CORDOBA
+https://www.personal.com.ar/pagos
+REFERENTE DE PAGO:3000783909010001
+
+---------------------------------------------------------------------------------------------------
+EPEC
+CLIENTE: 725620  CONTRATO: 0272393507
+CLIENTE: 5639738 CONTRATO: 0272393507 => APARENTEMENTE ESTE ES EL ÚLTIMO 
+
+---------------------------------------------------------------------------------------------------
+
+
+ 
+
+
