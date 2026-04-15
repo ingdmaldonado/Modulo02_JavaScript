@@ -1,0 +1,72 @@
+IA TEXTO => ChatGTP, claude, Gemini
+
+IMÁGENES => DALL-E, Midjorney, Stable Difussion,
+nano banana
+
+CÓDIGO => GitHub Copilot, Claude Code asisten en programación
+
+AUDIO => Suno, Sora generan musica y video a partir de texto
+
+
+LLM => Large Language Model => Modelo de IA entrenado con enormes cantidaddes de textos para
+comprender y generar lenguaje natural. Son el "motor"
+detras de herramientas como ChatGPT, Claude y Gemini.
+
+------------------------------------------------------
+Anthropic =>
+OpenAI =>
+Google =>
+
+----------------------------------------------------------------------
+
+vercel ai getway
+https://vercel.com/ai-gateway
+
+----------------------------------------------------------------------
+Tokens: son las unidades mínimas de texto que procesa un modelo de IA. 
+Una palabra puede ser uno o varios tokens. Son
+la "moneda" del procesamiento.
+
+OpenAi Tokenizer
+Open Api pricing
+
+Configuración del CHATGP (Personalización)
+
+----------------------------------------------------------------------
+AGENTE: es un sistema autónmo que puede planificar, tomar decisiones
+y ejecutar acciones usando herramientas externas para cumplir un objetivo, sin
+intervención paso a paso.
+	Razona: planifica pasos para alcanzar un objetivo
+	Itera: Evalúa resultados y ajusta su estrategia automáticamente
+	Usa Herramientas: Navega la web, ejecuta código, consulta bases de datos
+	Colabora: Múltiples agentes pueden trabajar juntos en tareas.
+
+----------------------------------------------------------------------
+
+IA Generativa en el Desarrollo de Software
+
+Requisitos
+Diseño
+Codificación
+Testing
+Despliegue
+
+----------------------------------------------------------------------
+HERRAMIENTAS DE IA para Desarrollo:
+----------------------------------------------------------------------
+
+GitHub Copilot
+
+Claude Code
+
+Cursor/Windsurf lo compró Microsoft y sería el Antigravity
+
+vo/bolt.new
+
+ChatGTP/Claude
+
+Trae IDE
+
+
+
+
