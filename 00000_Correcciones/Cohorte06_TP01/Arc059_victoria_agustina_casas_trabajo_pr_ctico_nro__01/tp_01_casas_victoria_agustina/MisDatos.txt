@@ -1,0 +1,6 @@
+TP Evaluación 01 - Módulo 02 - JavaScript
+
+Alumna: Casas, Victoria Agustina
+Teléfono: 3834021734
+
+Observación: Profe, no utilicé backsticks en el código porque al trabajar desde una notebook mi teclado no los reconoce bien y apretando alt + 96 no se generan. 
