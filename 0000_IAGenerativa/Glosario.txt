@@ -67,6 +67,12 @@ ChatGTP/Claude
 
 Trae IDE
 
+TRAE -> Trae.ia
+
+-----------------------------------------
+
+gitHubCopilot
+
 
 
 
