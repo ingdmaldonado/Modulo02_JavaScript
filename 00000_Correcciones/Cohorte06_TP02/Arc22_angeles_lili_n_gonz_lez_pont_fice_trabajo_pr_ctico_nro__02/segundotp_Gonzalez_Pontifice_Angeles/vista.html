@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp 2 | Ejercicios 14 al 18</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #e6f0ff);
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 119, 204, 0.15);
+            overflow: hidden;
+        }
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        .ejercicios { padding: 30px; }
+        .ejercicio {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        .ejercicio:hover {
+            border-color: #0077cc;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 119, 204, 0.1);
+        }
+        .ejercicio h2 { margin: 0 0 12px 0; color: #0077cc; font-size: 1.4rem; }
+        button {
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover { background: #005fa3; transform: scale(1.05); }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚦 DIPLOMATURA EN DISEÑO WEB FULL STACK CON JAVASCRIPT</h1>
+            <p>MÓDULO 02 - JAVASCRIPT • Ejercicios 14 al 18</p>
+        </header>
+
+        <div class="ejercicios">
+            <div class="ejercicio">
+                <h2>14. Peaje SUR S.A.</h2>
+                <button onclick="ejercicio14()">🚗 Ejecutar Ejercicio 14</button>
+            </div>
+            <div class="ejercicio">
+                <h2>15. Notas de la Diplomatura</h2>
+                <button onclick="ejercicio15()">📝 Ejecutar Ejercicio 15</button>
+            </div>
+            <div class="ejercicio">
+                <h2>16. Promoción Concesionaria 0 km</h2>
+                <button onclick="ejercicio16()">🚙 Ejecutar Ejercicio 16</button>
+            </div>
+            <div class="ejercicio">
+                <h2>17. Clasificadora de Huevos</h2>
+                <button onclick="ejercicio17()">🥚 Ejecutar Ejercicio 17</button>
+            </div>
+            <div class="ejercicio">
+                <h2>18. Supermercado - Caja</h2>
+                <button onclick="ejercicio18()">🛒 Ejecutar Ejercicio 18</button>
+            </div>
+        </div>
+
+        <footer>
+            Todos los ejercicios usan <strong>únicamente prompt() y alert()</strong><br>
+            Abre la consola del navegador (F12) para ver más detalles
+        </footer>
+    </div>
+
+    <script src="controlador.js"></script>
+</body>
+</html>
