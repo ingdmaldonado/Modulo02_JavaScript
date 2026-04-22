@@ -1,3 +1,11 @@
+
+PLATAFORMA: https://postdiplomatura.epixum.com/
+
+
+--------------------------------------------------------------------------------
+VIDEO CLASE NRO. 01: https://www.youtube.com/live/-fYLzIARPRw
+--------------------------------------------------------------------------------
+
 IA TEXTO => ChatGTP, claude, Gemini
 
 IMÁGENES => DALL-E, Midjorney, Stable Difussion,
@@ -12,17 +20,17 @@ LLM => Large Language Model => Modelo de IA entrenado con enormes cantidaddes de
 comprender y generar lenguaje natural. Son el "motor"
 detras de herramientas como ChatGPT, Claude y Gemini.
 
-------------------------------------------------------
+--------------------------------------------------------------------------------
 Anthropic =>
 OpenAI =>
 Google =>
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 vercel ai getway
 https://vercel.com/ai-gateway
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 Tokens: son las unidades mínimas de texto que procesa un modelo de IA. 
 Una palabra puede ser uno o varios tokens. Son
 la "moneda" del procesamiento.
@@ -32,7 +40,7 @@ Open Api pricing
 
 Configuración del CHATGP (Personalización)
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 AGENTE: es un sistema autónmo que puede planificar, tomar decisiones
 y ejecutar acciones usando herramientas externas para cumplir un objetivo, sin
 intervención paso a paso.
@@ -41,7 +49,7 @@ intervención paso a paso.
 	Usa Herramientas: Navega la web, ejecuta código, consulta bases de datos
 	Colabora: Múltiples agentes pueden trabajar juntos en tareas.
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 IA Generativa en el Desarrollo de Software
 
@@ -51,9 +59,9 @@ Codificación
 Testing
 Despliegue
 
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 HERRAMIENTAS DE IA para Desarrollo:
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 GitHub Copilot
 
@@ -69,9 +77,20 @@ Trae IDE
 
 TRAE -> Trae.ia
 
------------------------------------------
+--------------------------------------------------------------------------------
 
 gitHubCopilot
+
+--------------------------------------------------------------------------------
+https://stitch.withgoogle.com/
+
+ES UNA PLATAFORMA DE GOOGLE QUE AYUDA A DISEÑAR, DESARROLLAR
+INTERFACES VISUALES, ESTÉTICAS DE TODA UNA APLICACIÓN WEB O
+UNA APLICACIÓN MÓVIL.
+
+
+
+
 
 
 
