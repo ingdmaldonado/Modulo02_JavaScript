@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+    <h1>Ejercicio 18</h1> 
+    <p>Un supermercado desea realizar una aplicación WEB que le permita a sus cajeros realizar los cobros a los clientes que atenderán en su jornada laboral. La aplicación debe tener las siguientes consideraciones.</p>
+    <ul style="list-style:square;">
+        <li>
+            Un cajero podrá atender a “n” clientes, siendo n el número que no está definido, puede atender a 0, 2, 5 clientes.
+            <br>Nota: debería resolverse aplicando un ciclo while de cliente
+        </li>
+        <br>
+        <li>
+            Cada cliente atendido llevará “m” productos, siendo m el número que no está definido. Puede llevar 10, 15, 20, 50 productos.
+            <br>Nota: debería resolverse aplicando un ciclo while de productos.
+        </li>
+        <br>
+        <li>
+            Al finalizar la atención del cliente, debería preguntar si paga con:
+            <ol>
+                <li>Efectivo – aplicar descuento 10%</li>
+                <li>Visa BNA – aplicar descuento 7%</li>
+                <li>Tarjeta Master BNA – aplicar descuento 7%</li>
+                <li>Otras Tarjetas Medios – sin descuentos.</li>
+            </ol>
+        </li>
+        <br>
+        <li>
+            Al finalizar la atención del cliente deberá ir registrando los siguientes puntos
+            <ul>
+                <li>Venta Total = Acumular la venta de todos los clientes</li>
+                <li>Descuento Total = Acumular los descuentos realizados a cada cliente</li>
+                <li>Importe a Pagar Total = Acumular los Importes a pagar por cada cliente</li>
+                <li>Contar la cantidad de clientes que Tuvieron descuentos</li>
+                <li>Contar la cantidad de clientes que No Tuvieron descuentos.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Nota: Este proceso debe confeccionarse con dos ciclos while, un ciclo while atenderá a los clientes y el otro ciclo while (interno) registrará los productos que lleva cada cliente.</p>
+    <script src="ejercicio18.js"></script>
+</body>
+</html>

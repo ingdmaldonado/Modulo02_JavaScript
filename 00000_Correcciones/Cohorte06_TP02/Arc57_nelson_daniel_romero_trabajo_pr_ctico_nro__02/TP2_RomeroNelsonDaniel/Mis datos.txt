@@ -1,0 +1,5 @@
+Apellido y nombres: Romero Nelson Daniel
+DNI: 40.724.681
+Celular: 3834977874
+
+Si vé algún operador de asignación, estructura condicional o forma de codificar distinta a lo visto en clase, se debe a que tengo algo de conocimientos de C, Java, Haskell y Python. Me apegué todo lo posible a lo visto en clase.
