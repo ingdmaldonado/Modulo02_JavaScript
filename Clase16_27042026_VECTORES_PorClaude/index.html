@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Métodos de Arrays — JS</title>
+</head>
+<body>
+
+<h1>Métodos de Arrays en JavaScript</h1>
+<p>Abrí la consola del navegador (F12) y hacé clic en cada botón.</p>
+
+
+<h2>Funciones Callback</h2>
+<button id="btn-callback-01">1. ¿Qué es un callback? (función con nombre)</button>
+<button id="btn-callback-02">2. Callback como función anónima</button>
+<button id="btn-callback-03">3. Callback como arrow function</button>
+<button id="btn-callback-04">4. Cómo un método de array usa el callback (preview con forEach)</button>
+
+
+<h2>forEach</h2>
+<button id="btn-foreach-01">forEach — recorrer e imprimir</button>
+<button id="btn-foreach-02">forEach — acceder al índice</button>
+<button id="btn-foreach-03">forEach — siempre devuelve undefined ⚠</button>
+<button id="btn-foreach-04">forEach — mutación de objetos por referencia ⚠</button>
+
+
+<h2>map</h2>
+<button id="btn-map-01">map — valores simples</button>
+<button id="btn-map-02">map — extraer una propiedad (array de strings/números)</button>
+<button id="btn-map-03">map — transformar objetos CON spread (inmutable) ✓</button>
+<button id="btn-map-04">map — trampa: mutar el objeto sin spread ⚠</button>
+
+
+<h2>filter</h2>
+<button id="btn-filter-01">filter — valores simples</button>
+<button id="btn-filter-02">filter — objetos: devuelve referencias al original</button>
+<button id="btn-filter-03">filter — modificar filtrados afecta el original ⚠</button>
+<button id="btn-filter-04">filter + map + spread — forma correcta (inmutable) ✓</button>
+<button id="btn-filter-05">filter — si no hay resultados devuelve [] ⚠</button>
+
+
+<h2>find</h2>
+<button id="btn-find-01">find — valores simples</button>
+<button id="btn-find-02">find — buscar por id (patrón API REST)</button>
+<button id="btn-find-03">find — devuelve undefined si no encuentra ⚠</button>
+<button id="btn-find-04">find — devuelve referencia al original ⚠</button>
+
+
+<h2>findIndex</h2>
+<button id="btn-findindex-01">findIndex — encontrar la posición de un elemento</button>
+<button id="btn-findindex-02">findIndex — devuelve -1 si no encuentra ⚠</button>
+<button id="btn-findindex-03">findIndex — actualizar un objeto sin mutar el array ✓</button>
+
+
+<h2>reduce</h2>
+<button id="btn-reduce-01">reduce — concepto base, paso a paso</button>
+<button id="btn-reduce-02">reduce — sumar precios (total del carrito)</button>
+<button id="btn-reduce-03">reduce — agrupar por categoría (devuelve un objeto)</button>
+<button id="btn-reduce-04">reduce — trampa: sin valor inicial ⚠</button>
+
+
+<h2>some / every</h2>
+<button id="btn-some-01">some — ¿al menos uno cumple?</button>
+<button id="btn-every-01">every — ¿todos cumplen?</button>
+<button id="btn-someevery-02">some / every — short circuit ⚠</button>
+
+
+<h2>sort</h2>
+<button id="btn-sort-01">sort — trampa con números sin comparador ⚠</button>
+<button id="btn-sort-02">sort — comparador numérico correcto ✓</button>
+<button id="btn-sort-03">sort — MUTA el array original ⚠</button>
+<button id="btn-sort-04">sort — strings con localeCompare (tildes y ñ) ✓</button>
+
+
+<h2>slice / splice</h2>
+<button id="btn-slice-01">slice — extraer porciones sin mutar ✓</button>
+<button id="btn-splice-01">splice — eliminar elementos (muta el original) ⚠</button>
+<button id="btn-splice-02">splice — insertar elementos ⚠</button>
+<button id="btn-slicesplice-03">slice vs splice — resumen comparativo</button>
+
+
+<h2>flat / flatMap</h2>
+<button id="btn-flat-01">flat — aplanar arrays anidados</button>
+<button id="btn-flatmap-01">flatMap — map + flat (tags de productos)</button>
+
+
+<h2>Encadenamiento de métodos</h2>
+<button id="btn-encadenar-01">filter + map</button>
+<button id="btn-encadenar-02">filter + sort + slice (paginación)</button>
+<button id="btn-encadenar-03">filter + map + reduce (valor total por categoría)</button>
+
+
+<script type="module" src="controlador.js"></script>
+
+</body>
+</html>
