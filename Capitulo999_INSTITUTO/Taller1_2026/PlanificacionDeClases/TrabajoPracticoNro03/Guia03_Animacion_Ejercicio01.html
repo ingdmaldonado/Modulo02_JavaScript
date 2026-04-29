@@ -1,0 +1,529 @@
+
+<h2 class="sr-only">Animación completa paso a paso: Ejercicio 01 — Las tres billeteras virtuales</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+#app{background:#1e1e2e;border-radius:var(--border-radius-lg);overflow:hidden;width:100%;display:flex;flex-direction:column;border:0.5px solid #313244;font-family:var(--font-mono);}
+.tb{background:#181825;padding:8px 14px;display:flex;align-items:center;gap:10px;border-bottom:0.5px solid #313244;}
+.dots{display:flex;gap:5px;}
+.dot{width:11px;height:11px;border-radius:50%;}
+.dr{background:#f38ba8;}.dy{background:#f9e2af;}.dg{background:#a6e3a1;}
+.tbtxt{color:#cdd6f4;font-size:12px;font-family:var(--font-sans);flex:1;text-align:center;}
+.main{display:flex;flex:1;min-height:0;}
+.sb{width:185px;background:#181825;border-right:0.5px solid #313244;padding:10px 0;flex-shrink:0;}
+.sb-sec{color:#6c7086;font-size:10px;font-family:var(--font-sans);padding:0 10px 6px;text-transform:uppercase;letter-spacing:.08em;}
+.sb-root{color:#cdd6f4;font-size:11px;font-family:var(--font-sans);padding:4px 10px 8px;font-weight:500;}
+.fi{padding:4px 10px;font-size:11px;font-family:var(--font-mono);display:flex;align-items:center;gap:7px;color:#6c7086;transition:all .3s;}
+.fi.act{background:#313244;color:#cdd6f4;}
+.fi.vis{color:#89b4fa;}
+.fi.new-anim{animation:flashFile .6s ease;}
+@keyframes flashFile{0%{background:#a6e3a1;color:#1e1e2e;}100%{background:transparent;}}
+.ed{flex:1;display:flex;flex-direction:column;min-width:0;position:relative;}
+.tabs{background:#181825;display:flex;border-bottom:0.5px solid #313244;min-height:32px;}
+.tab{padding:7px 14px;font-size:11px;font-family:var(--font-mono);color:#6c7086;border-right:0.5px solid #313244;display:none;white-space:nowrap;}
+.tab.act{color:#cdd6f4;background:#1e1e2e;border-bottom:2px solid #89b4fa;display:block;}
+.tab.vis{display:block;}
+.ca{flex:1;padding:12px 14px;overflow:auto;min-height:260px;max-height:320px;}
+.cl{display:flex;min-height:18px;line-height:18px;opacity:0;transition:opacity .25s;}
+.cl.show{opacity:1;}
+.ln{color:#45475a;font-size:12px;user-select:none;min-width:24px;text-align:right;margin-right:12px;}
+.ct{font-size:12px;color:#cdd6f4;white-space:pre;font-family:var(--font-mono);}
+.cur{display:inline-block;width:2px;height:13px;background:#89b4fa;vertical-align:middle;animation:bl 1s infinite;margin-left:1px;}
+@keyframes bl{0%,50%{opacity:1}51%,100%{opacity:0}}
+.kw{color:#cba6f7;}.fn{color:#89b4fa;}.str{color:#a6e3a1;}.cm{color:#585b70;font-style:italic;}.vn{color:#89dceb;}.pu{color:#cdd6f4;}.op{color:#89b4fa;}.at{color:#fab387;}
+.cons{background:#11111b;border-top:0.5px solid #313244;padding:8px 14px;display:none;}
+.cons-t{color:#6c7086;font-size:10px;font-family:var(--font-sans);margin-bottom:5px;text-transform:uppercase;letter-spacing:.08em;}
+.cons-o{color:#a6e3a1;font-size:12px;font-family:var(--font-mono);}
+.si{background:#313244;padding:7px 14px;display:flex;align-items:center;gap:8px;border-top:0.5px solid #45475a;}
+.sl{color:#cdd6f4;font-size:11px;font-family:var(--font-sans);flex:1;line-height:1.4;}
+.sd{display:flex;gap:4px;}
+.sdot{width:6px;height:6px;border-radius:50%;background:#45475a;transition:background .3s;}
+.sdot.done{background:#a6e3a1;}.sdot.cur2{background:#89b4fa;}
+.bn{background:#89b4fa;color:#1e1e2e;border:none;border-radius:var(--border-radius-md);padding:5px 12px;font-size:11px;font-family:var(--font-sans);font-weight:500;cursor:pointer;white-space:nowrap;}
+.bn:hover{background:#b4d0fb;}.bn:disabled{background:#45475a;color:#6c7086;cursor:default;}
+.stb{background:#89b4fa;padding:3px 12px;display:flex;gap:14px;}
+.st{font-size:10px;color:#1e1e2e;font-family:var(--font-sans);font-weight:500;}
+
+.bbl{position:absolute;background:#f9e2af;color:#1e1e2e;border-radius:var(--border-radius-lg);padding:10px 13px;font-size:11px;font-family:var(--font-sans);max-width:200px;line-height:1.5;z-index:50;opacity:0;transition:opacity .4s;pointer-events:none;border-left:3px solid #f9e2af;right:12px;top:12px;}
+.bbl.show{opacity:1;}
+.bbl strong{display:block;font-weight:500;margin-bottom:3px;font-size:12px;}
+
+.ctx-menu{position:absolute;background:#2a2a3e;border:0.5px solid #45475a;border-radius:var(--border-radius-md);padding:4px 0;z-index:60;font-size:11px;font-family:var(--font-sans);min-width:180px;opacity:0;transition:opacity .3s;pointer-events:none;}
+.ctx-menu.show{opacity:1;}
+.ctx-item{padding:5px 14px;color:#cdd6f4;cursor:default;}
+.ctx-item:hover{background:#313244;}
+.ctx-item.hi{background:#89b4fa;color:#1e1e2e;border-radius:4px;margin:0 4px;}
+
+.new-file-prompt{position:absolute;background:#1e1e2e;border:0.5px solid #89b4fa;border-radius:4px;padding:3px 8px;z-index:60;opacity:0;transition:opacity .3s;left:10px;}
+.new-file-prompt.show{opacity:1;}
+.nfp-input{background:transparent;border:none;color:#cdd6f4;font-size:11px;font-family:var(--font-mono);outline:none;width:160px;}
+
+.tip-bar{background:#313244;padding:5px 14px;font-size:11px;font-family:var(--font-sans);color:#6c7086;display:none;border-top:0.5px solid #45475a;min-height:24px;}
+.tip-bar.show{display:block;}
+.tip-bar span{color:#f9e2af;}
+</style>
+
+<div id="app">
+  <div class="tb">
+    <div class="dots"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div></div>
+    <div class="tbtxt">Visual Studio Code — TrabajoPractico03</div>
+  </div>
+  <div class="main">
+    <div class="sb">
+      <div class="sb-sec">Explorador</div>
+      <div class="sb-root">📁 TrabajoPractico03</div>
+      <div class="fi" id="fi-datos"><span>📄</span>MisDatos.txt</div>
+      <div class="fi" id="fi-html"><span>🌐</span>ejercicio01.html</div>
+      <div class="fi" id="fi-js"><span>⚙</span>ejercicio01.js</div>
+    </div>
+    <div class="ed" id="editor">
+      <div class="tabs" id="tabs">
+        <div class="tab" id="t-datos">MisDatos.txt</div>
+        <div class="tab" id="t-html">ejercicio01.html</div>
+        <div class="tab" id="t-js">ejercicio01.js</div>
+      </div>
+      <div class="ca" id="ca"></div>
+      <div class="tip-bar" id="tip-bar"></div>
+      <div class="cons" id="cons"><div class="cons-t">consola</div><div class="cons-o" id="co"></div></div>
+      <div class="ctx-menu" id="ctx" style="top:40px;left:20px;">
+        <div class="ctx-item">Abrir archivo...</div>
+        <div class="ctx-item hi" id="ctx-new">+ Nuevo archivo</div>
+        <div class="ctx-item">Abrir carpeta...</div>
+      </div>
+      <div class="new-file-prompt" id="nfp" style="top:40px;">
+        <input class="nfp-input" id="nfp-in" readonly value="" />
+      </div>
+      <div class="bbl" id="bbl"><strong id="bt"></strong><span id="bb"></span></div>
+    </div>
+  </div>
+  <div class="si">
+    <div class="sl" id="slbl">Paso 1 de 8 — Creá la carpeta y abrila en VS Code</div>
+    <div class="sd" id="sd"></div>
+    <button class="bn" id="bn">Siguiente →</button>
+  </div>
+  <div class="stb">
+    <div class="st" id="st">Listo</div>
+    <div class="st">JavaScript</div>
+    <div class="st">UTF-8</div>
+  </div>
+</div>
+
+<script>
+const ca=document.getElementById('ca');
+const slbl=document.getElementById('slbl');
+const sd=document.getElementById('sd');
+const bn=document.getElementById('bn');
+const st=document.getElementById('st');
+const bbl=document.getElementById('bbl');
+const bt=document.getElementById('bt');
+const bb=document.getElementById('bb');
+const cons=document.getElementById('cons');
+const co=document.getElementById('co');
+const ctx=document.getElementById('ctx');
+const nfp=document.getElementById('nfp');
+const nfpIn=document.getElementById('nfp-in');
+const tipBar=document.getElementById('tip-bar');
+
+let step=0,bTimer=null;
+
+function showB(title,body,delay=0){
+  clearTimeout(bTimer);
+  bTimer=setTimeout(()=>{
+    bt.textContent=title;
+    bb.textContent=body;
+    bbl.classList.add('show');
+    clearTimeout(bTimer);
+    bTimer=setTimeout(()=>bbl.classList.remove('show'),4500);
+  },delay);
+}
+function hideB(){bbl.classList.remove('show');clearTimeout(bTimer);}
+
+function showTip(html){tipBar.innerHTML=html;tipBar.classList.add('show');}
+function hideTip(){tipBar.classList.remove('show');}
+
+function setTab(id){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('act'));
+  const t=document.getElementById(id);
+  if(t){t.classList.add('act');t.classList.add('vis');}
+}
+function setFile(id){
+  document.querySelectorAll('.fi').forEach(f=>f.classList.remove('act'));
+  const f=document.getElementById(id);
+  if(f)f.classList.add('act','vis');
+}
+function flashFile(id){
+  const f=document.getElementById(id);
+  if(f)f.classList.add('new-anim');
+  setTimeout(()=>{if(f)f.classList.remove('new-anim');},700);
+}
+
+function typeFileName(name, onDone){
+  nfpIn.value='';
+  let i=0;
+  function t(){
+    if(i>=name.length){setTimeout(onDone,400);return;}
+    nfpIn.value+=name[i++];
+    setTimeout(t,80);
+  }
+  t();
+}
+
+function addLine(html,num,delay,lineBubble){
+  return new Promise(res=>{
+    setTimeout(()=>{
+      const el=document.createElement('div');
+      el.className='cl';
+      el.innerHTML=`<span class="ln">${num}</span><span class="ct">${html}</span>`;
+      ca.appendChild(el);
+      ca.scrollTop=ca.scrollHeight;
+      setTimeout(()=>{
+        el.classList.add('show');
+        if(lineBubble)showB(lineBubble.t,lineBubble.b,lineBubble.d||0);
+        res();
+      },40);
+    },delay);
+  });
+}
+
+async function typeLines(lines,baseDelay=120){
+  ca.innerHTML='';
+  for(let i=0;i<lines.length;i++){
+    await addLine(lines[i].h||'',i+1,i*baseDelay,lines[i].b);
+  }
+}
+
+function initDots(total,cur){
+  sd.innerHTML='';
+  for(let i=0;i<total;i++){
+    const d=document.createElement('div');
+    d.className='sdot'+(i<cur?' done':i===cur?' cur2':'');
+    sd.appendChild(d);
+  }
+}
+
+const TOTAL=8;
+
+const STEPS={
+  0:{
+    label:'Paso 1 de 8 — Abrí VS Code y abrí la carpeta TrabajoPractico03',
+    status:'Bienvenido a VS Code',
+    run:()=>{
+      ca.innerHTML='';
+      hideTip();
+      ca.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;padding:30px 0;">
+        <div style="color:#45475a;font-size:28px;font-family:var(--font-sans);font-weight:500;">VS Code</div>
+        <div style="color:#6c7086;font-size:12px;font-family:var(--font-sans);text-align:center;line-height:1.7;">Abrí VS Code.<br>Luego hacé clic en <span style="color:#89b4fa;font-weight:500;">Archivo → Abrir Carpeta</span><br>y seleccioná la carpeta <span style="color:#a6e3a1;">TrabajoPractico03</span>.</div>
+        <div style="margin-top:8px;background:#313244;border-radius:var(--border-radius-md);padding:8px 16px;font-size:11px;font-family:var(--font-mono);color:#cdd6f4;">📁 TrabajoPractico03</div>
+      </div>`;
+      showB('¿Cómo abrís la carpeta?','En VS Code andá a Archivo → Abrir Carpeta, seleccioná TrabajoPractico03 y hacé clic en Abrir. Vas a ver la carpeta en el explorador de la izquierda.',600);
+      bn.disabled=false;
+    }
+  },
+  1:{
+    label:'Paso 2 de 8 — Creá el archivo MisDatos.txt',
+    status:'Creando MisDatos.txt',
+    run:()=>{
+      ca.innerHTML='';
+      hideTip();
+      hideB();
+      showTip('<span>💡 Para crear un archivo:</span> hacé clic derecho en el explorador → Nuevo archivo, escribí el nombre y presioná Enter');
+      setTimeout(()=>{
+        ctx.classList.add('show');
+        setTimeout(()=>{
+          document.getElementById('ctx-new').style.background='#89b4fa';
+          document.getElementById('ctx-new').style.color='#1e1e2e';
+          setTimeout(()=>{
+            ctx.classList.remove('show');
+            nfp.style.top='40px';
+            nfp.classList.add('show');
+            showB('Nombre del archivo','Siempre en minúsculas y sin espacios. Escribí: MisDatos.txt y presioná Enter.',400);
+            typeFileName('MisDatos.txt',()=>{
+              nfp.classList.remove('show');
+              flashFile('fi-datos');
+              document.getElementById('fi-datos').classList.add('vis','act');
+              setTab('t-datos');
+              hideTip();
+              setTimeout(async()=>{
+                await typeLines([
+                  {h:`<span class="cm">APELLIDO Y NOMBRE COMPLETO: Pérez Juan Ignacio</span>`},
+                  {h:`<span class="cm">                            (reemplazá con tus datos)</span>`},
+                  {h:''},
+                  {h:`<span class="cm">CORREO ELECTRÓNICO: juanperez@gmail.com</span>`},
+                  {h:`<span class="cm">                    (reemplazá con tu correo)</span>`},
+                  {h:''},
+                  {h:`<span class="cm">TELÉFONO CELULAR: 11-1234-5678</span>`},
+                  {h:`<span class="cm">                  (reemplazá con tu celular)</span>`},
+                ],150);
+                showB('MisDatos.txt es obligatorio','Sin este archivo el trabajo no se considera entregado. Completá con tus datos reales.',500);
+                bn.disabled=false;
+              },400);
+            });
+          },700);
+        },600);
+      },300);
+    }
+  },
+  2:{
+    label:'Paso 3 de 8 — Creá el archivo ejercicio01.html',
+    status:'Creando ejercicio01.html',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      showTip('<span>💡 Mismo proceso:</span> clic derecho en el explorador → Nuevo archivo → escribí: ejercicio01.html → Enter');
+      setTimeout(()=>{
+        ctx.classList.add('show');
+        setTimeout(()=>{
+          ctx.classList.remove('show');
+          nfp.classList.add('show');
+          showB('Nombre del archivo HTML','Siempre en minúsculas y sin espacios. El nombre tiene que ser exactamente: ejercicio01.html',400);
+          typeFileName('ejercicio01.html',()=>{
+            nfp.classList.remove('show');
+            flashFile('fi-html');
+            document.getElementById('fi-html').classList.add('vis','act');
+            setFile('fi-html');
+            setTab('t-html');
+            hideTip();
+            ca.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:8px;padding:20px 0;">
+              <div style="color:#6c7086;font-size:12px;font-family:var(--font-sans);text-align:center;line-height:1.8;">El archivo está vacío.<br>Ahora escribí <span style="color:#89b4fa;font-weight:500; font-family:var(--font-mono);">!</span> y presioná <span style="color:#a6e3a1;font-weight:500;">Tab</span><br>para generar la estructura HTML automáticamente.</div>
+            </div>`;
+            showB('El atajo ! + Tab','Escribí el símbolo ! en la primera línea y presioná Tab. VS Code va a generar toda la estructura HTML base automáticamente. Es un atajo que ahorra mucho tiempo.',1200);
+            bn.disabled=false;
+          });
+        },600);
+      },300);
+    }
+  },
+  3:{
+    label:'Paso 4 de 8 — Usá ! + Tab para generar la estructura HTML',
+    status:'Generando estructura HTML con Emmet',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      hideTip();
+      showTip('Escribís <span style="color:#89b4fa;font-family:var(--font-mono);">!</span> y presionás <span style="color:#a6e3a1;">Tab</span> — esto se llama <span style="color:#f9e2af;">Emmet</span> y viene incluido en VS Code');
+      setTab('t-html');
+      setFile('fi-html');
+      setTimeout(async()=>{
+        showB('¡Magia de VS Code!','Esto se llama Emmet. VS Code entiende el ! como una abreviatura y genera toda la estructura HTML base. No tenés que escribir todo a mano.',400);
+        const htmlLines=[
+          {h:`<span class="pu">&lt;!</span><span class="kw">DOCTYPE</span> <span class="at">html</span><span class="pu">&gt;</span>`},
+          {h:`<span class="pu">&lt;</span><span class="kw">html</span> <span class="at">lang</span><span class="pu">="</span><span class="str">es</span><span class="pu">"&gt;</span>`},
+          {h:`  <span class="pu">&lt;</span><span class="kw">head</span><span class="pu">&gt;</span>`},
+          {h:`    <span class="pu">&lt;</span><span class="kw">meta</span> <span class="at">charset</span><span class="pu">="</span><span class="str">UTF-8</span><span class="pu">"&gt;</span>`},
+          {h:`    <span class="pu">&lt;</span><span class="kw">meta</span> <span class="at">name</span><span class="pu">="</span><span class="str">viewport</span><span class="pu">"</span> <span class="at">content</span><span class="pu">="</span><span class="str">width=device-width</span><span class="pu">"&gt;</span>`},
+          {h:`    <span class="pu">&lt;</span><span class="kw">title</span><span class="pu">&gt;</span><span class="str">Ejercicio 01</span><span class="pu">&lt;/</span><span class="kw">title</span><span class="pu">&gt;</span>`},
+          {h:`  <span class="pu">&lt;/</span><span class="kw">head</span><span class="pu">&gt;</span>`},
+          {h:`  <span class="pu">&lt;</span><span class="kw">body</span><span class="pu">&gt;</span>`},
+          {h:`  <span class="pu">&lt;/</span><span class="kw">body</span><span class="pu">&gt;</span>`},
+          {h:`<span class="pu">&lt;/</span><span class="kw">html</span><span class="pu">&gt;</span>`},
+        ];
+        await typeLines(htmlLines,140);
+        bn.disabled=false;
+      },600);
+    }
+  },
+  4:{
+    label:'Paso 5 de 8 — Agregá el h1 y el script dentro del body',
+    status:'Editando ejercicio01.html',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      hideTip();
+      setTab('t-html');
+      setFile('fi-html');
+      showTip('Ahora agregamos el <span style="color:#89b4fa;font-family:var(--font-mono);">&lt;h1&gt;</span> y la línea <span style="color:#a6e3a1;font-family:var(--font-mono);">&lt;script&gt;</span> dentro del body');
+      setTimeout(async()=>{
+        const htmlLines=[
+          {h:`<span class="pu">&lt;!</span><span class="kw">DOCTYPE</span> <span class="at">html</span><span class="pu">&gt;</span>`},
+          {h:`<span class="pu">&lt;</span><span class="kw">html</span> <span class="at">lang</span><span class="pu">="</span><span class="str">es</span><span class="pu">"&gt;</span>`},
+          {h:`  <span class="pu">&lt;</span><span class="kw">head</span><span class="pu">&gt;</span>`},
+          {h:`    <span class="pu">&lt;</span><span class="kw">meta</span> <span class="at">charset</span><span class="pu">="</span><span class="str">UTF-8</span><span class="pu">"&gt;</span>`},
+          {h:`    <span class="pu">&lt;</span><span class="kw">title</span><span class="pu">&gt;</span><span class="str">Ejercicio 01</span><span class="pu">&lt;/</span><span class="kw">title</span><span class="pu">&gt;</span>`},
+          {h:`  <span class="pu">&lt;/</span><span class="kw">head</span><span class="pu">&gt;</span>`},
+          {h:`  <span class="pu">&lt;</span><span class="kw">body</span><span class="pu">&gt;</span>`},
+          {h:''},
+          {h:`    <span class="pu">&lt;</span><span class="kw">h1</span><span class="pu">&gt;</span><span class="str">Ejercicio 01</span><span class="pu">&lt;/</span><span class="kw">h1</span><span class="pu">&gt;</span>`,b:{t:'La etiqueta h1',b:'h1 es el título principal de la página. Todo lo que va entre <h1> y </h1> aparece como el título más grande. Es la etiqueta de título más importante en HTML.',d:200}},
+          {h:''},
+          {h:`    <span class="pu">&lt;</span><span class="kw">script</span> <span class="at">src</span><span class="pu">="</span><span class="str">ejercicio01.js</span><span class="pu">"&gt;&lt;/</span><span class="kw">script</span><span class="pu">&gt;</span>`,b:{t:'Esta línea conecta HTML con JS','b':'Sin esta línea tu código JavaScript NO se ejecuta. Es como enchufar el cable de luz — si no está conectado, no funciona nada.',d:300}},
+          {h:''},
+          {h:`  <span class="pu">&lt;/</span><span class="kw">body</span><span class="pu">&gt;</span>`},
+          {h:`<span class="pu">&lt;/</span><span class="kw">html</span><span class="pu">&gt;</span>`},
+        ];
+        await typeLines(htmlLines,140);
+        bn.disabled=false;
+      },500);
+    }
+  },
+  5:{
+    label:'Paso 6 de 8 — Creá ejercicio01.js y escribí el código',
+    status:'Creando ejercicio01.js',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      hideTip();
+      showTip('<span>💡 Mismo proceso:</span> clic derecho → Nuevo archivo → ejercicio01.js → Enter');
+      setTimeout(()=>{
+        ctx.classList.add('show');
+        setTimeout(()=>{
+          ctx.classList.remove('show');
+          nfp.classList.add('show');
+          showB('El archivo JavaScript','Acá es donde va TODO el código. El nombre tiene que coincidir exactamente con lo que pusiste en el src del script: ejercicio01.js',400);
+          typeFileName('ejercicio01.js',()=>{
+            nfp.classList.remove('show');
+            flashFile('fi-js');
+            document.getElementById('fi-js').classList.add('vis','act');
+            setFile('fi-js');
+            setTab('t-js');
+            hideTip();
+            setTimeout(async()=>{
+              const jsLines=[
+                {h:`<span class="pu">{</span>`,b:{t:'El bloque de código { }','b':'Las llaves { } agrupan instrucciones que van juntas. Todo tu código va entre la llave de apertura { y la de cierre }. Las vas a ver mucho cuando veamos funciones.',d:300}},
+                {h:''},
+                {h:`    <span class="cm">/*</span>`,b:{t:'Comentarios /* ... */','b':'Los comentarios explican qué hace el código. El navegador los ignora completamente. Son para que vos y otros puedan entender el código fácilmente.',d:800}},
+                {h:`    <span class="cm">  Aquí le pedimos al usuario cuánto dinero tiene en NaranjaX</span>`},
+                {h:`    <span class="cm">  y guardamos el valor en la variable dineroEnNaranjaX</span>`},
+                {h:`    <span class="cm">*/</span>`},
+                {h:`    <span class="kw">let</span> <span class="vn">dineroEnNaranjaX</span> <span class="op">=</span> <span class="fn">Number</span><span class="pu">(</span><span class="fn">prompt</span><span class="pu">(</span><span class="str">'¿Cuánto tenés en NaranjaX?'</span><span class="pu">));</span>`,b:{t:'Reglas de variables','b':'Sin espacios, sin tildes, sin guión medio. camelCase: primera palabra en minúscula, las siguientes con mayúscula. Ej: dineroEnNaranjaX ✓   dinero en naranjaX ✗',d:200}},
+                {h:''},
+                {h:`    <span class="cm">/*</span>`},
+                {h:`    <span class="cm">  Aquí le pedimos al usuario cuánto dinero tiene en MercadoPago</span>`},
+                {h:`    <span class="cm">  y guardamos el valor en la variable dineroEnMercadoPago</span>`},
+                {h:`    <span class="cm">*/</span>`},
+                {h:`    <span class="kw">let</span> <span class="vn">dineroEnMercadoPago</span> <span class="op">=</span> <span class="fn">Number</span><span class="pu">(</span><span class="fn">prompt</span><span class="pu">(</span><span class="str">'¿Cuánto tenés en MercadoPago?'</span><span class="pu">));</span>`,b:{t:'Number() es obligatorio','b':'prompt() siempre devuelve texto. Sin Number() la suma daría "500050003000" en lugar de 15000. Siempre convertí con Number() antes de operar.',d:300}},
+                {h:''},
+                {h:`    <span class="cm">/*</span>`},
+                {h:`    <span class="cm">  Aquí le pedimos al usuario cuánto dinero tiene en Ualá</span>`},
+                {h:`    <span class="cm">  y guardamos el valor en la variable dineroEnUala</span>`},
+                {h:`    <span class="cm">*/</span>`},
+                {h:`    <span class="kw">let</span> <span class="vn">dineroEnUala</span> <span class="op">=</span> <span class="fn">Number</span><span class="pu">(</span><span class="fn">prompt</span><span class="pu">(</span><span class="str">'¿Cuánto tenés en Ualá?'</span><span class="pu">));</span>`},
+                {h:''},
+                {h:`    <span class="cm">/*</span>`},
+                {h:`    <span class="cm">  Aquí sumamos los tres valores y guardamos el resultado</span>`},
+                {h:`    <span class="cm">  en la variable totalDeDinero</span>`},
+                {h:`    <span class="cm">*/</span>`},
+                {h:`    <span class="kw">let</span> <span class="vn">totalDeDinero</span> <span class="op">=</span> <span class="vn">dineroEnNaranjaX</span> <span class="op">+</span> <span class="vn">dineroEnMercadoPago</span> <span class="op">+</span> <span class="vn">dineroEnUala</span><span class="pu">;</span>`},
+                {h:''},
+                {h:`    <span class="cm">/*</span>`},
+                {h:`    <span class="cm">  Aquí mostramos el resultado por consola</span>`},
+                {h:`    <span class="cm">*/</span>`},
+                {h:`    <span class="fn">console</span><span class="pu">.</span><span class="fn">log</span><span class="pu">(</span><span class="str">'Total en las tres billeteras: $'</span> <span class="op">+</span> <span class="vn">totalDeDinero</span><span class="pu">);</span>`,b:{t:'console.log()','b':'Muestra el resultado en la consola del navegador. Presioná F12 para abrirla y hacé clic en la pestaña Console.',d:400}},
+                {h:''},
+                {h:`<span class="pu">}</span>`},
+              ];
+              await typeLines(jsLines,120);
+              bn.disabled=false;
+            },500);
+          });
+        },600);
+      },300);
+    }
+  },
+  6:{
+    label:'Paso 7 de 8 — Abrí con Live Server',
+    status:'Iniciando Live Server...',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      hideTip();
+      setTab('t-html');
+      setFile('fi-html');
+      showTip('Hacé clic derecho sobre el archivo <span style="color:#89b4fa;font-family:var(--font-mono);">ejercicio01.html</span> en el explorador → <span style="color:#a6e3a1;">Open with Live Server</span>');
+      setTimeout(()=>{
+        ctx.style.top='90px';
+        ctx.style.left='10px';
+        ctx.innerHTML=`
+          <div class="ctx-item">Abrir en explorador</div>
+          <div class="ctx-item hi">Open with Live Server</div>
+          <div class="ctx-item">Copiar ruta</div>
+        `;
+        ctx.classList.add('show');
+        showB('Click derecho sobre el HTML','Hacé clic derecho sobre ejercicio01.html en el explorador de la izquierda y seleccioná Open with Live Server. Se va a abrir el navegador solo.',600);
+        setTimeout(()=>{
+          ctx.classList.remove('show');
+          ctx.style.top='40px';
+          ca.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;padding:20px;">
+            <div style="background:#181825;border-radius:var(--border-radius-md);padding:8px 16px;font-size:11px;font-family:var(--font-mono);color:#a6e3a1;border:0.5px solid #a6e3a1;">Live Server corriendo en: 127.0.0.1:5500</div>
+            <div style="color:#6c7086;font-size:11px;font-family:var(--font-sans);text-align:center;line-height:1.7;">Se abrió el navegador automáticamente.<br>Ahora presioná <span style="color:#89b4fa;font-weight:500;">F12</span> para abrir la consola<br>y hacé clic en la pestaña <span style="color:#a6e3a1;font-weight:500;">Console</span>.</div>
+          </div>`;
+          showB('Live Server actualiza automáticamente','Cada vez que guardás un cambio con Ctrl+S, el navegador se actualiza solo. No tenés que recargar la página manualmente.',800);
+          bn.disabled=false;
+        },2000);
+      },500);
+    }
+  },
+  7:{
+    label:'Paso 8 de 8 — Mirá el resultado en la consola',
+    status:'Ejecutando el programa...',
+    run:()=>{
+      ca.innerHTML='';
+      hideB();
+      hideTip();
+      setTab('t-js');
+      setFile('fi-js');
+      cons.style.display='block';
+      co.textContent='';
+      showTip('Presioná <span style="color:#89b4fa;font-weight:500;">F12</span> → pestaña <span style="color:#a6e3a1;">Console</span> para ver el resultado del programa');
+      showB('¡El programa funcionó!','El navegador ejecutó tu código JavaScript, pidió los tres valores con prompt() y mostró el resultado con console.log(). Eso es programar.',1000);
+      setTimeout(()=>{
+        const prompts=[
+          {txt:'> prompt: ¿Cuánto tenés en NaranjaX?  →  5000',col:'#89b4fa'},
+          {txt:'> prompt: ¿Cuánto tenés en MercadoPago?  →  7000',col:'#89b4fa'},
+          {txt:'> prompt: ¿Cuánto tenés en Ualá?  →  3000',col:'#89b4fa'},
+          {txt:'Total en las tres billeteras: $15000',col:'#a6e3a1'},
+        ];
+        let pi=0;
+        function showPrompt(){
+          if(pi>=prompts.length){
+            bn.disabled=false;
+            bn.textContent='Reiniciar';
+            return;
+          }
+          const line=document.createElement('div');
+          line.style.cssText=`color:${prompts[pi].col};font-size:12px;font-family:var(--font-mono);margin-bottom:3px;opacity:0;transition:opacity .3s;`;
+          co.appendChild(line);
+          let text=prompts[pi].txt,i=0;
+          function typeIt(){
+            if(i>=text.length){
+              pi++;
+              setTimeout(showPrompt,400);
+              return;
+            }
+            line.textContent+=text[i++];
+            line.style.opacity='1';
+            setTimeout(typeIt,18);
+          }
+          typeIt();
+        }
+        showPrompt();
+      },800);
+    }
+  }
+};
+
+function runStep(s){
+  bn.disabled=true;
+  slbl.textContent=STEPS[s].label;
+  st.textContent=STEPS[s].status;
+  initDots(TOTAL,s);
+  STEPS[s].run();
+}
+
+bn.addEventListener('click',()=>{
+  if(bn.textContent==='Reiniciar'){
+    step=0;
+    cons.style.display='none';
+    co.textContent='';
+    bn.textContent='Siguiente →';
+    document.querySelectorAll('.fi').forEach(f=>f.classList.remove('act','vis','new-anim'));
+    document.querySelectorAll('.tab').forEach(t=>{t.className='tab';});
+    ctx.innerHTML=`<div class="ctx-item">Abrir archivo...</div><div class="ctx-item hi" id="ctx-new">+ Nuevo archivo</div><div class="ctx-item">Abrir carpeta...</div>`;
+    hideB();hideTip();
+    runStep(0);return;
+  }
+  step++;
+  if(step>=TOTAL){step=TOTAL-1;return;}
+  hideB();hideTip();
+  runStep(step);
+});
+
+runStep(0);
+</script>
