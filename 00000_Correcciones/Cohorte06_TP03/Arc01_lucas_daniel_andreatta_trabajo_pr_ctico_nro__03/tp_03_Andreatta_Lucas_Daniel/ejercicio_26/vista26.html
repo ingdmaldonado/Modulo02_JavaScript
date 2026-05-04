@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26</title>
+</head>
+<body>
+    <h1>Ejercicio 26 - Calcular insulina recomendada para el paciente</h1>
+    
+    <label for="idNivelGlucosa">Ingrese Nivel de glucosa en sangre</label>
+    <input type="number" id="idNivelGlucosa">
+    <br>
+    <label for="idPesoCorporal">Ingrese Peso Corporal (en kilogramos)</label>
+    <input type="number" id="idPesoCorporal">
+    <br>
+    <label for="idTipoDiabete">Seleccione tipo de diabetes</label>
+    <select id="idTipoDiabete">
+        <option value="1">Tipo 1</option>
+        <option value="2">Tipo 2</option>
+    </select>
+    <br><br>
+    <button id="idBtnCalcular">Calcular</button>
+
+    <br>
+    <h3 id="idResultado">aqui voy a mostrar el resultado</h3>
+
+    <br>
+    <button id="idBtnGuardar">Guardar</button>
+    <br><br>
+    <button id="idBtnRecuperar">Recuperar</button>
+
+
+
+    <script src="controlador26.js" type="module"></script>
+</body>
+</html>
