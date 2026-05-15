@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 22</title>
+</head>
+
+<body>
+
+    <h1>Punto 22</h1>
+
+    <h2>Cálculo de Impuesto a las Bebidas</h2>
+
+    <div>
+        <label for="importeBase">Importe Base de la Bebida:</label>
+        <input type="number" id="importeBase" placeholder="Ej: 1000">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="tipoBebida">Tipo de Bebida:</label>
+        <select id="tipoBebida">
+            <option value="0">Cualquier Bebida NO clasificada (1 ‰)</option>
+            <option value="1">Bebidas Agua en envases plásticos (5 ‰)</option>
+            <option value="2">Bebidas Agua en envases retornables (1 ‰)</option>
+            <option value="3">Bebidas Gaseosas Azucaradas en envases plásticos (7 ‰)</option>
+            <option value="4">Bebidas Gaseosas Azucaradas en envases retornables (2 ‰)</option>
+            <option value="5">Bebidas Energéticas (15 ‰)</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div>
+        <button id="btnCalcular">Calcular Impuesto</button>
+        <button id="btnGuardar">Guardar Datos</button>
+        <button id="btnRecuperar">Recuperar Datos</button>
+    </div>
+
+    <br>
+
+    <div>
+        <strong>Resultado de Sobre Tasa: </strong>
+        <span id="resultado"></span>
+    </div>
+
+
+    <script src="controladorPunto22.js" type="module"></script>
+
+</body>
+
+</html>

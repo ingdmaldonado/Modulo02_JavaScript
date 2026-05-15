@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Insulina</title>
+</head>
+<body>
+
+    <h1>Dosis Recomendada de Insulina</h1>
+
+    <label>Nivel de glucosa:</label>
+    <input type="number" id="txtGlucosa">
+
+    <br><br>
+
+    <label>Peso corporal (kg):</label>
+    <input type="number" id="txtPeso">
+
+    <br><br>
+
+    <label>Tipo de Diabetes:</label>
+
+    <select id="cmbTipo">
+        <option value="1">Tipo 1</option>
+        <option value="2">Tipo 2</option>
+    </select>
+
+    <br><br>
+
+    <button id="btnCalcular">
+        Calcular Dosis
+    </button>
+
+    <button id="btnGuardar">
+        Guardar Estado
+    </button>
+
+    <button id="btnRecuperar">
+        Recuperar Estado
+    </button>
+
+    <br><br>
+
+    <h2 id="resultado"></h2>
+
+    <script type="module" src="js/controlador.js"></script>
+
+</body>
+</html>

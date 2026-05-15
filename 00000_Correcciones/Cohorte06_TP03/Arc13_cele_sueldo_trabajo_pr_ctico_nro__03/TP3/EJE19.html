@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Ejercicio 19</title>
+
+    <style>
+
+        body {
+
+            background-color: #f2f2f2;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+
+        h1 {
+
+            color: #10e557;
+        }
+
+
+        input {
+
+            width: 300px;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            border: 1px solid gray;
+
+            font-size: 16px;
+        }
+
+
+        button {
+
+            background-color: #dc0f75;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        button:hover {
+
+            background-color: #11b2ca;
+        }
+
+
+        h2 {
+
+            margin-top: 20px;
+
+            color: rgb(154, 214, 33);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Precio de Venta</h1>
+
+    <!-- importe compra -->
+
+    <input type="number"
+    id="importeCompra"
+    placeholder="Importe de compra">
+
+    <br><br>
+
+    <!-- margen ganancia -->
+
+    <input type="number"
+    id="margenGanancia"
+    placeholder="Margen de ganancia %">
+
+    <br><br>
+
+    <button id="btnCalcular">
+
+        Calcular Precio
+
+    </button>
+
+    <h2 id="resultado"></h2>
+
+    <script type="module" src="controlador19.js"></script>
+
+</body>
+
+</html>

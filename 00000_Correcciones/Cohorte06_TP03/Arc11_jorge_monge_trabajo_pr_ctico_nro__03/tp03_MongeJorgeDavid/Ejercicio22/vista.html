@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Tasa Bebidas</title>
+</head>
+<body>
+
+    <h1>Cálculo de Sobre Tasa</h1>
+
+    <label>Importe Base:</label>
+    <input type="number" id="txtImporte" step="0.01">
+
+    <br><br>
+
+    <label>Tipo de Bebida:</label>
+
+    <select id="cmbTipo">
+        <option value="1">Agua envase plástico</option>
+        <option value="2">Agua envase retornable</option>
+        <option value="3">Gaseosa azucarada plástico</option>
+        <option value="4">Gaseosa azucarada retornable</option>
+        <option value="5">Bebida energética</option>
+        <option value="6">Otra bebida</option>
+    </select>
+
+    <br><br>
+
+    <button id="btnCalcular">
+        Calcular Sobre Tasa
+    </button>
+
+    <button id="btnGuardar">
+        Guardar Estado
+    </button>
+
+    <button id="btnRecuperar">
+        Recuperar Estado
+    </button>
+
+    <br><br>
+
+    <h2 id="resultado"></h2>
+
+    <script type="module" src="js/controlador.js"></script>
+
+</body>
+</html>

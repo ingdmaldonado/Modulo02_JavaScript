@@ -28,6 +28,7 @@ Cuenta 22472581 SALGUERO OBISPO 387 13 C - CORDOBA - Medidor Nº 818282
 INTERNET-CORDOBA
 https://www.personal.com.ar/pagos
 REFERENTE DE PAGO:3000783909010001
+3000783909010001
 
 ---------------------------------------------------------------------------------------------------
 EPEC

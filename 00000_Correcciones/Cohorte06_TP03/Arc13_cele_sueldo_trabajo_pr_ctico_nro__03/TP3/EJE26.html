@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Ejercicio 26</title>
+
+    <style>
+
+        body {
+
+            background-color: #f2f2f2;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+
+        h1 {
+
+            color: #0b5394;
+        }
+
+
+        input, select {
+
+            width: 250px;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            border: 1px solid gray;
+
+            font-size: 16px;
+        }
+
+
+        button {
+
+            background-color: #0b5394;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        button:hover {
+
+            background-color: #073763;
+        }
+
+
+        h2 {
+
+            margin-top: 20px;
+
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Cálculo de Insulina</h1>
+
+    <!-- glucosa -->
+
+    <input type="number" id="glucosa" placeholder="Nivel de glucosa">
+
+    <br><br>
+
+    <!-- peso -->
+
+    <input type="number" id="peso" placeholder="Peso corporal">
+
+    <br><br>
+
+    <!-- tipo diabetes -->
+
+    <select id="tipoDiabetes">
+
+        <option value="1">Tipo 1</option>
+
+        <option value="2">Tipo 2</option>
+
+    </select>
+
+    <br><br>
+
+    <button id="btnCalcular">
+
+        Calcular Dosis
+
+    </button>
+
+    <h2 id="resultado"></h2>
+
+    <script type="module" src="controlador26.js"></script>
+
+</body>
+
+</html>

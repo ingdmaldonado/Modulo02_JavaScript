@@ -1,0 +1,138 @@
+
+ 
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Ejercicio 22</title>
+
+    <style>
+
+        body {
+
+            background-color: #f2f2f2;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+
+        h1 {
+
+            color: #4fe106;
+        }
+
+
+        input, select {
+
+            width: 300px;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            border: 1px solid gray;
+
+            font-size: 16px;
+        }
+
+
+        button {
+
+            background-color: #c2d008;
+
+            color: white;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        button:hover {
+
+            background-color: #e91357;
+        }
+
+
+        h2 {
+
+            margin-top: 20px;
+
+            color: rgb(241, 7, 135);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Sobre Tasa de Bebidas</h1>
+
+    <!-- importe -->
+
+    <input type="number"
+    id="importeBase"
+    placeholder="Importe base">
+
+    <br><br>
+
+    <!-- tipo bebida -->
+
+    <select id="tipoBebida">
+
+        <option value="1">
+            Agua plástico
+        </option>
+
+        <option value="2">
+            Agua retornable
+        </option>
+
+        <option value="3">
+            Gaseosa plástico
+        </option>
+
+        <option value="4">
+            Gaseosa retornable
+        </option>
+
+        <option value="5">
+            Energética
+        </option>
+
+        <option value="6">
+            Otra bebida
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <button id="btnCalcular">
+
+        Calcular Impuesto
+
+    </button>
+
+    <h2 id="resultado"></h2>
+
+    <script type="module" src="controlador22.js"></script>
+
+</body>
+
+</html>

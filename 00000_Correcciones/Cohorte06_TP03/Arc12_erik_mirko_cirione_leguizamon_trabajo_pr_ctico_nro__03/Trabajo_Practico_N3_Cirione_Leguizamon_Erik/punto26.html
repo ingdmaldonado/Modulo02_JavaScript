@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto26</title>
+</head>
+
+<body>
+    <h1>Punto 26</h1>
+
+    <h2>Cálculo de Dosis de Insulina</h2>
+
+    <div>
+        <label for="glucosa">Nivel de glucosa en sangre (mg/dL):</label>
+        <input type="number" id="glucosa" placeholder="Ej: 190">
+    </div>
+    <br>
+
+    <div>
+        <label for="peso">Peso Corporal (kg):</label>
+        <input type="number" id="peso" placeholder="Ej: 75">
+    </div>
+    <br>
+
+    <div>
+        <label for="tipoDiabetes">Tipo de Diabetes:</label>
+        <select id="tipoDiabetes">
+            <option value="0">Seleccione una opción</option>
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+        </select>
+    </div>
+
+    <hr>
+    <br>
+
+    <button id="btnCalcularDosis">Calcular Dosis</button>
+    <button id="btnGuardar">Guardar Datos</button>
+    <button id="btnRecuperar">Recuperar Datos</button>
+
+    <h3>Resultado: <span id="resultadoDosis">0</span> unidades</h3>
+
+
+
+    <script src="controladorPunto26.js" type="module"></script>
+</body>
+
+</html>
