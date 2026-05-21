@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N° 3 - Ejercicio 19</title>
+</head>
+
+<body>
+    <main>
+            <fieldset>
+                <legend>Precio de Venta</legend><br>
+                <label for="importeProducto">Precio producto</label>
+                <input type="number" id="importeProducto" placeholder="$$$"><br><br>
+                <label for="margenGanancia">Margen de ganancia</label>
+                <input type="number" id="margenGanancia" placeholder="% de ganancia"><br><br>
+                <button id="btnCalcular">Calcular</button>
+                <div>
+                    <button id="btnGuardar">Guardar</button>
+                    <button id="btnRecuperar">Recuperar</button>
+                </div>
+                <p>Precio de venta (Sin impuestos): <strong id="resultado"></strong></p>
+            </fieldset>
+    </main>
+    <script src="controlador19.js" type="module"></script>
+</body>
+
+</html>

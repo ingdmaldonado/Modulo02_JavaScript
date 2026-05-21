@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>EJERCICIO 22</h1>
+
+    <label for="importeBase">Importe Base ($):</label>
+    <input type="number" id="idImporteBase" placeholder="Ej. 1000">
+
+    <br>
+
+     <label for="tipoBebida">Tipo de Bebida:</label>
+            <select id="idTipoBebida">
+                <option value="1">1 – Agua en envases plásticos</option>
+                <option value="2">2 – Agua en envases retornables</option>
+                <option value="3">3 – Gaseosa azucarada plástica</option>
+                <option value="4">4 – Gaseosa azucarada retornable</option>
+                <option value="5">5 – Bebidas Energéticas</option>
+                <option value="6">6 – Otra bebida no clasificada</option>
+            </select>
+
+        <button id="idBtnCalcular" class="btnCalcular">Calcular</button>
+        <button id="idBtnGuardar" class="btnGuardar">Guardar </button>
+        <button id="idBtnRecuperar" class="btnRecuperar">Recuperar</button>
+        <br>
+
+        <label for="idResultado">el resultado es </label>
+        <h3 id="idResultado"></h3>
+
+        <script type="module" src="controlador22.js"></script>
+       
+    
+</body>
+</html>

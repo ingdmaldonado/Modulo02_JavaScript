@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3</title>
+</head>
+
+<body>
+    <h1>Ejercicio 26° - Calculo de Dosis de Insulina</h1>
+
+
+    <label for="idTipoDiabetes">Seleccionar tipo de diabetes</label>
+    <select id="idTipoDiabetes">
+        <option value="1">Tipo 1</option>
+        <option value="2">Tipo 2</option>
+    </select>
+
+    <br>
+    <label for="idPesoCorporal">Ingrese peso corporal: </label>
+    <input type="number" id="idPesoCorporal" placeholder="En kg">
+    <br>
+
+    <br>
+    <label for="idNivelGlucosa">Ingrese nivel de Glucosa: </label>
+    <input type="number" id="idNivelGlucosa" placeholder="Ingresar nivel glucosa">
+    <br>
+    <br>
+    <button id="idCalculoInsulina">Calcular dosis de insulina</button>
+
+    <h2 id="idResultadoDosis">..</h2>
+    <br>
+    <br>
+    <button id="idGuardar">Guardar</button>
+    <button id="idRecuperar">Recuperar</button>
+
+    <script type="module" src="controlador26.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23</title>
+</head>
+<body>
+    <h1>Ejercicio 23</h1>
+    <p>Aguas de Catamarca ECSAPEM - Calcular importe a pagar según consumo.</p>
+    <ul>
+        <li>Primeros 50 m³: $350,00 por m³ (mínimo 50 m³)</li>
+        <li>Del m³ 51 al 70: $555,20 por m³</li>
+        <li>Más de 70 m³: $1.552,20 por m³</li>
+    </ul>
+
+    <label for="metros">Metros cúbicos consumidos:</label>
+    <input type="number" id="metros">
+    <br><br>
+    <button id="calcular">Calcular Importe</button>
+    <button id="guardar">Guardar</button>
+    <button id="recuperar">Recuperar</button>
+
+    <p id="resultado"></p>
+
+    <script type="module" src="controlador23.js"></script>
+</body>
+</html>

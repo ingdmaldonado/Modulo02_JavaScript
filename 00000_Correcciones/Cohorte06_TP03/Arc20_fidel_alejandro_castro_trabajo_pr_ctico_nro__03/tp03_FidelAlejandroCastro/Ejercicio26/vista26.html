@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N° 3 - Ejercicio 26</title>
+</head>
+
+<body>
+    <main>
+        <fieldset>
+            <legend>Dosis de insulina</legend><br>
+            <label for="nivelDeGlucosa">Nivel de glucosa en sangre:</label><br>
+            <input type="number" id="nivelDeGlucosa" placeholder="Ingresa nivel de glucosa"><br><br>
+            <label for="pesoCorporal">Peso corporal:</label><br>
+            <input type="number" id="pesoCorporal" placeholder="Ingresa tu peso en KG"><br><br>
+            <label for="opciones">Elige el tipo de diabetes:</label>
+            <select name="opciones" id="opciones">
+                <option value="1" selected>Tipo 1</option>
+                <option value="2">Tipo 2</option>
+            </select><br><br>
+            <button id="btnCalcular">Calcular</button>
+            <div>
+                <button id="btnGuardar">Guardar</button>
+                <button id="btnRecuperar">Recuperar</button>
+            </div>
+            <p>Insulina recomendada: <strong id="resultado"></strong></p>
+        </fieldset>
+    </main>
+    <script src="controlador26.js" type="module"></script>
+</body>
+
+</html>

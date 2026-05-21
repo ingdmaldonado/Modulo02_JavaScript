@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(51, 58, 102);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h1,h3{
+    margin-top: 0px;
+    background-color: rgb(26, 111, 161);
+    padding: 5px;
+    text-align: center;
+}
+h2,h5{
+    background-color: rgb(19, 19, 70);
+    text-align: center;
+}
+article{
+    border: rgb(19, 10, 73);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #328199;
+    padding: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+}  
+label{
+    color: black;
+    
+}
+button{
+    padding: 3px;
+    border-radius: 5px;
+}
+select {
+    padding: 5px;
+
+}

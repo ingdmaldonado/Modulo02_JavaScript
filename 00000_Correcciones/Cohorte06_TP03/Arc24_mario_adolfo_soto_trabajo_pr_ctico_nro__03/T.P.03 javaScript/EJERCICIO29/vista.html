@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajo practico 29</title>
+    <style>
+   
+        body{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #a9b0b8;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor{
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+            max-width: 450px;
+        }
+
+        h1{
+            margin-bottom: 25px;
+            color: #1e3c72;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        
+
+        label{
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+            font-weight: bold;
+            max-width: 100%;
+        }
+
+        input[type="text"], select{
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus{
+            border-color: #2a5298;
+            box-shadow: 0px 0px 10px rgba(42,82,152,0.5);
+        }
+
+        button{
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        #btnGuardar{
+            background-color: #28a745;
+            color: white;
+        }
+
+        #btnGuardar:hover{
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        #btnRecuperar{
+            background-color: #007bff;
+            color: white;
+        }
+
+        #btnRecuperar:hover{
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .grupo1{
+            display: grid;
+            grid-template-columns: auto;
+            gap: 12px;
+            margin: 3px;
+        }
+
+         
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+    <h1>trabajo practico Nº29</h1>
+   
+    <div class="grupo1">
+    <label for="idTexto">Ingrese el texto</label>
+    <input type="text" id="idTexto" placeholder="ingrese el texto">
+    <h3 id="resultado">Aca se muestra el resultado</h3>
+    </div>
+    <button id="btncalcular">Calcular</button>
+    <button id="btnGuardar">guardar</button>
+    <button id="btnRecuperar">recuperar</button>
+    </div>
+
+
+
+    <script src="controlador.js" type="module"></script>
+    
+</body>
+</html>

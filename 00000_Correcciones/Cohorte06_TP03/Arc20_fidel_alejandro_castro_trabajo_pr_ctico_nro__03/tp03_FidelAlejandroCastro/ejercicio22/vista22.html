@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N° 3 - Ejercicio 22</title>
+</head>
+
+<body>
+    <main>
+        <fieldset>
+            <legend>Impuesto (sobre tasa)</legend><br>
+            <label for="opciones">Elige una opción:</label>
+            <select name="opciones" id="opciones">
+                <option value="1">Bebidas Agua en envases plásticos</option>
+                <option value="2">Bebidas Agua en envases retornables</option>
+                <option value="3">Bebidas Gaseosas Azucaradas en envases plásticos</option>
+                <option value="4">Bebidas Gaseosas Azucaradas en envases retornables</option>
+                <option value="5">Bebidas Energéticas</option>
+                <option value="6">Cualquier otra bebida no clasificada</option>
+            </select><br><br>
+
+            <label for="importeBase">Importe base de la bebida</label>
+            <input type="number" id="importeBase" placeholder="Ingresa el importe base"><br><br>
+            <button id="btnCalcular">Calcular</button>
+            <div>
+                <button id="btnGuardar">Guardar</button>
+                <button id="btnRecuperar">Recuperar</button>
+            </div>
+            <p>El impuesto aplicado es: <strong id="resultado"></strong></p>
+        </fieldset>
+    </main>
+    <script src="controlador22.js" type="module"></script>
+</body>
+
+</html>
