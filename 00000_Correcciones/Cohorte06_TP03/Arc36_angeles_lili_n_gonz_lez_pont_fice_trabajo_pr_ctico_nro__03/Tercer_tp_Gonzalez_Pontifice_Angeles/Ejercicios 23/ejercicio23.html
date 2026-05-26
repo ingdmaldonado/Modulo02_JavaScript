@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICO N°3</title>
+</head>
+<body>
+    <h1>Ejercicio 23 </h1>
+    <p>
+        Definir una arrow function que reciba como parámetro una cadena de texto y determine si la misma no
+        contiene ningún dígito numérico (del 0 al 9).
+        La función debe recorrer la cadena carácter por carácter utilizando un ciclo for. Durante el recorrido, analizar
+        cada carácter y comprobar si se encuentra dentro del rango de los números '0' a '9'.
+        Si se detecta algún número, se debe interrumpir inmediatamente el bucle con break y devolver el valor
+        lógico false, ya que la cadena deja de cumplir la condición “no contiene números”.
+        En caso de recorrer la cadena completa sin encontrar ningún número, la función deberá devolver true.
+        Nota: Debe devolver un boolean (true ó false).</p>
+    
+    <h2>Ingrese los metros cúbicos consumidos</h2>
+    <input type="number" id="metros" placeholder="Ejemplo: 85" step="0.01">
+    <br><br>
+    <button onclick="calcularFacturaAgua()">Calcular Importe a Pagar</button>
+    
+    <div id="resultado"></div>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 01</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+   
+    <div class="bg-[#F2F2F2] text-slate-700 p-6">
+        <h2 class="text-center text-3xl font-bold mb-4 md:text-left">EJERCICIO 01</h2>
+
+        <p class="text-center max-w-4xl mx-auto mb-6">
+            Ingresar dos números (A y B) y calcular:
+        </p>
+
+        <ul class="text-center">
+            <li>Suma (A + B)</li>
+            <li>Resta (A - B)</li>
+            <li>Producto (A * B)</li>
+            <li>Cociente (A / B)</li>
+        </ul>
+    </div>
+
+   
+    <div class="mt-10">
+        <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+                Ingreso de datos
+            </h3>
+
+            <label class="block mb-2 text-sm text-gray-700">Número A</label>
+            <input type="number" id="numA"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el número A">
+
+            <label class="block mb-2 text-sm text-gray-700">Número B</label>
+            <input type="number" id="numB"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el número B">
+
+            <button type="button" id="btnCalcular"
+                class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all mb-4">
+                CALCULAR
+            </button>
+
+         
+            <div id="resultado" class="bg-gray-100 p-4 rounded text-sm"></div>
+
+        </form>
+    </div>
+
+ 
+    <footer class="bg-[#8C0303] mt-10">
+        <p class="text-white text-center text-[12px] p-5">
+            Copyrigth &copy; 2026
+        </p>
+    </footer>
+
+    <script src="ejercicio1.js"></script>
+</body>
+</html>

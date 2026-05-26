@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+    <div class="bg-[#F2F2F2] text-slate-700 p-6">
+        <h2 class="text-center text-3xl font-bold mb-4 ">EJERCICIO 12</h2>
+
+        <p class="text-center max-w-4xl mx-auto mb-6">
+          El programa One Shot Plus fue un beneficio implementado en la provincia de Catamarca en
+conjunto con el Banco Nación para incentivar el consumo en comercios locales.
+        </p>
+
+        <ul class="text-center">
+            <li>El beneficio consistía en:</li>
+            <li>50% de reintegro sobre el monto de la compra
+</li>
+            <li>Tope máximo de reintegro: $80.000</li>
+              
+            
+        </ul>
+        <br>
+ <p class="text-center max-w-4xl mx-auto mb-6">
+          El programa debe:
+        </p>
+        <p class="text-center max-w-4xl mx-auto mb-6">
+        1. Solicitar al usuario:
+        </p>
+      <ul class="text-center">
+            <li>El día de la compra</li>
+            <li>El importe de la compra</li>       
+              
+        </ul>
+  <p class="text-center max-w-4xl mx-auto mb-6">
+        2. Verificar si la compra fue realizada un viernes, sábado o domingo.
+
+        </p>
+      <ul class="text-center">
+            <li>Si no fue uno de esos días, no se aplica el beneficio.</li>
+        </ul>
+
+   <p class="text-center max-w-4xl mx-auto mb-6">
+       3. Si corresponde el beneficio:  
+        </p>
+      <ul class="text-center">
+            <li>calcular el 50% del importe de la compra</li>
+            <li>verificar si el reintegro supera el tope de $80.000</li> 
+            <li>si lo supera, aplicar solamente el tope</li>      
+              
+        </ul>
+      <p class="text-center max-w-4xl mx-auto mb-6">
+       4.Mostrar:
+        </p>
+      <ul class="text-center">
+            <li>día de la compra</li>
+            <li>importe de la compra</li> 
+            <li>reintegro obtenido</li>
+            <li>importe final pagado por el cliente</li>      
+              
+        </ul>
+
+
+        
+
+    </div>
+
+    <div class="mt-10">
+        <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+                Ingreso de datos
+            </h3>
+
+            <label class="block mb-2 text-sm text-gray-700">Compra</label>
+            <input type="number" id="idBtnProducto"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el monto de la compra">
+
+        <label class="block mb-2 text-sm text-gray-700">Día de la compra</label>
+
+<select id="idBtnDia"
+    class="w-full border border-gray-300 p-2 rounded mb-4">
+
+    <option value="">Seleccione un día</option>
+    <option value="lunes">Lunes</option>
+    <option value="martes">Martes</option>
+    <option value="miercoles">Miércoles</option>
+    <option value="jueves">Jueves</option>
+    <option value="viernes">Viernes</option>
+    <option value="sabado">Sábado</option>
+    <option value="domingo">Domingo</option>
+
+</select>
+            
+             <label class="block mb-2 text-sm text-gray-700">Resultado</label>
+          <textarea class="w-full border border-gray-300 p-2 rounded mb-4" rows="4" id="idResultado" required></textarea>    
+
+            <button type="button" id="idBtnCalcular"
+                class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all mb-4">
+                CALCULAR
+            </button>
+
+        
+            <div id="idBtnresultado" class="bg-gray-100 p-4 rounded text-sm"></div>
+
+        </form>
+    </div>
+
+    <footer class="bg-[#8C0303] mt-10">
+        <p class="text-white text-center text-[12px] p-5">
+            Copyrigth &copy; 2026
+        </p>
+    </footer>
+
+    <script src="Ejercicio12.js"></script>
+</body>
+</html>

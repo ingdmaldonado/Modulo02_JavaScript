@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+    <div class="bg-[#F2F2F2] text-slate-700 p-6">
+        <h2 class="text-center text-3xl font-bold mb-4 ">EJERCICIO 11</h2>
+
+        <p class="text-center max-w-4xl mx-auto mb-6">
+          Un local de venta de comida rápida, lanza su aplicación online que le permite al cliente pagar por la misma
+y además aclara que se incluye en el precio total el costo del envío dependiendo la zona en la que vive el
+cliente
+        </p>
+
+        <ul class="text-center">
+            <li>1) Zona Centro = $ 2500,00</li>
+            <li>2) Zona Oeste = $ 3750,00</li>
+            <li>3) Zona Norte = $ 4225,00</li>
+            <li>4) Zona Sur = $ 5222,50</li>
+            <li>5) Zona Este = $ 4288,50</li>         
+            
+        </ul>
+        <br>
+ <p class="text-center max-w-4xl mx-auto mb-6">
+          Debe ingresar el importe de la compra, sumarle el costo del envío en función de la zona del cliente. 
+        </p>
+        <p class="text-center max-w-4xl mx-auto mb-6">
+         Recomendación: Es mejor guardar los costos de envío en variables, de tal forma que si en un futuro cambian,
+no haya que tocar la lógica del programa, ni ver todo el recorrido, sino simplemente cambiar los precios.
+
+        </p>
+
+     
+        
+
+    </div>
+
+    <div class="mt-10">
+        <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+                Ingreso de datos
+            </h3>
+
+            <label class="block mb-2 text-sm text-gray-700">Compra</label>
+            <input type="number" id="idBtnProducto"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el monto de la compra">
+
+          <label class="block mb-2 text-sm text-gray-700">Zona</label>
+
+<select id="idBtnZona"
+    class="w-full border border-gray-300 p-2 rounded mb-4">
+
+    <option value="">Seleccione zona</option>
+    <option value="1">Centro</option>
+    <option value="2">Oeste</option>
+    <option value="3">Norte</option>
+    <option value="4">Sur</option>
+    <option value="5">Este</option>
+
+</select>
+            
+             <label class="block mb-2 text-sm text-gray-700">Resultado</label>
+          <textarea class="w-full border border-gray-300 p-2 rounded mb-4" rows="4" id="idResultado" required></textarea>    
+
+            <button type="button" id="idBtnCalcular"
+                class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all mb-4">
+                CALCULAR
+            </button>
+
+        
+            <div id="idBtnresultado" class="bg-gray-100 p-4 rounded text-sm"></div>
+
+        </form>
+    </div>
+
+    <footer class="bg-[#8C0303] mt-10">
+        <p class="text-white text-center text-[12px] p-5">
+            Copyrigth &copy; 2026
+        </p>
+    </footer>
+
+    <script src="Ejercicio11.js"></script>
+</body>
+</html>

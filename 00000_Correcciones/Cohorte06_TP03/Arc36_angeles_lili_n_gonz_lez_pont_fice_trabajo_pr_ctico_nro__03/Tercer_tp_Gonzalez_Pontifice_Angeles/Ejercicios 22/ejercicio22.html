@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO PRACTICO N° 22</title>
+</head>
+<body>
+    <h1>Ejercicio 22</h1>
+    <p>Realizar una arrow function que reciba el Importe Base de la Bebida y el tipo según la clasificación, y devuelva la sobre tasa correspondiente.</p>
+    
+    <h2>Ingrese los datos:</h2>
+    
+    <label>Importe Base:</label><br>
+    <input type="number" id="importeBase" placeholder="Ingrese el importe" step="0.01">
+    <br><br>
+    
+    <label>Tipo de Bebida:</label><br>
+    <select id="tipoBebida">
+        <option value="">Seleccione tipo...</option>
+        <option value="1">1 - Agua en envases plásticos</option>
+        <option value="2">2 - Agua en envases retornables</option>
+        <option value="3">3 - Gaseosas Azucaradas plásticas</option>
+        <option value="4">4 - Gaseosas Azucaradas retornables</option>
+        <option value="5">5 - Bebidas Energéticas</option>
+        <option value="6">6 - Otra bebida</option>
+    </select>
+    <br><br>
+    
+    <button onclick="calcularSobreTasa()">Calcular Sobre Tasa</button>
+    
+    <div id="resultado"></div>
+
+    <script type="moddelo" src="controlador.js"></script>
+</body>
+</html>

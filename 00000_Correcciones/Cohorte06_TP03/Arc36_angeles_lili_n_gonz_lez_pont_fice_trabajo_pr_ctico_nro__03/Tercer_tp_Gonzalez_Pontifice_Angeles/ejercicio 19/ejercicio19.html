@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO PRÁCTICO N°3</title>
+</head>
+<body>
+    <H1>Ejercicio 19</H1>
+    <p>
+        Realizar una arrow function que reciba dos parámetros de entrada. El parámetro 1 será el importe de
+        compra de un producto, el segundo será el margen de ganancia que se aplicará sobre ese producto, la función
+        debe retornar el precio de venta que será igual a aplicarle el % de margen de ganancia. La función debe retornar
+        el precio de venta (sin impuestos).
+        Nota: Debe devolver un número </p>
+        <label for="precioCompra">Importe de compra:</label>
+        <br>
+        <input type="number" id="precioCompra" step="0.01" placeholder="Ingrese precio de compra"><br>
+        <br>
+        <label for="margen">Margen de ganancia (%):</label>
+        <br>
+        <input type="number" id="margen" step="0.01" placeholder="Ingrese margen de ganancia"><br><br>
+    
+        <hr>
+        <button id="btnCalcular">Calcular</button>
+        <button id="btnGuardar">Guardar</button>
+        <button id="btnRecuperar">Recuperar</button>
+    
+        <h3 id="resultado"></h3>
+
+        <script src="controlador.js" type="module"></script>
+    
+    
+    </body>
+</html>
