@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+<body>
+    <h1>Ejercicio 22</h1>
+    <h2>Cálculo de sobre tasa a bebidas</h2>
+    <label for="importe">Importe de la bebida:</label>
+    <input type="number" name="importe" id="importe" min="0">
+    <input type="button" value="Calcular" name="botonCalcular" id="botonCalcular">
+    <br>
+    <br>
+    <fieldset>
+        <legend>Tipo de bebida</legend>
+        <label>
+            <input type="radio" name="tipoBebida" id="aguaPlastico" value="1">
+            Agua en envase plástico
+        </label>
+        <label>
+            <input type="radio" name="tipoBebida" id="aguaRetornable" value="2">
+            Agua en envase retornable
+        </label>
+        <label>
+            <input type="radio" name="tipoBebida" id="gaseosaPlastico" value="3">
+            Gaseosa azucarada en envase plástico
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="tipoBebida" id="gaseosaRetornable" value="4">
+            Gaseosa azucarada en envase retornable
+        </label>
+        <label>
+            <input type="radio" name="tipoBebida" id="bebidaEnergetica" value="5">
+            Bebida energédica
+        </label>
+        <label>
+            <input type="radio" name="tipoBebida" id="bebidaSinClasificar" value="6">
+            Sin clasificar
+        </label>
+    </fieldset>
+    <p name="resultado" id="resultado"></p>
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

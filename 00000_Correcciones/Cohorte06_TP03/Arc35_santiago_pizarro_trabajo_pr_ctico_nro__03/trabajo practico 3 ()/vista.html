@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TP 03 - JavaScript DOM y Arrow Functions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        h1 span {
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: normal;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+
+        .tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 15px;
+        }
+
+        .tab-btn {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            background: #ddd;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        .tab-btn.active {
+            background: #4a90d9;
+            color: white;
+            border-color: #3a7bc8;
+        }
+
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        .card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .card h2 span {
+            background: #4a90d9;
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 7px;
+            border-radius: 3px;
+            margin-right: 6px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.82rem;
+            margin-bottom: 3px;
+            color: #444;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 6px 8px;
+            font-size: 0.88rem;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .form-row input,
+        .form-row select {
+            width: 100%;
+        }
+
+        button.btn-calcular {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background: #4a90d9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            margin-top: 4px;
+        }
+
+        button.btn-calcular:hover {
+            background: #3a7bc8;
+        }
+
+        .resultado-box {
+            margin-top: 10px;
+            padding: 8px 10px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #555;
+            min-height: 34px;
+        }
+
+        .resultado-activo {
+            background: #e8f5e9;
+            border-color: #66bb6a;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .resultado-total {
+            background: #fff8e1;
+            border-color: #ffb300;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        .info-note {
+            font-size: 0.78rem;
+            color: #555;
+            background: #f9f9f9;
+            border-left: 3px solid #4a90d9;
+            padding: 6px 10px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .header-actions {
+            margin: 10px 0 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-guardar, .btn-recuperar {
+            padding: 6px 14px;
+            font-size: 0.82rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            border: 1px solid #bbb;
+        }
+
+        .btn-guardar {
+            background: #4a90d9;
+            color: white;
+            border-color: #3a7bc8;
+        }
+
+        .btn-recuperar {
+            background: #eee;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TP N° 03 - Javascript <span>/ DOM &amp; Arrow Functions - Ejercicios 19 al 31</span></h1>
+
+    <div class="header-actions">
+        <button id="btn-guardar"   class="btn-guardar">💾 Guardar estado</button>
+        <button id="btn-recuperar" class="btn-recuperar">📂 Recuperar estado</button>
+    </div>
+
+    <div class="tabs-nav">
+        <button class="tab-btn active" data-target="panel-19">Ej. 19 · Precio</button>
+        <button class="tab-btn" data-target="panel-20-21">Ej. 20-21 · Notas</button>
+        <button class="tab-btn" data-target="panel-22">Ej. 22 · Bebidas</button>
+        <button class="tab-btn" data-target="panel-23-25">Ej. 23-25 · Aguas Catamarca</button>
+        <button class="tab-btn" data-target="panel-26">Ej. 26 · Insulina</button>
+        <button class="tab-btn" data-target="panel-27-28">Ej. 27-28 · Vocales/Cons.</button>
+        <button class="tab-btn" data-target="panel-29-31">Ej. 29-31 · Verificaciones</button>
+    </div>
+
+    <!-- ─── Ejercicio 19 ─────────────────────────────────────── -->
+    <div id="panel-19" class="tab-panel active">
+        <div class="card">
+            <h2><span>Ej. 19</span> Precio de Venta con Margen de Ganancia</h2>
+            <div class="info-note">
+                Calcula el precio de venta aplicando el margen de ganancia sobre el importe de compra.<br>
+                Fórmula: PrecioVenta = Importe + (Importe × Margen / 100)
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="inp-importe-compra">Importe de Compra ($)</label>
+                    <input type="number" id="inp-importe-compra" min="0" step="0.01" placeholder="Ej: 1500.00"/>
+                </div>
+                <div>
+                    <label for="inp-margen">Margen de Ganancia (%)</label>
+                    <input type="number" id="inp-margen" min="0" step="0.01" placeholder="Ej: 30"/>
+                </div>
+            </div>
+            <button id="btn-calcular-19" class="btn-calcular">Calcular</button>
+            <div id="out-19" class="resultado-box">— Resultado —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicios 20 y 21 ───────────────────────────────── -->
+    <div id="panel-20-21" class="tab-panel">
+        <div class="card">
+            <h2><span>Ej. 20</span><span>Ej. 21</span> Promedio de Notas y Calificación</h2>
+            <div class="info-note">
+                Ingresá las 3 notas. Se calcula el promedio (Ej.20) y la calificación (Ej.21):<br>
+                ≤4 Desaprobado · &gt;4≤7 Aprobado · &gt;7≤9 Muy Bueno · 10 Excelente
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="inp-nota1">Nota 1</label>
+                    <input type="number" id="inp-nota1" min="0" max="10" step="0.01" placeholder="0 – 10"/>
+                </div>
+                <div>
+                    <label for="inp-nota2">Nota 2</label>
+                    <input type="number" id="inp-nota2" min="0" max="10" step="0.01" placeholder="0 – 10"/>
+                </div>
+            </div>
+            <label for="inp-nota3">Nota 3</label>
+            <input type="number" id="inp-nota3" min="0" max="10" step="0.01" placeholder="0 – 10"/>
+            <button id="btn-calcular-20-21" class="btn-calcular">Calcular</button>
+            <div id="out-20" class="resultado-box">— Promedio —</div>
+            <div id="out-21" class="resultado-box" style="margin-top:6px">— Calificación —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicio 22 ─────────────────────────────────────── -->
+    <div id="panel-22" class="tab-panel">
+        <div class="card">
+            <h2><span>Ej. 22</span> Sobretasa a las Bebidas</h2>
+            <div class="info-note">
+                Agua plástico 5‰ · Agua retornable 1‰ · Gaseosa azucarada plástico 7‰ ·
+                Gaseosa azucarada retornable 2‰ · Energética 15‰ · Otra bebida 1‰
+            </div>
+            <label for="sel-tipo-bebida">Tipo de Bebida</label>
+            <select id="sel-tipo-bebida">
+                <option value="1">1 – Agua en envase plástico (5‰)</option>
+                <option value="2">2 – Agua en envase retornable (1‰)</option>
+                <option value="3">3 – Gaseosa azucarada en envase plástico (7‰)</option>
+                <option value="4">4 – Gaseosa azucarada en envase retornable (2‰)</option>
+                <option value="5">5 – Bebida Energética (15‰)</option>
+                <option value="6">6 – Otra bebida no clasificada (1‰)</option>
+            </select>
+            <label for="inp-importe-bebida">Importe Base de la Bebida ($)</label>
+            <input type="number" id="inp-importe-bebida" min="0" step="0.01" placeholder="Ej: 5000.00"/>
+            <button id="btn-calcular-22" class="btn-calcular">Calcular</button>
+            <div id="out-22" class="resultado-box">— Resultado —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicios 23-25 ─────────────────────────────────── -->
+    <div id="panel-23-25" class="tab-panel">
+        <div class="card">
+            <h2><span>Ej. 23</span><span>Ej. 24</span><span>Ej. 25</span> Factura – Aguas de Catamarca ECSAPEM</h2>
+            <div class="info-note">
+                Bloque 1 → hasta 50 m³: $350,00/m³ (mínimo 50 m³)<br>
+                Bloque 2 → m³ 51 a 70: $555,20/m³<br>
+                Bloque 3 → excedente &gt;70 m³: $1.552,20/m³<br>
+                Sobre el importe base: Tasa Subsuelo 3% (Ej.24) + Tasa ENRE 1,2% (Ej.25)
+            </div>
+            <label for="inp-metros">Consumo en Metros Cúbicos (m³)</label>
+            <input type="number" id="inp-metros" min="0" step="1" placeholder="Ej: 55" />
+            <button id="btn-calcular-23-25" class="btn-calcular">Calcular Factura Completa</button>
+            <div id="out-23" class="resultado-box">— Importe Base (Ej.23) —</div>
+            <div id="out-24" class="resultado-box" style="margin-top:6px">— Tasa Subsuelo 3% (Ej.24) —</div>
+            <div id="out-25" class="resultado-box" style="margin-top:6px">— Tasa ENRE 1,2% (Ej.25) —</div>
+            <div id="out-total-agua" class="resultado-box resultado-total" style="margin-top:6px">— TOTAL FACTURA —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicio 26 ─────────────────────────────────────── -->
+    <div id="panel-26" class="tab-panel">
+        <div class="card">
+            <h2><span>Ej. 26</span> Cálculo de Dosis de Insulina</h2>
+            <div class="info-note">
+                Tipo 1: 50% del peso + 50% glucosa (solo si glucosa &gt; 180)<br>
+                Tipo 2: 20% del peso + 50% glucosa (solo si glucosa &gt; 180)
+            </div>
+            <label for="sel-tipo-diabetes">Tipo de Diabetes</label>
+            <select id="sel-tipo-diabetes">
+                <option value="1">Tipo 1</option>
+                <option value="2">Tipo 2</option>
+            </select>
+            <div class="form-row">
+                <div>
+                    <label for="inp-glucosa">Nivel de Glucosa (mg/dL)</label>
+                    <input type="number" id="inp-glucosa" min="0" step="1" placeholder="Ej: 200"/>
+                </div>
+                <div>
+                    <label for="inp-peso">Peso Corporal (kg)</label>
+                    <input type="number" id="inp-peso" min="0" step="0.1" placeholder="Ej: 70"/>
+                </div>
+            </div>
+            <button id="btn-calcular-26" class="btn-calcular">Calcular</button>
+            <div id="out-26" class="resultado-box">— Resultado —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicios 27-28 ─────────────────────────────────── -->
+    <div id="panel-27-28" class="tab-panel">
+        <div class="card">
+            <h2><span>Ej. 27</span><span>Ej. 28</span> Conteo de Vocales y Consonantes</h2>
+            <div class="info-note">
+                Recorre la cadena con un ciclo for, sin usar replace(), split() ni expresiones regulares.
+            </div>
+            <label for="inp-cadena-2728">Cadena de texto</label>
+            <input type="text" id="inp-cadena-2728" placeholder="Escribí cualquier texto aquí…"/>
+            <button id="btn-calcular-27-28" class="btn-calcular">Calcular</button>
+            <div id="out-27" class="resultado-box">— Vocales (Ej.27) —</div>
+            <div id="out-28" class="resultado-box" style="margin-top:6px">— Consonantes (Ej.28) —</div>
+        </div>
+    </div>
+
+    <!-- ─── Ejercicios 29-31 ─────────────────────────────────── -->
+    <div id="panel-29-31" class="tab-panel">
+
+        <div class="card">
+            <h2><span>Ej. 29</span> ¿Contiene al menos dos letras "s"?</h2>
+            <div class="info-note">
+                Usa ciclo for con contador. Sin includes() ni indexOf(). Retorna true o false.
+            </div>
+            <label for="inp-palabra-29">Palabra o texto</label>
+            <input type="text" id="inp-palabra-29" placeholder="Ej: sastre, sistemas…"/>
+            <button id="btn-calcular-29" class="btn-calcular">Verificar</button>
+            <div id="out-29" class="resultado-box">— Resultado —</div>
+        </div>
+
+        <div class="card">
+            <h2><span>Ej. 30</span> ¿Contiene al menos tres espacios en blanco?</h2>
+            <div class="info-note">
+                Usa ciclo for. Al detectar el 3er espacio ejecuta break y retorna true.
+            </div>
+            <label for="inp-cadena-30">Cadena de texto</label>
+            <input type="text" id="inp-cadena-30" placeholder="Escribí una frase con espacios…"/>
+            <button id="btn-calcular-30" class="btn-calcular">Verificar</button>
+            <div id="out-30" class="resultado-box">— Resultado —</div>
+        </div>
+
+        <div class="card">
+            <h2><span>Ej. 31</span> ¿La cadena NO contiene dígitos?</h2>
+            <div class="info-note">
+                Usa ciclo for. Al encontrar un dígito (0-9) ejecuta break y retorna false.
+            </div>
+            <label for="inp-cadena-31">Cadena de texto</label>
+            <input type="text" id="inp-cadena-31" placeholder="Ej: «hola mundo» ó «abc123»"/>
+            <button id="btn-calcular-31" class="btn-calcular">Verificar</button>
+            <div id="out-31" class="resultado-box">— Resultado —</div>
+        </div>
+
+    </div>
+
+    <script type="module" src="./controlador.js"></script>
+</body>
+</html>

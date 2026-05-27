@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 07</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+    <div class="bg-[#F2F2F2] text-slate-700 p-6">
+        <h2 class="text-center text-3xl font-bold mb-4 ">EJERCICIO 07</h2>
+
+        <p class="text-center max-w-4xl mx-auto mb-6">
+           Un comercio que vende bolsas de alimentos para mascotas trabaja y comercializa únicamente con tres
+grandes marcas de alimentos para perros lo que le permite trabajar con descuentos muy interesantes para sus
+clientes. Las marcas con las que trabaja son:
+
+<div class="flex justify-center mt-6">
+    <img src= "Imagenes/Sin título.jpg" ="descripcion"
+         class="max-w-full h-auto rounded-lg shadow-md">
+</div>
+<br>
+
+
+
+        </p>
+
+        <ul class="text-center">
+            <li>Realice un programa en JavaScript que permita ingresar el código del producto y la cantidad de bolsas a
+comprar y que solo determine el importe total a pagar.</li>
+            
+            
+        </ul>
+    </div>
+
+    <div class="mt-10">
+        <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+                Ingreso de datos
+            </h3>
+
+            <label class="block mb-2 text-sm text-gray-700">Producto</label>
+            <input type="number" id="idBtnProducto"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el codigo del producto">
+
+            <label class="block mb-2 text-sm text-gray-700">Cantidad</label>
+            <input type="number" id="idBtnCantidad"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese la cantidad de bolsas">
+            
+             <label class="block mb-2 text-sm text-gray-700">Resultado</label>
+          <textarea class="w-full border border-gray-300 p-2 rounded mb-4" rows="4" id="idResultado" required></textarea>    
+
+            <button type="button" id="idBtnCalcular"
+                class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all mb-4">
+                CALCULAR
+            </button>
+
+   
+            <div id="idBtnresultado" class="bg-gray-100 p-4 rounded text-sm"></div>
+
+        </form>
+    </div>
+
+    <footer class="bg-[#8C0303] mt-10">
+        <p class="text-white text-center text-[12px] p-5">
+            Copyrigth &copy; 2026
+        </p>
+    </footer>
+
+    <script src="Ejercicio7.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    El Gobierno Nacional desea aplicar un impuesto (Sobre Tasa) a las bebidas en función de la siguiente 
+clasificación y tipo. 
+1  Bebidas Agua en envases plásticos = 5 ‰ (cinco por mil) 
+2  Bebidas Agua en envases retornables = 1 ‰ (uno por mil) 
+3  Bebidas Gaseosas Azucaradas en envases plásticos = 7 ‰ (siete por mil) 
+4  Bebidas Gaseosas Azucaradas en envases retornables = 2 ‰ (dos por mil) 
+5  Bebidas Energéticas = 15 ‰ (quince por mil) 
+6  Cualquier otra bebida no clasificada = 1 ‰ (uno por mil). 
+La función debe recibir el Importe Base de la Bebida, debe calcular y retornar la sobre Tasa, la 
+recaudación de ese impuesto tendrá destino a la protección del medio ambiente. 
+Nota: Debe devolver un número
+
+    <label for="idImporteBebida">ingrese el importe de compra</label>
+    <input type="number" id="idImporteBebida" placeholder="ingrese el importe de compra">
+
+    <label>Tipo de bebidas</label>
+    <select id="idTipoDeBebida">
+        <option value="plastico">envases de plastico</option>
+        <option value="retornable">envases retornables</option>
+        <option value="azucaradasPlastico">bebidas azucaradas en envase de plastico</option>
+        <option value="azucaradasRetornables">bebidas azucaradas en envase retornable</option>
+        <option value="bebidasEnergeticas">bebidas energeticas</option>
+        <option value="bebidaNoClasificada">bebidas no clasificadas</option>
+    </select>
+
+    <button id="btnCalcular">calcular</button>
+
+    <h2 id="idResultado"></h2>
+
+    <script src="EJERCICIO22.js" type="module"></script>
+</body>
+</html>

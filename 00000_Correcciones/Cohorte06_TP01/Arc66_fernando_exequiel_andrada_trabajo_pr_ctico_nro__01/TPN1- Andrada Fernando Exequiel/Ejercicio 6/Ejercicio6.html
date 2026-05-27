@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 06</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+    <div class="bg-[#F2F2F2] text-slate-700 p-6">
+        <h2 class="text-center text-3xl font-bold mb-4 ">EJERCICIO 06</h2>
+
+        <p class="text-center max-w-4xl mx-auto mb-6">
+         Banco Nación de la República Argentina, tiene una promoción muy importante para sus clientes
+denominada “one shot” que consta en realizar un importante de descuento del 50% en las compras del cliente,
+teniendo en cuenta que el descuento máximo a otorgar (descuento tope) es equivalente a 80.000,00 (ochenta mil
+pesos argentinos).
+Realice un programa que permita introducir el valor de la compra y calcular el porcentaje de descuento
+sabiendo que no se puede pasar el límite establecido.
+ 
+        </p>
+
+      
+    </div>
+
+    <div class="mt-10">
+        <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+            <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+                Ingreso de datos
+            </h3>
+
+            <label class="block mb-2 text-sm text-gray-700">Valor de la compra</label>
+            <input type="number" id="idBtnNumero"
+                class="w-full border border-gray-300 p-2 rounded mb-4"
+                placeholder="Ingrese el valor de la compra">
+
+             
+
+
+            
+             <label class="block mb-2 text-sm text-gray-700">Resultado</label>
+          <textarea class="w-full border border-gray-300 p-2 rounded mb-4" rows="4" id="idResultado" required></textarea>    
+
+            <button type="button" id="idBtnCalcular"
+                class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all mb-4">
+                CALCULAR
+            </button>
+
+            
+            <div id="idBtnresultado" class="bg-gray-100 p-4 rounded text-sm"></div>
+
+        </form>
+    </div>
+
+    <footer class="bg-[#8C0303] mt-10">
+        <p class="text-white text-center text-[12px] p-5">
+            Copyrigth &copy; 2026
+        </p>
+    </footer>
+
+    <script src="Ejercicio6.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Nro 26</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <div>
+        <h1>Calcular y determinar la dosis de Insulina</h1>
+
+        <div>
+            <label for="precio">Ingrese Nivel de glucosa en sangre:</label>
+            <input type="number" id="nivelGlucosa" />
+        </div>
+
+        <div>
+            <label for="precio">Ingrese Peso Corporal (en kilogramos):</label>
+            <input type="number" id="pesoCorporal" />
+        </div>
+
+        <div>
+            <p>Tipo de diabetes:</p>
+            <label for="tipo1">Tipo 1</label>
+            <input type="radio" id="tipo1" value="tipo1" name="tipoDeabete" />
+            <label for="tipo2">Tipo 2</label>
+            <input type="radio" id="tipo2" value="tipo2" name="tipoDeabete" />
+        </div>
+
+        <div>
+            <input type="submit" value="Calcular Dosis" id="calcularInsulina" />
+            <input type="reset" value="Borrar" id="limpiar" />
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="js/Controlador.js" type="module"></script>
+</body>
+
+</html>

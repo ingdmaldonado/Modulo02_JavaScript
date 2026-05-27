@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 26</title>
+</head>
+<body>
+
+    <h1>Cálculo de Insulina</h1>
+
+    <label for="idGlucosa">Nivel Glucosa</label>
+    <input type="number"id="idGlucosa">
+
+
+    <label for="idPeso">Ingrese el peso corporal</label>
+    <input type="number"id="idPeso">
+
+    <br><br>
+
+    <select id="idTipoDiabetes">
+
+        <option value="1">
+            Diabetes Tipo 1
+        </option>
+
+        <option value="2">
+            Diabetes Tipo 2
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <button id="idBtnCalcular">Calcular</button>
+
+    <button id="idBtnGuardar">Guardar</button>
+
+    <button id="idBtnRecuperar">Recuperar</button>
+
+    <h2 id="idResultado"></h2>
+
+    <script src="controlador.js"type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO PRACTICO N°3 </title>
+</head>
+<body>
+    <h1>Ejercicio 26</h1>
+    
+    <section>
+        <h2>Ingrese los datos del paciente</h2>
+        
+        <label>Nivel de glucosa en sangre (mg/dL):
+
+        </label><br>
+        <input type="number" id="glucosa" placeholder="Ej: 180">
+        <br>
+        <br>
+    
+        <label>Peso corporal (kg):</label>
+        <br>
+        <input type="number" id="peso" placeholder="Ej: 75">
+        <br>
+        <br>
+        <label>Tipo de Diabetes:</label><br>
+        <p>Para Tipo 1: El cálculo es el 50% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
+            este último término solamente si la glucosa es mayor a 180.</p>
+        <select id="tipoDiabetes">
+            <option value="">Seleccione...</option>
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+        </select>
+        <br><br>
+        <p>Para Tipo 2: El cálculo es el 20% del Peso corporal del paciente + el 50% del nivel de glucosa en sangre,
+            este último término solamente si la glucosa es mayor a 180.
+            La función debe retornar la dosis de insulina recomendada y recibir como parámetros de entrada
+            (argumentos) nivel de glucosa, peso corporal y tipo de diabetes</p>
+        <button onclick="calcularDosisInsulina()">Calcular Dosis de Insulina</button>
+        <p>Salidas de la aplicación: la aplicación debe indicar la insulina recomendada para el paciente.
+        </p>
+        <div id="resultado"></div>
+    </section>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

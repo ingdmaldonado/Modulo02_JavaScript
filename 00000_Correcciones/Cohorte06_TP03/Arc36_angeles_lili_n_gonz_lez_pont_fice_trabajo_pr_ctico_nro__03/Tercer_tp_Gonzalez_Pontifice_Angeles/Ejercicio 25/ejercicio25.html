@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 25</title>
+</head>
+<body>
+    <h1>Ejercicio 25</h1>
+    <p>Realizar una arrow function que reciba como parámetro el Importe Base de una factura de “Servicios
+        Públicos de Aguas de Catamarca” y partir de ese importe base calcule y devuelva la Tasa de Fiscalización ENRE
+        (Ente Regulador de Servicios Públicos) que corresponde al 1,2 % del importe Base ingresado como parámetro de
+        la arrow function.
+        Nota: Debe devolver un número</p>
+    <section>
+        <h2>Importe Base de la Factura</h2>
+        <input type="number" id="importeBase" placeholder="Ingrese el importe base" step="0.01">
+        <br>
+        <button onclick="calcularTasaENRE()">Calcular Tasa ENRE</button>
+        
+        <div class="resultado" id="resultado"></div>
+    </section>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

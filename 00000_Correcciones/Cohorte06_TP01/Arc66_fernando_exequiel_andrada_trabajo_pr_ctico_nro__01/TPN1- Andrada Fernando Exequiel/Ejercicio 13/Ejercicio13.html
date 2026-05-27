@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+</head>
+
+<body class="bg-slate-600 font-['Bahnschrift', sans-serif]">
+
+
+<div class="bg-[#F2F2F2] text-slate-700 p-6">
+    <h2 class="text-center text-3xl font-bold mb-4">EJERCICIO 13</h2>
+
+    <p class="text-center max-w-4xl mx-auto mb-6">
+        Programa Marcatón: calcular descuentos según rubro con tope máximo.
+    </p>
+
+    <ul class="text-center">
+        <li>Vestimenta  20% (tope $80.000)</li>
+        <li>Perfumería  20% (tope $80.000)</li>
+        <li>Librería 30% (tope $90.000)</li>
+        <li>Electrodomésticos  15% (tope $70.000)</li>
+        <li>Calzado  20% (tope $80.000)</li>
+    </ul>
+</div>
+
+
+<div class="mt-10">
+    <form class="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
+
+        <h3 class="text-xl font-semibold text-[#8C0303] mb-4 text-center">
+            Ingreso de datos
+        </h3>
+
+    
+        <label class="block mb-2 text-sm text-gray-700">Importe de la compra</label>
+        <input type="number" id="idBtnProducto"
+            class="w-full border border-gray-300 p-2 rounded mb-4"
+            placeholder="Ingrese el monto de la compra">
+
+        <label class="block mb-2 text-sm text-gray-700">Rubro</label>
+        <select id="idBtnRubro"
+            class="w-full border border-gray-300 p-2 rounded mb-4">
+
+            <option value="">Seleccione un rubro</option>
+            <option value="1">Vestimenta</option>
+            <option value="2">Perfumería</option>
+            <option value="3">Librería</option>
+            <option value="4">Electrodomésticos</option>
+            <option value="5">Calzado</option>
+
+        </select>
+
+    
+        <label class="block mb-2 text-sm text-gray-700">Resultado</label>
+        <textarea class="w-full border border-gray-300 p-2 rounded mb-4"
+            rows="5" id="idResultado" readonly></textarea>
+
+      
+        <button type="button" id="idBtnCalcular"
+            class="w-full bg-[#8C0303] text-white px-4 py-2 rounded hover:bg-[#a30404] transition-all">
+            CALCULAR
+        </button>
+
+    </form>
+</div>
+
+
+<footer class="bg-[#8C0303] mt-10">
+    <p class="text-white text-center text-[12px] p-5">
+        Copyright &copy; 2026
+    </p>
+</footer>
+
+<script src="Ejercicio13.js"></script>
+
+
+</body>
+</html>

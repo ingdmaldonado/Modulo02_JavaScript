@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+<body>
+    <h1>Ejercicio 22</h1>
+    <p>Calcular la Sobre Tasa de bebidas según su clasificación.</p>
+
+    <label for="importeBase">Importe base de la bebida:</label>
+    <input type="number" id="importeBase">
+    <br><br>
+    <label for="tipoBebida">Tipo de bebida:</label>
+    <select id="tipoBebida">
+        <option value="1">1 - Agua en envase plástico (5‰)</option>
+        <option value="2">2 - Agua en envase retornable (1‰)</option>
+        <option value="3">3 - Gaseosa azucarada en plástico (7‰)</option>
+        <option value="4">4 - Gaseosa azucarada retornable (2‰)</option>
+        <option value="5">5 - Bebida energética (15‰)</option>
+        <option value="6">6 - Otra bebida (1‰)</option>
+    </select>
+    <br><br>
+    <button id="calcular">Calcular Sobre Tasa</button>
+    <button id="guardar">Guardar</button>
+    <button id="recuperar">Recuperar</button>
+
+    <p id="resultado"></p>
+
+    <script type="module" src="controlador22.js"></script>
+</body>
+</html>

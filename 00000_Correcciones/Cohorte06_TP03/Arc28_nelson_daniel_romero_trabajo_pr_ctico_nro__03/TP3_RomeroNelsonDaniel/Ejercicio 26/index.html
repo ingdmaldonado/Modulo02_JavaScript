@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 26</title>
+</head>
+<body>
+    <h1>Ejercicio 26</h1>
+    <h2>Cálculo de dosis de insulina</h2>
+    <label for="peso">Peso corporal:</label>
+    <input type="number" name="peso" id="peso" min="0">
+    <br>
+    <label for="nivelGlucosa">Nivel de glucosa en sangre:</label>
+    <input type="number" name="nivelGlucosa" id="nivelGlucosa" min="0">
+    <br>
+    <label>Tipo de diabetes:</label>
+    <input type="radio" name="tipoDiabetes" id="diabetesTipo1" value="1">
+    <label for="diabetesTipo1">Tipo 1</label>
+    <input type="radio" name="tipoDiabetes" id="diabetesTipo2" value="2">
+    <label for="diabetesTipo2">Tipo 2</label>
+    <br>
+    <input type="button" value="Calcular" name="botonCalcular" id="botonCalcular">
+    <p name="resultado" id="resultado"></p>
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>
