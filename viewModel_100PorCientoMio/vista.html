@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase Final - View Model</title>
+</head>
+<body>
+  <h1>Clase Final - View Model</h1>
+  <label for="idNombre">Ingrese Nombre</label>
+  <input type="text" placeholder="Ingrese nombre" id="idNombre">
+  <button id="idBtnBuscar">Buscar</button>
+  <table border="2px">
+    <thead>
+      <th>
+        CUIT
+      </th>
+      <th>
+        NOMBRE
+      </th>
+      <th>
+        DOMICILIO
+      </th>
+      <th>
+        CONDICION
+      </th>
+      <th>
+        SELECCIONAR
+      </th>
+    </thead>
+    <tbody id="idCuerpoTabla">
+      <tr>
+        <td>22-999999999-1</td>
+        <td>MALDONADO</td>
+        <td>FRAY MAMERTO ESQUIU</td>
+        <td>1</td>
+        <td><input type="checkbox"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="idClientesSeleccionados">Mostrar Paises Elegidos</button>
+
+
+  <script src="controlador.js" type="module"></script>
+</body>
+</html>
