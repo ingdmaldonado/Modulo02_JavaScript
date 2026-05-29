@@ -1,0 +1,33 @@
+* que es el Sincronismo ?.
+
+* que es el Asincronismo ?.
+
+* cuales son las funciones, sintáxis, procesos en JavaScript que
+son asíncronos y porque ?.
+
+	-(1) mostrar setTimeOut
+
+		- auto guardado de cosas
+		- despúes de terminar de cargar algo, poner
+		un mensaje que diga proceso realizado y redirigirlo a otro lugar
+
+	-(2) explicar previamente lo de new Date()
+
+	-(3) mostrar un ejemplo de setInterval()
+
+		- hacer un reloj
+		- hacer consultas repetitivas a una API del BackEnd para que 
+		traiga datos sin necesidad que el usuario presione un botón
+		y reflejar esos datos en la pantalla.
+
+	-(4) Try/Catch
+
+		
+
+
+	-(5) fetch con async & await
+
+	- sirve para realizar consultas a APIs externas o propias.
+
+
+
