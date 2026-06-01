@@ -11,6 +11,8 @@ MUNICIPALIDAD
 https://tributariomuni.gob.ar/samweb/index.php?r=/objeto/objeto/index&to=1
 Identificador de Inmueble:
 040404506600059
+
+PAGADO POR MODO PERO NO ME VERIFICÓ QUE SE HAYA ACREDITADO EL PAGO
 ---------------------------------------------------------------------------------------------------
 AGUAS CORDOBESAS
 https://www.aguascordobesas.com.ar/espacioClientes/
@@ -24,6 +26,7 @@ CONTRATO VIEJO: 22377547
 CONTRATO NUEVO: 22472581
 Cuenta 22472581 SALGUERO OBISPO 387 13 C - CORDOBA - Medidor Nº 818282
 
+PAGADO POR MODO => CHEQUEAR DESPUES
 ---------------------------------------------------------------------------------------------------
 INTERNET-CORDOBA
 https://www.personal.com.ar/pagos
@@ -33,7 +36,8 @@ REFERENTE DE PAGO:3000783909010001
 ---------------------------------------------------------------------------------------------------
 EPEC
 CLIENTE: 725620  CONTRATO: 0272393507
-CLIENTE: 5639738 CONTRATO: 0272393507 => APARENTEMENTE ESTE ES EL ÚLTIMO 
+CLIENTE: 5639738 CONTRATO: 0272393507 =>
+CLIENTE: 6020198 CONTRATO: 0272393508 => ESTE ES EL ULTIMO QUE LO SAQUE DE LA FACTURA DE 05/2026
 
 ---------------------------------------------------------------------------------------------------
 
