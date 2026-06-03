@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO PRÁCTICO NRO. 04 – JAVASCRIPT</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>TRABAJO PRÁCTICO NRO. 04 – JAVASCRIPT</h1>
+
+    <div class="contenedor">
+        <!-------01---------->
+            <div class="caja">
+                <p>
+                    1  - Realice una función, que reciba como parámetro un vector de alumnos (puede ser de cualquier cohorte) los recorra con un forEach y muestre por consola, el apellido y el nombre.
+                </p>
+                <p>    
+                    Invoque esa misma función, pasándole como parámetro el vector de la cohorte01, luego el vector de la cohorte02 y así sucesivamente hasta la cuarta cohorte.
+                </p>
+                <button class="btn" id="idPunto1">Punto Nro 1</button>
+            </div>
+
+            <!-------02---------->
+            <div class="caja">
+                <p>
+                    2 - El profesor desea unificar todos los alumnos en un solo vector, dado que estructuralmente son       iguales, utilice spread operator para “unificar el contenido de las cuatro cohortes” en un solo vector. Muestre por consola el vector resultante.
+                </p>
+                <button class="btn" id="idPunto2">Punto Nro 2</button>
+            </div>
+
+            <!-------03---------->
+            <div class="caja">
+                <p>
+                    3 -Sobre los datos unificados, cree dos vectores nuevos, uno puede llamarse alumnosAprobados y el otro alumnosDesaprobados.
+                    <p>
+                        Para crear el vector de alumnos aprobados, aplique el método filter sobre el Vector que tiene todos los alumnos cuando la nota > 5;
+                    </p>
+                    <p>
+                        Para crear el vector de alumnos desaprobados, aplique el método filter sobre el Vector que tiene todos los alumnos cuando la nota <= 5;
+                    </p>
+                </p>
+                <button class="btn" id="idPunto3">Punto Nro 3</button>
+            </div>
+
+            <!-------04---------->
+            <div class="caja">
+                <p>
+                    4 - Sobre el vector Total de alumnos (cuatro cohortes), aplique el método “sort” = ordenar y ordene los 
+                        datos de todos esos alumnos por nota de menor a mayor.
+                </p>
+                <button class="btn" id="idPunto4">Punto Nro 4</button>
+            </div>
+
+            <!-------05---------->
+            <div class="caja">
+                <p>
+                   5 - Sobre el vector Total de alumnos, realice una búsqueda de los siguientes alumnos aplicando el 
+                    método “find” que tienen los vectores incorporados y busque algún alumno por su “dni”. El que ud. 
+                    Desee.
+                </p>
+                <input type="number" id="idBuscar">
+
+                <button class="btn" id="idPunto5">(Punto Nro 5) Buscar</button>
+
+                <p id="etiquetaValorBuscado">Valor buscado</p>
+            </div>
+
+            <!-------06---------->
+            <div class="caja">
+                <p>
+                    6 - Sobre el vector Total de alumnos, deseamos “contabilizar” la cantidad de alumnos aprobados, es 
+                        decir la cantidad de alumnos que tienen nota > 5; para ello utilicen el método reduce que tienen los 
+                        vectores incorporados para contabilizar. Realice esto de dos formas
+                </p>
+                <p>
+                    a. Usando una arrow function que a dentro utilice un condicional if/else para saber si la nota > 
+                       5 y por lo tanto contabilizar los aprobados;
+                </p>
+                <p>
+                    b. Usando una arrow function que a dentro utilice un operador ternario para saber si la nota > 
+                       5 y por lo tanto contabilizar los aprobados;
+                </p>
+                <p>
+                    Ambas formas deben llegar al mismo resultado, únicamente que se implementaron de dos formas 
+                    diferentes.
+                </p>
+
+                <button class="btn" id="idPunto6">Alumnos aprobados (Punto Nro 6)</button>
+
+                <p id="nroAlumnosAprobadosV1">Cantidad de Alumnos aprobados (if/else)</p>
+                <p id="nroAlumnosAprobadosV2">Cantidad de Alumnos aprobados (Operador ternario)</p>
+            </div>
+
+    </div> <!----Fin div---->
+
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

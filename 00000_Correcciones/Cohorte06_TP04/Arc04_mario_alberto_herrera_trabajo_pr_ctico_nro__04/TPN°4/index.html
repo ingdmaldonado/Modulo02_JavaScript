@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico Nro 4 - Módulo II</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Gestión del Cursado</h1>
+        <p>Módulo: Fundamentos de Programación con JavaScript</p>
+    </header>
+
+    <main class="container">
+        <section class="acciones">
+            <h2>Acciones de Control</h2>
+            <div class="btn-group">
+                <button id="btnUnificar" class="btn">Unificar Cohortes</button>
+                <button id="btnFiltrar" class="btn">Separar Aprobados/Desaprobados</button>
+                <button id="btnOrdenar" class="btn">Ordenar por Nota</button>
+                <button id="btnContar" class="btn">Contar Aprobados (Reduce)</button>
+            </div>
+
+            <div class="buscador">
+                <h3>Búsqueda Individual</h3>
+                <input type="text" id="txtDni" placeholder="Ingrese DNI del alumno (Ej: 12345678)">
+                <button id="btnBuscar" class="btn btn-search">Buscar Alumno</button>
+            </div>
+        </section>
+
+        <section class="visor">
+            <h2>Consola de Salida de Pantalla</h2>
+            <div id="resultados" class="panel-resultados">
+                <p class="placeholder">Presione un botón para interactuar con los datos del modelo.</p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

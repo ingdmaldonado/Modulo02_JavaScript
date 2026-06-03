@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctico N° 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Práctico N°4</h1>
+    </header>
+    <main class="parent">
+        <div class="ejercicio">
+            <h2>Ejercicio 1</h2>
+            <div class="boxcontainer">
+                <div class="box">
+                    <h3>Cohortes</h3>
+                    <label for="opciones">Elige una cohorte:</label>
+                    <select id="opciones" name="opciones">
+                        <option value="opcion1">Cohorte 1</option>
+                        <option value="opcion2">Cohorte 2</option>
+                        <option value="opcion3">Cohorte 3</option>
+                        <option value="opcion4">Cohorte 4</option>
+                    </select>
+                    <button id="btnUno" class="btnEnviar">Mostrar</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="ejercicio">
+            <h2>Ejercicio 3 y 4</h2><br>
+            <div class="boxcontainer">
+                <div class="box">
+                    <button id="btnTres" class="btnEnviar btnGreen">Alumnos aprobados</button>
+                    <button id="btnCuatro" class="btnEnviar btnRed">Alumnos Desaprobados</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="ejercicio">
+            <h2>Ejercicio 5</h2><br>
+            <div class="boxcontainer">
+                <div class="box">
+                    <label for="dniAlumno">Buscar por DNI:</label>
+                    <input type="text" id="dniAlumno" placeholder="Ingrese DNI del alumno">
+                    <button id="btnCinco" class="btnEnviar">Buscar</button>
+                    <p id="aviso2">&nbsp;</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="ejercicio">
+            <h2>Ejercicio 6</h2><br>
+            <div class="boxcontainer">
+                <div class="box">
+                    <h3>Cantidad Alumnos con Nota > 5</h3>
+                    <button id="btnSeis" class="btnEnviar">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="controlador.js"></script>
+</body>
+
+</html>

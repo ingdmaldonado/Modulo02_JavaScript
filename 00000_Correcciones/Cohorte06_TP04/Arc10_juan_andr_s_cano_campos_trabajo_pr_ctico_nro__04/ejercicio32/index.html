@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Nro. 32: ( spread operator … y métodos de vectores)</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;   
+            justify-content: center; 
+            min-height: 100vh;   
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"], button, select {
+            margin: 8px;            
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 80%;
+        }
+
+        
+        button, select {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-weight: 600;
+            min-width: 100px;
+            font-family: inherit;
+            font-size: 13.33px; 
+        }
+        select {
+            padding-right: 20px;
+            
+        }
+        select option {
+            background-color: white;
+            color: #333;
+        }
+
+        button:hover, select:hover {
+            background-color: #0056b3;
+        }
+
+        #idResultado1, #idResultado2 ,#idResultado3, #idResultado4 ,#idResultado5 ,#idResultado6,#idResultado7 {
+            margin-top: 20px;
+            padding: 15px;
+            font-weight: bold;
+            color: #333;
+            border-top: 2px solid #eee; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Gestion de cursos</h1>
+        
+        <div class="form-group">
+            <label for="inputTexto">Hacer click:</label><br>
+        </div>
+        
+        <div>
+            <select id="selectCohorte">
+                <option value="0">Seleccionar Cohorte Alumnos Nombre y Apellido 1-forEach</option>
+                <option value="1">Cohorte 01</option>
+                <option value="2">Cohorte 02</option>
+                <option value="3">Cohorte 03</option>
+                <option value="4">Cohorte 04</option>
+            </select>
+            <div id="idResultado6">Cohorte seleccionada:</div>
+            <hr>
+            <button id="btnSpreadOperator">2-spread operator</button>
+            <div id="idResultado5">Total de alumnos:</div>
+            <hr>
+             <select id="selectCohorteFilter">
+                <option value="0">Cohorte alumnos aprobados/desaprobados 3-filter</option>
+                <option value="1">Notas aprobados</option>
+                <option value="2">Notas desaprobados</option>
+            </select>
+            <div id="idResultado7"> Alumnos Aprobados/Desaprobados:</div>
+
+
+        </div>
+
+        <div>
+            <button id="btnSort">4-sort</button>
+            <div id="idResultado4">Ordenar por nota:</div>
+            <hr>
+            <div class="form-group">
+                <input type="number" id="inputDni" placeholder="Ingrese DNI">
+                <button id="btnFind">5-find</button>
+                <div id="idResultado3"> Buscando... </div>
+            </div>
+            <hr>
+            <button id="btnIf">6-a if/else</button>
+                <div id="idResultado1">Aprobados: </div>
+        </div>
+<hr>
+        <div>
+            <button id="btnTernario">6-b operador ternario</button>
+             <div id="idResultado2">Aprobados: </div>
+        </div>
+
+    </div>
+
+    <script src="controlador32.js" type="module"></script>
+</body>
+</html>

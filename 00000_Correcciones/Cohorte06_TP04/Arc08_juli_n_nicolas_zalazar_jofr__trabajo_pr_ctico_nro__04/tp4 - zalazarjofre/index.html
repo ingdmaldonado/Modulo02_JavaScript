@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Evaluación 04 - Ejercicio 32</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            box-sizing: border-box;
+
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #idResultado {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #e8f4fd;
+            border-radius: 6px;
+            color: #2c3e50;
+            font-weight: bold;
+            border-left: 5px solid #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ejercicio 32 - TP4</h1>
+        
+        <label for="selectCohorte">Seleccione Cohorte a mostrar: </label>
+        <select id="selectCohorte">
+            <option value="cohorte01">Cohorte 01</option>
+            <option value="cohorte02">Cohorte 02</option>
+            <option value="cohorte03">Cohorte 03</option>
+            <option value="cohorte04">Cohorte 04</option>
+            <option value="cohorteUnificadas">Cohorte Unificadas</option>
+        </select>
+        <button id="btnMostrar">Mostrar Cohorte</button>
+        <div id="contenedorResultados"></div>
+
+
+        <hr>
+        <label for="mostrarAlumnos">Selecciones Listado a Mostrar: </label>
+        <select id="mostrarAlumnos">  
+            <option value="aprobados">Alumnos Aprobados</option>
+            <option value="desaprobados">Alumnos Desaprobados</option>
+            <option value="ordenados">Alumnos Ordenados por Nota</option>
+        </select>
+            <button id="btnMostrarAlumnos">Mostrar Listado</button>
+            <div id="contenedorResultadosAlumnos"></div>
+    
+        <hr>
+        <label for="inputDni">Buscar Alumno por DNI: </label>
+        <input type="number" id="inputDni" placeholder="Ingrese el DNI del alumno a buscar: ">
+        <button id="btnBuscar">Buscar Alumno</button>
+        <div id="contenedorResultadoBusqueda"></div>
+
+
+        <label for="mostrarCantidadAprobados">Seleccione Método para Mostrar Cantidad de Aprobados: </label>
+        <select id="mostrarCantidadAprobados">
+            <option value="metodo1">Método 1 - Función</option>
+            <option value="metodo2">Método 2 - Ternario</option>
+        </select>
+        <button id="btnMostrarCantidadAprobados">Mostrar Cantidad de Aprobados</button>
+        <div id="contenedorCantidadAprobados"></div>
+
+        <script src="controlador.js" type="module"></script>
+    </div>
+</body>
+
+</html>

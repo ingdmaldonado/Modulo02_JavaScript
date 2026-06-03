@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cohortes - TP JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4 md:p-8 antialiased">
+
+    <div class="w-full max-w-xl bg-slate-800 rounded-xl shadow-xl border border-slate-700 p-6 space-y-6">
+
+        <header class="text-center border-b border-slate-700 pb-4">
+            <h1 class="text-xl font-bold tracking-wide text-teal-400">
+                Diplomatura en Desarrollo Web - Módulo JS
+            </h1>
+            <p class="text-xs text-slate-400 mt-1">
+                Trabajo Práctico Nro. 04 (Ejercicio 32)
+            </p>
+        </header>
+
+        <section class="space-y-4 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-teal-400 uppercase">
+                Sub-Punto 1: Listado por Cohorte Individual
+            </h2>
+
+            <div class="flex flex-col space-y-1.5">
+                <label for="selectCohortes" class="text-xs font-medium text-slate-300">
+                    Seleccionar Cohorte:
+                </label>
+                <div class="relative">
+                    <select id="selectCohortes"
+                        class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-teal-500 cursor-pointer appearance-none">
+                        <option value="">-- Seleccione una opción --</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
+                        <svg class="fill-current h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <button id="btnListar"
+                class="w-full bg-teal-600 hover:bg-teal-500 text-slate-950 text-sm font-bold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                Listar nombres de cohorte
+            </button>
+        </section>
+
+        <section class="space-y-3 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-emerald-400 uppercase">
+                Sub-Punto 2: Unificación con Spread Operator
+            </h2>
+            <p class="text-xs text-slate-400">
+                Une estructuralmente los datos de todos los alumnos en un solo vector global.
+            </p>
+            <button id="btnUnificarCohortes"
+                class="w-full bg-emerald-600 hover:bg-emerald-500 text-slate-950 text-sm font-bold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                Unificar Todas las Cohortes
+            </button>
+        </section>
+
+        <section class="space-y-3 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-sky-400 uppercase">
+                Sub-Punto 3: Filtrado de Alumnos (Método Filter)
+            </h2>
+            <p class="text-xs text-slate-400 mb-1">
+                Genera nuevos arrays sobre los datos globales filtrados por estado académico.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="btnUAlumnosAprobados"
+                    class="w-full bg-slate-700 hover:bg-slate-600 text-emerald-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                    Listar Aprobados (> 5)
+                </button>
+                <button id="btnUAlumnosDesaprobados"
+                    class="w-full bg-slate-700 hover:bg-slate-600 text-rose-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                    Listar Desaprobados (<= 5) </button>
+            </div>
+        </section>
+
+        <section class="space-y-3 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-amber-400 uppercase">
+                Sub-Punto 4: Ordenamiento (Método Sort)
+            </h2>
+            <p class="text-xs text-slate-400">
+                Ordena a todos los alumnos unificados de menor a mayor según su nota final.
+            </p>
+            <button id="btnOrdenarNotas"
+                class="w-full bg-slate-700 hover:bg-slate-600 text-amber-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                Ordenar por Nota (Menor a Mayor)
+            </button>
+        </section>
+
+        <section class="space-y-4 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-fuchsia-400 uppercase">
+                Sub-Punto 5: Búsqueda (Método Find)
+            </h2>
+            <p class="text-xs text-slate-400">
+                Busca un alumno específico en el vector unificado utilizando su número de DNI.
+            </p>
+
+            <div class="flex flex-col space-y-1.5">
+                <label for="inputDni" class="text-xs font-medium text-slate-300">
+                    Ingresar DNI del Alumno:
+                </label>
+                <input type="text" id="inputDni" placeholder="Ej: 12345678" maxLength="8"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-fuchsia-500 transition" />
+            </div>
+
+            <button id="btnBuscarDni"
+                class="w-full bg-slate-700 hover:bg-slate-600 text-fuchsia-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                Buscar Alumno por DNI
+            </button>
+        </section>
+
+        <section class="space-y-3 border border-slate-700/60 p-4 rounded-lg bg-slate-850">
+            <h2 class="text-xs font-bold tracking-wider text-violet-400 uppercase">
+                Sub-Punto 6: Contabilizar (Método Reduce)
+            </h2>
+            <p class="text-xs text-slate-400">
+                Cuenta los alumnos con nota > 5 utilizando dos implementaciones del método reduce.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="btnContarIf"
+                    class="w-full bg-slate-700 hover:bg-slate-600 text-violet-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                    Contar con If / Else
+                </button>
+                <button id="btnContarTernario"
+                    class="w-full bg-slate-700 hover:bg-slate-600 text-violet-400 border border-slate-600 text-sm font-semibold py-2.5 px-4 rounded-lg transition duration-150 active:scale-[0.99]">
+                    Contar con Ternario
+                </button>
+            </div>
+        </section>
+
+
+        <footer class="space-y-3 border-t border-slate-700 pt-4">
+            <h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase">
+                Persistencia de Estado (Local Storage)
+            </h3>
+            <div class="grid grid-cols-2 gap-3">
+                <button id="btnGuardar"
+                    class="flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-950 text-slate-300 text-xs font-semibold py-2 px-3 rounded-lg border border-slate-700 transition duration-150 active:scale-[0.99]">
+                    <svg class="w-3.5 h-3.5 text-teal-500" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4">
+                        </path>
+                    </svg>
+                    <span>Guardar Estado</span>
+                </button>
+                <button id="btnRecuperar"
+                    class="flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-950 text-slate-300 text-xs font-semibold py-2 px-3 rounded-lg border border-slate-700 transition duration-150 active:scale-[0.99]">
+                    <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                    </svg>
+                    <span>Recuperar Estado</span>
+                </button>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./controladorPunto32.js" type="module"></script>
+</body>
+
+</html>

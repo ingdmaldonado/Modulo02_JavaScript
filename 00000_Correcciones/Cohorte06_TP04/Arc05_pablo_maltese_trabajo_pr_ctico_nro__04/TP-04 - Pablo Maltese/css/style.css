@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caja{
+    width: 80%;
+    height: auto;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.caja .btn{
+    width: 220px;         /* ancho */
+    height: 30px;         /* alto */
+
+    background-color: rgb(14, 14, 15); /* color de fondo */
+    color: white;
+    text-align: center;
+}
