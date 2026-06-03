@@ -23,9 +23,9 @@ son asíncronos y porque ?.
 	-(4) Try/Catch
 
 		
-
-
 	-(5) fetch con async & await
+
+	https://ws.smn.gob.ar/map_items/weather
 
 	- sirve para realizar consultas a APIs externas o propias.
 
