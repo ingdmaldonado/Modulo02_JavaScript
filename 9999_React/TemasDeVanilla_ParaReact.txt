@@ -1,0 +1,19 @@
+TEMAS EXCLUSIVOS DE VANILLA PARA REACT
+
+- guardar una constante o valor dentro de un vector
+
+- guardar una función en un vector
+
+- hacerle destructuring al vector
+
+- hacer una especie de un Patrón Observador.
+
+- hacer un evento oninput y que utiliza evento.target.value
+
+- el handleClick. es decir, decirle a un botón que el manejador del evento
+es una función separada que inclusive puedo levantarla con desde un modulo.
+
+
+
+
+

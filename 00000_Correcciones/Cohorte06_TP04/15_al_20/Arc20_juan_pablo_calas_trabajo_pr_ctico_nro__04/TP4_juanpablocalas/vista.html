@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO PRACTICO NRO 4</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Trabajo Parctico Nro 4</h1>
+    
+    <div id="ContenedorTP">
+
+        <div>
+            <label for="IdSeleccioneCohorte">Seleccione Cohorte deseada</label>
+            <select name="Cohortes" id="IdSeleccioneCohorte">
+                <option value="0"></option>
+                <option value="1">Cohorte 1</option>
+                <option value="2">Cohorte 2</option>
+                <option value="3">Cohorte 3</option>
+                <option value="4">Cohorte 4</option>
+            </select>
+        </div>
+        <div id="IdContenedorLista">
+            <ol id="IdListaCohortes">
+            </ol>
+        </div>
+
+        <button id="IdConsulteTodas">Consultar Alumnos TODAS las Cohorte</button>        
+        <div id="IdContenedorLista2">
+            <ol id="IdListaTodasCohortes">
+            </ol>
+        </div>
+
+        <button id="IdAprobados">Listar Alumnos APROBADOS</button>  
+        <div id="IdContenedorLista3">
+            <ol id="IdListaAprobados">
+            </ol>
+        </div>        
+        <button id="IdDesaprobados">Listar Alumnos DESAPROBADOS</button>  
+        <div id="IdContenedorLista4">
+            <ol id="IdListaDesAprobados">
+            </ol>
+        </div>    
+        <button id="IdOrdenarLista">Ordenar Lista Por NOTA (de < a >)</a></button>   
+        <div id="IdContenedorLista5">
+            <ol id="IdListaPorNota">
+            </ol>
+        </div>            
+        <div id="BusquedaDni">
+            <label for="IdBusquedaDni">Ingrese DNI</label>
+            <input type="number" id="IdBusquedaDni" size = "10" placeholder="Aqui Nro. DNI">
+            <button id="IdBuscarxDni">Buscar Alumno</button>
+          </div> 
+        <h5 id="IdNombreAlu">Aqui Alumno</h5>
+        <div>
+            <input type="checkbox" id="IdChkAprobados">Contar APROBADOS
+            <h6 id="IdCantAbrobados"></h6>
+            <h6 id="IdCantAbrobadosOT"></h6>
+            <br>
+            <input type="checkbox" id="IdChkDesAprobados">Contar DESAPROBADOS
+            <h6 id="IdCantDesAbrobados"></h6>
+            <h6 id="IdCantDesAbrobadosOT"></h6>
+        </div>
+
+
+    </div>
+    <script src="controlador.js" type="module"></script>
+</body>
+</html>

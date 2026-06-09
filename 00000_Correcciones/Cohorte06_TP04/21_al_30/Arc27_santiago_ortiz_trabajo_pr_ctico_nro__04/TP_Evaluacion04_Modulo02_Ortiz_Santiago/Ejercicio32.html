@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Alumnos</title>
+    <link rel="stylesheet" href="Ejercicio32.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Gestor de Alumnos -- Cohorte JavaScript</h1>
+        
+        <section class="panel-controles">
+            <button id="btn-mostrar">1. Mostrar Alumnos (Consola)</button>
+            <button id="btn-unificar">2. Unificar Cohortes (Spread/Rest)</button>
+            <button id="btn-filtrar">3. Filtrar Aprobados/Desaprobados</button>
+            <button id="btn-ordenar">4. Ordenar por Nota (Menor a Mayor)</button>
+            <button id="btn-buscar">5. Buscar Alumno por DNI</button>
+            <button id="btn-contar">6. Contar Aprobados (Reduce)</button>
+        </section>
+
+        <section class="panel-salida">
+            <h3>Resultados (DOM y Formato JSON):</h3>
+            <h3 id="consola-dom">Esperando respuesta del usuario...</h3>
+        </section>
+    </main>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>

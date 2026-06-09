@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+        <h1>Sistema de Gestión de Alumnos</h1>
+        
+        <div class="acciones">
+            <button id="listar-cohortes">Listar Alumnos por Consola</button>
+           
+        </div>
+
+        <div class="resultado">
+            <h2>Resultados:</h2>
+            <div id="salida-datos">Haz clic en una opción para comenzar.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Unificación de Cohortes</h2>
+        <p>Haz clic en el botón para unificar a todos los alumnos y ver el resultado por consola.</p>
+        <button id="btnUnificar">Procesar Cohortes</button>
+        </div>
+
+
+        <hr>
+     <header>
+        <h1>Control de Notas </h1>
+    </header>
+
+    <main>
+        <button id="btn-procesar">Procesar Cohortes y Mostrar Notas</button>
+        
+        <section id="resultados"></section>
+    
+    </main>
+
+    <hr>
+
+    <div class="contenedor">
+        <h2>Control de Alumnos </h2>
+        <button id="btn-todos">Ver Todos los Alumnos</button>
+        <button id="btn-aprobados">Ver Aprobados (>4)</button>
+        <button id="btn-ordenar">Ordenar por Nota</button>
+        
+
+        <div id="resultado">
+            <p>Haz clic en una opción para ver los resultados.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Búsqueda de Alumnos</h1>
+    
+    <div>
+        <label for="input-dni">Ingrese DNI:</label>
+        <input type="text" id="input-dni" placeholder="Ej: 12345678">
+        <button id="btn-buscar">Buscar</button>
+    </div>
+
+    <p id="resultado-busqueda"></p>
+
+    <hr>
+    <main class="contenedor">
+        <h1>Contabilizar Aprobados </h1>
+        
+        <div class="acciones">
+            <button id="btn-contar"> Contabilizar Aprobados</button>
+            <button id="btn-mostrar-json"> Ver Listado en JSON</button>
+        </div>
+
+        <div id="resultado1" class="tarjeta">
+            
+        </div>
+
+        <pre id="json-display" class="codigo-json">
+    
+        </pre>
+    </main>
+
+    
+    <script type="module" src="controlador.js"></script>
+
+</body>
+</html>
