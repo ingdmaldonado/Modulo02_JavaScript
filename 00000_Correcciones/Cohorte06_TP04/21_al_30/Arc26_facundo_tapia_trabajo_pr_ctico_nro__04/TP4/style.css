@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e7ea;
+    color: #333;
+    padding: 25px;
+}
+
+header {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+.subtitulo {
+    color: #666;
+    font-size: 13px;
+}
+
+.botones-contenedor {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #2270a2;
+}
+
+#resultado {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 80px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #2270a2;
+}
+
+p {
+    margin-bottom: 6px;
+}
+
+.alumnos-lista {
+    border-left: 3px solid #d9534f;
+    padding-left: 8px;
+    margin: 6px 0;
+}
+
+.caja-busqueda {
+    background-color: #dff0d8;
+    border-left: 3px solid #5cb85c;
+    padding: 10px;
+    margin-top: 10px;
+}

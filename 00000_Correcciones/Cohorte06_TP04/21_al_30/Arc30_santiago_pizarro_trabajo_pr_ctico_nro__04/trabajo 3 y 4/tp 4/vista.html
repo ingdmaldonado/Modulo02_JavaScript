@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N°4 - JavaScript - Pizarro Santiago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>TP N° 4 - Javascript (Ejercicio 32)</h1>
+    <p><strong>Alumno:</strong> Pizarro Santiago</p>
+
+    <div class="panel">
+        <h3>1. Mostrar alumnos (forEach)</h3>
+        <p>Muestra por consola el apellido y nombre de cada alumno por cohorte.</p>
+        <button id="btn-mostrar">Ejecutar y ver en consola</button>
+        <div id="out-mostrar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <div class="panel">
+        <h3>2. Unificar cohortes (Spread Operator)</h3>
+        <p>Une los 4 vectores en uno solo.</p>
+        <button id="btn-unificar">Unificar datos</button>
+        <div id="out-unificar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <div class="panel">
+        <h3>3. Filtrar Entre Aprobados y Desaprobados</h3>
+        <button id="btn-filtrar">Filtrar (Nota límite de: 5)</button>
+        <div id="out-filtrar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <div class="panel">
+        <h3>4. Ordenar por Nota ( De Menor a Mayor)</h3>
+        <button id="btn-ordenar">Ordenar Alumnos</button>
+        <div id="out-ordenar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <div class="panel">
+        <h3>5. Buscar alumno por su DNI</h3>
+        <input type="text" id="inp-dni" placeholder="Ej: 89012345">
+        <button id="btn-buscar">Buscar </button>
+        <div id="out-buscar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <div class="panel">
+        <h3>6. Contabilizar Aprobados (Reduce)</h3>
+        <button id="btn-contar">Contar Alumnos Aprobados</button>
+        <div id="out-contar" class="resultado-box">Esperando acción...</div>
+    </div>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>
