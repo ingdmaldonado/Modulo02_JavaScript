@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 32</title>
+</head>
+<body>
+    <h1>Trabajo práctico 4</h1>
+    <hr>
+    <h2>Ejercicio 32</h2>
+    <p>
+        <b>Alumno:</b> Nelson Daniel Romero
+        <br>
+        <b>DNI:</b> 40.724.681
+        <br>
+        <b>Teléfono:</b> 3834977874
+    </p>
+    <div>
+        <h2>Mostrar alumnos por cohorte</h2>
+        <label for="selector">Seleccione cohorte: </label>
+        <select name="selector" id="selector">
+            <option selected disabled>--------------------</option>
+        </select>
+    </div>
+    <hr>
+    <div>
+        <h2>Mostrar los alumnos de todas las cohortes</h2>
+        <button type="button" name="botonMostrarAlumnos" id="botonMostrarAlumnos">Mostrar todos los alumnos</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Mostrar los alumnos aprobados y desaprobados</h2>
+        <button type="button" name="botonMostrarAprobados" id="botonMostrarAprobados">Mostrar alumnos aprobados</button>
+        <button type="button" name="botonMostrarDesaprobados" id="botonMostrarDesaprobados">Mostrar alumnos desaprobados</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Ordenar alumnos por nota</h2>
+        <button type="button" name="botonOrdenar" id="botonOrdenar">Mostrar alumnos ordenados</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Buscar alumno por DNI</h2>
+        <label for="dni">DNI: </label>
+        <input type="number" name="dni" id="dni" min="0" placeholder="ej: 34567891">
+        <button type="button" name="botonBuscarAlumno" id="botonBuscarAlumno">Buscar</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Contar cantidad de alumnos aprobados</h2>
+        <button type="button" name="botonContarAlumnos" id="botonContarAlumnos">Contar alumnos aprobados</button>
+    </div>
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>
