@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 32px;
+  background: #f4f4f4;
+  color: #222;
+}
+
+main {
+  max-width: 1000px;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+p {
+  margin-top: 0;
+}
+
+.panel {
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+  margin: 20px 0;
+}
+
+.busqueda {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: #0645ad;
+  color: white;
+  border-color: #0645ad;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+#salida {
+  padding: 16px;
+  min-height: 320px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.autor {
+  margin-top: 24px;
+  font-weight: bold;
+}

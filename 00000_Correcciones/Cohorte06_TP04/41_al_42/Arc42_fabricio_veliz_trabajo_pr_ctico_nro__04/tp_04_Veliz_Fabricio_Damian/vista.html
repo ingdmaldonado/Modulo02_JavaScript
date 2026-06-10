@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #333;
+        }
+        .botonera {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .aviso {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-left: 4px solid #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Trabajo Práctico Nro. 04</h1>
+
+    <div class="botonera">
+        <button id="btn1">1. Mostrar Alumnos</button>
+        <button id="btn2">2. Unificar Cohortes</button>
+        <button id="btn3">3. Filtrar Aprobados y Desaprobados</button>
+        <button id="btn4">4. Ordenar por Nota</button>
+        <button id="btn5">5. Buscar alumno por DNI</button>
+        <button id="btn6">6. Contar aprobados</button>
+    </div>
+
+    <script type="module" src="controlador.js"></script>
+</body>
+</html>
