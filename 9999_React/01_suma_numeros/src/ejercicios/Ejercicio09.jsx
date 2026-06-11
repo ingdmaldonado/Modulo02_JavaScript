@@ -26,6 +26,8 @@ const Ejercicio09 = ()=>{
   const [AnioCompleto,setAnioCompleto] = useState(0);
   const [TurnoElegido,setTurnoElegido] = useState(0);
   const [TurnoCompleto,setTurnoCompleto] = useState(0);
+  const [ApellidoYNombre,setApellidoYNombre] = useState(0);
+  const [Dni,setDni] = useState(0);
 
   return (<>
     <h2>INSCRIPCIÓN DE ALUMNOS CICLO LECTIVO - 2026</h2>
@@ -60,6 +62,13 @@ const Ejercicio09 = ()=>{
     </select>
     <h3>Turno Elegido: {TurnoElegido}</h3>
     <h3>Turno Completo: {JSON.stringify(TurnoCompleto)}</h3>
+    <h4>(4) - Complete sus Datos</h4>
+    <label htmlFor="idApellidoYNombre" >Ingrese Apellido y Nombre</label>
+    <input type="text" id="idApellidoYNombre" placeholder="Ingrese Apellido y Nombre" onChange={(e)=>{setApellidoYNombre(e.target.value)}}></input>
+    <label htmlFor="idDni">Ingrese su DNI</label>
+    <input type="number" id="idDni" placeholder="Ingrese DNI" onChange={(e)=>{setDni(Number(e.target.value))}}></input>   
+    <h3>Datos Ingresados</h3>
+    <p>{ApellidoYNombre} - {Dni}</p>
   </>);
 };
 
