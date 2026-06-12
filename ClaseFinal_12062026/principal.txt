@@ -1,0 +1,14 @@
+
+
+1) Flexibilidad de los Vectores y el Tipo
+de cada elemento. 
+  valores primitivos vs valores por referencia
+
+2) Hooks de React
+
+3) Evento Onchange, evento Onclick.
+parametro del evento (e) y la propiedad target
+
+4) Eventos centralizados.
+
+

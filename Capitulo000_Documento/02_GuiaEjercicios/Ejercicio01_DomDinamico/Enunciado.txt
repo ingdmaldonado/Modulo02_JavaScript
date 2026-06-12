@@ -1,0 +1,1 @@
+Dado el archivo modelo.js que es un módulo que exporta las provincias, construir una pantalla de alta de clientes que cargue dinámicamente el <select> de provincias utilizando map.
