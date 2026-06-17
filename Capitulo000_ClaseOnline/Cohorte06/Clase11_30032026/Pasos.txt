@@ -1,0 +1,9 @@
+http://127.0.0.1:5501/vista.html
+
+1RO) Request
+2do) Response
+3ro) Los datos llegan al navegador
+4to) el Browser renderiza 
+los elementos que vienen
+5to) dispara un evento, esta
+todo listo. onload => 

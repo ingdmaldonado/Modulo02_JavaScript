@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12</title>
+</head>
+<body>
+    <h1>Clase Nro. 12 - Manejo del DOM</h1>
+
+    <h3>01 - Como manipular un input - evento => oninput</h3>
+    <label for="idNumero">Ingrese el importe de la factura</label>
+    <input type="number" id="idNumero">
+
+    <h3>02 - Como manipular un select - evento => onchange</h3>
+    <select id="idSelectPaises">
+        <option value="1">ARGENTINA</option>
+        <option value="2">BRASIL</option>
+        <option value="3">URUGUAY</option>
+    </select>
+
+    <h3>03 - Como manipular los CheckBox - evento => onchange</h3>
+    
+    <label for="idPagaEnvio">Paga Envio ?</label>
+    <input type="checkbox" id="idPagaEnvio">
+    <label for="idPagaSeguro">Paga seguro extendido ?.</label>
+    <input type="checkbox" id="idPagaSeguro">
+
+    <h3>04 - Radio Buttons - evento => onchange</h3>
+
+    <label for="idViajaAlMunidial">Viaja al Mundial ?.</label>
+    <input type="radio" id="idViajaAlMunidial" name="viaja">
+    <label for="idNoViajaAlMundial">No viaja al Mundial ?</label>
+    <input type="radio" id="idNoViajaAlMundial" name="viaja">
+
+    <hr>
+    <hr>
+
+    <input type="button" value="Aceptar" id="idBtnAceptar">
+
+    <script src="controlador01.js"></script>
+</body>
+</html>

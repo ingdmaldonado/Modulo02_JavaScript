@@ -1,0 +1,6 @@
+Botones realizados con CSS 
+para ver el modelo de caja => box-model
+y de paso vincular eso con javascript,
+sacar valores de las cajas, hacer operaciones.
+y mostrar valores en la pantalla.
+

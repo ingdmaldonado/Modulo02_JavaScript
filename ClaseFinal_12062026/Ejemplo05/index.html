@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Chart.js</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: #f5f5f5;
+    }
+    h1 { margin-bottom: 30px; color: #333; }
+    canvas {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ventas mensuales</h1>
+  <canvas id="miGrafico"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+    /* 1. Los datos: un vector de objetos con mes y ventas */
+    const resultados = [
+      { mes: "Enero",   ventas: 1200 },
+      { mes: "Febrero", ventas: 1850 },
+      { mes: "Marzo",   ventas: 1400 },
+      { mes: "Abril",   ventas: 2100 },
+      { mes: "Mayo",    ventas: 1750 },
+      { mes: "Junio",   ventas: 2300 },
+    ];
+
+    /* 2. Separo etiquetas y valores usando map */
+    const etiquetas = resultados.map(r => r.mes);
+    const valores   = resultados.map(r => r.ventas);
+
+    /* 3. Un color distinto por barra */
+    const colores = [
+      "rgba(99,  153,  34, 0.8)",
+      "rgba(52,  152, 219, 0.8)",
+      "rgba(231,  76,  60, 0.8)",
+      "rgba(155,  89, 182, 0.8)",
+      "rgba(230, 126,  34, 0.8)",
+      "rgba(26,  188, 156, 0.8)",
+    ];
+
+    /* 4. Obtengo el contexto del canvas */
+    const ctx = document.getElementById("miGrafico").getContext("2d");
+
+    /* 5. Creo el gráfico */
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: etiquetas,
+        datasets: [{
+          label: "Ventas mensuales",
+          data:  valores,
+          backgroundColor: colores,
+          borderColor:     colores.map(c => c.replace("0.8", "1")),
+          borderWidth: 1,
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "top" },
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: valor => "$" + valor.toLocaleString()
+            }
+          }
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

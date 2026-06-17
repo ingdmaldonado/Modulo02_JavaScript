@@ -1,0 +1,63 @@
+
+body
+{
+    background-color: black;
+    color: white
+}
+
+h1 /* es un selector de etiqueta */
+{
+    font-size: 45px;
+}
+
+.cajita1 /* esto es un selector de clase */
+{
+    background-color: crimson;
+    background-color: brown;
+    background-color: rgba(107, 212, 177, 0.993);
+    width: 300px;
+    height: 50px;
+    color: darkblue;
+}
+
+.cajita2
+{
+    background-color: red;
+    color: white;
+    width: 500px;
+    height: 50px;
+    font-size: 30px;
+    padding:30px;
+    border: 5px solid blue;
+    text-align: center;
+}
+
+.cajita3
+{
+    background-color: orange;
+    width: 400px;
+    height: 70px;
+}
+
+.box
+{
+    border-top: 2px solid white;
+    border-right: 5px dashed white;
+    border-left: 15px double white;
+    border-bottom: 20px dotted white;
+
+}
+
+.circulo
+{
+    width: 50px;
+    height: 50px;
+    border: 10px solid white;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.box-centrado
+{
+    text-align: center;    
+}

@@ -1,0 +1,71 @@
+
+
+1) Creamos la carpeta del proyecto
+
+2) Dentro de la Carpeta del proyecto Creamos una subcarpeta
+que se llame frontend
+
+
+
+4) verificar la versión instalada con 
+
+    comando: node -v
+
+5) instalar express
+
+    comando: npm i express
+
+6) instalar el cliente para postgress
+
+    comando: npm i pg 
+
+7) instalar nodemon 
+
+    comando: npm install --save-dev nodemon
+
+8) crear el archivo punto inicial de la aplicación del 
+back end
+
+    index.js
+
+9) escribimos comandos de js puro, es decir no van los comandos
+
+    
+    const Vector = [
+                        {dni:24010663,apellido:"MALDONADO ENRIQUE DANIEL"},
+                        {dni:24010663,apellido:"SALVADOR MORALES MICAELA"},
+                        {dni:24010663,apellido:"MENDOZA FLAVIO AUGUSTO"}
+                    ];
+
+    let a = 0;
+
+    console.log(Vector);
+
+    console.log("hola");
+
+10) Diferentes formas de ejecutar los archivos .js
+
+    node index.js
+
+    npx nodemon index.js
+
+11) Modificar el package json para reiniciar la aplicación
+
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    }
+
+
+    Diferencia entre npm run dev y npm run start:
+
+        npm run dev: 
+            Utiliza nodemon, que es útil para el desarrollo 
+            porque vigila los cambios en el código y reinicia 
+            automáticamente el servidor cuando detecta modificaciones.
+
+        npm run start: 
+            Utiliza node para iniciar la aplicación, 
+            sin vigilancia de cambios. Es más adecuado para cuando tu código
+            está listo y no esperas hacer modificaciones frecuentes.
+

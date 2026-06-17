@@ -1,0 +1,14 @@
+
+1ro) Instalar Visual Studio Code
+
+2do) Instalar unos componentes
+
+	- vscode - icons
+
+	- live server
+
+	- html skelton
+
+3ro) Solo etiquetas HTML
+
+

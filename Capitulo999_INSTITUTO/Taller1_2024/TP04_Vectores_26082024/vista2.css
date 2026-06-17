@@ -1,0 +1,66 @@
+
+
+/* estoy haciendo referencia a una clase. 
+es decir, al nombre del atributo que puse
+dentro de la etiqueta class */
+
+
+/*
+
+    .algo =>significa que me estoy haciendo referencia a la etiqueta class del elemento HTML
+    #algo => significa que estoy haciendo referencia a la etiqueta (id) de algo
+
+    p => estaría haciendo referencia a todos los parrafos
+    input => estaría seleccionado todas las etiquetas input
+
+
+    CSS = CASCADING STYLE SHEET
+
+*/
+
+/* 
+    SELECTORES CSS 
+*/
+
+.contenedor
+{
+    width: 600px;
+    height: 80px;
+    background-color: aqua;
+    border: 2px solid orange;
+}
+
+.contenedor1
+{
+    width: 400px;
+    height: 60px;
+    background-color: chartreuse;
+    background-color: #702e2e;
+
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+
+    border-top: 4px dashed crimson; 
+    border-right: 8px solid red;
+    border-bottom: 12px dotted white;
+    border-left: 20px double orange;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+}
+
+.contenedor1 h3
+{
+    font-size: 25px;
+}
+
+.contenedor2
+{
+    background-color: hotpink;
+    width: 500px;
+    height: 80px;
+    margin-bottom: 100px;
+}
