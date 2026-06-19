@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="font-[Roboto]">
+    <h1 class="p-3 m-5 text-[50px]">Gestion Universidades</h1>
+    
+    <select id="idSelectorPais" class="p-1 m-5 border rounded-lg">
+        <option value="1">Argentina</option>
+        <option value="2">Brasil</option>
+    </select>
+    
+    <button id="idBtnRecuperar" class="p-1 m-5 border hover:scale-105 rounded-lg">Rescuperar Universidades</button>
+    
+    <table class="m-10 border-2">
+        <thead class="bg-emerald-300">
+            <th class="m-5 p-5 border-2">Pais</th>
+            <th class="m-5 p-5 border-2">Nombre Universidad</th>
+            <th class="m-5 p-5 border-2">Provincia</th>
+            <th class="m-5 p-5 border-2">URL</th>
+        </thead>
+        <tbody id="idCuerpoDeTabla">
+            <tr>
+            <td class="m-5 p-5 border-2">-</td>
+            <td class="m-5 p-5 border-2">-</td>
+            <td class="m-5 p-5 border-2">-</td>
+            <td class="m-5 p-5 border-2"><a href="" target="blank"></a>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="universidad.js" type="module"></script>
+</body>
+
+</html>

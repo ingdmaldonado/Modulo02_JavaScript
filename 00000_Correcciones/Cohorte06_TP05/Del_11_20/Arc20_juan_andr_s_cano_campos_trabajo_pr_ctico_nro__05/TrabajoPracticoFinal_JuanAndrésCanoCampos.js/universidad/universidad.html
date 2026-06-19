@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 5</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;   
+            justify-content: center; 
+            min-height: 100vh;   
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 800px; 
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        select#idSelectPaises {
+            width: 100%;            
+            box-sizing: border-box; 
+            margin-bottom: 20px;         
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #444;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        select#idSelectPaises:focus {
+            border-color: #007bff;
+        }
+        
+        .acciones {
+            display: flex;
+            justify-content: center;
+        }
+
+        button#idBtnRecuperar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        button#idBtnRecuperar:hover {
+            background-color: #0056b3;
+        }
+
+        #idResultado {
+            margin-top: 25px;
+            padding: 15px;
+            font-size: 0.95rem;
+            color: #666;
+            border-top: 2px solid #eee;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            max-height: 200px;
+            overflow-y: auto; 
+        }
+       
+        .tabla-contenedor {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 25px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+            background-color: #ffffff;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+            vertical-align: middle;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #e3e3e3;
+        }
+
+        table a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        table a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Gestión de Universidades</h1>
+        
+        <select id="idSelectPaises">
+            <option value="1">Argentina</option>
+            <option value="2">Brasil</option>
+        </select>
+        
+        <div class="acciones">
+            <button id="idBtnRecuperar">Buscar</button>
+        </div>
+
+        <hr>
+        <table>
+            <thead>
+            
+                    <th>Universidad</th>
+                    <th>País</th>
+                    <th>Provincia</th>
+                    <th>URL</th>
+                
+            </thead>
+            <tbody id="idTablaUniversidades">
+                <tr>
+              <td>UNIVERSIDAD NACIONAL DE CATAMARCA</td>
+                <td>ARGENTINA</td>
+                <td>CATAMARCA</td>
+                <td><a href="http://www.unca.edu.ar" target="_blank">UNCA</a></td>
+                <!-- Las universidades se agregarán aquí dinámicamente -->
+
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script src="universidad.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+</head>
+<body style="background-color: #e6e6e6; font-family: arial, sans-serif; text-align: center;">
+    <h1 style="color: white; background-color: #0d6efd; padding: 15px; border-radius: 10px; display: inline-block;">Universidades</h1>
+
+    <select id="idSeletorPais" style="
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    ">
+        <option value="1">Argentina</option>
+        <option value="2">Brasil</option>
+        <option value="3">Africa</option>
+        <option value="4">Europa</option>
+    </select>
+    <button id ="idBtnRecuperar" style=" background-color: #198754;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;">Recuperar Universidades</button>
+
+    <hr>
+    <table border="2px" style="
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    width: 90%;
+    "   >
+        <thead>
+            
+                <th>País</th>
+                <th>Nombre Universidad</th>
+                <th>Provincia</th>
+                <th>URL</th>
+            
+        </thead>
+        <tbody id="idCuerpoDetabla">
+            <tr>
+                <td>ARGENTINA</td>
+                <td>UNIVERSIDAD NACIONAL DE CATAMARCA</td>
+                <td>CATAMARCA</td>
+                <td><a href="https://www.unca.edu.ar" target="_blank">www.unca.edu.ar</a></td>
+            </tr>
+        </tbody> 
+    </table>
+    
+
+
+     <script type="module" src="universidad.js"></script></script>
+</body>
+</html>

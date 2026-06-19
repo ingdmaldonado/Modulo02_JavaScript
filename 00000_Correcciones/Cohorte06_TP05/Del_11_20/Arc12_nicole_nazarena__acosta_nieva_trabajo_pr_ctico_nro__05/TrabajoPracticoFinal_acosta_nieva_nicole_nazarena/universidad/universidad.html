@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Universidades</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#F5F5DC]">
+    <h1 class="font-[Montserrat] font-bold py-10 ml-20">UNIVERSIDADES</h1>
+    <select id="idSelectPais" class="py-2 mb-2 bg-gradient-to-b from-gray-300 font-[Montserrat]">
+        <option value="1">Argentina</option>
+        <option value="2">Brasil </option>
+        <option value="3">chile </option>
+    </select>
+    <button id="idBtnRecuperar" class="font-[Montserrat]border rounded-md p-2 m-2  hover:bg-gray-200 border">Recuperar
+        Universidades</button>
+    <hr>
+    <table class="border-4 m-20">
+        <thead class="w-2 bg-gray-300 font-[Montserrat]">
+            <th class="border px-4 py-1">PAIS</th>
+            <th class="border px-4 py-1 ">PROVINCIA</th>
+            <th class="border px-4 py-1 ">NOMBRE UNIVERSIDAD</th>
+            <th class="border px-4 py-1 ">URL</th>
+        </thead>
+        <tbody id="idCuerpoDeTabla" class="font-semibold">
+            <tr class="border font-[Montserrat]">
+                <td class="border px-4 py-2">ARGENTINA</td>
+                <td class="border px-4 py-2">CORDOBA</td>
+                <td class="border px-4 py-2">UNIVERSIDAD NACIONAL DE CORDOBA</td>
+                <td class="border px-4 py-2"><a href="https://www.unc.edu.ar" target="_blank">WWW.UNC.EDU.AR</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="universidad.js" type="module"></script>
+</body>
+
+</html>

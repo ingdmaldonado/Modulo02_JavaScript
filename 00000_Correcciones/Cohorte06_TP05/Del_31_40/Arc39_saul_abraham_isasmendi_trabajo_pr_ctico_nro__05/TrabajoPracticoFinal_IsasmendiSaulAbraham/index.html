@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo final JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-gray-100 p-4 md:p-8 font-sans">
+
+    <div class="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-3xl font-bold text-center text-blue-800 mb-6">
+            Universidades de Latinoamerica
+        </h1>
+
+        <!-- selector de pais y botones -->
+        <div class="flex flex-wrap gap-2 mb-4 items-center">
+            <label for="paisSelect" class="font-semibold text-gray-700">Pais:</label>
+            <select id="paisSelect" class="border border-gray-300 rounded px-3 py-1">
+                <option value="todos">Todos</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Peru">Peru</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Paraguay">Paraguay</option>
+            </select>
+            <button id="btnCargar" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                Cargar datos
+            </button>
+            <button id="btnGuardar" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                Guardar estado
+            </button>
+            <button id="btnRecuperar" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                Recuperar estado
+            </button>
+            <button id="btnFiltrarWeb" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                +1 sitio web
+            </button>
+        </div>
+
+        <!-- selector de region (oculto por defecto) -->
+        <div id="regionContainer" class="flex flex-wrap gap-2 mb-4 items-center hidden">
+            <label for="regionSelect" class="font-semibold text-gray-700">Region AR:</label>
+            <select id="regionSelect" class="border border-gray-300 rounded px-3 py-1">
+                <option value="todas">Todas</option>
+                <option value="NOA">NOA</option>
+                <option value="NEA">NEA</option>
+                <option value="Cuyo">Cuyo</option>
+                <option value="Centro">Centro</option>
+                <option value="Litoral">Litoral</option>
+                <option value="Patagonia">Patagonia</option>
+            </select>
+            <button id="btnFiltrarRegion" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded">
+                Filtrar
+            </button>
+            <button id="btnMostrarTodas" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded">
+                Todas
+            </button>
+        </div>
+
+        <!-- tabla -->
+        <div class="overflow-x-auto shadow-md rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200 text-sm">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left">Pais</th>
+                        <th class="px-4 py-3 text-left">Universidad</th>
+                        <th class="px-4 py-3 text-left">Provincia</th>
+                        <th class="px-4 py-3 text-left">Region</th>
+                        <th class="px-4 py-3 text-left">Sitio Web</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyUniversities" class="bg-white divide-y divide-gray-200">
+                    <!-- aca se renderiza -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script type="module" src="Controlador/funcionesDelControlador.js"></script>
+</body>
+</html>

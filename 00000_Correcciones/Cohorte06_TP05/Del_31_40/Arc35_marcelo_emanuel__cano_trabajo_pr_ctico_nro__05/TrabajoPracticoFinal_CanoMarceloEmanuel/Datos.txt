@@ -1,0 +1,7 @@
+Apellido: Cano
+Nombres: Marcelo Emanuel
+DNI: 29.436.853
+Correo electrónico: mecano@catamarca.edu.ar
+Teléfono Celular: 3838403741
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9ff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            box-sizing: border-box;
+        }
+
+        .custom-select {
+            padding: 10px 16px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fff;
+            color: #444;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .custom-select:focus {
+            border-color: #0140b1;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+        }
+
+        .custom-btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #003aa3;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+        }
+
+        .custom-btn:hover {
+            background-color: #032c79;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+        }
+
+        .custom-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 2px rgba(74, 144, 226, 0.2);
+        }
+
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: left;
+            border-radius: 10px;
+            border: 2px solid #dee0ec;
+        }
+
+        .custom-table th {
+            background-color: #e6eeff;
+            text-transform: uppercase;
+            color: #444857;
+            ;
+            font-weight: 600;
+            padding: 14px 16px;
+            border-bottom: 2px solid #eceff1;
+            overflow: hidden;
+        }
+
+        .custom-table td {
+            padding: 16px;
+            border-bottom: 1px solid #eceff1;
+            color: #666;
+        }
+
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Efecto Hover en las filas */
+        .custom-table tbody tr:hover {
+            background-color: #f1f5f9;
+            transition: background-color 0.2s ease;
+        }
+
+        .size-6{
+            width: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Gestión de Universidades</h1>
+        <p>Podras ver información respecto a las universidades de cada país.</p>
+        <select id="idSelectorPais" class="custom-select">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="1">Argentina</option>
+            <option value="2">Brasil</option>
+            <option value="3">Chile</option>
+        </select>
+        <button id="idBtnRecuperar" class="custom-btn">
+            <span>Recuperar Universidades</span>
+        </button>
+        <hr>
+        <div class="table-container">
+            <table class="custom-table">
+                <thead>
+                    <th>País</th>
+                    <th>Provincia</th>
+                    <th>Nombre Universidad</th>
+                    <th>URL</th>
+                </thead>
+                <tbody id="idCuerpoDeTabla">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script type="module" src="universidad.js"></script>
+</body>
+
+</html>

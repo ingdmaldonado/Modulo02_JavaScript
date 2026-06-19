@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Directorio de Universidades</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <a href="/index.html" class="back-link">← Volver al Inicio</a>
+        <h1>Directorio de Universidades</h1>
+        
+        <label for="selectorPais">Seleccione País: </label>
+        <select id="selectorPais">
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+            <option value="Brazil">Brasil</option>
+            <option value="Mexico">México</option>
+            <option value="Spain">España</option>
+            <option value="United States">Estados Unidos</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Provincia</th>
+                    <th>Dominio</th>
+                    <th>Sitio Web</th>
+                </tr>
+            </thead>
+            <tbody id="idCuerpoDeTabla"></tbody>
+        </table>
+    </div>
+
+    <script type="module" src="../controlador.js"></script>
+</body>
+</html>

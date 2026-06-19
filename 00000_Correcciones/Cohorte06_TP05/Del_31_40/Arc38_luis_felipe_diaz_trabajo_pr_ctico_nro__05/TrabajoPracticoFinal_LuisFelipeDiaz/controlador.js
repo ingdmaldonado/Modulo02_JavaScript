@@ -1,0 +1,1 @@
+console.log("Controlador global iniciado. Por favor ingresa a la sección Universidades.");

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Universidad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Gestion de Universidades</h1>
+
+
+    <select id="idSelectorPais">
+        <option value = "1">ARGENTINA</option>
+        <option value ="2">BRAZIL</option>
+    </select>
+    <button id="idBtRecuperar">Recuperar Universidades </button>
+    <hr>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Pais</th>
+                <th>Nombre Universidad</th>
+                <th>Provincia</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody id="idCuerpoDelatabla">
+            <tr>
+                <td colspan="4" style="text-align: center; color: gray;">
+                    Haga clic en el botón para cargar los datos.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="universidad.js" type="module"> </script>
+</body>
+
+</html>

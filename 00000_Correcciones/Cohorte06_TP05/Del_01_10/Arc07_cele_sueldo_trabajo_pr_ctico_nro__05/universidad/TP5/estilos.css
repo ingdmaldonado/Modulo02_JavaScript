@@ -1,0 +1,224 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES Y PALETA DE COLORES
+   ========================================================================== */
+:root {
+    --color-fondo: #f4f7f6;
+    --color-tarjeta: #ffffff;
+    --color-primario: #1a365d;       /* Azul oscuro elegante */
+    --color-secundario: #4a7bb0;     /* Azul intermedio */
+    --color-texto-oscuro: #2d3748;   /* Gris oscuro para lectura fácil */
+    --color-texto-claro: #718096;    /* Gris secundario para detalles */
+    --color-cebra: #f8fafc;          /* Fondo intercalado de filas */
+    --color-hover-celda: #e2ece9;    /* Color verde/azul agua para el hover */
+    --fuente-principal: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   2. ESTILOS GENERALES Y CUERPO
+   ========================================================================== */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-oscuro);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* El contador dinámico de universidades */
+#idContador p {
+    font-size: 1.05rem;
+    color: var(--color-texto-claro);
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+#idContador strong {
+    color: var(--color-primario);
+    background-color: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   3. SECCIÓN DE CONTROLES (Select y Botón)
+   ========================================================================== */
+.controles {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+    background: var(--color-tarjeta);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+select {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--color-texto-oscuro);
+    background-color: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    min-width: 180px;
+    transition: all 0.25s ease;
+}
+
+select:focus {
+    border-color: var(--color-secundario);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 123, 176, 0.15);
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-primario) 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(43, 76, 126, 0.2);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(43, 76, 126, 0.3);
+    filter: brightness(1.05);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* ==========================================================================
+   4. TARJETA CONTENEDORA Y TABLA
+   ========================================================================== */
+.contenedor-tabla {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--color-tarjeta);
+    border-radius: 14px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    overflow: hidden; 
+    border: 1px solid #edf2f7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Encabezados de la tabla (Quedan fijos arriba) */
+th {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 16px 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Celdas normales */
+td {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    color: var(--color-texto-oscuro);
+    border-bottom: 1px solid #edf2f7;
+    line-height: 1.5;
+    /* Transición suave para que los efectos del profe se disfruten al pasar el mouse */
+    transition: background-color 0.2s ease, font-weight 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Filas intercaladas (Efecto Cebra) */
+tbody tr:nth-child(even) {
+    background-color: var(--color-cebra);
+}
+
+/* Base de la fila */
+tbody tr {
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   5. EFECTOS INTERACTIVOS (Gusto del Profe: Se desplaza y se agranda la info)
+   ========================================================================== */
+tbody tr:hover {
+    /* La fila se levanta sutilmente hacia arriba */
+    transform: translateY(-3px);
+}
+
+/* Al tocar la fila, afectamos directamente a sus celdas hijas */
+tbody tr:hover td {
+    background-color: var(--color-hover-celda) !important; /* Cambia al fondo resaltado */
+    color: #0f2340;              /* El texto se pone más oscuro y nítido */
+    font-weight: 600;            /* 🌟 HACE MÁS GRANDE LA INFO (pasa a negrita) */
+    border-top: 1px solid #b2c7c2; /* Líneas de contorno sutiles */
+    border-bottom: 1px solid #b2c7c2;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08); /* Sombra para simular elevación */
+}
+
+/* ==========================================================================
+   6. DISEÑO DE ENLACES (URLs)
+   ========================================================================== */
+td a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+td a:hover {
+    color: var(--color-primario);
+}
+
+/* Línea animada decorativa debajo del link */
+td a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-primario);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+td a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

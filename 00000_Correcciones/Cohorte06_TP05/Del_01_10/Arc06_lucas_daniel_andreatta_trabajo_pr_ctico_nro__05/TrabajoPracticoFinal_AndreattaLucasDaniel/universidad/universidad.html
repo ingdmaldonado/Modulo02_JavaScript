@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Universidades</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-slate-50 text-slate-800 p-6 md:p-8 font-sans antialiased">
+    
+    <div class="max-w-5xl mx-auto">
+        
+        <h1 class="text-3xl font-bold text-slate-900 mb-8">Gestión de Universidades</h1>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-8 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <select id="idSelectorPais" class="flex-1 bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all cursor-pointer">
+                <option value="1">ARGENTINA</option>
+                <option value="2">BRASIL</option>
+            </select>
+            
+            <button id="idBtnRecuperar" class="bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-6 py-2.5 transition-colors shadow-sm focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer">
+                Recuperar Universidades
+            </button>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden overflow-x-auto">
+            <table class="w-full text-left text-sm table-fixed">
+                <thead class="bg-slate-100 text-slate-600 uppercase text-xs font-semibold border-b border-slate-200">
+                    <tr>
+                        <th class="px-6 py-4">País</th>
+                        <th class="px-6 py-4">Nombre Universidad</th>
+                        <th class="px-6 py-4">Provincia</th>
+                        <th class="px-6 py-4">URL</th>
+                    </tr>
+                </thead>
+                <tbody id="idCuerpoDeTabla" class="divide-y divide-slate-200">
+                    <tr class="border-b border-slate-200 hover:bg-blue-100 transition-colors duration-200 cursor-pointer">
+                        <td class="px-6 py-4 font-medium text-slate-900">ARGENTINA</td>
+                        <td class="px-6 py-4 text-slate-700">UNIVERSIDAD NACIONAL DE CATAMARCA</td>
+                        <td class="px-6 py-4 text-slate-700">CATAMARCA</td>
+                        <td class="px-6 py-4">
+                            <a href="https://www.unca.edu.ar" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+                                www.unca.edu.ar
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script type="module" src="universidad.js"></script>
+</body>
+</html>

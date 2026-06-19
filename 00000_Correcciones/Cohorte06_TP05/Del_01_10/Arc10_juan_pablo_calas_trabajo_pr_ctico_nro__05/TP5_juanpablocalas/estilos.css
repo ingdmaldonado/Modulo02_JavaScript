@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(21, 126, 61);
+    color: white;
+/*    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+*/
+    font-family: 'Arimo';
+}
+h1,h3{
+    margin-top: 0px;
+    background-color: rgb(23, 105, 7);
+    padding: 5px;
+    text-align: center;
+    text-shadow: 2px 2px 4px;
+}
+h2,h5{
+    background-color: rgb(19, 19, 70);
+    text-align: center;
+}
+
+a{
+    font-family: 'Roboto', sans-serif ;
+}
+
+
+
+#ContenedorTP{
+
+    display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+ 
+    border: rgb(2, 63, 25);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #538528;
+    padding: 10px;
+}  
+
+#BusquedaDni{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+label{
+    color: rgb(29, 28, 28);
+    text-shadow: 1px 1px 3px;
+    margin-right: 5px;
+    
+}
+#IdBuscarxDni{
+    box-shadow: 3px 3px 10px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+button{
+    box-shadow: 3px 3px 10px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+input{
+    margin-left: 3px;
+    margin-right: 10px;
+}
+#IdChkAprobados, #IdChkDesAprobados{
+    padding: 3px;
+    margin-left: 3px;
+    margin-right: 10px;
+}

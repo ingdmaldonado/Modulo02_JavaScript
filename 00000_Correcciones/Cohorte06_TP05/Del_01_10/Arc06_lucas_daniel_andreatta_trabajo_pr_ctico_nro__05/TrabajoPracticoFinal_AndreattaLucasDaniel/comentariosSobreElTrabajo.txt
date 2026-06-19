@@ -1,0 +1,6 @@
+
+*A los archivos de index.html y controlador.js no les añadí nada de código, no sabia si eran necesario subirlos porque en clase no los uso.
+
+*Le añadí un poco de estilos con Tailwind v4, como lo habíamos usado en el modulo 1, añadí la línea de script en el head de universidades.html y agregue el archivo tailwind.config.js(sin código) para que funciones bien.
+
+*A la función fnUniversidadToView de UniversidadVista.js, a cada celda/columna de la tabla le puse estilos para que se dibujen dinámicamente con la propiedad className, y le agregue lo del efecto a cada fila cuando pasamos el puntero por ella.

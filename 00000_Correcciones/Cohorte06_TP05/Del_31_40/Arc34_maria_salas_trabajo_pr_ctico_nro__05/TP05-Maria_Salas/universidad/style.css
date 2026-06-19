@@ -1,0 +1,138 @@
+body {
+    background-color: #252e2d;
+    color:  #c4bfc8;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:  #c4bfc8;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.controles-container{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #37384c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+select{
+    flex: 1;
+    padding: 12px;
+    background-color:  #252e2d;
+    color: #c4bfc8;
+    border: 1px solid #4b575f;
+    border-radius: 6px;
+}
+
+button{
+    padding: 12px 25px;
+    background-color: #4b575f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+
+    background-color: #91abc8;
+    transform: translateY(-2px);
+}
+
+hr{
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color:  #4b575f;
+    margin:  25px 0;
+}
+
+.tabla-container{
+    width: 100%;
+    max-width: 900px;
+    background-color:#37384c;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+table{
+
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead{
+    background-color: #252e2d;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+thead{
+    position: sticky;
+    top: 0;
+}
+
+
+td{
+    padding: 15px;
+    border-bottom: 1px solid rgba(196,191,200,0.2);
+    color: #c4bfc8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #4b575f;
+}
+
+tbody tr:hover{
+    background-color: #4b575f;
+    
+}
+
+tbody tr:hover td{
+    color: #ffffff;
+}
+a{
+    color: #91abc8;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+button,tbody tr,a{
+    transition: all 0.2s ease;
+}
+
+.controles-container,.tabla-container{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+

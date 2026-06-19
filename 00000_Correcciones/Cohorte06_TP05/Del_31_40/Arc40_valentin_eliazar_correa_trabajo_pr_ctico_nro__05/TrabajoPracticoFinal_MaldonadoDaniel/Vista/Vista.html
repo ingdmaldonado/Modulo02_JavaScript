@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico Final</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div >
+        <h1>
+            Gestión de Universidades
+        </h1>
+        <div>
+            <select id="idSelectorPais" class="">
+                <option value="1">Argentina</option>
+                <option value="2">Brazil</option>
+            </select>
+
+            <button id="idButtonRecuperar"class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition">Recuperar Universidades</button>
+            <button id="idButtonUniCombinadas" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg transition">Universidades Combinadas</button>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full border border-slate-300">
+                <thead class="bg-slate-800 text-white">
+                    <tr>
+                        <th class="p-3 border">País</th>
+                        <th class="p-3 border">Nombre</th>
+                        <th class="p-3 border">Provincia</th>
+                        <th class="p-3 border">URL</th>
+                    </tr>
+                </thead>
+                <tbody id="idCuerpoDeTabla">
+                    <tr class="hover:bg-slate-50">
+                        <td class="border p-2">Argentina</td>
+                        <td class="border p-2">Universidad Nacional de Catamarca</td>
+                        <td class="border p-2">Catamarca</td>
+                        <td class="border p-2"><a href="https://www.unca.edu.ar" target="_blank" class="text-blue-600 hover:underline">UNCA</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../Controlador/funcionesDelControlador.js" type="module"></script>
+</body>
+</html>

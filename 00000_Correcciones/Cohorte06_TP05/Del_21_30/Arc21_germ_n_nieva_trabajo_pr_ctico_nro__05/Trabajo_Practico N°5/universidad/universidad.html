@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Gestion de Universidades</h1>
+
+    <div class="controles">
+        <select id="idSelectorPais">
+            <option value="1">ARGENTINA</option>
+            <option value="2">BRASIL</option>
+            <option value="3">CHILE</option>
+            <option value="4">URUGUAY</option>
+            <option value="5">COLOMBIA</option>
+            <option value="6">MEXICO</option>
+            <option value="7">PERU</option>
+            <option value="8">ESPAÑA</option>
+        </select>
+        <button id="idbtnRecuperar">Recuperar Universidades</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pais</th>
+                <th>Nombre Universidad</th>
+                <th>Provincia</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody id="idCuerpoDeTabla">
+        </tbody>
+    </table>
+
+    <script src="universidad.js" type="module"></script>
+
+</body>
+</html>

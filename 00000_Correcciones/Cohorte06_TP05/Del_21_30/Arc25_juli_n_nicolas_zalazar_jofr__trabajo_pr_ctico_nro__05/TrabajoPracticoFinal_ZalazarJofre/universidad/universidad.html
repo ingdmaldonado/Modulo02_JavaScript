@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    
+        .container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            
+        }
+    
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+    
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+            font-weight: 600;
+            text-align: left;
+        }
+    
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-bottom: 1.2rem;
+        }
+    
+        .acciones {
+            margin: 1.5rem 0;
+        }
+    
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #3498db;
+            /* Color de fondo añadido */
+            color: white;
+            transition: background 0.3s;
+        }
+    
+        button:hover {
+            background-color: #2980b9;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+    
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dcdde1;
+            font-size: 0.9rem;
+        }
+    
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Gestión de Universidades</h1>
+        
+        <label for="idSelectPaises">Seleccione un país:</label>
+        <select id="idSelectPaises">
+            <option value="1">Argentina</option>
+            <option value="2">Brasil</option>
+        </select>
+        
+        <div class="acciones">
+            <button id="idBtnRecuperar">Buscar</button>
+        </div>
+
+        <hr>
+        <table>
+            <thead>
+            
+                    <th>Universidad</th>
+                    <th>País</th>
+                    <th>Provincia</th>
+                    <th>URL</th>
+                
+            </thead>
+            <tbody id="idTablaUniversidades">
+                <tr>
+              <td>UNIVERSIDAD NACIONAL DE CATAMARCA</td>
+                <td>ARGENTINA</td>
+                <td>CATAMARCA</td>
+                <td><a href="http://www.unca.edu.ar" target="_blank" rel="noopener noreferrer">UNCA</a></td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script src="universidad.js" type="module"></script>
+</body>
+</html>

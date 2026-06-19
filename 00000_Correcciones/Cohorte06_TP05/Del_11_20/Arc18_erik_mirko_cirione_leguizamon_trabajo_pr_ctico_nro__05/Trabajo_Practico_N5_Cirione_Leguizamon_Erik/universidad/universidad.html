@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-slate-100 font-sans min-h-screen p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto bg-slate-800/60 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-700/50 p-6 md:p-8">
+        
+        <div class="flex items-center gap-4 mb-8 border-b border-slate-700/60 pb-6">
+            <div class="p-3 bg-gradient-to-tr from-blue-500 to-indigo-600 rounded-xl shadow-lg shadow-indigo-500/30">
+                <svg class="w-8 height-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-400 via-indigo-200 to-emerald-400 bg-clip-text text-transparent tracking-tight">
+                    Gestión de Universidades
+                </h1>
+                <p class="text-sm text-slate-400 mt-1">Filtra y recupera información académica en tiempo real</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 bg-slate-900/50 p-4 rounded-xl border border-slate-700/30 mb-8">
+            <div class="flex-1">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Seleccionar País</label>
+                <select id="idSelectorPais" class="w-full bg-slate-800 border border-slate-600 text-slate-200 py-2.5 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-inner cursor-pointer transition-all">
+                    <option value="1">Argentina</option>
+                    <option value="2">Brazil</option>
+                </select>
+            </div>
+
+            <div class="flex items-end justify-end">
+                <button id="idBtnRecuperar" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-2.5 px-6 rounded-lg shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30 active:scale-[0.98] transition-all duration-150 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-blue-500 h-[46px] mt-auto">
+                    Recuperar Universidades
+                </button>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-700/80 shadow-xl bg-slate-900/30">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-800 border-b border-slate-700/80">
+                        <th class="py-4 px-5 font-bold text-slate-300 text-xs uppercase tracking-wider">País</th>
+                        <th class="py-4 px-5 font-bold text-indigo-300 text-xs uppercase tracking-wider">Nombre de Universidad</th>
+                        <th class="py-4 px-5 font-bold text-slate-300 text-xs uppercase tracking-wider">Provincia</th>
+                        <th class="py-4 px-5 font-bold text-emerald-400 text-xs uppercase tracking-wider">URL de Acceso</th>
+                    </tr>
+                </thead>
+                <tbody id="idCuerpoDeTabla" class="divide-y divide-slate-800">
+                    <tr class="hover:bg-slate-800/40 odd:bg-slate-900/10 even:bg-slate-800/10 transition-colors duration-150 group">
+                        <td class="py-4 px-5 text-slate-300 font-medium">
+                            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                Argentina
+                            </span>
+                        </td>
+                        <td class="py-4 px-5 text-white font-semibold group-hover:text-blue-400 transition-colors">
+                            Universidad Nacional de Catamarca
+                        </td>
+                        <td class="py-4 px-5 text-slate-400">Catamarca</td>
+                        <td class="py-4 px-5">
+                            <a href="http://www.unca.edu.ar" target="_blank" class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 hover:underline font-medium bg-emerald-500/5 hover:bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/10 transition-all">
+                                <span>Visitar sitio</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="universidad.js" type="module"></script>
+</body>
+
+</html>

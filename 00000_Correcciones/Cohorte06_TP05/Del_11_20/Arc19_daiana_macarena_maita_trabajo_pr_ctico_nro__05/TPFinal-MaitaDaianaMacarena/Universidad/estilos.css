@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: navy;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: navy;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:hover {
+    background-color: #d6eaff;
+    cursor: pointer;
+}
+
+
+/* fila seleccionada */
+
+.seleccionada {
+    background-color: #7ec8ff !important;
+}

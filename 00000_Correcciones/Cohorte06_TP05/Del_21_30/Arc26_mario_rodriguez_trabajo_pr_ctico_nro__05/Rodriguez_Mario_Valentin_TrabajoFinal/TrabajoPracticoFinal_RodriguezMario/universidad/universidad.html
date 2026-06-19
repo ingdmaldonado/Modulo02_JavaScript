@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+
+    <style>
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        select, button {
+            margin: 10px;
+            padding: 5px 10px;
+        }
+
+        table{
+            text-align: center;
+            margin: 15px auto;
+            width: 60%;
+            border-collapse: collapse;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        td, th{
+            padding: 8px;
+        }
+
+        th{
+            background-color: rgb(209, 4, 4);
+        }
+
+        a {
+            color: rgb(223, 1, 1);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(212, 2, 37);
+            text-decoration: underline;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Gestion de Universidades</h1>
+
+    <select id="idSelectorPais">
+        <option value="1">Argentina</option>
+        <option value="2">Brasil</option>
+    </select>
+
+    <button id="idBtnRecuperar">Recuperar Universidades</button>
+
+    <hr>
+
+    <table border="2px">
+        <thead>
+            <th>Pais</th>
+            <th>Nombre Universidad</th>
+            <th>Provincia</th>
+            <th>URL</th>
+        </thead>
+        <tbody id="idCuerpoDeTabla">
+            <tr>
+                <td>Argentina</td>
+                <td>Univerdidad Nacional de Catamarca</td>
+                <td>Catamarca</td>
+                <td><a href="http://www.unca.edu.ar"        target="_blank" >UNCA</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="unicontrolador.js" type="module"></script>
+</body>
+</html>

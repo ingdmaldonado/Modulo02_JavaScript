@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidades</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Gestion de Universidades</h1>
+    <select id="idSelectorPais">
+        <option value="1"> Argentina</option>
+        <option value="2"> Brasil</option>
+    </select>
+    <button id="idBtnRecuperar">Recuperar Universidades</button>
+    <hr>
+    <table border="1" style="margin:20px auto;">
+        <thead>
+            <th>Pais</th>
+            <th>Provincia</th>
+            <th>Nombre de la Universidad</th>
+            <th>URL</th>
+        </thead>
+        <tbody id="idCuerpoDeTabla">
+            <tr>
+                <td>Argentina</td>
+                <td>Catamarca</td>
+                <td>Universidad Nacional de Catamarca</td>
+                <td><a href="https://www.unca.edu.ar" target="_blank">www.unca.edu.ar</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="universidad.js" type="module"></script>
+</body>
+</html>

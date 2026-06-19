@@ -1,0 +1,28 @@
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+.mensaje-carga {
+    color: #2563eb;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.mensaje-error {
+    color: #dc2626;
+    font-weight: 700;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.mensaje-vacio {
+    color: #6b7280;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 0;
+}

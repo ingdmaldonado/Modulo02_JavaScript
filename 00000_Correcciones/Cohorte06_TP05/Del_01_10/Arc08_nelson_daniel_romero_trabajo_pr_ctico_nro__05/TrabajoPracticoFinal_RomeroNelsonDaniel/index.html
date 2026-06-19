@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Trabajo Práctico 5 (Final)</title>
+</head>
+<body>
+    <header>
+        <h1>Gestion de universidades - Trabajo Práctico 5 (Final)</h1>
+    </header>
+    <main>
+        <article>
+            <div>
+                <p><b>Apellido:</b> Romero</p>
+                <p><b>Nombres:</b> Nelson Daniel Romero</p>
+                <p><b>DNI:</b> 40.724.681</p>
+                <p><b>Correo Electrónico:</b> nelson34@live.com.ar</p>
+                <p><b>Teléfono:</b> 3834977874</p>
+                <select id="selectorPais">
+                    <!--Esta área se rellenará dinámicamente-->
+                </select>
+                <button type="button" id="botonMostrarUniversidades">Mostrar universidades</button>
+            </div>
+            <table border="1" id="tabla" hidden>
+                <thead>
+                    <th>Pais</th>
+                    <th>Nombre universidad</th>
+                    <th>Provincia</th>
+                    <th>URL</th>
+                </thead>
+                <tbody id="cuerpoDeTabla">
+                    <!--Esta área se rellenará dinámicamente-->
+                </tbody>
+            </table>
+        </article>
+    </main>
+    <script type="module" src="./js/universidadControlador.js"></script>
+</body>
+</html>
