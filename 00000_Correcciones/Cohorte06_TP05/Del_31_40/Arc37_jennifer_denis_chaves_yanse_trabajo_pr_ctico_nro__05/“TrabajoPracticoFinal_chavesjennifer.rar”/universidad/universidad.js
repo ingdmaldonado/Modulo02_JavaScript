@@ -7,7 +7,7 @@ import { fnUniversidadtoView,fnUniversidadestoView,fnRender } from "./universida
 
 
 
-Window.onloat =()=>{
+Window.onload =()=>{
 
     const ideBtnRecuperar = document.querySelector(#ideBtnRecuperar);
     const ideselectPais = document.querySelector(#ideselectPais);

@@ -1,0 +1,154 @@
+[
+  {
+    "name": { "common": "Canada", "official": "Canada" },
+    "capital": ["Ottawa"],
+    "region": "Americas",
+    "population": 41575585,
+    "flags": { "png": "https://flagcdn.com/w320/ca.png", "svg": "https://flagcdn.com/ca.svg" },
+    "cca3": "CAN"
+  },
+  {
+    "name": { "common": "United States", "official": "United States of America" },
+    "capital": ["Washington, D.C."],
+    "region": "Americas",
+    "population": 338289857,
+    "flags": { "png": "https://flagcdn.com/w320/us.png", "svg": "https://flagcdn.com/us.svg" },
+    "cca3": "USA"
+  },
+  {
+    "name": { "common": "Mexico", "official": "United Mexican States" },
+    "capital": ["Mexico City"],
+    "region": "Americas",
+    "population": 128932753,
+    "flags": { "png": "https://flagcdn.com/w320/mx.png", "svg": "https://flagcdn.com/mx.svg" },
+    "cca3": "MEX"
+  },
+  {
+    "name": { "common": "Brazil", "official": "Federative Republic of Brazil" },
+    "capital": ["Brasília"],
+    "region": "Americas",
+    "population": 215313498,
+    "flags": { "png": "https://flagcdn.com/w320/br.png", "svg": "https://flagcdn.com/br.svg" },
+    "cca3": "BRA"
+  },
+  {
+    "name": { "common": "Argentina", "official": "Argentine Republic" },
+    "capital": ["Buenos Aires"],
+    "region": "Americas",
+    "population": 46735004,
+    "flags": { "png": "https://flagcdn.com/w320/ar.png", "svg": "https://flagcdn.com/ar.svg" },
+    "cca3": "ARG"
+  },
+  {
+    "name": { "common": "Germany", "official": "Federal Republic of Germany" },
+    "capital": ["Berlin"],
+    "region": "Europe",
+    "population": 83369843,
+    "flags": { "png": "https://flagcdn.com/w320/de.png", "svg": "https://flagcdn.com/de.svg" },
+    "cca3": "DEU"
+  },
+  {
+    "name": { "common": "France", "official": "French Republic" },
+    "capital": ["Paris"],
+    "region": "Europe",
+    "population": 67750000,
+    "flags": { "png": "https://flagcdn.com/w320/fr.png", "svg": "https://flagcdn.com/fr.svg" },
+    "cca3": "FRA"
+  },
+  {
+    "name": { "common": "Spain", "official": "Kingdom of Spain" },
+    "capital": ["Madrid"],
+    "region": "Europe",
+    "population": 47615034,
+    "flags": { "png": "https://flagcdn.com/w320/es.png", "svg": "https://flagcdn.com/es.svg" },
+    "cca3": "ESP"
+  },
+  {
+    "name": { "common": "Italy", "official": "Italian Republic" },
+    "capital": ["Rome"],
+    "region": "Europe",
+    "population": 58940668,
+    "flags": { "png": "https://flagcdn.com/w320/it.png", "svg": "https://flagcdn.com/it.svg" },
+    "cca3": "ITA"
+  },
+  {
+    "name": { "common": "United Kingdom", "official": "United Kingdom of Great Britain and Northern Ireland" },
+    "capital": ["London"],
+    "region": "Europe",
+    "population": 68108897,
+    "flags": { "png": "https://flagcdn.com/w320/gb.png", "svg": "https://flagcdn.com/gb.svg" },
+    "cca3": "GBR"
+  },
+  {
+    "name": { "common": "China", "official": "People's Republic of China" },
+    "capital": ["Beijing"],
+    "region": "Asia",
+    "population": 1425887337,
+    "flags": { "png": "https://flagcdn.com/w320/cn.png", "svg": "https://flagcdn.com/cn.svg" },
+    "cca3": "CHN"
+  },
+  {
+    "name": { "common": "India", "official": "Republic of India" },
+    "capital": ["New Delhi"],
+    "region": "Asia",
+    "population": 1417173173,
+    "flags": { "png": "https://flagcdn.com/w320/in.png", "svg": "https://flagcdn.com/in.svg" },
+    "cca3": "IND"
+  },
+  {
+    "name": { "common": "Japan", "official": "Japan" },
+    "capital": ["Tokyo"],
+    "region": "Asia",
+    "population": 123294513,
+    "flags": { "png": "https://flagcdn.com/w320/jp.png", "svg": "https://flagcdn.com/jp.svg" },
+    "cca3": "JPN"
+  },
+  {
+    "name": { "common": "South Korea", "official": "Republic of Korea" },
+    "capital": ["Seoul"],
+    "region": "Asia",
+    "population": 51784059,
+    "flags": { "png": "https://flagcdn.com/w320/kr.png", "svg": "https://flagcdn.com/kr.svg" },
+    "cca3": "KOR"
+  },
+  {
+    "name": { "common": "Australia", "official": "Commonwealth of Australia" },
+    "capital": ["Canberra"],
+    "region": "Oceania",
+    "population": 26068792,
+    "flags": { "png": "https://flagcdn.com/w320/au.png", "svg": "https://flagcdn.com/au.svg" },
+    "cca3": "AUS"
+  },
+  {
+    "name": { "common": "New Zealand", "official": "New Zealand" },
+    "capital": ["Wellington"],
+    "region": "Oceania",
+    "population": 5228100,
+    "flags": { "png": "https://flagcdn.com/w320/nz.png", "svg": "https://flagcdn.com/nz.svg" },
+    "cca3": "NZL"
+  },
+  {
+    "name": { "common": "Nigeria", "official": "Federal Republic of Nigeria" },
+    "capital": ["Abuja"],
+    "region": "Africa",
+    "population": 223804632,
+    "flags": { "png": "https://flagcdn.com/w320/ng.png", "svg": "https://flagcdn.com/ng.svg" },
+    "cca3": "NGA"
+  },
+  {
+    "name": { "common": "Egypt", "official": "Arab Republic of Egypt" },
+    "capital": ["Cairo"],
+    "region": "Africa",
+    "population": 110612103,
+    "flags": { "png": "https://flagcdn.com/w320/eg.png", "svg": "https://flagcdn.com/eg.svg" },
+    "cca3": "EGY"
+  },
+  {
+    "name": { "common": "South Africa", "official": "Republic of South Africa" },
+    "capital": ["Pretoria", "Cape Town", "Bloemfontein"],
+    "region": "Africa",
+    "population": 60142978,
+    "flags": { "png": "https://flagcdn.com/w320/za.png", "svg": "https://flagcdn.com/za.svg" },
+    "cca3": "ZAF"
+  }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo Práctico Final - RestCountries</title>
+  <link rel="stylesheet" href="./estilos.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Trabajo Práctico N° 5</h1>
+    <p>Consumo de la API RestCountries y renderizado dinámico en el DOM con JavaScript puro.</p>
+  </header>
+
+  <main class="app-main">
+    <section class="pane pane-controls">
+      <h2>Seleccionar región</h2>
+      <div class="control-row">
+        <label for="region-select">Región</label>
+        <select id="region-select" aria-label="Seleccionar región"> 
+          <option value="africa">África</option>
+          <option value="americas" selected>Américas</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europa</option>
+          <option value="oceania">Oceanía</option>
+        </select>
+      </div>
+      <button id="fetch-button" class="button-primary">Recuperar países</button>
+      <div id="status" class="status-message"></div>
+    </section>
+
+    <section class="pane pane-results">
+      <h2>Listado de países</h2>
+      <div class="table-wrapper">
+        <table id="countries-table">
+          <thead>
+            <tr>
+              <th>Bandera</th>
+              <th>Nombre</th>
+              <th>Capital</th>
+              <th>Población</th>
+              <th>Región</th>
+              <th>Dominio</th>
+            </tr>
+          </thead>
+          <tbody id="countries-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="pane pane-filters">
+      <h2>Filtros y localStorage</h2>
+      <div id="filter-results" class="filter-results"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./Controlador.js"></script>
+</body>
+</html>
