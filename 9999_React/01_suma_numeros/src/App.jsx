@@ -6,10 +6,11 @@ import Ejercicio06 from "./ejercicios/Ejercicio06";
 import Ejercicio07 from "./ejercicios/Ejercicio07";
 import Ejercicio08 from "./ejercicios/Ejercicio08";
 import Ejercicio09 from "./ejercicios/Ejercicio09";
+import Ejercicio10 from "./ejercicios/Ejercicio10";
 
 const App = ()=>{
 
-  return <Ejercicio09></Ejercicio09>
+  return <Ejercicio10></Ejercicio10>
 
 };
 
