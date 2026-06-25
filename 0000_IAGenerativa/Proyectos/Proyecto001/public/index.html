@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Clientes</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Registro de Clientes</h1>
+    </header>
+
+    <main>
+        <!-- Formulario de alta -->
+        <section class="card" id="seccion-form">
+            <h2>Nuevo Cliente</h2>
+
+            <div id="mensaje" class="mensaje oculto"></div>
+
+            <form id="form-cliente" novalidate>
+                <div class="campo">
+                    <label for="cuit">CUIT <span class="req">*</span></label>
+                    <input type="text" id="cuit" name="cuit"
+                           maxlength="11" placeholder="11 dígitos sin guiones"
+                           autocomplete="off" />
+                    <small id="cuit-error" class="error-campo"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre <span class="req">*</span></label>
+                    <input type="text" id="nombre" name="nombre"
+                           maxlength="50" placeholder="Razón social o nombre completo"
+                           autocomplete="off" />
+                    <small id="nombre-error" class="error-campo"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" id="domicilio" name="domicilio"
+                           maxlength="100" placeholder="Calle, número, ciudad"
+                           autocomplete="off" />
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo de Cliente <span class="req">*</span></label>
+                    <select id="tipo" name="id_tipo_cliente">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                    <small id="tipo-error" class="error-campo"></small>
+                </div>
+
+                <div class="acciones-form">
+                    <button type="submit" id="btn-guardar">Guardar</button>
+                    <button type="button" id="btn-limpiar">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Listado de clientes -->
+        <section class="card" id="seccion-lista">
+            <div class="lista-header">
+                <h2>Clientes Registrados</h2>
+                <span id="contador"></span>
+            </div>
+
+            <div class="tabla-wrapper">
+                <table id="tabla-clientes">
+                    <thead>
+                        <tr>
+                            <th>CUIT</th>
+                            <th>Nombre</th>
+                            <th>Domicilio</th>
+                            <th>Tipo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-clientes">
+                        <tr id="fila-vacia">
+                            <td colspan="5" class="vacio">Cargando clientes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal confirmación de baja -->
+    <div id="modal-overlay" class="oculto">
+        <div id="modal">
+            <h3>Confirmar eliminacion</h3>
+            <p id="modal-texto"></p>
+            <div class="modal-acciones">
+                <button id="modal-confirmar" class="btn-danger">Eliminar</button>
+                <button id="modal-cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
