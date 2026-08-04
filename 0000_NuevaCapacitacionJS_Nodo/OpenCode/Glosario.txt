@@ -1,0 +1,36 @@
+Modelos Similares:
+Claude Code, Codex, y OpenCode
+
+OpenCode
+DeepSeek Flash 4 Free
+
+stack
+Next.js y Supabase
+desplegando en Vercel
+
+- Explicar que es Git y que es GitHub
+Registrarse en GitHub
+
+- Diferencias entre
+	* página web / sitio web
+	* aplicación web
+
+- Tecnologías utilizadas para 
+construir un sitio web
+	HTML
+	CSS
+	JAVASCRIPT
+
+- Arquitecura de una Aplicación
+WEB. FrontEnd / BackEnd
+	
+	FrontEnd (HTML, CSS, JavasCript)
+	BackEnd (JavaScript + SGBD)
+
+
+1) Instalar Open Code
+2) Registrarse en SupaBase
+
+PassWord del Proyecto: pj83YlKUI9gZyhLG
+Project URL: https://gdqcysfbmykucclcilcg.supabase.co
+Publisheable key: sb_publishable_8uu-7mSX2xid8EPOlnHfyQ_AklDUKSy
