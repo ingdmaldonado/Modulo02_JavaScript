@@ -1,0 +1,3 @@
+Faltaría la Clase 02: que sería todo lo que es crear un document HTML
+que tiene el documento, etc. como son las etiquetas, en fin. todo eso.
+
