@@ -12,6 +12,12 @@ https://tributariomuni.gob.ar/samweb/index.php?r=/objeto/objeto/index&to=1
 Identificador de Inmueble:
 040404506600059
 
+	ENTRAR POR MI-DOCTA:
+
+		Usuario: 23-24010663-9
+		Clave: LiChe$$223844
+
+
 PAGADO POR MODO PERO NO ME VERIFICÓ QUE SE HAYA ACREDITADO EL PAGO
 ---------------------------------------------------------------------------------------------------
 AGUAS CORDOBESAS
@@ -20,6 +26,9 @@ https://www.aguascordobesas.com.ar/espacioClientes/
 AQUI => https://www.aguascordobesas.com.ar/espacioClientes/seccion/gestionDeuda
 Unidad de Facturación:715888
 
+	usuario: ingdmaldonado@gmail.com
+	Clave: PeladoCba223844
+
 ---------------------------------------------------------------------------------------------------
 ECO-GAS
 CONTRATO VIEJO: 22377547
@@ -27,6 +36,8 @@ CONTRATO NUEVO: 22472581
 Cuenta 22472581 SALGUERO OBISPO 387 13 C - CORDOBA - Medidor Nº 818282
 
 PAGADO POR MODO => CHEQUEAR DESPUES
+
+
 ---------------------------------------------------------------------------------------------------
 INTERNET-CORDOBA
 https://www.personal.com.ar/pagos
