@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#082f49"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- prompt box -->
+  <rect x="146" y="152" width="92" height="68" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="5"/>
+  <text x="162" y="200" font-family="DejaVu Sans Mono, monospace" font-weight="bold" font-size="36" fill="#38bdf8">&gt;_</text>
+  <!-- arrow + sparkle -->
+  <path d="M248 186 H286" stroke="#fde047" stroke-width="8" stroke-linecap="round"/>
+  <path d="M282 172 L302 186 L282 200 Z" fill="#fde047"/>
+  <path d="M272 132 L277 148 L293 153 L277 158 L272 174 L267 158 L251 153 L267 148 Z" fill="#fde047"/>
+  <!-- document -->
+  <rect x="312" y="138" width="66" height="88" rx="8" fill="#ffffff"/>
+  <rect x="320" y="147" width="50" height="32" rx="4" fill="#bfdbfe"/>
+  <circle cx="329" cy="156" r="4" fill="#f59e0b"/>
+  <path d="M322 177 L336 163 L346 172 L354 165 L368 177 Z" fill="#2563eb"/>
+  <g stroke="#1e40af" stroke-width="4" stroke-linecap="round">
+    <line x1="321" y1="192" x2="369" y2="192"/><line x1="321" y1="204" x2="369" y2="204"/><line x1="321" y1="216" x2="346" y2="216"/>
+  </g>
+  <!-- title -->
+  <text x="256" y="294" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" font-size="40" fill="#ffffff">IA Generativa</text>
+  <text x="256" y="326" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" fill="#67e8f9">de palabras a contenido</text>
+  <!-- small edition badge -->
+  <rect x="196" y="346" width="120" height="30" rx="15" fill="#f472b6"/>
+  <text x="256" y="367" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" font-size="16" fill="#1c1917">Ed. Nro. 5</text>
+</svg>

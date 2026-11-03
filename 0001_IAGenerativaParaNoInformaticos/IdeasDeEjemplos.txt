@@ -1,0 +1,95 @@
+1) Me voy a poner en el Rol de un profesor, que tiene varios cursos, donde enseña diferentes materias
+en distintos colegios y en una planilla de Excel tiene las notas de todos los alumnos, lo ideal 
+sería presentar las planillas de evaluación final para cada escuela, cada colegio.
+
+2) Me voy a poner en el Rol de un Inspector que realizó verificaciones físicas en diferentes 
+establecimientos, chequeando y relevando la existencia de elementos, algunos obligatorios, 
+otros no obligatorios.
+
+3) Me voy a poner en el Rol de un Secretario/Tesorero de una Entidad que cobra cuota mensuales a sus afiliados.
+lo que haré. (Una institución Pequeña) donde seguramente hay
+
+	1) Grupo de Whatsapp de los Afiliados/Socios/Miembros
+	2) Los Afiliados Pagan la cuota por medio de Transferencia / Efectivo
+	3) Existe una planilla de Excel donde se llevan registrado los socios que están adeudando
+	4) Existe una planilla de Socios con sus datos y su teléfono actualizado, domicilio, etc.
+
+
+	EJEMPLO 01: Notificar a los socios que está adeudando algo + intereses
+
+	EJEMPLO 02: Notas dirigidas a distintas entidades solicitando colaboración y/o 
+	aportes económicos para la construcción de la futura sede.
+
+
+4) Me voy a poner en el Rol de un Médico / Secretaria de un Médico o cualquier profesional de salud
+que lleva un listado de sus pacientes, atenciones, …
+
+
+5) Me voy a poner en el Rol de un Pequeño Centro de Salud, que tiene 3 Médicos + 1 Secretaria que lleva
+y gestiona los pacientes, los turnos, las obras sociales que tiene cada paciente, los horarios de los
+médicos, y en la PC. de la Secretaria que seguramente "No tiene Sistema de Gestión de Pacientes", sino
+que es todo un poco mas casero, es llevar todo eso. 
+
+6) En vivo, les pediré que digan su DNI, que registren sus datos, los chequearé sobre la planilla 
+total de asistencia, realizaré un informe que diga cuantos están activos 
+
+7) Hacer una presentación:
+
+	Power Point: no necesitas licencia de Power Point u otra herramienta
+	
+	Interfaz HTML: documento enriquecido, es la WEB, se pueden adjuntar videos, 
+	se pueden imágenes interactivas, haciendo click puede llevarte de un lugar a otro.
+
+	Desventaja: no es fácil de compartir, para que esté de acceso público hay que 
+	publicarla en algún servidor web.
+
+8) El volumen de Información es Grande y necesito eficiencia, necesito realizar
+búsquedas, cruces con bases de datos, necesito por ejemplo cruzar los datos
+de un listado de personas que me deben, con el Padrón Electoral de la Provincia.
+
+8) Preparar informes a partir de datos Crudos. (TESIS / INFORMES GERENCIALES / INFORMES DE AVANCE / ESTADOS DE SITUACIÓN)
+
+	Pasar de DATOS a => INFORMACIÓN
+
+9) Otro Ejemplo: Trabajar con ARCHIVOS de Google Sheet, Document Sheet en la Nube. (No son muy prácticos de manejar, pero 
+son eficientes cuando se hace trabajo en equipo).
+
+	Cómo lo encararía: una clase tipo “El agente y la nube” (la 6 o la 7), antes del sistemita de la Clase 08. El caso podría ser un formulario de Google que carga inscripciones, y el agente las lee, las cruza con un Excel local y 	escribe en la hoja quién confirmó
+	Se entiende, y es una dinámica excelente: es en vivo, todos participan y el caso es real. Lo armaría así:
+
+	Vos compartís el link y cada alumno escribe su nombre y apellido. Mejor con un Formulario de Google conectado a la hoja: 50 personas escribiendo a la vez en la misma planilla terminan pisándose filas.
+	En tu PC tenés inscriptos.xlsx, la lista oficial.
+	Le pedís al agente: “Leé la hoja de asistencia, cruzala con inscriptos.xlsx y decime quién está presente, quién falta y quién se anotó sin estar inscripto.”
+	El agente escribe en la hoja la columna “Confirmado ✓”, y todos ven el cambio en vivo en su pantalla. Ese es el momento “wow”.
+	Registro: el agente genera asistencia_clase06.md con lo que hizo.
+
+	Dos aprendizajes que salen solos de esta dinámica:
+
+	Datos desprolijos: uno pone “Pérez”, otro “PEREZ”, otro “perez juan”. El agente lo resuelve y ven por qué conviene normalizar (mayúsculas, sin acentos).
+	Privacidad: en la hoja de la nube pedís solo nombre y apellido, nunca DNI. El inscripto con DNI se queda en tu disco y el cruce se hace localmente. Así aplican el punto 6 de la Clase 01.
+
+	Si querés, lo voy anotando como idea para esa clase y seguimos con lo que falta de la Clase 01.
+
+
+10) Otro ejemplo con el que me gustaría tocar, y creo que es muy útil, es cuando tengo por ejemplo tengo un excel con datos no muy bien formateados, todo una mezcla, una ensalada, por ejemplo, el típico problema de formatos. algunos DNIs separados con puntos, otros sin puntos, columna fecha de nacimiento formato DD/MM/AAAA, otras DD/MM/AAAA, otras donde se escriben 02 Sep 2005, y hay que llevar y formatear todo a una mismo formato. muy muy importante los IMPORTES para hacer reportes de importes, etc
+
+11) Otro ejemplo muy interesante es el tratamiento por ejemplo, a partir de una planilla de gastos de una pequeña institución deportiva/etc. hacer que haga reportes comparativos de Ingresos vs gastos (Mes, por Mes), año, por año. (Semestre por Semetres), que nos informe y realice la evaluación de algo. se entiende ?. 
+
+12) GIMNASIO. Llevar Control de los Registrados, los que asisten, los que tienen pagada la cuota, etc. hacer informes, reportes, etc.
+
+13) HACER QUE EL AGENTE EMITA REPORTES entrando en la Web. Descargando los Archivos
+y que los acomode en carpetas. que controle los archivos generados, los procese
+y me avise cuando termina.
+
+14) INTEGRAR EL AGENTE LOCAL CON EL NAVEGADOR CHROME Para que
+
+	- Emita Listados
+	- Escuche el Whatsapp Web
+	- Escuche los Audios, los Transcriba y responda en mi nombre
+
+
+
+
+
+
+	
