@@ -1,3 +1,182 @@
+MODELO DE INTELIGENCIA ARTIFICIAL ANTHROPIC
+
+email:ia.maldonado.da.2024@gmail.com
+pass:iadamiagro223844
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+Que son los archivos MD Mark Down
+	Memoria (del Proyecto / del Usuario)
+	Comandos
+	Ciclo de Eventos => hace esto cuando termine de ..
+	Hooks 
+	MCP => MODEL CONTEXT PROTOCOL
+	/Agents
+	
+
+RESUMEN DEL VIDEO DE: https://www.youtube.com/watch?v=NAV4Uqepqz0
+
+
+	(1) INTRODUCCIÓN:
+
+		Claude Code: Es una manera diferente de utilizar INTELIGENCIA ARTIFICIAL
+
+		Claude Code puede entrar en un proyecto, en una carpeta, puede trabajar 
+		con tus archivos, puede leer/modificar/crear/GENERAR ARCHIVOS NUEVOS. de allí
+		el nombre de INTELIGENCIA ARTIFICIAL GENERATIVA.
+
+			- leer tus archivos
+			- modificarlos
+			- GENERAR DOCUMENTOS NUEVOS
+			- Entrar a internet y buscar información por vos
+			- instalar en tu equipo/computadora herramientas, componentes que te 
+			hagan falta sin necesidad de ser un experto en informática.
+
+			- Es mejor pensar en la IA Generativa
+
+				* Open Code	
+				* Codex
+				* Claude Code
+
+			como un asistente que está trabajando conmigo en mi PC, que
+		recibe mis instrucciones, que puede tomar control de mi equipo 
+		
+
+	(2) LA TERMINAL:
+
+		Claude Code / Open Code / Codex no funcionan en el navegador (como el Chat)
+		sino que trabaja. es una pantalla negra con texto que vemos utilizar en las
+		peliculas, que al principio puede parecer bastante intimidante pero. La
+		Terminal no es otra forma de conectarme con el Ordenador, en vez de hacer 
+		click en botones, escribes instrucciones.
+
+		IMPORTANTE: No necesitas conocer una lista extensa de comandos netamente
+		técnicos, sino que esta terminal está diseñada/construida para que en lenguaje natural
+		podamos hablarle a este Agente (y el evalúe el o los pasos ordenados para realizar la acción).
+
+	AQUI MOSTRAR COMO TENER UNA CARPETA: TENER 3 ARCHIVOS CON DISTINTOS CONTENIDOS Y LUEGO
+	CREAR UNA SUB-CARPETA PARA CADA UNO, Mover los 3 archivos a cada carpeta.
+
+	Mostrarlo con comandos de Informático
+	Mostrarlo desde el Explorador de Archivos
+	Mostrarlo con el Agente de IA
+
+
+	(3) PROMPTS: Es lo que le escribes al Agente para decirle que quieres hacer, igual que 
+	en cualquier chat, tu escribes una instrucción y el actúa en base a eso. no tan solo responde,
+	analiza, escucha sino que GENERA información nueva, archivos nuevos, proyectos. 
+
+		No necesitas hablarle de forma técnica
+		Pero si necesitas ser específico.
+
+	
+	(4) TOOLs ó Herramientas: Una de las cosas que hace potente al Agente de IA instalado
+	es que no se limita a responderte, tiene acceso a:
+
+		- Herramientas Ofimáticas que tienes instaladas en tu PC
+		- Tiene herramientas que le permiten interactuar con tu computadora y los archivos
+		del Proyecto.
+			- Leer: Leer el contenido de tus archivos
+			- Escribir: (Crear archivos nuevos ó modificar existentes)
+			- Ejecutar acciones en la terminal 
+			- Instalar algo en la pc
+
+
+		Tu le dices lo que quieres hacer y el Agente elije las herramientas que necesita
+	para cumplir con el objetivo que le pediste.
+
+		TOMAR una Nota que tenga Fecha y Hora del Día, que tenga por ejemplo un Diseño
+	Curricular Aulico del año 2026 y le cambie para el 2027.
+
+	(5) PERMISOS: Por defecto el Agente te va a pedir confirmación de cada uno de los pasos
+	que quieras hacer, y esto está muy bien, pero por momentos se tornará demasiado lento
+	el proceso de construcción/generación de lo que estemos haciendo dado que a cada paso
+	le tendremos que decir que si lo haga.
+
+		NOTA: Averiguar cómo podemos definir esos pasos y cómo podemos configurar
+		estos permisos para personas que no son programadoras, informáticas, etc.
+
+		Darle libertad a lo que uno considera seguro y tratar de restringir
+		todo aquello que sea interacción con la nube.
+
+
+	(6) VENTANA DE CONTEXTO: Es la memoria a corto plazo de Claude, es todo lo que Claude puede
+	tener en cuenta en un momento dado, mientras está trabajando contigo. ahí entra lo que tú le has
+	escrito, lo que él te ha respondido, los archivos que a leído y toda la información que se fue 
+	acumulando en esa sesión. El problema es que esa memoria tiene un límite, cuando la conversación
+	se alarga demasiado ó Claude ha leído demasiadas cosas, empieza a perder claridad, se despista más,
+	se mezcla instrucciones, olvida parte de lo anterior ó empieza a responder peor. Al principio 
+	todo funciona muy bien, pero cuando hay demasiada información acumulada la calidad empieza a caer, 
+	Por eso. Es como una persona cuando tiene demasiadas cosas en la cabeza a la vez.
+	Cuando mas limpia y enfocada esté la sesión, mejor !!!.
+
+	(7) CONTEXTO COMPACTO: Consiste en resumir lo importante de una sesión larga y quitar todo lo que
+	no aporta tanto, es como hacer limpieza para que Claude siga teniendo presente las ideas clave pero
+	sin cargar con todo lo anterior. Es como tener el Escritorio lleno de hojas (porque estamos trabajando 
+	en algo) y quitar, sacar todas las hojas, cosas que se pueden descartar teniendo y dejando en foco
+	lo importante. Si retiras todo lo que sobra y dejas un resumen vuelves a trabajar con claridad.
+	
+	/compact quédate con las partes importantes de la aplicación y cómo funciona. el 
+	Contexto compacto ayuda a que Claude siga centrado en sesiones largas, porque reduce el exceso de información y conserva
+	realmente lo importante.
+
+	(8) HISTORIAL DE CONVERSACION: Otra cosa muy útil es que guarda el historial de tus sesiones. Es decir, no 
+	hace falta empezar de cero cada vez que cierras que cierras la terminal o apagas el ordenador. si estabas trabajando
+	en algo y quieres retomarlo puedes volver a la conversación y retomarlo desde donde lo dejaste. Esto es importante
+	porque en la práctica casi nadie termina un proyecto largo en una sola sesión. Lo normal es que un proceso de 
+	construcción ó generación de algo  pueda llevar varias sesiones.
+
+	Claude --resume Recupera la conversación anterior para que sigas trabajando desde ahí.
+
+	(9) Claude.mk Es un archivo Mark down donde puedes definir como quieres que Claude trabaje contigo 
+	en este proyecto. es como darle instrucciones fijas que va a tener en cuenta siempre sin que tengas 
+	que repetirlas en cada mensaje. En lugar de explicarle una y otra vez como quieres que respondas.
+
+		Por ejemplo:
+
+			a) como quieres que estructures las cosas ?.
+			b) como quieres que genere los archivos Word de salida
+			c) como quieres que genere los archivos Excel de salida
+
+		Son Reglas que Claude va a seguir siempre en este proyecto.
+
+			En el Encabezado 
+
+	
+
+
+
+	
+
+	
+
+	
+
+
+
+
+
+
+	
+
+	
+
+
+		
+
+	
+	
+
+
+	
+	
+
+	
+
+
+
 1) Me voy a poner en el Rol de un profesor, que tiene varios cursos, donde enseña diferentes materias
 en distintos colegios y en una planilla de Excel tiene las notas de todos los alumnos, lo ideal 
 sería presentar las planillas de evaluación final para cada escuela, cada colegio.
