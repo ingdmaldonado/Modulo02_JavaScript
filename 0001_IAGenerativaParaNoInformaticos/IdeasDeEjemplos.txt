@@ -139,10 +139,42 @@ RESUMEN DEL VIDEO DE: https://www.youtube.com/watch?v=NAV4Uqepqz0
 			a) como quieres que estructures las cosas ?.
 			b) como quieres que genere los archivos Word de salida
 			c) como quieres que genere los archivos Excel de salida
+			d) que siempre responda en español
+			e) que el titulo tenga el logo de la Institución, que tenga
+			el Area ó Jefatura a la que pertenezco, etc.
+			f) que no de respuestas demasiado largas
+		
 
 		Son Reglas que Claude va a seguir siempre en este proyecto.
 
-			En el Encabezado 
+	(10) Memoria: Hasta ahora. todo lo guarda en una sola
+	conversación. La memoria va un paso más allá la idea
+	es que no tan solo recuerda la conversación sino que va
+	aprendiendo como trabajo, cómo es mi forma de trabajar,
+	se va, va aprendiendo ciertas preferencias en todos mis
+	trabajos. Comienza a captar patrones.
+		Claude.md instrucciones que el usuario escrie para dar
+		a claude contexto persistente. => Claude.md
+
+		Auto memory: notas que Claude escribe por si mismo basadas
+		en las correcciones del usuario y preferencias. =>
+		se construye sola.
+
+	(11) Modelos: Cada modelo esta pensado para distintas tareas
+
+		/model	
+
+		Fable 5.1 => El mas capaz de la familia
+		Opus 5.5 => Muy capaz, para tareas complejas de código y razonamiento
+		Sonnet 5.5 => Equilibrio entre capacidad, velocidad y costo.
+		Haiku 5.5 => El más rapido y economico para tareas simples.
+
+	(12) Comandos con /
+
+		
+	
+
+	
 
 	
 
